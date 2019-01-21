@@ -1,24 +1,24 @@
-import { style } from "typestyle/lib";
+import { style } from 'typestyle';
 import * as vars from './vars';
 
-export const ParagraphText= style({
+export const ParagraphText = style({
   fontFamily: 'Helvetica',
   color: vars.Paragraph,
   fontWeight: 400,
   margin: 0,
   marginBottom: 16,
-  $nest:{
+  $nest: {
     '&.small': {
       fontSize: 22,
-      lineHeight: '28px',
+      lineHeight: '28px'
     },
     '&.medium': {
       fontSize: 28,
-      lineHeight: '34px',
+      lineHeight: '34px'
     },
     '&.big': {
       fontSize: 34,
-      lineHeight: '40px',
+      lineHeight: '40px'
     },
     '&.left': {
       textAlign: 'left'
@@ -28,6 +28,6 @@ export const ParagraphText= style({
     },
     '&.right': {
       textAlign: 'right'
-    },
+    }
   }
 })

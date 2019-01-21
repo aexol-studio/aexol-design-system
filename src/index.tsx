@@ -3,7 +3,7 @@ import {render} from 'react-dom'
 import {AppContainer} from 'react-hot-loader'
 import Root from './examples/Root'
 
-const renderFunc = (Component:React.ComponentType<any>) =>
+const renderFunc = (Component: React.ComponentType<any>) =>
   render(
     <AppContainer>
       <Component />

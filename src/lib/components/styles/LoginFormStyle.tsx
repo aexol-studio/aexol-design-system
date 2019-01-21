@@ -1,5 +1,5 @@
-import { style } from "typestyle/lib";
-//import * as vars from './vars';
+import { style } from 'typestyle';
+// import * as vars from './vars';
 
 export const LoginForm = style({
   $debugName: 'LoginForm',
@@ -8,7 +8,7 @@ export const LoginForm = style({
   padding: 40,
   borderRadius: 7,
   fontFamily: 'Helvetica',
-  border: "2px solid rgba(0,0,0,.12)",
+  border: '2px solid rgba(0,0,0,.12)',
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'column'
 })

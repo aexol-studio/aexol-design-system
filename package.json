@@ -12,6 +12,10 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0"
+  },
+  "dependencies": {
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "@types/classnames": "2.2.3",
@@ -30,23 +34,21 @@
     "file-loader": "^1.1.11",
     "html-loader": "^1.0.0-alpha.0",
     "html-webpack-plugin": "^3.0.4",
-    "mini-css-extract-plugin": "^0.4.0",
     "prettier": "^1.11.1",
     "react-hot-loader": "^4.0.0",
     "style-loader": "^0.20.2",
     "ts-loader": "^4.0.0",
+    "classnames": "^2.2.5",
+    "mini-css-extract-plugin": "^0.5.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1",
+    "typestyle": "^1.7.2",
     "typescript": "^3.0.1",
     "url-loader": "^1.0.0-beta.0",
     "webpack": "^4.20.2",
     "webpack-cleanup-plugin": "^0.5.1",
     "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.0"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.1",
-    "react-router-dom": "^4.3.1",
-    "typestyle": "^1.7.2"
+    "webpack-dev-server": "^3.1.14"
   }
 }

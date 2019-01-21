@@ -1,4 +1,4 @@
-import { style } from "typestyle/lib";
+import { style } from 'typestyle';
 import * as vars from './vars';
 
 export const Button = style({
@@ -13,8 +13,8 @@ export const Button = style({
   textAlign: 'center',
   backgroundColor: vars.primaryColor,
   cursor: 'pointer',
-  $nest:{
-    '&.submit':{
+  $nest: {
+    '&.submit': {
       margin: '0 0 0 auto'
     }
   }
