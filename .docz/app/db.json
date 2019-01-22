@@ -1,0 +1,40 @@
+{
+  "config": {
+    "title": "Design System",
+    "description": "Design system documentation",
+    "menu": [],
+    "ordering": "descending",
+    "version": "0.1.0",
+    "repository": null,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {},
+    "typescript": true,
+    "src": "./docs",
+    "dest": "/docs-dist"
+  },
+  "entries": {
+    "index.mdx": {
+      "name": "Getting started",
+      "id": "73498ad0e1e62a714b08085d318f9de1",
+      "filepath": "index.mdx",
+      "link": null,
+      "slug": "index",
+      "route": "/index",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "components/Button.mdx": {
+      "name": "Button",
+      "id": "8661b6981e2294626dd24685bfd3582b",
+      "filepath": "components/Button.mdx",
+      "link": null,
+      "slug": "components-button",
+      "route": "/components-button",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    }
+  }
+}

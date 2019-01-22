@@ -1,5 +1,5 @@
 import { style } from 'typestyle';
-import * as vars from './vars';
+import * as vars from '../styles/vars';
 
 export const Button = style({
   height: 45,
