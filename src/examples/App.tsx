@@ -26,6 +26,7 @@ const App = () => (
     </Paragraph>
     <Button
       onClick={onclickHandler}
+      shape="oval"
     >
       Learn More...
     </Button>

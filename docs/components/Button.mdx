@@ -7,10 +7,128 @@ import { Button } from '../../src/components'
 
 #Button
 
+##Properties
+
 <PropsTable of={Button} />
 
 ##Basic usage
 
+###Button type
+
 <Playground>
-  <Button>Click me!</Button>
+  <label
+    htmlFor="primaryType"
+    style={{display: 'block', marginTop: 10}}
+  >
+    primary
+  </label>
+  <Button
+    name="primaryType"
+  >
+    Click me!
+  </Button>
+  <label
+    htmlFor="dangerType"
+    style={{display: 'block', marginTop: 10}}
+  >
+    danger
+  </label>
+  <Button
+    type="danger"
+    name="dangerType"
+  >
+    Click me!
+  </Button>
+  <label
+    htmlFor="successType"
+    style={{display: 'block', marginTop: 10}}
+  >
+    success
+  </label>
+  <Button
+    type="success"
+    name="successType"
+  >
+    Click me!
+  </Button>
+</Playground>
+
+###Button size
+
+<Playground>
+  <label
+    htmlFor="smallSize"
+    style={{display: 'block', marginTop: 10}}
+  >
+    small
+  </label>
+  <Button 
+    name="smallSize"
+    size="small"
+  >
+    Click me!
+  </Button>
+  <label 
+    htmlFor="defaultSize"
+    style={{display: 'block', marginTop: 10}}
+  >
+    normal
+  </label>
+  <Button 
+    name="defaultSize"
+  >
+    Click me!
+  </Button>
+  <label
+    htmlFor="largeSize"
+    style={{display: 'block', marginTop: 10}}
+  >
+    large
+  </label>
+  <Button 
+    size="large" 
+    name="largeSize"
+  >
+    Click me!
+  </Button>
+</Playground>
+
+###Button shape
+
+<Playground>
+  <label
+    htmlFor="squareShape"
+    style={{display: 'block', marginTop: 10}}
+  >
+    square
+  </label>
+  <Button
+    shape="square"
+    name="squareShape"
+  >
+    Click me!
+  </Button>
+  <label
+    htmlFor="roundShape"
+    style={{display: 'block', marginTop: 10}}
+  >
+    round/default
+  </label>
+  <Button
+    name="roundShape"
+  >
+    Click me!
+  </Button>
+  <label
+    htmlFor="ovalShape"
+    style={{display: 'block', marginTop: 10}}
+  >
+    oval
+  </label>
+  <Button 
+    shape="oval"
+    name="ovalShape"
+  >
+    Click me!
+  </Button>
 </Playground>
