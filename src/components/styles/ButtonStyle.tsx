@@ -4,7 +4,7 @@ import * as vars from '../../vars';
 export const Button = style({
   padding: '15px 30px',
   // minWidth: 160,
-  borderRadius: 7,
+  borderRadius: 4,
   color: '#fff',
   textAlign: 'center',
   backgroundColor: vars.colorPalete.purple.normal,
@@ -28,10 +28,10 @@ export const Button = style({
       borderRadius: 0
     },
     '&.danger': {
-      backgroundColor: vars.colorPalete.red.normal
+      backgroundColor: vars.colorPalete.cherry.normal
     },
     '&.success': {
-      backgroundColor: vars.colorPalete.blue.normal
+      backgroundColor: vars.colorPalete.green.normal
     },
     '&.disabled': {
       backgroundColor: vars.colorPalete.grey.normal,

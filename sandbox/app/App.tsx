@@ -5,7 +5,6 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import TopMenu from './TopMenu'
 import About from './About'
 
 class App extends React.Component {
@@ -14,7 +13,6 @@ class App extends React.Component {
     return (
       <BrowserRouter>
       <React.Fragment>
-        <TopMenu />
         <Switch>
           <Route
             path={'/'}

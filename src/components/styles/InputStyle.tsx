@@ -15,7 +15,7 @@ export const TextInput = style({
   color: '#000',
   padding: '15px 10px',
   border: '1px solid rgba(0,0,0,.12)',
-  borderRadius: 7,
+  borderRadius: 4,
   outline: 0,
   marginBottom: 15
 });
