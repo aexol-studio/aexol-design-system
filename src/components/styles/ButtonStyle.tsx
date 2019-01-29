@@ -3,9 +3,8 @@ import * as vars from '../../vars';
 
 export const Button = style({
   padding: '15px 30px',
+  minWidth: 160,
   borderRadius: 7,
-  fontSize: vars.defaultFont,
-  fontWeight: 400,
   color: '#fff',
   textAlign: 'center',
   backgroundColor: vars.colorPalete.purple.normal,

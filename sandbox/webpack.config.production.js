@@ -1,8 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
-var isProduction = process.argv.indexOf('-p') >= 0;
-var sourcePath = path.join(__dirname, './src');
-var outPath = path.join(__dirname, './dist');
+var sourcePath = path.join(__dirname, './');
+var outPath = path.join(__dirname, './');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -20,20 +19,19 @@ module.exports = {
     publicPath: '/'
   },
   target: 'web',
+  mode: 'production',
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx'],
     mainFields: ['module', 'browser', 'main'],
     alias: {
-      app: path.resolve(__dirname, 'src/app/')
+      app: path.resolve(__dirname, '../src')
     }
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: isProduction
-          ? 'ts-loader'
-          : ['babel-loader?plugins=react-hot-loader/babel', 'ts-loader']
+        use: 'ts-loader'
       },
       {
         test: /\.css$/,
@@ -45,7 +43,7 @@ module.exports = {
             loader: 'css-loader',
             query: {
               modules: true,
-              sourceMap: !isProduction,
+              sourceMap: false,
               importLoaders: 1,
               localIdentName: '[local]__[hash:base64:5]'
             }
@@ -76,7 +74,7 @@ module.exports = {
   },
   plugins: [
     new webpack.EnvironmentPlugin({
-      NODE_ENV: isProduction ? 'production' : 'development', // use 'development' unless process.env.NODE_ENV is defined
+      NODE_ENV: 'production', // use 'development' unless process.env.NODE_ENV is defined
       DEBUG: false
     }),
     new WebpackCleanupPlugin(),
@@ -87,14 +85,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'assets/index.html'
     })
-  ],
-  devServer: {
-    contentBase: sourcePath,
-    hot: true,
-    inline: true,
-    historyApiFallback: {
-      disableDotRule: true
-    },
-    stats: 'minimal'
-  },
+  ]
 };

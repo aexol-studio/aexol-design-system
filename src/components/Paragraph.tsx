@@ -6,16 +6,19 @@ type ParagraphType = 'big' | 'medium' | 'small'
 type AlignType = 'left' | 'center' | 'right'
 
 export interface IParagraphProps {
-  type?: ParagraphType,
-  width?: number,
-  align?: AlignType
+  type?: ParagraphType;
+  width?: number;
+  align?: AlignType;
+  style?: React.CSSProperties;
 }
 
 export const Paragraph: React.FunctionComponent<IParagraphProps> = (props) => {
   const {
     type = 'medium',
     align = 'left',
-    width
+    width,
+    style,
+    ...restProps
   } = props
 
   return (
@@ -25,7 +28,11 @@ export const Paragraph: React.FunctionComponent<IParagraphProps> = (props) => {
         type,
         align
       )}
-      style={{width: `${width}px`}}
+      style={{
+        width: width ? `${width}px` : '100%',
+        ...style
+      }}
+      {...restProps}
     >
       {props.children}
     </p>

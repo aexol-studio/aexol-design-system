@@ -6,19 +6,16 @@ export const ParagraphText = style({
   color: vars.Paragraph,
   fontWeight: 400,
   margin: 0,
-  marginBottom: 16,
+  marginBottom: 15,
   $nest: {
     '&.small': {
-      fontSize: 22,
-      lineHeight: '28px'
+      fontSize: vars.paragraphSmall
     },
     '&.medium': {
-      fontSize: 28,
-      lineHeight: '34px'
+      fontSize: vars.paragraphMedium
     },
     '&.big': {
-      fontSize: 34,
-      lineHeight: '40px'
+      fontSize: vars.paragraphBig
     },
     '&.left': {
       textAlign: 'left'

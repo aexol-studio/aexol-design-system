@@ -9,13 +9,16 @@ export interface IHeadingProps {
   type?: HeadingType,
   width?: number,
   align?: AlignType,
+  style?: React.CSSProperties;
 }
 
 export const Heading: React.FunctionComponent<IHeadingProps> = (props) => {
   const {
     type = 'h1',
     align = 'left',
-    width
+    width,
+    style,
+    ...restProps
   } = props
 
   return (
@@ -25,7 +28,11 @@ export const Heading: React.FunctionComponent<IHeadingProps> = (props) => {
         type,
         align
       )}
-      style={{width: `${width}px`}}
+      style={{
+        width: width ? `${width}px` : '100%',
+        ...style
+      }}
+      {...restProps}
     >
       {props.children}
     </p>
