@@ -2,11 +2,13 @@ import * as React from 'react';
 import * as styles from './styles/InputStyle';
 
 export interface IInputProps {
-  type?: string,
-  label?: string,
-  placeholder?: string,
-  required?: boolean
-  onChange?: (value: string) => void,
+  type?: string;
+  label?: string;
+  placeholder?: string;
+  required?: boolean;
+  onChange?: (value: string) => void;
+  width?: number;
+  fullWidth?: boolean;
   style?: React.CSSProperties;
 }
 
@@ -17,6 +19,8 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
     placeholder,
     required = false,
     onChange,
+    width,
+    fullWidth,
     style,
     ...restProps
   } = props
@@ -27,7 +31,14 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
   }
 
   return (
-    <div className={styles.TextInputContainer}>
+    <div
+      className={styles.TextInputContainer}
+      style={{width: fullWidth
+          ? '100%'
+          : width,
+        ...style
+      }}
+    >
       {label &&
         <label
           className={styles.TextInputLabel}
@@ -41,7 +52,6 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
         onChange={handleChange}
         placeholder={placeholder}
         required={required}
-        style={style}
         {...restProps}
       />
     </div>

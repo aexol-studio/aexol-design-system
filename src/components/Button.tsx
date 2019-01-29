@@ -12,6 +12,7 @@ export interface IButtonProps {
   shape?: ButtonShape;
   disabled?: boolean;
   width?: number;
+  fullWidth?: boolean;
   onClick?: (e: HTMLButtonElement) => void;
   style?: React.CSSProperties;
 }
@@ -23,6 +24,7 @@ export const Button: React.FunctionComponent<IButtonProps> = (props) => {
     shape = 'round',
     disabled = false,
     width,
+    fullWidth,
     style,
     onClick,
     ...restProps
@@ -46,7 +48,9 @@ export const Button: React.FunctionComponent<IButtonProps> = (props) => {
       onClick={handleClick}
       type={type === 'submit' ? 'submit' : 'button'}
       style={{
-        width: width ? width : '100%',
+        width: fullWidth
+          ? '100%'
+          : width,
         ...style
       }}
       {...restProps}

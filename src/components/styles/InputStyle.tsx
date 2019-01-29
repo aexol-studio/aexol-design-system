@@ -2,8 +2,8 @@ import { style } from 'typestyle';
 // import * as vars from '../../vars';
 
 export const TextInputContainer = style({
-  $debugName: 'TextInput',
-  maxWidth: 400
+  $debugName: 'TextInput'
+  // maxWidth: 400
 })
 
 export const TextInputLabel = style({

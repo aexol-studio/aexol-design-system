@@ -3,7 +3,7 @@ import * as vars from '../../vars';
 
 export const Button = style({
   padding: '15px 30px',
-  minWidth: 160,
+  // minWidth: 160,
   borderRadius: 7,
   color: '#fff',
   textAlign: 'center',
