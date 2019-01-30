@@ -1,0 +1,18 @@
+---
+name: Pagination
+---
+
+import { Playground, PropsTable } from 'docz'
+import { Pagination } from '../../src/components'
+
+#Pagination
+
+##Properties
+
+<PropsTable of={Pagination} />
+
+##Basic usage
+
+<Playground>
+  <Pagination onChange={(page, pageSize) => {console.log('page', page, 'page size', pageSize)}} />
+</Playground>

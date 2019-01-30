@@ -13,6 +13,7 @@ export interface IButtonProps {
   disabled?: boolean;
   width?: number;
   fullWidth?: boolean;
+  icon?: JSX.Element;
   onClick?: (e: HTMLButtonElement) => void;
   style?: React.CSSProperties;
 }
@@ -25,6 +26,7 @@ export const Button: React.FunctionComponent<IButtonProps> = (props) => {
     disabled = false,
     width,
     fullWidth,
+    icon,
     style,
     onClick,
     ...restProps
@@ -40,7 +42,6 @@ export const Button: React.FunctionComponent<IButtonProps> = (props) => {
       className={classnames(classnames(
         styles.Button,
         type,
-        size,
         shape
       ), classnames({
         disabled: disabled
@@ -55,7 +56,18 @@ export const Button: React.FunctionComponent<IButtonProps> = (props) => {
       }}
       {...restProps}
     >
-      {props.children}
+      {icon}
+      <span
+        className={classnames(classnames({
+          [styles.ButtonText]: true,
+          icon: icon !== undefined
+        }),
+        classnames(
+          size
+        ))}
+      >
+        {props.children}
+      </span>
     </button>
   )
 };

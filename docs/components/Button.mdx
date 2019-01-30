@@ -4,6 +4,7 @@ name: Button
 
 import { Playground, PropsTable } from 'docz'
 import { Button } from '../../src/components'
+import * as icons from '../../src/components/icons'
 
 #Button
 
@@ -132,3 +133,21 @@ import { Button } from '../../src/components'
     Click me!
   </Button>
 </Playground>
+
+###Button with icon
+
+<Playground>
+  <label
+    htmlFor="profileIcon"
+    style={{display: 'block', marginTop: 10}}
+  >
+    profile icon
+  </label>
+  <Button
+    name="profileIcon"
+    icon={<icons.ProfileLight />}
+  >
+    My Profile
+  </Button>
+</Playground>
+

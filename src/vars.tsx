@@ -1,11 +1,12 @@
 import { cssRaw } from 'typestyle';
 
-export const primaryColor = '#4A23C2';
 export const containerWidth = '80%';
+export const whiteBackground = '#FFF'
 export const Heading = '#25222E';
 export const Paragraph = '#514E5A';
 export const greyText = '#757575';
 export const blackText = '#313132';
+export const whiteText = '#FFF'
 export const colorPalete = {
   purple : {
     superLight: '#E1E0FF',
@@ -88,6 +89,8 @@ export const headingJumbo = 66;
 export const paragraphSmall = 22;
 export const paragraphMedium = 28;
 export const paragraphBig = 34;
+
+export const transition = '0.3 ease-out'
 
 cssRaw(`*{font-family: 'Helvetica'}`)
 cssRaw(`*{font-size: ${defaultFont}px}`)
