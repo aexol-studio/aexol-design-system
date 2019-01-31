@@ -1,7 +1,7 @@
 import { style } from 'typestyle';
 import * as vars from '../../vars';
 
-export const Preloader = style({
+export const Loader = style({
   backgroundColor: vars.colorPalete.purple.superLight,
   borderRadius: '50%',
   position: 'relative',
@@ -19,11 +19,24 @@ export const Preloader = style({
   }
 })
 
-export const PreloaderCircle = style({
+export const LoaderCircle = style({
   transform: 'rotate(-90deg)'
 })
 
-export const PreloaderFill = style({
-  animationIterationCount: 'infinite',
+export const LoaderFill = style({
   animationTimingFunction: 'linear'
+})
+
+export const LoaderProgress = style({
+  position: 'absolute',
+  width: '40%',
+  height: '40%',
+  top: '30%',
+  left: '30%',
+  zIndex: 10,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: vars.colorPalete.blue.light,
+  fontSize: 20
 })
