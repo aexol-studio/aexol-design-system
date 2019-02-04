@@ -12,14 +12,12 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <React.Fragment>
           <Switch>
             <Route
               path={'/'}
               component={About}
             />
           </Switch>
-        </React.Fragment>
       </BrowserRouter>
       )
     }
