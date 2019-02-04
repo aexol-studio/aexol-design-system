@@ -9,7 +9,6 @@ export const Button = style({
   // minWidth: 160,
   borderRadius: 4,
   color: '#fff',
-  textAlign: 'center',
   backgroundColor: vars.colorPalete.purple.normal,
   cursor: 'pointer',
   transition: vars.transition,

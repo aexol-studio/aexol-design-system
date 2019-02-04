@@ -90,7 +90,7 @@ export const paragraphSmall = 22;
 export const paragraphMedium = 28;
 export const paragraphBig = 34;
 
-export const transition = '0.3 ease-out'
+export const transition = '0.3s ease-out'
 
 cssRaw(`*{font-family: 'Helvetica'}`)
 cssRaw(`*{font-size: ${defaultFont}px}`)

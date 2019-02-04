@@ -15,7 +15,7 @@ const DEFAULT_LOGO_WIDTH = 150
 class About extends React.PureComponent<IProps> {
 
   onclickHandler = (e: HTMLButtonElement) => {
-    // console.log("learn more")
+    alert('learn more')
   }
 
   render() {

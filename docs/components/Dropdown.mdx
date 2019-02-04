@@ -1,0 +1,48 @@
+---
+name: Dropdown
+---
+
+import { Playground, PropsTable } from 'docz'
+import { Dropdown, DropdownButton, DropdownSubmenu, DropdownElement } from '../../src/components'
+
+#Dropdown
+
+##Properties
+
+<PropsTable of={Dropdown} />
+
+##Basic usage
+
+<Playground>
+  <Dropdown>
+    <DropdownButton title="opt1">
+      <DropdownElement>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://www.wp.pl/"
+        >
+          opt1.1
+        </a>
+      </DropdownElement>
+      <DropdownElement>opt1.2</DropdownElement>
+    </DropdownButton>
+    <DropdownButton title="opt2">
+      <DropdownSubmenu title="opt2.1">
+        <DropdownElement>opt2.2.1</DropdownElement>
+        <DropdownElement>opt2.2.2</DropdownElement>
+      </DropdownSubmenu>
+      <DropdownSubmenu title="opt 2.2">
+        <DropdownElement>opt 2.2.1</DropdownElement>
+        <DropdownElement>opt2.2.2</DropdownElement>
+      </DropdownSubmenu>
+      <DropdownElement>vvvv</DropdownElement>
+    </DropdownButton>
+    <DropdownButton title="opt3">
+      <DropdownElement>opt3.1</DropdownElement>
+      <DropdownElement>opt3.2</DropdownElement>
+      <DropdownElement>opt3.3</DropdownElement>
+      <DropdownElement>opt3.4</DropdownElement>
+    </DropdownButton>                  
+  </Dropdown>
+</Playground>
