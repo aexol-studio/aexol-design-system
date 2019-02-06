@@ -27,7 +27,7 @@ export const Button = style({
       borderRadius: 0
     },
     '&.danger': {
-      backgroundColor: vars.colorPalete.cherry.normal
+      backgroundColor: vars.colorPalete.red.normal
     },
     '&.success': {
       backgroundColor: vars.colorPalete.green.normal

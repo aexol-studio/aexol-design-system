@@ -4,19 +4,13 @@ export { Logo } from './Logo'
 export { Loader } from './Loader'
 export { Pagination } from './Pagination'
 export { Toggle } from './Toggle'
-
-import {
-  Dropdown,
-  DropdownButton,
-  DropdownElement,
-  DropdownSubmenu
-} from './dropdown'
+export { Notification } from './notification'
 export {
   Dropdown,
   DropdownButton,
   DropdownElement,
   DropdownSubmenu
-}
+} from './dropdown'
 
 import * as icons from './icons'
 export { icons }

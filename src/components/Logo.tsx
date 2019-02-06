@@ -1,13 +1,13 @@
 import * as React from 'react'
 import * as styles from './styles/LogoStyles'
 
-export interface LogoProps {
+export interface ILogoProps {
   width?: number;
   logoURL: string;
   style?: React.CSSProperties;
 }
 
-export const Logo: React.FunctionComponent<LogoProps> = (props) => {
+export const Logo: React.FunctionComponent<ILogoProps> = (props) => {
   const {
     width,
     logoURL,

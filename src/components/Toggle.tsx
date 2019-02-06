@@ -11,11 +11,11 @@ export interface IToggleProps {
   onChange?: (value: boolean) => void;
 }
 
-interface ToggleState {
+interface IToggleState {
   value: boolean;
 }
 
-export class Toggle extends React.PureComponent<IToggleProps, ToggleState> {
+export class Toggle extends React.PureComponent<IToggleProps, IToggleState> {
   constructor(props: IToggleProps) {
     super(props)
     this.state = {

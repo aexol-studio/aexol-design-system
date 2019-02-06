@@ -3,7 +3,7 @@ import * as classnames from 'classnames';
 import * as styles from './styles/DropdownStyle';
 
 export interface IDropdownProps {
-  onClick?: (item: string) => void;
+  // onClick?: (item: string) => void;
 }
 
 interface DropdownState {
@@ -23,9 +23,9 @@ export class Dropdown extends React.PureComponent<IDropdownProps, DropdownState>
       this.setState({
         selected: child.props.title || child.props.children
       })
-      if (this.props.onClick) {
-        this.props.onClick(child.props.title || child.props.children)
-      }
+      // if (this.props.onClick) {
+      //   this.props.onClick(child.props.title || child.props.children)
+      // }
     }
   }
 

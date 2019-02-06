@@ -8,7 +8,7 @@ export interface IPaginationProps {
   onChange?: (page: number, pageSize: number) => void;
 }
 
-interface PaginationState {
+interface IPaginationState {
   page: number;
   pageSize: number;
 }
@@ -16,7 +16,7 @@ interface PaginationState {
 const DEFAULT_PAGESIZE = 10
 // const DEFAULT_TOTAL = 0
 
-export class Pagination extends React.PureComponent<IPaginationProps, PaginationState> {
+export class Pagination extends React.PureComponent<IPaginationProps, IPaginationState> {
   constructor(props: IPaginationProps) {
     super(props)
     this.state = {

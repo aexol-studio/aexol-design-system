@@ -49,3 +49,30 @@ export const CheckDark = () => (
     <path fillRule="evenodd" clipRule="evenodd" d="M21.6937 4.77968C22.0915 5.16277 22.1034 5.79582 21.7203 6.19364L8.72035 19.6936C8.52318 19.8984 8.2482 20.0096 7.96414 19.9994C7.68007 19.9892 7.41377 19.8585 7.2318 19.6402L2.2318 13.6402C1.87824 13.2159 1.93556 12.5853 2.35984 12.2318C2.78412 11.8782 3.41468 11.9355 3.76825 12.3598L8.0538 17.5025L20.2797 4.80636C20.6628 4.40854 21.2958 4.39659 21.6937 4.77968Z" fill="#313132"/>
   </svg>
 )
+
+export const InfoLight = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fillRule="evenodd" clipRule="evenodd" d="M12 18.9683C11.4653 18.9683 11.0318 18.5348 11.0318 18L11.0318 9.00001C11.0318 8.46526 11.4653 8.03176 12 8.03176C12.5348 8.03176 12.9683 8.46526 12.9683 9.00001L12.9683 18C12.9683 18.5348 12.5348 18.9683 12 18.9683Z" fill="white"/>
+    <path d="M12 5C11.4477 5 11 5.44772 11 6C11 6.55228 11.4477 7 12 7C12.5523 7 13 6.55228 13 6C13 5.44772 12.5523 5 12 5Z" fill="white"/>
+  </svg>
+)
+
+export const ErrorLight = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.5 7.5L16.5 16.5" stroke="white" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M16.5 7.5L7.5 16.5" stroke="white" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+export const WarningLight = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 6V15" stroke="white" strokeWidth="1.9365" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M12.5 18C12.5 18.2761 12.2761 18.5 12 18.5C11.7239 18.5 11.5 18.2761 11.5 18C11.5 17.7239 11.7239 17.5 12 17.5C12.2761 17.5 12.5 17.7239 12.5 18Z" fill="black" stroke="white"/>
+  </svg>
+)
+
+export const SuccessLight = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 8L8.5 17.5L5.5 13.5" stroke="white" strokeWidth="1.9365" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)

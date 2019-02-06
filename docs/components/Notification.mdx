@@ -1,0 +1,56 @@
+---
+name: Notification
+---
+
+import { Notification, Button } from '../../src/components'
+
+#Notification
+
+<!-- ##Properties
+
+<PropsTable of={Notification} /> -->
+
+##Basic usage
+
+
+##Example code
+```
+import * as React from 'react'
+import {
+  Button,
+  Notification
+} from '../../src'
+
+class TestNotification extends React.PureComponent<any> {
+  private notification: React.RefObject<Notification>
+  constructor(props: any) {
+    super(props);
+    this.notification = React.createRef();
+  }
+
+  onclickHandler = (e: HTMLButtonElement) => {
+    if (this.notification) {
+      this.notification.current!.addAlert({
+        message: 'This is a notification!',
+        type: 'info',
+        closable: true
+      })
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <Button
+          onClick={this.onclickHandler}
+        >
+          Show Notification
+        </Button>
+        <Notification ref={this.notification} />
+      </div>
+    )
+  }
+}
+export default TestNotification
+
+```

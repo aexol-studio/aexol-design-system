@@ -15,7 +15,7 @@ export const colorPalete = {
     dark: '#343096',
     superDark: '#050254'
   },
-  cherry : {
+  red : {
     superLight: '#FFE7EB',
     light: '#FF5E6C',
     normal: '#F9193F',

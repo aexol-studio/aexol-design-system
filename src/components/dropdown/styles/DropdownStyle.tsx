@@ -1,6 +1,10 @@
 import { style, classes } from 'typestyle';
 import * as vars from '../../../vars';
 
+const width = 100
+const height = 32
+const font = vars.smallFont
+
 export const Dropdown = style({
   $debugName: 'Dropdown',
   display: 'inline-flex',
@@ -18,17 +22,19 @@ export const Dropdown = style({
       height: '100%',
       width: '100%',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      fontSize: font
     }
   }
 })
 
 export const DropdownListElement = style({
-  width: 152,
-  height: 40,
+  width: width,
+  height: height,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  fontSize: font,
   border: `1px solid ${vars.colorPalete.purple.superLight}`,
   position: 'relative',
   $nest: {
@@ -44,12 +50,12 @@ export const DropdownListElement = style({
 
 export const DropdownList = style({
   display: 'none',
-  marginTop: 40,
+  marginTop: height,
   position: 'absolute',
   left: 0,
   top: 0,
   backgroundColor: vars.whiteBackground,
-  boxShadow: `5px 5px 10px ${vars.colorPalete.grey.superLight}`,
+  boxShadow: '2px 2px 12px rgba(0, 0, 0, 0.3)',
   $nest: {
     '&:last-child': {
       borderRadius: '0 0 4px 4px'
@@ -64,11 +70,11 @@ export const DropdownList = style({
 export const DropdownSubmenuList = style({
   left: 0,
   top: 0,
-  marginLeft: 153,
+  marginLeft: width,
   display: 'none',
   position: 'absolute',
   backgroundColor: vars.whiteBackground,
-  boxShadow: `5px 5px 10px ${vars.colorPalete.grey.superLight}`,
+  boxShadow: '2px 2px 12px rgba(0, 0, 0, 0.3)',
   $nest: {
     '&:last-child': {
       borderRadius: '0 0 4px 4px'
@@ -94,8 +100,9 @@ export const DropdownSubmenuElement = classes(DropdownListElement, style({
 export const DropdownButton = style({
   padding: 0,
   margin: 2,
-  width: 150,
-  height: 40,
+  width: width,
+  fontSize: font,
+  height: height,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',

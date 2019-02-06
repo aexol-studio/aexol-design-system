@@ -10,14 +10,14 @@ export interface ILoaderProps {
   style?: React.CSSProperties;
 }
 
-export interface LoaderState {
+export interface ILoaderState {
   progress: number;
 }
 
 const DEFAULT_WIDTH = 100
 const DEFAULT_DURATION = '3s'
 
-export class Loader extends React.PureComponent<ILoaderProps, LoaderState> {
+export class Loader extends React.PureComponent<ILoaderProps, ILoaderState> {
   constructor(props: ILoaderProps) {
     super(props)
     this.state = {
