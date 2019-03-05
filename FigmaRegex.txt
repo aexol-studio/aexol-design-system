@@ -1,0 +1,9 @@
+SetColors
+
+\/\* (.*) \*\/\nbackground: #(.*);
+
+['$1']: '#$2',
+
+RemoveUnwanted
+
+position: absolute;\nleft:(.*);\nright:(.*);\ntop:(.*);\nbottom:(.*);\n

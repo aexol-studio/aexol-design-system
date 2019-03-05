@@ -1,16 +1,17 @@
 import { style, classes } from 'typestyle';
 import * as vars from '../../../vars';
+import { Colors } from '../../styles/Colors';
 
-const width = 100
-const height = 32
-const font = vars.smallFont
+const width = 100;
+const height = 32;
+const font = vars.smallFont;
 
 export const Dropdown = style({
   $debugName: 'Dropdown',
   display: 'inline-flex',
   alignItems: 'center',
   flexBasis: 'auto',
-  backgroundColor: vars.colorPalete.purple.superLight,
+  backgroundColor: Colors['Damsel in distress'],
   margin: 0,
   padding: '3px 4px',
   borderRadius: '4px 4px 0 0',
@@ -26,7 +27,7 @@ export const Dropdown = style({
       fontSize: font
     }
   }
-})
+});
 
 export const DropdownListElement = style({
   width: width,
@@ -35,18 +36,18 @@ export const DropdownListElement = style({
   alignItems: 'center',
   justifyContent: 'center',
   fontSize: font,
-  border: `1px solid ${vars.colorPalete.purple.superLight}`,
+  border: `1px solid ${Colors['Damsel in distress']}`,
   position: 'relative',
   $nest: {
     '&:hover': {
-      backgroundColor: vars.colorPalete.purple.superLight,
-      color: vars.colorPalete.purple.normal
+      backgroundColor: Colors['Damsel in distress'],
+      color: Colors.Ultrasonic
     },
     '&:last-child': {
       borderRadius: '0 0 4px 4px'
     }
   }
-})
+});
 
 export const DropdownList = style({
   display: 'none',
@@ -54,7 +55,7 @@ export const DropdownList = style({
   position: 'absolute',
   left: 0,
   top: 0,
-  backgroundColor: vars.whiteBackground,
+  backgroundColor: Colors.White,
   boxShadow: '2px 2px 12px rgba(0, 0, 0, 0.3)',
   $nest: {
     '&:last-child': {
@@ -65,7 +66,7 @@ export const DropdownList = style({
       flexDirection: 'column'
     }
   }
-})
+});
 
 export const DropdownSubmenuList = style({
   left: 0,
@@ -73,7 +74,7 @@ export const DropdownSubmenuList = style({
   marginLeft: width,
   display: 'none',
   position: 'absolute',
-  backgroundColor: vars.whiteBackground,
+  backgroundColor: Colors.White,
   boxShadow: '2px 2px 12px rgba(0, 0, 0, 0.3)',
   $nest: {
     '&:last-child': {
@@ -84,18 +85,21 @@ export const DropdownSubmenuList = style({
       flexDirection: 'column'
     }
   }
-})
+});
 
-export const DropdownSubmenuElement = classes(DropdownListElement, style({
-  $debugName: 'DropdownSubmenu',
-  $nest: {
-    [`&:hover .${DropdownSubmenuList}`]: {
-      display: 'flex',
-      flexDirection: 'column',
-      color: vars.greyText
+export const DropdownSubmenuElement = classes(
+  DropdownListElement,
+  style({
+    $debugName: 'DropdownSubmenu',
+    $nest: {
+      [`&:hover .${DropdownSubmenuList}`]: {
+        display: 'flex',
+        flexDirection: 'column',
+        color: Colors['Ancient Stone']
+      }
     }
-  }
-}))
+  })
+);
 
 export const DropdownButton = style({
   padding: 0,
@@ -106,30 +110,30 @@ export const DropdownButton = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: vars.whiteBackground,
+  backgroundColor: Colors.White,
   borderRadius: 4,
-  color: vars.greyText,
+  color: Colors['Ancient Stone'],
   transition: vars.transition,
   cursor: 'pointer',
   position: 'relative',
   $nest: {
     '&:hover': {
-      backgroundColor: vars.colorPalete.purple.normal,
-      color: vars.whiteText
+      backgroundColor: Colors.Ultrasonic,
+      color: Colors.White
     },
     [`&:hover .${DropdownList}`]: {
       display: 'flex',
       flexDirection: 'column',
-      color: vars.greyText
+      color: Colors['Ancient Stone']
     },
     '&.selected': {
-      backgroundColor: vars.colorPalete.purple.normal,
-      color: vars.whiteText
+      backgroundColor: Colors.Ultrasonic,
+      color: Colors['Ancient Stone']
     },
     [`&.selected .${DropdownList}`]: {
       display: 'flex',
       flexDirection: 'column',
-      color: vars.greyText
+      color: Colors['Ancient Stone']
     }
   }
-})
+});

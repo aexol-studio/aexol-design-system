@@ -1,5 +1,5 @@
 import { style, keyframes } from 'typestyle';
-import * as vars from '../../../vars';
+import { Colors } from '../../styles/Colors';
 
 const slideAndFade = keyframes({
   '0%': {
@@ -10,82 +10,80 @@ const slideAndFade = keyframes({
     opacity: 1,
     transform: 'translate(0px, 0px)'
   }
-})
+});
 
 export const NotificationContainer = style({
   $debugName: 'Notification',
   position: 'fixed',
   top: 0,
   right: 0
-})
+});
 
-export const Notification = style({
-
-})
+export const Notification = style({});
 
 export const NoticeBox = style({
   width: 400,
   minHeight: 40,
   boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
   borderRadius: 4,
-  backgroundColor: vars.whiteBackground,
+  backgroundColor: Colors.White,
   display: 'flex',
   alignItems: 'stretch',
   margin: 20,
   animation: `${slideAndFade} ease 1s`,
   animationIterationCount: 1,
   animationFillMode: 'forwards'
-})
+});
 
 export const NoticeText = style({
   width: '80%',
   padding: 10
-})
+});
 
 export const NoticeIconBox = style({
   width: '10%',
-  backgroundColor: vars.colorPalete.blue.superLight,
+  backgroundColor: Colors['Ozone Layer'],
   borderRadius: '4px 0 0 4px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   $nest: {
     '&.alert': {
-      backgroundColor: vars.colorPalete.yellow.superLight
+      backgroundColor: Colors['Captain Parrot']
     },
     '&.error': {
-      backgroundColor: vars.colorPalete.red.superLight
+      backgroundColor: Colors['Cotton Candy']
     },
     '&.success': {
-      backgroundColor: vars.colorPalete.green.superLight
+      backgroundColor: Colors['Plutonic Briza']
     }
   }
-})
+});
 
 export const NoticeIcon = style({
   width: 20,
   height: 20,
   borderRadius: '50%',
-  backgroundColor: vars.colorPalete.blue.normal,
+  backgroundColor: Colors['Space Pirate'],
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   $nest: {
     '&.alert': {
-      backgroundColor: vars.colorPalete.yellow.normal
+      backgroundColor: Colors.Fireball
     },
     '&.error': {
-      backgroundColor: vars.colorPalete.red.normal
+      backgroundColor: Colors['Cherry Bomb']
     },
     '&.success': {
-      backgroundColor: vars.colorPalete.green.normal
+      backgroundColor: Colors.Serpentine
     },
     'svg': {
       width: '100%',
       height: '100%'
     }
   }
-})
+});
 
 export const NoticeClose = style({
   width: '10%',
@@ -99,4 +97,4 @@ export const NoticeClose = style({
       height: 16
     }
   }
-})
+});

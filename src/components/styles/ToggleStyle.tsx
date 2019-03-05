@@ -1,5 +1,5 @@
 import { style } from 'typestyle';
-import * as vars from '../../vars';
+import { Colors } from './Colors';
 
 export const Toggle = style({
   height: 24,
@@ -7,7 +7,7 @@ export const Toggle = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-around'
-})
+});
 
 export const ToggleElement = style({
   width: '50%',
@@ -18,8 +18,8 @@ export const ToggleElement = style({
   cursor: 'pointer',
   $nest: {
     '&.on': {
-      border: `1px solid ${vars.colorPalete.grey.normal}`,
-      backgroundColor: vars.whiteBackground,
+      border: `1px solid ${Colors.Androgyn}`,
+      backgroundColor: Colors.White,
       borderRadius: '4px 0 0 4px',
       $nest: {
         '&.oval': {
@@ -36,8 +36,8 @@ export const ToggleElement = style({
           maxWidth: '90%'
         },
         '&.active': {
-          border: `1px solid ${vars.colorPalete.purple.normal}`,
-          backgroundColor: vars.colorPalete.purple.normal,
+          border: `1px solid ${Colors.Ultrasonic}`,
+          backgroundColor: Colors.Ultrasonic,
           $nest: {
             svg: {
               display: 'block'
@@ -47,8 +47,8 @@ export const ToggleElement = style({
       }
     },
     '&.off': {
-      border: `1px solid ${vars.colorPalete.grey.normal}`,
-      backgroundColor: vars.whiteBackground,
+      border: `1px solid ${Colors.Androgyn}`,
+      backgroundColor: Colors.White,
       borderRadius: '0 4px 4px 0',
       $nest: {
         '&.oval': {
@@ -65,7 +65,7 @@ export const ToggleElement = style({
           maxWidth: '90%'
         },
         '&.active': {
-          backgroundColor: vars.colorPalete.grey.normal,
+          backgroundColor: Colors.Androgyn,
           $nest: {
             svg: {
               display: 'block'
@@ -75,4 +75,4 @@ export const ToggleElement = style({
       }
     }
   }
-})
+});

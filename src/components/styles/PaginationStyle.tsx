@@ -1,22 +1,23 @@
 import { style } from 'typestyle';
 import * as vars from '../../vars';
+import { Colors } from './Colors';
 
 export const Pagination = style({
   height: 40,
   padding: 0,
   margin: 0
-})
+});
 export const NavElement = style({
   listStyleType: 'none',
-  backgroundColor: vars.colorPalete.purple.normal,
-  color: vars.whiteText,
+  backgroundColor: Colors.Ultrasonic,
+  color: Colors.White,
   lineHeight: '40px',
   padding: '0px 25px',
   display: 'inline-block',
   borderRadius: 4,
   cursor: 'pointer',
   fontSize: vars.smallFont
-})
+});
 
 export const Element = style({
   width: 40,
@@ -27,25 +28,25 @@ export const Element = style({
   lineHeight: '40px',
   fontSize: vars.smallFont,
   textAlign: 'center',
-  backgroundColor: vars.whiteBackground,
+  backgroundColor: Colors.White,
   borderRadius: 4,
-  color: vars.greyText,
+  color: Colors['Ancient Stone'],
   cursor: 'pointer',
   $nest: {
     '&:hover': {
-      backgroundColor: vars.colorPalete.purple.superLight
+      backgroundColor: Colors['Damsel in distress']
     },
     '&.active': {
-      backgroundColor: vars.colorPalete.purple.superLight
+      backgroundColor: Colors['Damsel in distress']
     },
     '&.disabled': {
       // pointerEvents: 'none'
       cursor: 'default',
       $nest: {
         '&:hover': {
-          backgroundColor: vars.whiteBackground
+          backgroundColor: Colors.White
         }
       }
     }
   }
-})
+});

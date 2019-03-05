@@ -1,10 +1,11 @@
 import * as React from 'react';
 import * as classnames from 'classnames';
 import * as styles from './styles/ButtonStyle';
+import { PMedium } from './typography';
 
-type ButtonType = 'primary' | 'danger' | 'success' | 'submit'
-type ButtonSize = 'large' | 'small' | 'default'
-type ButtonShape = 'square' | 'round' | 'oval'
+type ButtonType = 'primary' | 'danger' | 'success' | 'submit';
+type ButtonSize = 'large' | 'small' | 'default';
+type ButtonShape = 'square' | 'round' | 'oval';
 
 export interface IButtonProps {
   type?: ButtonType;
@@ -18,7 +19,7 @@ export interface IButtonProps {
   style?: React.CSSProperties;
 }
 
-export const Button: React.FunctionComponent<IButtonProps> = (props) => {
+export const Button: React.FunctionComponent<IButtonProps> = props => {
   const {
     type = 'primary',
     size = 'default',
@@ -30,46 +31,39 @@ export const Button: React.FunctionComponent<IButtonProps> = (props) => {
     style,
     onClick,
     ...restProps
-  } = props
+  } = props;
   const handleClick = (e: React.SyntheticEvent<HTMLButtonElement>) => {
     if (onClick) {
-      onClick(e.currentTarget)
+      onClick(e.currentTarget);
     }
-  }
+  };
 
   return (
     <button
-      className={classnames(classnames(
-        styles.Button,
-        type,
-        shape
-      ), classnames({
-        disabled: disabled
-      }))}
+      className={classnames(
+        classnames(styles.Button, type, shape),
+        classnames({
+          disabled: disabled
+        })
+      )}
       onClick={handleClick}
       type={type === 'submit' ? 'submit' : 'button'}
       style={{
-        width: fullWidth
-          ? '100%'
-          : width,
+        width: fullWidth ? '100%' : width,
         ...style
       }}
       {...restProps}
     >
       {icon}
       <span
-        className={classnames(classnames({
-          [styles.ButtonText]: true,
+        className={classnames({
           icon: icon !== undefined
-        }),
-        classnames(
-          size
-        ))}
+        })}
       >
-        {props.children}
+        <PMedium>{props.children}</PMedium>
       </span>
     </button>
-  )
+  );
 };
 
 export default Button;

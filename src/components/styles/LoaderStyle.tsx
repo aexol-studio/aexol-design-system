@@ -1,8 +1,8 @@
 import { style } from 'typestyle';
-import * as vars from '../../vars';
+import { Colors } from './Colors';
 
 export const Loader = style({
-  backgroundColor: vars.colorPalete.purple.superLight,
+  backgroundColor: Colors['Damsel in distress'],
   borderRadius: '50%',
   position: 'relative',
   $nest: {
@@ -14,18 +14,18 @@ export const Loader = style({
       top: '15%',
       left: '15%',
       borderRadius: '50%',
-      backgroundColor: vars.whiteBackground
+      backgroundColor: Colors.White
     }
   }
-})
+});
 
 export const LoaderCircle = style({
   transform: 'rotate(-90deg)'
-})
+});
 
 export const LoaderFill = style({
   animationTimingFunction: 'linear'
-})
+});
 
 export const LoaderProgress = style({
   position: 'absolute',
@@ -37,6 +37,6 @@ export const LoaderProgress = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  color: vars.colorPalete.blue.light,
+  color: Colors.Pacific,
   fontSize: 20
-})
+});

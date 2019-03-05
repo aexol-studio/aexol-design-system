@@ -1,15 +1,17 @@
 import { style } from 'typestyle';
 import * as vars from '../../vars';
+import { Colors } from './Colors';
 
 export const Button = style({
-  padding: '10px 5px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  // minWidth: 160,
+  width: 168,
+  height: 40,
   borderRadius: 4,
+  border: 0,
   color: '#fff',
-  backgroundColor: vars.colorPalete.purple.normal,
+  backgroundColor: Colors.Ultrasonic,
   cursor: 'pointer',
   transition: vars.transition,
   $nest: {
@@ -27,13 +29,13 @@ export const Button = style({
       borderRadius: 0
     },
     '&.danger': {
-      backgroundColor: vars.colorPalete.red.normal
+      backgroundColor: Colors['Cherry Bomb']
     },
     '&.success': {
-      backgroundColor: vars.colorPalete.green.normal
+      backgroundColor: Colors.Serpentine
     },
     '&.disabled': {
-      backgroundColor: vars.colorPalete.grey.normal,
+      backgroundColor: Colors.Androgyn,
       pointerEvents: 'none'
     },
     '&:focus': {
@@ -41,21 +43,18 @@ export const Button = style({
       boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'
     }
   }
-})
+});
 
 export const ButtonText = style({
-  padding: '0 40px',
   $nest: {
     '&.icon': {
       paddingLeft: 15
     },
     '&.small': {
-      fontSize: vars.smallFont,
-      padding: '0 30px'
+      fontSize: vars.smallFont
     },
     '&.large': {
-      fontSize: vars.largeFont,
-      padding: '0 45px'
+      fontSize: vars.largeFont
     }
   }
-})
+});
