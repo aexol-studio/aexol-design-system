@@ -26,6 +26,7 @@
     "@types/react-router-dom": "^4.2.5",
     "@types/webpack": "3.8.8",
     "@types/webpack-env": "1.13.5",
+    "cz-conventional-changelog": "^2.1.0",
     "docz": "^0.13.7",
     "docz-theme-default": "^0.13.7",
     "tslint": "^5.11.0",
@@ -34,7 +35,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }  
+    }
   },
   "dependencies": {
     "babel-core": "^6.26.3",
@@ -62,5 +63,10 @@
     "webpack-dev-server": "^3.1.14",
     "i18next": "^13.0.0",
     "react-i18next": "^8.4.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
