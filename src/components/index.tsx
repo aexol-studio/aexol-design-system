@@ -7,6 +7,7 @@ export { Toggle } from './Toggle';
 export { Notification } from './notification';
 export { WorkshopTile } from './WorkshopTile';
 export { WorkshopTextTile } from './WorkshopTextTile';
+export { BrandBar } from './BrandBar';
 export {
   Dropdown,
   DropdownButton,
