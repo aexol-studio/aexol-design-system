@@ -8,6 +8,7 @@ export { Notification } from './notification';
 export { WorkshopTile } from './WorkshopTile';
 export { WorkshopTextTile } from './WorkshopTextTile';
 export { BrandBar } from './BrandBar';
+export { PoweredCommunity } from './PoweredCommunity';
 export {
   Dropdown,
   DropdownButton,

@@ -1,0 +1,39 @@
+---
+name: PoweredCommunity
+---
+
+import { Playground, PropsTable } from 'docz'
+import { PoweredCommunity } from '../../src/components'
+
+#WorkshopTile
+
+##Properties
+
+<PropsTable of={PoweredCommunity} />
+
+##Basic usage
+
+<Playground>
+  <PoweredCommunity
+    header="Powered By The Community"
+    bigText="Start using GraphQL today and improve your workflow inmediately."
+    smallText="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio."
+    cards={[
+      {
+        val: 1000,
+        description: 'Github Stars',
+        barColor: '#10C642'
+      },
+      {
+        val: 25,
+        description: 'Projects',
+        barColor: '#4168FF'
+      },
+      {
+        val: 150,
+        description: 'Users',
+        barColor: '#FB6B3D'
+      }
+    ]}
+  />
+</Playground>
