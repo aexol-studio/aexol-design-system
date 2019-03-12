@@ -5,6 +5,8 @@ export { Loader } from './Loader';
 export { Pagination } from './Pagination';
 export { Toggle } from './Toggle';
 export { Notification } from './notification';
+export { WorkshopTile } from './WorkshopTile';
+export { WorkshopTextTile } from './WorkshopTextTile';
 export {
   Dropdown,
   DropdownButton,

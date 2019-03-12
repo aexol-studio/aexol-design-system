@@ -1,0 +1,27 @@
+---
+name: WorkshopTile
+---
+
+import { Playground, PropsTable } from 'docz'
+import { WorkshopTile } from '../../src/components'
+
+#WorkshopTile
+
+##Properties
+
+<PropsTable of={WorkshopTile} />
+
+##Basic usage
+
+<Playground style={{ backgroundColor: '#DFE6F7' }}>
+  <WorkshopTile
+    day={1}
+    list={[
+      'Introduction',
+      'Query Language with GraphQL',
+      'Exam (5 Questions)',
+      'Find Public Schemas (Homework)'
+    ]}
+    corner="topLeft"
+  />
+</Playground>
