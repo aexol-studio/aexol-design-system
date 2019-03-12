@@ -1,4 +1,4 @@
-import { cssRaw } from 'typestyle';
+import { cssRaw, fontFace } from 'typestyle';
 
 export const containerWidth = '80%';
 export const whiteBackground = '#FFF'
@@ -18,7 +18,40 @@ export const paragraphBig = 34;
 
 export const transition = '0.3s ease-out'
 
-cssRaw(`*{font-family: 'Helvetica'}`)
+fontFace({
+  fontFamily: 'Helvetica Neue',
+  fontWeight: 450,
+  fontStyle: 'normal',
+  src: `url(${require('../assets/fonts/HelveticaNeue.eot')});
+  src: url(${require('../assets/fonts/HelveticaNeue.eot')}) format('embedded-opentype'),
+        url(${require('../assets/fonts/HelveticaNeue.woff2')}) format('woff2'),
+        url(${require('../assets/fonts/HelveticaNeue.woff')}) format('woff'),
+        url(${require('../assets/fonts/HelveticaNeue.ttf')}) format('truetype')`
+});
+
+fontFace({
+  fontFamily: 'Helvetica Neue-Medium',
+  fontWeight: 650,
+  fontStyle: 'normal',
+  src: `url(${require('../assets/fonts/HelveticaNeue-Medium.eot')});
+  src: url(${require('../assets/fonts/HelveticaNeue-Medium.eot')}) format('embedded-opentype'),
+        url(${require('../assets/fonts/HelveticaNeue-Medium.woff2')}) format('woff2'),
+        url(${require('../assets/fonts/HelveticaNeue-Medium.woff')}) format('woff'),
+        url(${require('../assets/fonts/HelveticaNeue-Medium.ttf')}) format('truetype')`
+});
+
+fontFace({
+  fontFamily: 'Helvetica Neue-CondensedBold',
+  fontWeight: 770,
+  fontStyle: 'normal',
+  src: `url(${require('../assets/fonts/HelveticaNeue-CondensedBold.eot')});
+  src: url(${require('../assets/fonts/HelveticaNeue-CondensedBold.eot')}) format('embedded-opentype'),
+        url(${require('../assets/fonts/HelveticaNeue-CondensedBold.woff2')}) format('woff2'),
+        url(${require('../assets/fonts/HelveticaNeue-CondensedBold.woff')}) format('woff'),
+        url(${require('../assets/fonts/HelveticaNeue-CondensedBold.ttf')}) format('truetype')`
+});
+
+cssRaw(`*{font-family: 'Helvetica Neue'}`)
 cssRaw(`*{font-size: ${defaultFont}px}`)
 cssRaw(`*{font-weight: 400}`)
 cssRaw(`*{box-sizing: border-box}`)
