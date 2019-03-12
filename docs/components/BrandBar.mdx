@@ -1,0 +1,28 @@
+---
+name: BrandBar
+---
+
+import { Playground, PropsTable } from 'docz'
+import { BrandBar } from '../../src/components'
+
+#WorkshopTile
+
+##Properties
+
+<PropsTable of={BrandBar} />
+
+##Basic usage
+
+<Playground style={{backgroundColor: '#f3f2ff'}}>
+  <BrandBar
+    BrandBarURL={[
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/60",
+      "https://via.placeholder.com/80",
+      "https://via.placeholder.com/150x60",
+      "https://via.placeholder.com/190x50",
+      "https://via.placeholder.com/50x40",
+      "https://via.placeholder.com/80x40"
+    ]}
+  />
+</Playground>
