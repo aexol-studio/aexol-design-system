@@ -19,7 +19,7 @@ export const HeroContent = style({
   flex: 1,
   alignItems: 'center',
   justifyContent: 'space-between',
-  marginTop: 95
+  marginTop: 90
 })
 
 export const TextContent = style({
@@ -71,4 +71,19 @@ export const Img1 = style({
 
 export const Img2 = classes(Img1, style({
   backgroundPosition: 'right center'
+}))
+
+export const Hero4 = classes(Hero, style({
+  width: '100%',
+  height: '100%',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center'
+}))
+
+export const TextContent4 = classes(TextContent, style({
+  width: '50%',
+  maxWidth: 570,
+  padding: '30px 70px 30px 50px',
+  backgroundColor: Colors.White
 }))
