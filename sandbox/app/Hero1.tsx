@@ -9,11 +9,12 @@ class Hero1view extends React.PureComponent<IProps> {
   render() {
     return (
       <Hero1
-        headerText="GraphQL Workshops"
-        paragraphText="Tailored Specially For Your Company Needs & With Core Team."
+        headerText="Thinking About Going Mobile?"
+        paragraphText="Start seeing the masive benefits of having an app for your bussines."
         buttonText="Try it!"
         buttonOnClick={() => console.log('click')}
-        imgFile="https://via.placeholder.com/668x569"
+        imgFile1="https://via.placeholder.com/270x540"
+        imgFile2="https://via.placeholder.com/270x540"
       />
     )
   }

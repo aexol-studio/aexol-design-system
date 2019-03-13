@@ -4,38 +4,36 @@ import { Button } from './Button';
 import * as styles from './styles/HeroStyles';
 import { Colors } from './styles/Colors';
 
-export interface IHero1Props {
+export interface IHero2Props {
   headerText: string;
   paragraphText: string;
   buttonText: string;
   buttonOnClick: (e: HTMLButtonElement) => void;
-  imgFile1: string;
-  imgFile2: string;
+  imgFile: string;
   style?: React.CSSProperties;
 }
 
-export const Hero1: React.FunctionComponent<IHero1Props> = (props) => {
+export const Hero2: React.FunctionComponent<IHero2Props> = (props) => {
 
   const {
     headerText,
     paragraphText,
     buttonText,
     buttonOnClick,
-    imgFile1,
-    imgFile2,
+    imgFile,
     style,
     ...restProps
   } = props
 
   return (
     <div
-      className={styles.Hero1}
+      className={styles.Hero}
       {...restProps}
     >
       <div className={styles.HeroContainer}>
         <div className={styles.Nav}>Nawigacja</div>
         <div className={styles.HeroContent}>
-          <div className={styles.TextContent1}>
+          <div className={styles.TextContent}>
             <H1 style={{color: Colors['Dark Side'], marginBottom: 6}}>
               {headerText}
             </H1>
@@ -48,10 +46,7 @@ export const Hero1: React.FunctionComponent<IHero1Props> = (props) => {
               {buttonText}
             </Button>
           </div>
-          <div className={styles.ImgContent}>
-            <div className={styles.Img1} style={{backgroundImage: `url(${imgFile1})`}} />
-            <div className={styles.Img2} style={{backgroundImage: `url(${imgFile2})`}} />
-          </div>
+          <div className={styles.Img} style={{backgroundImage: `url(${imgFile})`}} />
         </div>
       </div>
     </div>

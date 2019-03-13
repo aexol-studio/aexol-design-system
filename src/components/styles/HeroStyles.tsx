@@ -1,5 +1,5 @@
-import { style } from 'typestyle';
-// import { Colors } from './Colors';
+import { style, classes } from 'typestyle';
+import { Colors } from './Colors';
 
 export const Hero = style({
   width: '100vw',
@@ -44,3 +44,31 @@ export const Nav = style({
   alignItems: 'center',
   justifyContent: 'flex-end'
 })
+
+export const Hero1 = classes(Hero, style({
+  backgroundColor: Colors.Foggy
+}))
+
+export const ImgContent = style({
+  width: '50%',
+  height: '100%',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center'
+})
+
+export const TextContent1 = classes(TextContent, style({
+  width: '40%'
+}))
+
+export const Img1 = style({
+  width: '45%',
+  height: '100%',
+  backgroundSize: 'contain',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'left center'
+})
+
+export const Img2 = classes(Img1, style({
+  backgroundPosition: 'right center'
+}))

@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import About from './About';
 import Hero1view from './Hero1';
+import Hero2view from './Hero2';
 import NoMatch from './NoMatch';
 
 class App extends React.Component {
@@ -23,6 +24,10 @@ class App extends React.Component {
             <Route
               path={'/hero1'}
               component={Hero1view}
+            />
+            <Route
+              path={'/hero2'}
+              component={Hero2view}
             />
             <Route
               component={NoMatch}

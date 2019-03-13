@@ -21,8 +21,8 @@ export const Nav = style({
   top: 0,
   left: 0,
   height: 72,
-  width: '80%',
-  margin: '0 auto',
+  width: '100%',
+  paddingRight: '10%',
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'center'
