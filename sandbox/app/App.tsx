@@ -9,6 +9,7 @@ import About from './About';
 import Hero1view from './Hero1';
 import Hero2view from './Hero2';
 import Hero4view from './Hero4';
+import Hero5view from './Hero5';
 import NoMatch from './NoMatch';
 
 class App extends React.Component {
@@ -33,6 +34,10 @@ class App extends React.Component {
             <Route
               path={'/hero4'}
               component={Hero4view}
+            />
+            <Route
+              path={'/hero5'}
+              component={Hero5view}
             />
             <Route
               component={NoMatch}

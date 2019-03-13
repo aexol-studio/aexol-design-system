@@ -87,3 +87,11 @@ export const TextContent4 = classes(TextContent, style({
   padding: '30px 70px 30px 50px',
   backgroundColor: Colors.White
 }))
+
+export const TextContent5 = classes(TextContent, style({
+  width: '100%',
+  maxWidth: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  marginBottom: 162
+}))
