@@ -15,6 +15,7 @@ export {
   DropdownElement,
   DropdownSubmenu
 } from './dropdown';
+export { CardComponent } from './CardComponent';
 
 import * as icons from './icons';
 export { icons };
