@@ -1,6 +1,7 @@
 import * as React from 'react';
-// import { CommunityCard } from './CommunityCard';
 import { ICommunityCardProps, CommunityCard } from './CommunityCard';
+import { H1, H4, P } from './typography';
+import { Colors } from './styles/Colors'
 import * as styles from './styles/PoweredCommunityStyles';
 
 export interface IPoweredCommunityProps {
@@ -41,18 +42,18 @@ export const PoweredCommunity: React.FunctionComponent<IPoweredCommunityProps> =
       className={styles.PoweredCommunityContainer}
       {...restProps}
     >
-      <div className={styles.PoweredCommunityHeader}>
+      <H1 style={{textAlign: 'center', marginBottom: 50}}>
         {header}
-      </div>
+      </H1>
       <div className={styles.Cards}>
         {cards.map((el, idx) => renderCards(el, idx))}
       </div>
-      {bigText && <div className={styles.CommunityBigText}>
+      {bigText && <H4 style={{color: Colors['Dark Side'], marginBottom: 16}}>
         {bigText}
-      </div>}
-      {smallText && <div className={styles.CommunitySmallText}>
+      </H4>}
+      {smallText && <P style={{color: Colors['Ancient Stone']}}>
         {smallText}
-      </div>}
+      </P>}
     </div>
   )
 }

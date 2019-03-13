@@ -1,4 +1,4 @@
-import { style, classes } from 'typestyle';
+import { style } from 'typestyle';
 import { Colors } from './Colors';
 
 export const CommunityCardContainer = style({
@@ -34,28 +34,6 @@ export const PoweredCommunityContainer = style({
   padding: '40px 0',
   margin: '0 auto'
 })
-
-export const PoweredCommunityHeader = style({
-  fontFamily: 'Helvetica Neue-Bold',
-  fontSize: 50,
-  lineHeight: '48px',
-  textAlign: 'center',
-  marginBottom: 50
-})
-
-export const CommunitySmallText = style({
-  color: Colors['Ancient Stone'],
-  lineHeight: '23px',
-  textAlign: 'left'
-})
-
-export const CommunityBigText = classes(CommunitySmallText, style({
-  fontSize: 21,
-  lineHeight: '21px',
-  fontFamily: 'Helvetica Neue-Medium',
-  color: Colors['Dark Side'],
-  marginBottom: 16
-}))
 
 export const Cards = style({
   marginRight: -33,
