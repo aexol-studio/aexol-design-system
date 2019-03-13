@@ -15,3 +15,15 @@ export const Container = style({
   justifyContent: 'center',
   alignItems: 'center'
 })
+
+export const Nav = style({
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  height: 72,
+  width: '80%',
+  margin: '0 auto',
+  display: 'flex',
+  justifyContent: 'flex-end',
+  alignItems: 'center'
+})

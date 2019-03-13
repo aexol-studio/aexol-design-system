@@ -9,6 +9,7 @@ export { WorkshopTile } from './WorkshopTile';
 export { WorkshopTextTile } from './WorkshopTextTile';
 export { BrandBar } from './BrandBar';
 export { PoweredCommunity } from './PoweredCommunity';
+export { Hero1 } from './Hero1';
 export {
   Dropdown,
   DropdownButton,

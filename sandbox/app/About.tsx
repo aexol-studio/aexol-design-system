@@ -1,13 +1,13 @@
-import * as React from 'react'
-// import classnames from 'classnames'
+import * as React from 'react';
 import {
   Button,
   Logo,
   Notification
-} from '../../src'
-import * as styles from './styles/AboutStyles'
+} from '../../src';
+import * as styles from './styles/AboutStyles';
 import { withRouter, RouteComponentProps } from 'react-router';
-import { NamespacesConsumer } from 'react-i18next'
+import { Link } from 'react-router-dom';
+import { NamespacesConsumer } from 'react-i18next';
 
 type IProps = RouteComponentProps<any>
 
@@ -33,6 +33,9 @@ class About extends React.PureComponent<IProps> {
   render() {
     return (
       <div className={styles.About}>
+      <nav className={styles.Nav}>
+        <Link to="/hero1">Hero1</Link>
+      </nav>
         <div className={styles.Container}>
           <Logo
             width={DEFAULT_LOGO_WIDTH}

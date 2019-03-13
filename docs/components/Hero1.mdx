@@ -1,0 +1,24 @@
+---
+name: Hero1
+---
+
+import { Playground, PropsTable } from 'docz'
+import { Hero1 } from '../../src/components'
+
+#WorkshopTile
+
+##Properties
+
+<PropsTable of={Hero1} />
+
+##Basic usage
+
+<Playground>
+  <Hero1
+    headerText="GraphQL Workshops"
+    paragraphText="Tailored Specially For Your Company Needs & With Core Team."
+    buttonText="Try it!"
+    buttonOnClick={() => console.log('click')}
+    imgFile="https://via.placeholder.com/668x569"
+  />
+</Playground>

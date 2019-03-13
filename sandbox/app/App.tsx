@@ -1,26 +1,36 @@
-import * as React from 'react'
-import '../i18n'
+import * as React from 'react';
+import '../i18n';
 import {
-  BrowserRouter,
+  HashRouter,
   Route,
   Switch
-} from 'react-router-dom'
-import About from './About'
+} from 'react-router-dom';
+import About from './About';
+import Hero1view from './Hero1';
+import NoMatch from './NoMatch';
 
 class App extends React.Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
           <Switch>
             <Route
               path={'/'}
+              exact={true}
               component={About}
             />
+            <Route
+              path={'/hero1'}
+              component={Hero1view}
+            />
+            <Route
+              component={NoMatch}
+            />
           </Switch>
-      </BrowserRouter>
-      )
-    }
+      </HashRouter>
+    )
   }
+}
 
 export default App
