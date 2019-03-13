@@ -1,4 +1,4 @@
-import { style, classes } from 'typestyle';
+import { style } from 'typestyle';
 import { Colors } from './Colors';
 
 export const BrandCardContainer = style({
@@ -24,23 +24,6 @@ export const BrandBarContainer = style({
   borderBottom: `3px solid ${Colors.Sopel}`,
   margin: '0 auto'
 })
-
-export const BrandContent = style({
-
-})
-
-export const BrandSmallText = style({
-  fontFamily: 'Helvetica Neue',
-  color: Colors['Ancient Stone'],
-  lineHeight: '23px',
-  textAlign: 'center'
-})
-
-export const BrandBigText = classes(BrandSmallText, style({
-  fontSize: 28,
-  lineHeight: '28px',
-  color: Colors['Dark Side']
-}))
 
 export const BrandLogos = style({
   marginRight: -19,

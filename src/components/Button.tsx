@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as classnames from 'classnames';
-import * as styles from './styles/ButtonStyle';
 import { PMedium } from './typography';
+import * as styles from './styles/ButtonStyle';
 
 type ButtonType = 'primary' | 'danger' | 'success' | 'submit';
-type ButtonSize = 'large' | 'small' | 'default';
+type ButtonSize = 'small' | 'default';
 type ButtonShape = 'square' | 'round' | 'oval';
 
 export interface IButtonProps {
@@ -41,27 +41,22 @@ export const Button: React.FunctionComponent<IButtonProps> = props => {
   return (
     <button
       className={classnames(
-        classnames(styles.Button, type, shape),
+        classnames(styles.Button, type, shape, size),
         classnames({
           disabled: disabled
         })
       )}
       onClick={handleClick}
-      type={type === 'submit' ? 'submit' : 'button'}
-      style={{
-        width: fullWidth ? '100%' : width,
-        ...style
-      }}
+      type={type === 'submit'
+        ? 'submit'
+        : 'button'
+      }
       {...restProps}
     >
       {icon}
-      <span
-        className={classnames({
-          icon: icon !== undefined
-        })}
-      >
-        <PMedium>{props.children}</PMedium>
-      </span>
+      <PMedium>
+        {props.children}
+      </PMedium>
     </button>
   );
 };

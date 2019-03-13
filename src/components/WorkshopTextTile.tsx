@@ -1,7 +1,8 @@
 import * as React from 'react'
 import * as classnames from 'classnames';
-
-import * as styles from './styles/WorkshopTileStyles'
+import { PMedium } from './typography';
+import * as styles from './styles/WorkshopTileStyles';
+import { Colors } from './styles/Colors';
 
 type Corner = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'none'
 
@@ -27,9 +28,9 @@ export const WorkshopTextTile: React.FunctionComponent<IWorkshopTextTileProps> =
       )}
       {...restProps}
     >
-      <div className={styles.TileText}>
+      <PMedium style={{color: Colors['Black Hole']}}>
         {text}
-      </div>
+      </PMedium>
     </div>
   )
 }

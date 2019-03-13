@@ -108,16 +108,11 @@ export const ListEl = style({
   }
 })
 
-export const TileText = style({
-  fontFamily: 'Helvetica Neue-Medium',
-  fontWeight: 650,
-  margin: 18,
-  marginLeft: 25,
-  overflowY: 'auto'
-})
-
 export const WorkshopTextTileContainer = classes(WorkshopTileContainer,
   style ({
-    borderRadius: '8px 0 0 0'
+    borderRadius: '20px 0 0 0',
+    padding: 18,
+    paddingLeft: 25,
+    overflowY: 'auto'
   })
 )

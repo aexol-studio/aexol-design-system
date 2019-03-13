@@ -41,20 +41,9 @@ export const Button = style({
     '&:focus': {
       outline: 0,
       boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'
-    }
-  }
-});
-
-export const ButtonText = style({
-  $nest: {
-    '&.icon': {
-      paddingLeft: 15
     },
     '&.small': {
-      fontSize: vars.smallFont
-    },
-    '&.large': {
-      fontSize: vars.largeFont
+      width: 80
     }
   }
 });

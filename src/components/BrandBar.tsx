@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { BrandCard } from './BrandCard';
+import { PBold, H3 } from './typography';
 import * as styles from './styles/BrandStyles';
+import { Colors } from './styles/Colors';
 
 export interface IBrandBarProps {
   BrandBarURL: string[];
@@ -33,17 +35,15 @@ export const BrandBar: React.FunctionComponent<IBrandBarProps> = (props) => {
       className={styles.BrandBarContainer}
       {...restProps}
     >
-      <div className={styles.BrandContent}>
-        <div className={styles.BrandLogos}>
-          {BrandBarURL.map((el, idx) => renderCards(el, idx))}
-        </div>
-        <div className={styles.BrandSmallText}>
-          {smallText}
-        </div>
-        <div className={styles.BrandBigText}>
-          {bigText}
-        </div>
+      <div className={styles.BrandLogos}>
+        {BrandBarURL.map((el, idx) => renderCards(el, idx))}
       </div>
+      <PBold style={{color: Colors['Ancient Stone'], textAlign: 'center'}}>
+        {smallText}
+      </PBold>
+      <H3 style={{color: Colors['Dark Side'], textAlign: 'center'}}>
+        {bigText}
+      </H3>
     </div>
   )
 }
