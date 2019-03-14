@@ -1,7 +1,7 @@
 import { style } from 'typestyle';
 import { Colors } from './Colors';
 
-export const CardComponentContainer = style({
+export const BlackFooterContainer = style({
   $debugName: 'CardComponentTile',
   backgroundColor: Colors.White,
   width: 268,
