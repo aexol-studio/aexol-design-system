@@ -14,6 +14,7 @@ export { Hero2 } from './Hero2';
 export { Hero3 } from './Hero3';
 export { Hero4 } from './Hero4';
 export { Hero5 } from './Hero5';
+export { NotFound } from './NotFound';
 export {
   Dropdown,
   DropdownButton,
