@@ -1,13 +1,13 @@
 import * as React from 'react'
 import * as classnames from 'classnames';
-import { H4 } from './typography';
+import { H4, PMedium } from './typography';
 import * as styles from './styles/CardComponent';
 import { Colors } from './styles/Colors';
 
 type Corner = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'none'
 
 export interface ICardComponentProps {
-  headerText: string;
+  boxText: string;
   boxTitle: string;
   corner?: Corner;
   style?: React.CSSProperties;
@@ -15,7 +15,7 @@ export interface ICardComponentProps {
 
 export const CardComponent: React.FunctionComponent<ICardComponentProps> = (props) => {
   const {
-    headerText,
+    boxText,
     boxTitle,
     style,
     ...restProps
@@ -23,18 +23,33 @@ export const CardComponent: React.FunctionComponent<ICardComponentProps> = (prop
 
   return (
     <div className={styles.CardHero}>
-    <div className={styles.ComponentBox}>
-      <div
-        className={classnames(
-          styles.CardComponentContainer,
-        )}
-        {...restProps}
-      >
-        <H4 style={{ color: Colors['Black Hole'] }}>
-          {boxTitle}
-        </H4>
+      <div className={styles.ComponentHero}>
+        <div
+          className={classnames(
+            styles.CardComponentContainer,
+          )}
+          {...restProps}
+        >
+          <div className={styles.logo}>img</div>
+          <div className={styles.rectangle}>
+            <div className={styles.rectangle1} />
+            <div className={styles.rectangle2} />
+          </div>
+
+          <div className={styles.boxTitle}>
+            <H4 style={{
+              color: Colors['Black Hole'],
+            }}>
+              {boxTitle}
+            </H4>
+          </div>
+          <div className={styles.boxText}>
+            <PMedium>
+              {boxText}
+            </PMedium>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   )
 }
