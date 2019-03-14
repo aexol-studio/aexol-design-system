@@ -95,3 +95,33 @@ export const TextContent5 = classes(TextContent, style({
   alignItems: 'center',
   marginBottom: 162
 }))
+
+export const Hero3 = classes(Hero1, style({
+  position: 'relative'
+}))
+
+export const TextContent3 = classes(TextContent5, style({
+  marginBottom: 300
+}))
+
+export const ImgContent3 = style({
+  width: '100%',
+  height: '50%',
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  display: 'flex',
+  alignItems: 'flex-end'
+})
+
+export const Img3 = style({
+  width: '25%',
+  height: '100%',
+  backgroundSize: 'contain',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center bottom'
+})
+
+export const Img4 = classes(Img3, style({
+  height: '80%'
+}))

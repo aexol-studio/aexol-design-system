@@ -36,6 +36,7 @@ class About extends React.PureComponent<IProps> {
       <nav className={styles.Nav}>
         <Link to="/hero1" style={{marginRight: 10}}>Hero1</Link>
         <Link to="/hero2" style={{marginRight: 10}}>Hero2</Link>
+        <Link to="/hero3" style={{marginRight: 10}}>Hero3</Link>
         <Link to="/hero4" style={{marginRight: 10}}>Hero4</Link>
         <Link to="/hero5">Hero5</Link>
       </nav>

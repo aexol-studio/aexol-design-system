@@ -8,6 +8,7 @@ import {
 import About from './About';
 import Hero1view from './Hero1';
 import Hero2view from './Hero2';
+import Hero3view from './Hero3';
 import Hero4view from './Hero4';
 import Hero5view from './Hero5';
 import NoMatch from './NoMatch';
@@ -30,6 +31,10 @@ class App extends React.Component {
             <Route
               path={'/hero2'}
               component={Hero2view}
+            />
+            <Route
+              path={'/hero3'}
+              component={Hero3view}
             />
             <Route
               path={'/hero4'}
