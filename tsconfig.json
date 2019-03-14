@@ -4,18 +4,17 @@
     "target": "es6",
     "jsx": "react",
     "module": "es6",
-    "allowJs": true,
     "moduleResolution": "node",
-    "isolatedModules": true,
     "experimentalDecorators": true,
-    "declaration": false,
+    "declaration": true,
     "removeComments": true,
     "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "outDir": "./lib",
+    "rootDir": "./src",
     "lib": ["es6", "es7", "dom"],
-    "baseUrl": "src"
+    "baseUrl": "./src"
   },
   "exclude": ["lib", "node_modules", "sandbox", "docs"]
 }
