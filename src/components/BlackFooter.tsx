@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as classnames from 'classnames';
-import { H4, PMedium } from './typography';
+// import { H4, PMedium } from './typography';
 import * as styles from './styles/BlackFooterStyle';
 import { Colors } from './styles/Colors';
 
@@ -22,34 +22,39 @@ export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props)
   } = props
 
   return (
-    <div className={styles.CardHero}>
-      <div className={styles.ComponentHero}>
-        <div
-          className={classnames(
-            styles.BlackFooterContainer,
-          )}
-          {...restProps}
-        >
-          <div className={styles.logo}>img</div>
-          <div className={styles.rectangle}>
-            <div className={styles.rectangle1} />
-            <div className={styles.rectangle2} />
-          </div>
+    <div className={styles.BlackFooterMain}>
+      {/* <div className={styles.CardHero}> */}
 
-          <div className={styles.boxTitle}>
-            <H4 style={{
-              color: Colors['Black Hole'],
-            }}>
-              {boxTitle}
-            </H4>
-          </div>
-          <div className={styles.boxText}>
-            <PMedium>
-              {boxText}
-            </PMedium>
-          </div>
+
+      {/* <div className={styles.ComponentHero}> */}
+      <div
+        className={classnames(
+          styles.BlackFooterContainer,
+        )}
+        {...restProps}
+      >
+        <div className={styles.rectangle11}>
+          <div className={styles.rectangle1} />
+        </div>
+        <div className={styles.BlackFooterContent} >
+          <p style={{color: Colors['Ancient Stone'], textAlign: 'center'}}>
+          img
+          </p>
+        </div>
+        <div className={styles.rectangle22}>
+          <div className={styles.rectangle2} />
+        </div>
+        <div>
+        <p style={{color: Colors['Ancient Stone'], textAlign: 'center', marginTop:5,fontSize: 12}}>
+        Copyright 2018 AEXOL/Slothking/Graphqleditor.com</p> 
         </div>
       </div>
+
+
+
+
+
+
     </div>
   )
 }

@@ -2,66 +2,64 @@ import { style } from 'typestyle';
 import { Colors } from './Colors';
 
 export const BlackFooterContainer = style({
-  $debugName: 'CardComponentTile',
-  backgroundColor: Colors.White,
-  width: 268,
-  height: 251,
-  boxShadow: "8px 8px 24px rgba(0,0,0,0.15)",
+  $debugName: 'BlackFooterContainer',
+  backgroundColor: Colors["Black Hole"],
+  width: 400,
+  height: 561,
   marginTop: "20px",
   marginBottom: "20px",
   display: "flex",
   flexDirection: "column",
+  // justifyContent: "center",
+  // alignContent: "space-between"
+})
+
+export const rectangle11 = style ({
+  $debugName: "rectangle11",
+  display: "flex",
   justifyContent: "center",
+  marginTop: 50
+  // alignContent: "space-around",
 })
-
-export const logo = style({
-  $debugName: "logo",
-  marginLeft: "34px",
-  marginBottom: "6px"
-})
-
-export const CardHero = style({
+export const rectangle22 = style ({
+  $debugName: "rectangle22",
   display: "flex",
-  justifyContent: "space-around"
-})
-
-export const ComponentHero = style ({
-  $debugName: "ComponentHero"
-})
-
-export const rectangle = style ({
-  $debugName: "rectangle",
-  display: "flex",
-  marginLeft: "16px",
+  justifyContent: "center",
+  // alignContent: "space-around",
 })
 
 export const rectangle1 = style({
   $debugName: "rectangle1",
-  width: "84px",
-  height: "7px",
+  width: "80%",
+  height: "3px",
   background: Colors["Alien Blood"],
 })
 
 export const rectangle2 = style({
   $debugName: "rectangle2",
-  width: "7px",
-  height: "7px",
-  background: "#C4C4C4",
+  width: "80%",
+  height: "3px",
+  background: Colors["Serpentine"],
+})
+
+export const BlackFooterMain = style({
+  $debugName: "BlackFooterMain",
+  display: "flex",
+  justifyContent: "space-around"
+})
+
+export const BlackFooterContent = style({
+  $debugName: "BlackFooterContent",
+  height: "80%",
+  display: "flex",
+  justifyContent: "space-around"
 })
 
 
-export const boxTitle = style({
-  $debugName: 'boxTitle',
-  marginTop: "8px",
-  marginLeft: "16px",
-})
 
-export const boxText = style({
-  $debugName: 'boxText',
-  marginLeft: "16px",
-  marginTop: "8px",
-  width: "213px",
-  maxHeight: "113px"
-})
+// export const BlackFooterHero = style ({
+//   $debugName: "BlackFooterHero",
+//   display: "flex",
+//   flexDirection: "column",
 
-
+// })
