@@ -4,27 +4,6 @@ import * as classnames from 'classnames';
 import * as styles from './styles/BlackFooterStyle';
 import { Colors } from './styles/Colors';
 
-type Corner = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'none'
-
-// const Footer = {
-//     Examples : {
-//     Example1 : "Faker Twitter1",
-//     Example2 : "Faker Twitter2",
-//     Example3 : "Faker Twitter3",
-//     Example4 : "Faker Twitter4",
-//     Example5 : "Faker Twitter5",
-//     Example6 : "Faker Twitter6",
-//     Example7 : "Faker Twitter7",
-//     Example8 : "Faker Twitter8",
-//     },
-//     FromTheBlog : {
-//           color : "red",
-//           length : "25cm"
-//       
-// }
-// const Footer = {}
-
-
 
 let FooterMenu = ["Services",
                   "Roadmap",
@@ -54,10 +33,13 @@ let FromTheBlog = ["GraphQL Tutorial - Schemas and types part1",
 
 
 export interface ICardComponentProps {
-  boxText: string;
-  boxTitle: string;
-  corner?: Corner;
-  style?: React.CSSProperties;
+ objects:{
+   title:string;
+   objects:{
+     name:string;
+     link:string;
+   }[]
+ }[]
 }
 
 export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props) => {
@@ -81,17 +63,17 @@ export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props)
         </div>
         <div className={styles.BlackFooterContent}>
           <div>
-          <p style={{ color: Colors['Ancient Stone'], textAlign: 'center' }}>
+          <p style={{ fontSize: 10, color: Colors['Ancient Stone'], textAlign: 'center' }}>
             {FooterMenu[0]}
           </p>
           </div>
           <div>
-          <p style={{ color: Colors['Ancient Stone'], textAlign: 'center' }}>
+          <p style={{ fontSize: 10, color: Colors['Ancient Stone'], textAlign: 'center' }}>
            {Examples[0]}
           </p>
           </div>
           <div>
-          <p style={{ color: Colors['Ancient Stone'], textAlign: 'center' }}>
+          <p style={{ fontSize: 10, color: Colors['Ancient Stone'], textAlign: 'center' }}>
           {FromTheBlog[0]}
           </p>
           </div>

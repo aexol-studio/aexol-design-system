@@ -54,7 +54,9 @@ export const BlackFooterContent = style({
   $debugName: "BlackFooterContent",
   height: "80%",
   display: "flex",
-  justifyContent: "space-around"
+  justifyContent: "space-around",
+  marginLeft: "10%",
+  marginRight: "10%"
 })
 
 
