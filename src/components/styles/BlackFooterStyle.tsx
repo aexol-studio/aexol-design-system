@@ -4,14 +4,15 @@ import { Colors } from './Colors';
 export const BlackFooterContainer = style({
   $debugName: 'BlackFooterContainer',
   backgroundColor: Colors["Black Hole"],
-  width: 400,
+  width: "80%",
   height: 561,
   marginTop: "20px",
   marginBottom: "20px",
   display: "flex",
+  justifyContent: "space-between",
   flexDirection: "column",
   // justifyContent: "center",
-  // alignContent: "space-between"
+
 })
 
 export const rectangle11 = style ({
@@ -25,6 +26,7 @@ export const rectangle22 = style ({
   $debugName: "rectangle22",
   display: "flex",
   justifyContent: "center",
+  marginBottom: 50
   // alignContent: "space-around",
 })
 
