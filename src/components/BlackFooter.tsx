@@ -5,48 +5,94 @@ import * as styles from './styles/BlackFooterStyle';
 import { Colors } from './styles/Colors';
 
 
-let FooterMenu = ["Services",
-                  "Roadmap",
-                  "Slack Community",
-                  "GraphQL Blog",
-                  "GraphQL Editor",
-                  "Docs"];
 
-let Examples = ["Faker Twitter1",
-                "Faker Twitter2", 
-                "Faker Twitter3", 
-                "Faker Twitter4", 
-                "Faker Twitter5", 
-                "Faker Twitter6", 
-                "Faker Twitter7", 
-                "Faker Twitter8"];
+let newOne = {
+  objects: [{
+    title: "Services",
+    objects: [{ name: "Services", link: "http://google.pl" },
+    { name: "Roadmap", link: "http://google.pl" },
+    { name: "Slack Community", link: "http://google.pl" },
+    { name: "GraphQL Blog", link: "http://google.pl" },
+    { name: "GraphQL Editor", link: "http://google.pl" },
+    { name: "Docs", link: "http://google.pl" }]
+  },
+  {
+    title: "Examples",
+    objects: [{ name: "Faker Twitter2", link: "http://google.pl" },
+    { name: "Faker Twitter3", link: "http://google.pl" },
+    { name: "Faker Twitter4", link: "http://google.pl" },
+    { name: "Faker Twitter5", link: "http://google.pl" },
+    { name: "Faker Twitter6", link: "http://google.pl" },
+    { name: "Faker Twitter7", link: "http://google.pl" },
+    { name: "Faker Twitter8", link: "http://google.pl" }]
+  },
+  {
+    title: "FromTheBlog",
+    objects: [{ name: "Faker Twitter2", link: "http://google.pl" },
+    { name: "Faker Twitter3", link: "http://google.pl" },
+    { name: "Faker Twitter4", link: "http://google.pl" },
+    { name: "Faker Twitter5", link: "http://google.pl" },
+    { name: "Faker Twitter6", link: "http://google.pl" },
+    { name: "Faker Twitter7", link: "http://google.pl" },
+    { name: "Faker Twitter8", link: "http://google.pl" }]
+  },]
+}
+  // {
+  //   title: "FromTheBlog",
+  //   objects: [{ name: "Faker Twitter2", link: "http://google.pl" },
+  //   { name: "Faker Twitter3", link: "http://google.pl" },
+  //   { name: "Faker Twitter4", link: "http://google.pl" },
+  //   { name: "Faker Twitter5", link: "http://google.pl" },
+  //   { name: "Faker Twitter6", link: "http://google.pl" },
+  //   { name: "Faker Twitter7", link: "http://google.pl" },
+  //   { name: "Faker Twitter8", link: "http://google.pl" }]
+  // }
 
-let FromTheBlog = ["GraphQL Tutorial - Schemas and types part1",
-                  "GraphQL Tutorial - Schemas and types part2",
-                  "GraphQL Tutorial - Schemas and types part3",
-                  "GraphQL Tutorial - Schemas and types part4",
-                  "GraphQL Tutorial - Schemas and types part5",
-                  "GraphQL Tutorial - Schemas and types part6",
-                  "GraphQL Tutorial - Schemas and types part7",
-                  "GraphQL Tutorial - Schemas and types part8"];
+// let FooterMenu = [{ name: "Services", link: "http://google.pl" },
+// { name: "Roadmap", link: "http://google.pl" },
+// { name: "Slack Community", link: "http://google.pl" },
+// { name: "GraphQL Blog", link: "http://google.pl" },
+// { name: "GraphQL Editor", link: "http://google.pl" },
+// { name: "Docs", link: "http://google.pl" },];
+
+// let Examples = ["Faker Twitter1",
+//   "Faker Twitter2",
+//   "Faker Twitter3",
+//   "Faker Twitter4",
+//   "Faker Twitter5",
+//   "Faker Twitter6",
+//   "Faker Twitter7",
+//   "Faker Twitter8"];
+
+// let FromTheBlog = ["Schemas and types part1",
+//   "Schemas and types part2",
+//   "Schemas and types part3",
+//   "Schemas and types part4",
+//   "Schemas and types part5",
+//   "Schemas and types part6",
+//   "Schemas and types part7",
+//   "Schemas and types part8"];
+
+// let inputs = [FooterMenu, FooterMenu, FooterMenu];
 
 
+let inputs = newOne
 
 export interface ICardComponentProps {
- objects:{
-   title:string;
-   objects:{
-     name:string;
-     link:string;
-   }[]
- }[]
+  objects: {
+    title: string;
+    objects: {
+      name: string;
+      link: string;
+    }[]
+  }[]
 }
 
 export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props) => {
   const {
-    boxText,
-    boxTitle,
-    style,
+    // boxText,
+    // boxTitle,
+    // style,
     ...restProps
   } = props
 
@@ -63,19 +109,19 @@ export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props)
         </div>
         <div className={styles.BlackFooterContent}>
           <div>
-          <p style={{ fontSize: 10, color: Colors['Ancient Stone'], textAlign: 'center' }}>
-            {FooterMenu[0]}
-          </p>
+            <p style={{ fontSize: 10, color: Colors['Ancient Stone'], textAlign: 'center' }}>
+              {inputs.objects[0].objects[0].name}
+            </p>
           </div>
           <div>
-          <p style={{ fontSize: 10, color: Colors['Ancient Stone'], textAlign: 'center' }}>
-           {Examples[0]}
-          </p>
+            <p style={{ fontSize: 10, color: Colors['Ancient Stone'], textAlign: 'center' }}>
+            {inputs.objects[1].objects[0].name}
+            </p>
           </div>
           <div>
-          <p style={{ fontSize: 10, color: Colors['Ancient Stone'], textAlign: 'center' }}>
-          {FromTheBlog[0]}
-          </p>
+            <p style={{ fontSize: 10, color: Colors['Ancient Stone'], textAlign: 'center' }}>
+            {inputs.objects[1].objects[0].name}
+            </p>
           </div>
         </div>
         <div className={styles.rectangle22}>
