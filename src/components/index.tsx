@@ -9,6 +9,8 @@ export { WorkshopTile } from './WorkshopTile';
 export { WorkshopTextTile } from './WorkshopTextTile';
 export { BrandBar } from './BrandBar';
 export { PoweredCommunity } from './PoweredCommunity';
+export { RoadmapPoint } from './RoadmapPoint';
+export { Roadmap } from './Roadmap';
 export {
   Dropdown,
   DropdownButton,
