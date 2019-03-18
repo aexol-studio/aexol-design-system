@@ -79,12 +79,22 @@ export const RoadmapPoint: React.FunctionComponent<IRoadmapPointProps> = (props)
         }
       }
     } else {
-      if (idx === 3 || idx === 5) {
-        return <icon.SmallPointInactiveBottom />
-      } else if (idx === 2 || idx === 6) {
-        return <icon.SmallPointInactiveTop />
-      } else {
-        return <icon.SmallPointInactive />
+      if (pointColor === 'gradient') {
+        if (idx === 3 || idx === 5) {
+          return <icon.SmallPointInactiveBottom />
+        } else if (idx === 2 || idx === 6) {
+          return <icon.SmallPointInactiveTop />
+        } else {
+          return <icon.SmallPointInactive />
+        }
+      } else if (pointColor === 'blue') {
+        if (idx === 3 || idx === 5) {
+          return <icon.SmallPointInactiveWhiteBottom />
+        } else if (idx === 2 || idx === 6) {
+          return <icon.SmallPointInactiveWhiteTop />
+        } else {
+          return <icon.SmallPointInactiveWhite />
+        }
       }
     }
   }
