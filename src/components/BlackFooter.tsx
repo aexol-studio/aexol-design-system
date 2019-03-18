@@ -3,7 +3,7 @@ import * as classnames from 'classnames';
 import { P } from './typography';
 // import { P } from './typography';
 import * as styles from './styles/BlackFooterStyle';
-// import { Colors } from './styles/Colors';
+import { Colors } from './styles/Colors';
 
 
 type input = {
@@ -39,20 +39,23 @@ export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props)
         {...restProps}
       >
         <div className={styles.rectangle11}>
+        <p style={{color: Colors['Ancient Stone'], textAlign: 'center', marginTop:5,fontSize: 30}}>
+       LOGO</p> 
           <div className={styles.rectangle1} />
         </div>
         <div className={styles.BlackFooterContent}>
           {inputsAr.objects.map(el => {
-            return <div>
+            return <div className={styles.BlackFooterContentColumn}>
               <P style={{
                 color: "#514E5A",
                 fontSize: 16,
-                // fontWeight: "bold",
+                fontWeight: "bold",
               }}>{el.title}</P>
               <div>{el.objects.map(o => <P
                 style={{
                   color: "#514E5A",
-                  fontSize: 16
+                  fontSize: 16,
+                  marginTop: 5,
                 }}
               >{o.name}</P>)}</div>
             </div>
