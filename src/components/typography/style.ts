@@ -59,5 +59,10 @@ export const TypoGraphy = {
     lineHeight: `16px`,
     fontSize: 12,
     fontFamily: 'Helvetica Neue-Medium'
-  })
+  }),
+  // PLead: style({
+  //   ...BaseTypoGraphy,
+  //   ...BaseTypoGraphyP,
+
+  // }),
 };
