@@ -1,6 +1,10 @@
 import * as React from 'react';
 import * as classnames from 'classnames';
-import * as icon from './icons_roadmap';
+import {
+  loadActiveLineBlue,
+  loadActiveLineGradient,
+  loadInactiveLine
+} from './icons_roadmap';
 import { H1 } from './typography';
 import { RoadmapPoint } from './RoadmapPoint';
 import * as styles from './styles/RoadmapStyle';
@@ -31,69 +35,12 @@ export const Roadmap: React.FunctionComponent<IRoadmapProps> = (props) => {
     const i = Math.min(idx, points.length - 1)
     if (props.points[i].done) {
       if (props.mainColor === 'blue') {
-        switch (idx) {
-          case 0:
-            return <icon.ActiveLineBlue0 />
-          case 1:
-            return <icon.ActiveLineBlue1 />
-          case 2:
-            return <icon.ActiveLineBlue2 />
-          case 3:
-            return <icon.ActiveLineBlue3 />
-          case 4:
-            return <icon.ActiveLineBlue4 />
-          case 5:
-            return <icon.ActiveLineBlue5 />
-          case 6:
-            return <icon.ActiveLineBlue6 />
-          case 7:
-            return <icon.ActiveLineBlue7 />
-          default:
-            return
-        }
+        return loadActiveLineBlue(idx)
       } else if (props.mainColor === 'gradient') {
-        switch (idx) {
-          case 0:
-            return <icon.ActiveLineGradient0 />
-          case 1:
-            return <icon.ActiveLineGradient1 />
-          case 2:
-            return <icon.ActiveLineGradient2 />
-          case 3:
-            return <icon.ActiveLineGradient3 />
-          case 4:
-            return <icon.ActiveLineGradient4 />
-          case 5:
-            return <icon.ActiveLineGradient5 />
-          case 6:
-            return <icon.ActiveLineGradient6 />
-          case 7:
-            return <icon.ActiveLineGradient7 />
-          default:
-            return
-        }
+        return loadActiveLineGradient(idx)
       }
     } else {
-      switch (idx) {
-        case 0:
-          return <icon.InactiveLine0 />
-        case 1:
-          return <icon.InactiveLine1 />
-        case 2:
-          return <icon.InactiveLine2 />
-        case 3:
-          return <icon.InactiveLine3 />
-        case 4:
-          return <icon.InactiveLine4 />
-        case 5:
-          return <icon.InactiveLine5 />
-        case 6:
-          return <icon.InactiveLine6 />
-        case 7:
-          return <icon.InactiveLine7 />
-        default:
-          return
-      }
+      return loadInactiveLine(idx)
     }
   }
 

@@ -332,3 +332,42 @@ export const InactiveLine7 = () => (
     <path opacity="0.5" d="M2 2H90.1587C90.6967 2 91.2121 2.21679 91.5883 2.60141L113.5 25" stroke="#999DA0" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 8" transform="translate(0,16)" />
   </svg>
 )
+
+const ActiveLinesGradient = [
+  <ActiveLineGradient0 key={0} />,
+  <ActiveLineGradient1 key={1} />,
+  <ActiveLineGradient2 key={2} />,
+  <ActiveLineGradient3 key={3} />,
+  <ActiveLineGradient4 key={4} />,
+  <ActiveLineGradient5 key={5} />,
+  <ActiveLineGradient6 key={6} />,
+  <ActiveLineGradient7 key={7} />,
+]
+
+const ActiveLinesBlue = [
+  <ActiveLineBlue0 key={0} />,
+  <ActiveLineBlue1 key={1} />,
+  <ActiveLineBlue2 key={2} />,
+  <ActiveLineBlue3 key={3} />,
+  <ActiveLineBlue4 key={4} />,
+  <ActiveLineBlue5 key={5} />,
+  <ActiveLineBlue6 key={6} />,
+  <ActiveLineBlue7 key={7} />,
+]
+
+const InactiveLines = [
+  <InactiveLine0 key={0} />,
+  <InactiveLine1 key={1} />,
+  <InactiveLine2 key={2} />,
+  <InactiveLine3 key={3} />,
+  <InactiveLine4 key={4} />,
+  <InactiveLine5 key={5} />,
+  <InactiveLine6 key={6} />,
+  <InactiveLine7 key={7} />,
+]
+
+export const loadActiveLineBlue = (idx: number) => ActiveLinesBlue[idx]
+
+export const loadActiveLineGradient = (idx: number) => ActiveLinesGradient[idx]
+
+export const loadInactiveLine = (idx: number) => InactiveLines[idx]
