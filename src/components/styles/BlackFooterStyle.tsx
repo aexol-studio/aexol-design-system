@@ -11,25 +11,26 @@ export const BlackFooterContainer = style({
   display: "flex",
   justifyContent: "space-between",
   flexDirection: "column",
-  // justifyContent: "center",
 
 })
 
-export const rectangle11 = style ({
+export const rectangle11 = style({
   $debugName: "rectangle11",
   display: "flex",
   justifyContent: "space-evenly",
   marginTop: 50,
-  alignContent: "space-around",
   marginLeft: "10%",
   marginRight: "10%"
 })
-export const rectangle22 = style ({
+export const rectangle22 = style({
   $debugName: "rectangle22",
   display: "flex",
-  justifyContent: "space-evenly",
+  // justifyContent: "space-evenly",
   marginBottom: 50,
-  alignContent: "space-around",
+  // alignContent: "space-around",
+  flexDirection: "column",
+  marginLeft: "10%",
+  marginRight: "10%"
 })
 
 export const rectangle1 = style({
@@ -41,7 +42,7 @@ export const rectangle1 = style({
 
 export const rectangle2 = style({
   $debugName: "rectangle2",
-  width: "80%",
+  // width: "80%",
   height: "3px",
   background: Colors["Serpentine"],
 })
@@ -54,21 +55,19 @@ export const BlackFooterMain = style({
 
 export const BlackFooterContent = style({
   $debugName: "BlackFooterContent",
-  // height: "80%",
   display: "flex",
   justifyContent: "space-around",
-  // alignItems: "center",
   marginLeft: "10%",
   marginRight: "10%"
 })
 
 export const BlackFooterContentColumn = style({
   $debugName: "BlackFooterContent",
-  marginTop: "68px",
+  marginTop: "20px",
   marginBottom: "60px"
 })
 
-// export const BlackFooterHero = style ({
+// export const BlackFooterContentColumnTitle = style ({
 //   $debugName: "BlackFooterHero",
 //   display: "flex",
 //   flexDirection: "column",

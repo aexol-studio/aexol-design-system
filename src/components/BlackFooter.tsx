@@ -1,7 +1,6 @@
 import * as React from 'react'
 import * as classnames from 'classnames';
 import { P } from './typography';
-// import { P } from './typography';
 import * as styles from './styles/BlackFooterStyle';
 import { Colors } from './styles/Colors';
 
@@ -27,9 +26,6 @@ export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props)
     ...restProps
   } = props
 
-  // console.log(inputsAr)
-  // console.log(inputsAr.objects[1])
-
   return (
     <div className={styles.BlackFooterMain}>
       <div
@@ -39,8 +35,8 @@ export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props)
         {...restProps}
       >
         <div className={styles.rectangle11}>
-        <p style={{color: Colors['Ancient Stone'], textAlign: 'center', marginTop:5,fontSize: 30}}>
-       LOGO</p> 
+          <p style={{ color: Colors['Ancient Stone'], textAlign: 'center', marginTop: 5, marginBottom: 5, fontSize: 30 }}>
+            LOGO</p>
           <div className={styles.rectangle1} />
         </div>
         <div className={styles.BlackFooterContent}>
@@ -60,23 +56,12 @@ export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props)
               >{o.name}</P>)}</div>
             </div>
           })
-
           }
-          {/* <div>
-            <p style={{ fontSize: 10, color: Colors['Ancient Stone'], textAlign: 'center' }}>
-            cokolwiek1
-            </p>
-          </div>
-          <div>
-            <p style={{ fontSize: 10, color: Colors['Ancient Stone'], textAlign: 'center' }}>
-            cokolwiek2
-            </p>
-          </div> */}
         </div>
         <div className={styles.rectangle22}>
           <div className={styles.rectangle2} />
-          {/* <p style={{color: Colors['Ancient Stone'], textAlign: 'center', marginTop:5,fontSize: 12}}>
-        Copyright 2018 AEXOL/Slothking/Graphqleditor.com</p>  */}
+          <p style={{color: Colors['Ancient Stone'], textAlign: 'center', marginTop:5, fontSize: 12,}}>
+        Copyright 2018 AEXOL/Slothking/Graphqleditor.com</p> 
         </div>
       </div>
     </div>
