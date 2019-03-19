@@ -1,11 +1,10 @@
-import * as React from 'react'
-import '../i18n'
+import * as React from 'react';
 import {
   BrowserRouter,
   Route,
   Switch
-} from 'react-router-dom'
-import About from './About'
+} from 'react-router-dom';
+import About from './About';
 
 class App extends React.Component {
 
