@@ -19,8 +19,8 @@ export const rectangleTopDiv = style({
   display: 'flex',
   justifyContent: 'space-evenly',
   marginTop: 50,
-  marginLeft: '10%',
-  marginRight: '10%'
+  marginLeft: '10%', // usunac proceny
+  marginRight: '10%' // usunac proceny
 })
 export const rectangleDownDiv = style({
   $debugName: 'rectangleDownDiv',
@@ -29,8 +29,8 @@ export const rectangleDownDiv = style({
   marginBottom: 50,
   // alignContent: "space-around",
   flexDirection: 'column',
-  marginLeft: '10%',
-  marginRight: '10%'
+  marginLeft: '10%', // usunac proceny
+  marginRight: '10%'// usunac proceny
 })
 
 export const rectangleTop = style({
@@ -45,6 +45,15 @@ export const rectangleDown = style({
   // width: "80%",
   height: '3px',
   background: Colors.Serpentine
+})
+
+export const rectangleTopLogo = style({
+  $debugName: 'rectangleTopLogo',
+  color: Colors['Ancient Stone'],
+  textAlign: 'center',
+  marginTop: 5,
+  marginBottom: 5,
+   fontSize: 30
 })
 
 export const rectangleDownCopyright = style({
@@ -65,8 +74,8 @@ export const BlackFooterContent = style({
   $debugName: 'BlackFooterContent',
   display: 'flex',
   justifyContent: 'space-around',
-  marginLeft: '10%',
-  marginRight: '10%'
+  marginLeft: '10%', // usunac proceny
+  marginRight: '10%' // usunac proceny
 })
 
 export const BlackFooterContentColumn = style({
