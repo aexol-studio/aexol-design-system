@@ -60,9 +60,22 @@ export const TypoGraphy = {
     fontSize: 12,
     fontFamily: 'Helvetica Neue-Medium'
   }),
-  // PLead: style({
-  //   ...BaseTypoGraphy,
-  //   ...BaseTypoGraphyP,
+  PFooterTitle: style({
+    ...BaseTypoGraphy,
+    ...BaseTypoGraphyP,
+    color: '#514E5A',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 0,
+    marginTop: 0
+  }),
+  PFooterName: style({
+    ...BaseTypoGraphy,
+    ...BaseTypoGraphyP,
+    color: '#514E5A',
+    fontSize: 16,
+    marginBottom: 0,
+    marginTop: 5
+  })
 
-  // }),
 };
