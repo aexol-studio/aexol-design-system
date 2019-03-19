@@ -3,7 +3,11 @@ import * as classnames from 'classnames';
 import {
   loadActiveLineBlue,
   loadActiveLineGradient,
-  loadInactiveLine
+  loadInactiveLine,
+  loadBackgroundLine,
+  loadBackgroundLineBlue,
+  BackgroundLine7,
+  BackgroundLineBlue7
 } from './icons_roadmap';
 import { H1 } from './typography';
 import { RoadmapPoint } from './RoadmapPoint';
@@ -45,7 +49,6 @@ export const Roadmap: React.FunctionComponent<IRoadmapProps> = (props) => {
   }
 
   const renderPoints = (point: Point, idx: number) => {
-
     return (
       <React.Fragment key={idx}>
         {checkLine(idx)}
@@ -57,12 +60,29 @@ export const Roadmap: React.FunctionComponent<IRoadmapProps> = (props) => {
           done={point.done}
           pointColor={props.mainColor}
           point={points[idx].done === true && points[idx + 1].done === false ? 'big' : 'small'}
-          titlePosition={idx === 2 ? 'topRight' : idx === 6 ? 'top' : 'bottom'}
+          titlePosition={idx === 2 ? 'topRight' : idx === 4 || idx === 6 ? 'top' : 'bottom'}
         />
-        {idx === props.points.length - 1 && idx === 7 && checkLine(0)}
+        {idx === props.points.length - 1 && idx === 7 && props.mainColor === 'gradient' && <BackgroundLine7 />}
+        {idx === props.points.length - 1 && idx === 7 && props.mainColor === 'blue' && <BackgroundLineBlue7 />}
         {idx === props.points.length - 1 && idx < 7 && checkLine(idx + 1)}
       </React.Fragment>
     )
+  }
+
+  const renderBackgroundLines = (idx: number) => {
+    if (props.mainColor === 'gradient') {
+      if (idx === 7) {
+        return
+      } else {
+        return loadBackgroundLine(idx)
+      }
+    } else {
+      if (idx === 7) {
+        return
+      } else {
+        return loadBackgroundLineBlue(idx)
+      }
+    }
   }
 
   return (
@@ -75,6 +95,7 @@ export const Roadmap: React.FunctionComponent<IRoadmapProps> = (props) => {
     >
       <H1 style={{color: mainColor === 'blue' ? Colors.White : Colors['Black Hole'], marginTop: 30}}>Roadmap</H1>
       <div className={styles.Road}>
+        <div className={styles.Background}>{points.map((el, idx) => renderBackgroundLines(idx))}</div>
         {points.map((el, idx) => renderPoints(el, idx))}
       </div>
     </div>

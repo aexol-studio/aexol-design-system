@@ -125,15 +125,15 @@ export const BigPointBlueBottom = () => (
 // inactive grey points
 export const SmallPointInactive = () => (
   <svg width="16" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="8" cy="8" r="7" stroke={'#999DA0'} strokeWidth="2" transform="translate(0,42)"/>
-    <circle cx="8" cy="8" r="4" fill={'#999DA0'} transform="translate(0,42)"/>
+    <circle cx="8" cy="8" r="7" stroke="#999DA0" strokeWidth="2" transform="translate(0,42)"/>
+    <circle cx="8" cy="8" r="4" fill="#999DA0" transform="translate(0,42)"/>
   </svg>
 )
 
 export const SmallPointInactiveBottom = () => (
   <svg width="16" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="8" cy="8" r="7" stroke="#999DA0" strokeWidth="2" transform="translate(0,56)"/>
-    <circle cx="8" cy="84" r="4" fill="#999DA0" transform="translate(0,56)"/>
+    <circle cx="8" cy="8" r="4" fill="#999DA0" transform="translate(0,56)"/>
   </svg>
 )
 
@@ -351,22 +351,22 @@ export const InactiveLine5 = () => (
 
 export const InactiveLine6 = () => (
   <svg width="83" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path opacity="0.5" d="M79 1.5L52.5858 27.9142C52.2107 28.2893 51.702 28.5 51.1716 28.5H13.8284C13.298 28.5 12.7893 28.7107 12.4142 29.0858L2 39.5" stroke="#999DA0" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 8" transform="translate(0,24)"/>
+    <path opacity="0.5" d="M79 1.5L52.5858 27.9142C52.2107 28.2893 51.702 28.5 51.1716 28.5H13.8284C13.298 28.5 12.7893 28.7107 12.4142 29.0858L2 39.5" stroke="#999DA0" strokeWidth="3" strokeLinecap="round" strokeDasharray="8 8" transform="translate(0,24)"/>
   </svg>
 )
 
 export const InactiveLine7 = () => (
   <svg width="115" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path opacity="0.5" d="M2 2H90.1587C90.6967 2 91.2121 2.21679 91.5883 2.60141L113.5 25" stroke="#999DA0" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 8" transform="translate(0,16)" />
+    <path opacity="0.5" d="M2 2H90.1587C90.6967 2 91.2121 2.21679 91.5883 2.60141L113.5 25" stroke="#999DA0" strokeWidth="3" strokeLinecap="round" strokeDasharray="8 8" transform="translate(0,16)" />
   </svg>
 )
 
 // background lines
 export const BackgroundLine0 = () => (
-  <svg width="8" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="4" cy="4" r="4" fill="#DFE6F7" transform="translate(0,16)"/>
+  <svg width="300" height="300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="4" cy="4" r="4" fill="#E1F3FF" transform="translate(40,171)" />
     <g opacity="0.3">
-      <path d="M2 15H225.694C226.211 15 226.708 14.7995 227.081 14.4406L240 2" stroke="url(#paint20_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(0,16)"/>
+      <path d="M2 15H225.694C226.211 15 226.708 14.7995 227.081 14.4406L240 2" stroke="url(#paint20_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(50,160)"/>
     </g>
     <defs>
       <linearGradient id="paint20_linear" x1="121" y1="-4.28572" x2="119.675" y2="20.8013" gradientUnits="userSpaceOnUse">
@@ -378,10 +378,10 @@ export const BackgroundLine0 = () => (
 )
 
 export const BackgroundLine1 = () => (
-  <svg width="8" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="4" cy="4" r="4" fill="#DFE6F7" transform="translate(0,16)"/>
+  <svg width="150" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(-130,0)">
+    <circle cx="4" cy="4" r="4" fill="#E1F3FF" transform="translate(0,122)"/>
     <g opacity="0.3">
-      <path d="M135 2H1.5" stroke="url(#paint21_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(0,16)" />
+      <path d="M125 2H1.5" stroke="url(#paint21_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(10,124)" />
     </g>
     <defs>
       <linearGradient id="paint21_linear" x1="68.25" y1="1.51648" x2="68.236" y2="3.45153" gradientUnits="userSpaceOnUse">
@@ -393,9 +393,9 @@ export const BackgroundLine1 = () => (
 )
 
 export const BackgroundLine2 = () => (
-  <svg width="195" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="195" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(-145,0)">
     <g opacity="0.3">
-      <path d="M1.5 20.5H10.5665C11.1582 20.5 11.7195 20.238 12.0995 19.7844L26.4005 2.71556C26.7805 2.26201 27.3418 2 27.9335 2H86.6716C87.202 2 87.7107 2.21071 88.0858 2.58579L128.414 42.9142C128.789 43.2893 129.298 43.5 129.828 43.5H193.5" stroke="url(#paint22_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(0,16)" />
+      <path d="M1.5 20.5H10.5665C11.1582 20.5 11.7195 20.238 12.0995 19.7844L26.4005 2.71556C26.7805 2.26201 27.3418 2 27.9335 2H86.6716C87.202 2 87.7107 2.21071 88.0858 2.58579L128.414 42.9142C128.789 43.2893 129.298 43.5 129.828 43.5H193.5" stroke="url(#paint22_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(0,132)" />
     </g>
     <defs>
       <linearGradient id="paint22_linear" x1="97.5" y1="-18.0659" x2="81.4165" y2="58.8811" gradientUnits="userSpaceOnUse">
@@ -407,50 +407,179 @@ export const BackgroundLine2 = () => (
 )
 
 export const BackgroundLine3 = () => (
-  <svg width="58" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="58" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(-155,0)" >
     <g opacity="0.3">
-      <path d="M56.5 31L26.5791 2.5506C26.2073 2.19712 25.7139 2 25.201 2H2" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(0,16)" />
+      <path d="M56.5 31L26.5791 2.5506C26.2073 2.19712 25.7139 2 25.201 2H2" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(0,225)" />
     </g>
   </svg>
 )
 
 export const BackgroundLine4 = () => (
-  <svg width="196" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="196" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(-170,0)">
     <g opacity="0.3">
-      <path d="M2 1.99999L35.4216 2C35.952 2 36.4607 2.21071 36.8358 2.58578L51.4142 17.1642C51.7893 17.5393 52.298 17.75 52.8284 17.75L134.172 17.75C134.702 17.75 135.211 17.9607 135.586 18.3358L143.586 26.3358C144.367 27.1168 145.633 27.1168 146.414 26.3358L170.75 1.99999L194 1.99999" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(0,16)"/>
+      <path d="M2 1.99999L35.4216 2C35.952 2 36.4607 2.21071 36.8358 2.58578L51.4142 17.1642C51.7893 17.5393 52.298 17.75 52.8284 17.75L134.172 17.75C134.702 17.75 135.211 17.9607 135.586 18.3358L143.586 26.3358C144.367 27.1168 145.633 27.1168 146.414 26.3358L170.75 1.99999L194 1.99999" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(0,173)"/>
     </g>
-    <circle cx="4" cy="4" r="4" fill="#DFE6F7" transform="translate(0,16)"/>
+    <circle cx="4" cy="4" r="4" fill="#E1F3FF" transform="translate(0,130)"/>
     <g opacity="0.3">
-      <path d="M1.5 1.99999L98.9216 2C99.452 2 99.9607 2.21071 100.336 2.58579L115.5 17.75" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(0,16)" />
+      <path d="M1.5 1.99999L98.9216 2C99.452 2 99.9607 2.21071 100.336 2.58579L115.5 17.75" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(10,132)" />
     </g>
   </svg>
 )
 
 export const BackgroundLine5 = () => (
-  <svg width="33" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="33" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(-200,0)" >
     <g opacity="0.3">
-      <path d="M31 2L2.55059 31.9209C2.19711 32.2927 2 32.7861 2 33.299L2 56.5" stroke="#4168FF" stroke-width="3" stroke-linecap="round" transform="translate(0,16)" />
+      <path d="M31 2L2.55059 31.9209C2.19711 32.2927 2 32.7861 2 33.299L2 56.5" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(0,0)" />
     </g>
   </svg>
 )
 
 export const BackgroundLine6 = () => (
-  <svg width="187" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="197" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(-60,0)">
     <g opacity="0.3">
-      <path d="M2 29H50.6716C51.202 29 51.7107 29.2107 52.0858 29.5858L58.4142 35.9142C58.7893 36.2893 59.298 36.5 59.8284 36.5H99.0909C99.6685 36.5 100.218 36.2503 100.598 35.8151L123.402 9.68493C123.782 9.24974 124.331 9 124.909 9H143.672C144.202 9 144.711 9.21071 145.086 9.58579L151.414 15.9142C151.789 16.2893 152.298 16.5 152.828 16.5H182.672C184.453 16.5 185.346 14.3457 184.086 13.0858L173 2" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(0,16)" />
+      <path d="M2 29H50.6716C51.202 29 51.7107 29.2107 52.0858 29.5858L58.4142 35.9142C58.7893 36.2893 59.298 36.5 59.8284 36.5H99.0909C99.6685 36.5 100.218 36.2503 100.598 35.8151L123.402 9.68493C123.782 9.24974 124.331 9 124.909 9H143.672C144.202 9 144.711 9.21071 145.086 9.58579L151.414 15.9142C151.789 16.2893 152.298 16.5 152.828 16.5H182.672C184.453 16.5 185.346 14.3457 184.086 13.0858L173 2" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(10,140)" />
     </g>
     <g opacity="0.3">
-      <path d="M2 32.5L33.5 1.5" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(0,16)" />
+      <path d="M2 32.5L33.5 1.5" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(20,100)" />
     </g>
-    <circle cx="4" cy="4" r="4" fill="#DFE6F7" transform="translate(0,16)" />
-    <circle cx="4" cy="4" r="4" fill="#DFE6F7" transform="translate(0,16)" />
+    <circle cx="4" cy="4" r="4" fill="#E1F3FF" transform="translate(10,135)" />
+    <circle cx="4" cy="4" r="4" fill="#E1F3FF" transform="translate(170,130)" />
   </svg>
 )
 
 export const BackgroundLine7 = () => (
-  <svg width="33" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="90" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g opacity="0.3">
-      <path d="M31 2L2.55059 31.9209C2.19711 32.2927 2 32.7861 2 33.299L2 56.5" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(0,16)"/>
+      <path d="M1.5 1.5H87" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(0,49)"/>
+    </g>
+  </svg>
+)
+// background lines
+export const BackgroundLineBlue0 = () => (
+  <svg width="300" height="300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="4" cy="4" r="4" fill="#E1F3FF" transform="translate(40,171)" opacity="0.5"/>
+    <g>
+      <path d="M2 15H225.694C226.211 15 226.708 14.7995 227.081 14.4406L240 2" stroke="url(#paint0_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(50,160)"/>
+    </g>
+    <defs>
+      <linearGradient id="paint0_linear" x1="121" y1="-4.28572" x2="119.675" y2="20.8013" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#0091FF"/>
+        <stop offset="1" stopColor="#5D2EEB"/>
+      </linearGradient>
+    </defs>
+  </svg>
+)
+
+export const BackgroundLineBlue1 = () => (
+  <svg width="150" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(-130,0)">
+    <circle cx="4" cy="4" r="4" fill="#E1F3FF" transform="translate(0,122)" opacity="0.5"/>
+    <g>
+      <path d="M125 2H1.5" stroke="url(#paint31_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(10, 124)"/>
+    </g>
+    <defs>
+      <linearGradient id="paint31_linear" x1="68.25" y1="1.51648" x2="68.236" y2="3.45153" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#0091FF"/>
+        <stop offset="1" stopColor="#5D2EEB"/>
+      </linearGradient>
+    </defs>
+  </svg>
+)
+
+export const BackgroundLineBlue2 = () => (
+  <svg width="195" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(-145,0)">
+    <g>
+      <path d="M1.5 20.5H10.5665C11.1582 20.5 11.7195 20.238 12.0995 19.7844L26.4005 2.71556C26.7805 2.26201 27.3418 2 27.9335 2H86.6716C87.202 2 87.7107 2.21071 88.0858 2.58579L128.414 42.9142C128.789 43.2893 129.298 43.5 129.828 43.5H193.5" stroke="url(#paint32_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(0,132)"/>
+    </g>
+    <defs>
+      <linearGradient id="paint32_linear" x1="97.5" y1="-18.0659" x2="81.4165" y2="58.8811" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#0091FF"/>
+        <stop offset="1" stopColor="#5D2EEB"/>
+      </linearGradient>
+    </defs>
+  </svg>
+)
+
+export const BackgroundLineBlue3 = () => (
+  <svg width="58" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(-155,0)" >
+    <g>
+      <path d="M56.5 31L26.5791 2.5506C26.2073 2.19712 25.7139 2 25.201 2H2" stroke="url(#paint33_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(0,225)"/>
+    </g>
+    <defs>
+      <linearGradient id="paint33_linear" x1="29.25" y1="-12.022" x2="6.41815" y2="32.3489" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#0091FF"/>
+        <stop offset="1" stopColor="#5D2EEB"/>
+      </linearGradient>
+    </defs>
+  </svg>
+)
+
+export const BackgroundLineBlue4 = () => (
+  <svg width="196" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(-170,0)">
+    <g>
+      <path d="M2 3.99999L35.4216 4C35.952 4 36.4607 4.21071 36.8358 4.58578L51.4142 19.1642C51.7893 19.5393 52.298 19.75 52.8284 19.75L134.172 19.75C134.702 19.75 135.211 19.9607 135.586 20.3358L143.586 28.3358C144.367 29.1168 145.633 29.1168 146.414 28.3358L170.75 3.99999L194 3.99999" stroke="url(#paint34_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(0,173)"/>
+    </g>
+    <defs>
+      <linearGradient id="paint34_linear" x1="98" y1="42.2005" x2="104.356" y2="-6.80536" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#0091FF"/>
+        <stop offset="1" stopColor="#5D2EEB"/>
+      </linearGradient>
+    </defs>
+    <circle cx="4" cy="4" r="4" fill="#E1F3FF" transform="translate(0,130)" opacity="0.5"/>
+    <g>
+      <path d="M1.5 1.99999L98.9216 2C99.452 2 99.9607 2.21071 100.336 2.58579L115.5 17.75" stroke="url(#paint34_2_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(10,132)"/>
+    </g>
+    <defs>
+      <linearGradient id="paint34_2_linear" x1="58.5" y1="25.3654" x2="62.5006" y2="-4.57878" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#0091FF"/>
+        <stop offset="1" stopColor="#5D2EEB"/>
+      </linearGradient>
+    </defs>
+  </svg>
+)
+
+export const BackgroundLineBlue5 = () => (
+  <svg width="33" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(-200,0)" >
+    <g>
+      <path d="M31 2L2.55059 31.9209C2.19711 32.2927 2 32.7861 2 33.299L2 56.5" stroke="url(#paint35_linear)" strokeWidth="3" strokeLinecap="round"/>
+    </g>
+    <defs>
+      <linearGradient id="paint35_linear" x1="-12.022" y1="29.25" x2="32.3489" y2="52.0818" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#0091FF"/>
+        <stop offset="1" stopColor="#5D2EEB"/>
+      </linearGradient>
+    </defs>
+  </svg>
+)
+
+export const BackgroundLineBlue6 = () => (
+  <svg width="197" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(-60,0)">
+    <g>
+      <path d="M2 29H50.6716C51.202 29 51.7107 29.2107 52.0858 29.5858L58.4142 35.9142C58.7893 36.2893 59.298 36.5 59.8284 36.5H99.0909C99.6685 36.5 100.218 36.2503 100.598 35.8151L123.402 9.68493C123.782 9.24974 124.331 9 124.909 9H143.672C144.202 9 144.711 9.21071 145.086 9.58579L151.414 15.9142C151.789 16.2893 152.298 16.5 152.828 16.5H182.672C184.453 16.5 185.346 14.3457 184.086 13.0858L173 2M35.5 344H76.5" stroke="url(#paint36_linear)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" transform="translate(10,140)"/>
+    </g>
+    <defs>
+      <linearGradient id="paint36_linear" x1="94.75" y1="509.363" x2="-187.625" y2="350.982" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#0091FF"/>
+        <stop offset="1" stopColor="#5D2EEB"/>
+      </linearGradient>
+    </defs>
+    <g>
+      <path d="M2 32.5L33.5 1.5" stroke="url(#paint36_2_linear)" strokeWidth="3" strokeLinecap="round" transform="translate(20,100)" />
+    </g>
+    <defs>
+      <linearGradient id="paint36_2_linear" x1="17.75" y1="-13.489" x2="-12.2081" y2="17.9901" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#0091FF"/>
+        <stop offset="1" stopColor="#5D2EEB"/>
+      </linearGradient>
+    </defs>
+    <circle cx="4" cy="4" r="4" fill="#E1F3FF" transform="translate(10,135)" opacity="0.5"/>
+    <circle cx="4" cy="4" r="4" fill="#E1F3FF" transform="translate(170,130)" opacity="0.5"/>
+  </svg>
+)
+
+export const BackgroundLineBlue7 = () => (
+  <svg width="90" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g>
+      <path d="M1.5 1.5H87" stroke="#4168FF" strokeWidth="3" strokeLinecap="round" transform="translate(0,49)"/>
     </g>
   </svg>
 )
@@ -499,6 +628,17 @@ const BackgroundLines = [
   <BackgroundLine7 key={7} />,
 ]
 
+const BackgroundLinesBlue = [
+  <BackgroundLineBlue0 key={0} />,
+  <BackgroundLineBlue1 key={1} />,
+  <BackgroundLineBlue2 key={2} />,
+  <BackgroundLineBlue3 key={3} />,
+  <BackgroundLineBlue4 key={4} />,
+  <BackgroundLineBlue5 key={5} />,
+  <BackgroundLineBlue6 key={6} />,
+  <BackgroundLineBlue7 key={7} />,
+]
+
 export const loadActiveLineBlue = (idx: number) => ActiveLinesBlue[idx]
 
 export const loadActiveLineGradient = (idx: number) => ActiveLinesGradient[idx]
@@ -506,3 +646,5 @@ export const loadActiveLineGradient = (idx: number) => ActiveLinesGradient[idx]
 export const loadInactiveLine = (idx: number) => InactiveLines[idx]
 
 export const loadBackgroundLine = (idx: number) => BackgroundLines[idx]
+
+export const loadBackgroundLineBlue = (idx: number) => BackgroundLinesBlue[idx]

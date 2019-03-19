@@ -14,7 +14,8 @@ export const Popup = style({
   display: 'flex',
   zIndex: 100,
   opacity: 0,
-  transition: vars.transition
+  transition: vars.transition,
+  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)'
 })
 
 export const Header = style({
@@ -105,11 +106,11 @@ export const Title = style({
   left: -60,
   $nest: {
     '&.topRight': {
-      top: -40,
-      left: 10
+      top: -20,
+      left: 8
     },
     '&.top': {
-      top: -40
+      top: -20
     },
     '&.blue': {
       color: Colors.White
@@ -134,5 +135,12 @@ export const Roadmap = style({
 export const Road = style({
   display: 'flex',
   flexWrap: 'wrap',
-  marginTop: 150
+  marginTop: 150,
+  position: 'relative'
+})
+
+export const Background = style({
+  position: 'absolute',
+  top: -100,
+  left: 0
 })
