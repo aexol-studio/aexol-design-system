@@ -1,8 +1,11 @@
 import * as React from 'react';
 import { H1, H3 } from './typography';
 import { Button } from './Button';
+import * as classnames from 'classnames';
 import * as styles from './styles/HeroStyles';
 import { Colors } from './styles/Colors';
+
+type ImgPosition = 'bottom' | 'center';
 
 export interface IHero2Props {
   headerText: string;
@@ -10,6 +13,7 @@ export interface IHero2Props {
   buttonText: string;
   buttonOnClick: (e: HTMLButtonElement) => void;
   imgFile: string;
+  imgPosition?: ImgPosition;
   style?: React.CSSProperties;
 }
 
@@ -21,6 +25,7 @@ export const Hero2: React.FunctionComponent<IHero2Props> = (props) => {
     buttonText,
     buttonOnClick,
     imgFile,
+    imgPosition = 'bottom',
     style,
     ...restProps
   } = props
@@ -46,7 +51,10 @@ export const Hero2: React.FunctionComponent<IHero2Props> = (props) => {
               {buttonText}
             </Button>
           </div>
-          <div className={styles.Img} style={{backgroundImage: `url(${imgFile})`}} />
+          <div
+            className={classnames(styles.Img, imgPosition)}
+            style={{ backgroundImage: `url(${imgFile})` }}
+          />
         </div>
       </div>
     </div>

@@ -34,7 +34,13 @@ export const Img = style({
   height: '100%',
   backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'right bottom'
+  backgroundPosition: 'right bottom',
+  $nest: {
+    '&.center': {
+      height: '80%',
+      backgroundPosition: 'right center'
+    }
+  }
 })
 
 export const Nav = style({
