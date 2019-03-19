@@ -30,5 +30,19 @@ export const BrandLogos = style({
   marginBottom: 35,
   display: 'flex',
   justifyContent: 'center',
-  flexWrap: 'wrap'
+  flexWrap: 'wrap',
+  position: 'relative',
+  zIndex: 1
+})
+
+export const BrandBarBackground = style({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  height: '100%',
+  width: '100%',
+  backgroundImage: 'linear-gradient(193.55deg, #0091FF 0%, #5D2EEB 98.38%)',
+  opacity: 0.05,
+  filter: 'blur(30px)',
+  zIndex: -1
 })

@@ -24,7 +24,8 @@ export const CommunityCard: React.FunctionComponent<ICommunityCardProps> = (prop
     <div
       className={styles.CommunityCardContainer}
       style={{
-        borderBottom: `8px solid ${barColor}`
+        borderBottom: `8px solid ${barColor}`,
+        ...style
       }}
       {...restProps}
     >

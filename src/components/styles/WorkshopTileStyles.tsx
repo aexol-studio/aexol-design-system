@@ -50,13 +50,26 @@ export const SideBar = style({
 export const SideBarText = style({
   color: Colors.White,
   fontSize: 28,
-  lineHeight: '20px'
+  lineHeight: '20px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center'
+})
+
+export const TextFirstLine = style({
+  color: Colors.White,
+  fontSize: 28,
+  lineHeight: '20px',
+  fontFamily: 'Helvetica Neue-CondensedBold',
+  marginBottom: 1
 })
 
 export const DayEnding = style({
   fontSize: 28,
   lineHeight: '20px',
-  color: Colors['Black Hole']
+  color: Colors['Black Hole'],
+  fontFamily: 'Helvetica Neue-CondensedBold',
+  letterSpacing: -1
 })
 
 export const Day = style({
@@ -64,7 +77,8 @@ export const Day = style({
   fontSize: 24,
   lineHeight: '20px',
   fontFamily: 'Helvetica Neue-CondensedBold',
-  fontWeight: 770
+  fontWeight: 770,
+  margin: '0 auto'
 })
 
 export const List = style({
@@ -73,7 +87,6 @@ export const List = style({
   display: 'flex',
   overflowY: 'auto',
   flexDirection: 'column',
-  // justifyContent: 'center',
   $nest: {
     '&.topLeft': {
       borderRadius: '20px 0 0 0'

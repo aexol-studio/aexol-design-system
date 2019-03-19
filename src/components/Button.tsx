@@ -3,7 +3,7 @@ import * as classnames from 'classnames';
 import { PMedium } from './typography';
 import * as styles from './styles/ButtonStyle';
 
-type ButtonType = 'primary' | 'danger' | 'success' | 'submit';
+type ButtonType = 'primary' | 'danger' | 'success' | 'submit' | 'secondary';
 type ButtonSize = 'small' | 'default';
 type ButtonShape = 'square' | 'round' | 'oval';
 
@@ -13,7 +13,6 @@ export interface IButtonProps {
   shape?: ButtonShape;
   disabled?: boolean;
   width?: number;
-  fullWidth?: boolean;
   icon?: JSX.Element;
   onClick?: (e: HTMLButtonElement) => void;
   style?: React.CSSProperties;
@@ -26,7 +25,6 @@ export const Button: React.FunctionComponent<IButtonProps> = props => {
     shape = 'round',
     disabled = false,
     width,
-    fullWidth,
     icon,
     style,
     onClick,
