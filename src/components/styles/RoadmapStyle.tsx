@@ -114,6 +114,10 @@ export const Title = style({
     },
     '&.blue': {
       color: Colors.White
+    },
+    '&.todo': {
+      fontFamily: 'Helvetica Neue',
+      color: Colors.Foggy
     }
   }
 })

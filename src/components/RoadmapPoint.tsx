@@ -30,6 +30,7 @@ export const RoadmapPoint: React.FunctionComponent<IRoadmapPointProps> = (props)
     title,
     titlePosition,
     pointColor,
+    done,
     style
   } = props
 
@@ -116,7 +117,20 @@ export const RoadmapPoint: React.FunctionComponent<IRoadmapPointProps> = (props)
           {text}
         </div>
       </div>
-      <div className={classnames(styles.Title, titlePosition, pointColor)}>{title}</div>
+      <div
+       className={classnames(
+          classnames(
+            styles.Title,
+            titlePosition,
+            pointColor
+          ),
+          classnames({
+            todo: !done
+          })
+        )}
+      >
+        {title}
+      </div>
     </div>
   )
 }
