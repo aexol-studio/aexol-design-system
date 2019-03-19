@@ -26,6 +26,7 @@ export const WorkshopTextTile: React.FunctionComponent<IWorkshopTextTileProps> =
         styles.WorkshopTextTileContainer,
         corner
       )}
+      style={style}
       {...restProps}
     >
       <PMedium style={{color: Colors['Black Hole']}}>

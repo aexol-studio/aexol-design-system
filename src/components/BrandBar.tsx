@@ -33,6 +33,7 @@ export const BrandBar: React.FunctionComponent<IBrandBarProps> = (props) => {
   return (
     <div
       className={styles.BrandBarContainer}
+      style={style}
       {...restProps}
     >
       <div className={styles.BrandLogos}>

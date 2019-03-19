@@ -38,6 +38,7 @@ export const WorkshopTile: React.FunctionComponent<IWorkshopTileProps> = (props)
         styles.WorkshopTileContainer,
         corner
       )}
+      style={style}
       {...restProps}
     >
       <div
