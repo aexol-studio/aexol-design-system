@@ -37,6 +37,7 @@ export const BrandBar: React.FunctionComponent<IBrandBarProps> = (props) => {
       {...restProps}
     >
       <div className={styles.BrandLogos}>
+        <div className={styles.BrandBarBackground} />
         {BrandBarURL.map((el, idx) => renderCards(el, idx))}
       </div>
       <PBold style={{color: Colors['Ancient Stone'], textAlign: 'center'}}>
