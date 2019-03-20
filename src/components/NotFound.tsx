@@ -61,7 +61,7 @@ export const NotFound: React.FunctionComponent<INotFoundProps> = (props) => {
       </div>
       <div
         className={styles.Img}
-        style={{backgroundImage: `url(${require('../../assets/images/Lost1.png')})`}}
+        style={{backgroundImage: `url(${require('../assets/images/Lost1.png')})`}}
       />
     </div>
   )

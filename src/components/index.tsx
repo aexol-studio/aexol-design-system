@@ -15,6 +15,8 @@ export { Hero3 } from './Hero3';
 export { Hero4 } from './Hero4';
 export { Hero5 } from './Hero5';
 export { NotFound } from './NotFound';
+export { ArrowsDown } from './ArrowsDown';
+export { WorkshopBottomBar } from './WorkshopBottomBar';
 export {
   Dropdown,
   DropdownButton,

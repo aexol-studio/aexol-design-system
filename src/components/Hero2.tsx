@@ -14,6 +14,7 @@ export interface IHero2Props {
   buttonOnClick: (e: HTMLButtonElement) => void;
   imgFile: string;
   imgPosition?: ImgPosition;
+  height?: number;
   style?: React.CSSProperties;
 }
 
@@ -26,6 +27,7 @@ export const Hero2: React.FunctionComponent<IHero2Props> = (props) => {
     buttonOnClick,
     imgFile,
     imgPosition = 'bottom',
+    height,
     style,
     ...restProps
   } = props
@@ -33,10 +35,16 @@ export const Hero2: React.FunctionComponent<IHero2Props> = (props) => {
   return (
     <div
       className={styles.Hero}
+      style={{
+        height: height
+          ? height
+          : '100%',
+        ...style
+      }}
       {...restProps}
     >
       <div className={styles.HeroContainer}>
-        <div className={styles.Nav}>Nawigacja</div>
+        {/* <div className={styles.Nav}>Nawigacja</div> */}
         <div className={styles.HeroContent}>
           <div className={styles.TextContent}>
             <H1 style={{color: Colors['Dark Side'], marginBottom: 6}}>

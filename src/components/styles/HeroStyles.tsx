@@ -3,11 +3,13 @@ import { Colors } from './Colors';
 
 export const Hero = style({
   width: '100vw',
-  height: '100vh'
+  display: 'flex',
+  alignItems: 'center'
 })
 
 export const HeroContainer = style({
-  maxWidth: '80%',
+  width: '80%',
+  maxWidth: 1168,
   height: '100%',
   margin: '0 auto',
   display: 'flex',
@@ -15,11 +17,11 @@ export const HeroContainer = style({
 })
 
 export const HeroContent = style({
+  height: '100%',
   display: 'flex',
   flex: 1,
   alignItems: 'center',
-  justifyContent: 'space-between',
-  marginTop: 90
+  justifyContent: 'space-between'
 })
 
 export const TextContent = style({
@@ -31,14 +33,16 @@ export const TextContent = style({
 
 export const Img = style({
   width: '70%',
-  height: '100%',
+  height: '85%',
+  alignSelf: 'flex-end',
   backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'right bottom',
   $nest: {
     '&.center': {
       height: '80%',
-      backgroundPosition: 'right center'
+      backgroundPosition: 'right center',
+      alignSelf: 'center'
     }
   }
 })
@@ -57,7 +61,7 @@ export const Hero1 = classes(Hero, style({
 
 export const ImgContent = style({
   width: '50%',
-  height: '100%',
+  height: '80%',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center'
@@ -81,7 +85,6 @@ export const Img2 = classes(Img1, style({
 
 export const Hero4 = classes(Hero, style({
   width: '100%',
-  height: '100%',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center'
@@ -107,6 +110,7 @@ export const Hero3 = classes(Hero1, style({
 }))
 
 export const TextContent3 = classes(TextContent5, style({
+  marginTop: 150,
   marginBottom: 300
 }))
 

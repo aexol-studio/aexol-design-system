@@ -35,14 +35,8 @@ export const SideBar = style({
     '&.topLeft': {
       borderRadius: '20px 0 0 0'
     },
-    '&.topRight': {
-      borderRadius: '0 20px 0 0'
-    },
     '&.bottomLeft': {
       borderRadius: '0 0 0 20px'
-    },
-    '&.bottomRight': {
-      borderRadius: '0 0 20px 0'
     }
   }
 })

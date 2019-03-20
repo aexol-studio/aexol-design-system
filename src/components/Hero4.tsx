@@ -10,6 +10,7 @@ export interface IHero4Props {
   buttonText: string;
   buttonOnClick: (e: HTMLButtonElement) => void;
   backgroundFile: string;
+  height?: number;
   style?: React.CSSProperties;
 }
 
@@ -21,6 +22,7 @@ export const Hero4: React.FunctionComponent<IHero4Props> = (props) => {
     buttonText,
     buttonOnClick,
     backgroundFile,
+    height,
     style,
     ...restProps
   } = props
@@ -29,13 +31,16 @@ export const Hero4: React.FunctionComponent<IHero4Props> = (props) => {
     <div
       className={styles.Hero4}
       style={{
+        height: height
+          ? height
+          : '100%',
         backgroundImage: `url(${backgroundFile})`,
         ...style
       }}
       {...restProps}
     >
       <div className={styles.HeroContainer}>
-        <div className={styles.Nav}>Nawigacja</div>
+        {/* <div className={styles.Nav}>Nawigacja</div> */}
         <div className={styles.HeroContent}>
           <div className={styles.TextContent4}>
             <H1 style={{color: Colors['Dark Side'], marginBottom: 6}}>

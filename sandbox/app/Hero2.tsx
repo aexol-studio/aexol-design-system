@@ -15,6 +15,7 @@ class Hero2view extends React.PureComponent<IProps> {
         buttonOnClick={() => console.log('click')}
         imgFile="https://via.placeholder.com/668x569"
         imgPosition="center"
+        height={550}
       />
     )
   }

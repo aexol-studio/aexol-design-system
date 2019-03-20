@@ -11,6 +11,7 @@ export interface IHero1Props {
   buttonOnClick: (e: HTMLButtonElement) => void;
   imgFile1: string;
   imgFile2: string;
+  height?: number;
   style?: React.CSSProperties;
 }
 
@@ -23,6 +24,7 @@ export const Hero1: React.FunctionComponent<IHero1Props> = (props) => {
     buttonOnClick,
     imgFile1,
     imgFile2,
+    height,
     style,
     ...restProps
   } = props
@@ -30,10 +32,16 @@ export const Hero1: React.FunctionComponent<IHero1Props> = (props) => {
   return (
     <div
       className={styles.Hero1}
+      style={{
+        height: height
+          ? height
+          : '100%',
+        ...style
+      }}
       {...restProps}
     >
       <div className={styles.HeroContainer}>
-        <div className={styles.Nav}>Nawigacja</div>
+        {/* <div className={styles.Nav}>Nawigacja</div> */}
         <div className={styles.HeroContent}>
           <div className={styles.TextContent1}>
             <H1 style={{color: Colors['Dark Side'], marginBottom: 6}}>

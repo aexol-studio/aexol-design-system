@@ -15,6 +15,7 @@ class Hero1view extends React.PureComponent<IProps> {
         buttonOnClick={() => console.log('click')}
         imgFile1="https://via.placeholder.com/270x540"
         imgFile2="https://via.placeholder.com/270x540"
+        height={550}
       />
     )
   }

@@ -13,6 +13,7 @@ export interface IHero3Props {
   imgFile2: string;
   imgFile3: string;
   imgFile4: string;
+  height?: number;
   style?: React.CSSProperties;
   styleImg1_4?: React.CSSProperties;
   styleImg2_3?: React.CSSProperties;
@@ -29,6 +30,7 @@ export const Hero3: React.FunctionComponent<IHero3Props> = (props) => {
     imgFile2,
     imgFile3,
     imgFile4,
+    height,
     style,
     styleImg1_4,
     styleImg2_3,
@@ -38,10 +40,16 @@ export const Hero3: React.FunctionComponent<IHero3Props> = (props) => {
   return (
     <div
       className={styles.Hero3}
+      style={{
+        height: height
+          ? height
+          : '100%',
+        ...style
+      }}
       {...restProps}
     >
       <div className={styles.HeroContainer}>
-        <div className={styles.Nav}>Nawigacja</div>
+        {/* <div className={styles.Nav}>Nawigacja</div> */}
         <div className={styles.HeroContent}>
           <div className={styles.TextContent3}>
             <H1 style={{color: Colors['Black Hole'], marginBottom: 6}}>
