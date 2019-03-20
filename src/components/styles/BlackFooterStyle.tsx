@@ -5,31 +5,29 @@ export const BlackFooterContainer = style({
   $debugName: 'BlackFooterContainer',
   backgroundColor: Colors['Black Hole'],
   width: '100%',
-  marginTop: '20px',
-  marginBottom: '20px',
+  // marginTop: '20px',
+  // marginBottom: '20px',
   display: 'flex',
   justifyContent: 'space-between',
   flexDirection: 'column',
-  paddingRight: '115px',
-  paddingLeft: '115px'
+  paddingTop: '100px',
+  paddingBottom: '100px',
+  paddingRight: '135px',
+  paddingLeft: '135px'
 })
 
 export const rectangleTopDiv = style({
   $debugName: 'rectangleTopDiv',
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'column'
   // justifyContent: 'space-evenly',
-  marginTop: 50
-  // marginLeft: '10%', // usunac proceny
-  // marginRight: '10%' // usunac proceny
+  // marginTop: 50
 })
 export const rectangleDownDiv = style({
   $debugName: 'rectangleDownDiv',
   display: 'flex',
-  marginBottom: 50,
+  // marginBottom: 50,
   flexDirection: 'column'
-  // marginLeft: '10%', // usunac proceny
-  // marginRight: '10%'// usunac proceny
 })
 
 export const rectangleTop = style({
@@ -58,6 +56,7 @@ export const rectangleDownCopyright = style({
   textAlign: 'left',
   color: Colors['Ancient Stone'],
   marginTop: 5,
+  marginBottom: 0,
   fontSize: 12
 })
 
@@ -75,11 +74,11 @@ export const BlackFooterContent = style({
   // marginLeft: '110px',
   // marginRight: '110px'
 },
-  media({ minWidth: 0, maxWidth: 1280 },
+  media({ minWidth: 0, maxWidth: 1200 },
     {
       flexDirection: 'column',
-      justifyContent: 'center'
-      // alignItems: 'center'
+      justifyContent: 'center',
+      alignItems: 'center'
     })
 )
 
@@ -89,7 +88,7 @@ export const BlackFooterContentColumn = style({
   marginBottom: '60px',
   flexDirection: 'column'
 },
-media({ minWidth: 0, maxWidth: 960 },
+media({ minWidth: 0, maxWidth: 1200 },
   {
     marginTop: '35px',
     marginBottom: '35px'
