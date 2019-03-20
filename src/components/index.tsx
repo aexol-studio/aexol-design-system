@@ -9,6 +9,8 @@ export { WorkshopTile } from './WorkshopTile';
 export { WorkshopTextTile } from './WorkshopTextTile';
 export { BrandBar } from './BrandBar';
 export { PoweredCommunity } from './PoweredCommunity';
+export { RoadmapPoint } from './RoadmapPoint';
+export { Roadmap } from './Roadmap';
 export { Hero1 } from './Hero1';
 export { Hero2 } from './Hero2';
 export { Hero3 } from './Hero3';
