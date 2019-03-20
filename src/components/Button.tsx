@@ -49,6 +49,7 @@ export const Button: React.FunctionComponent<IButtonProps> = props => {
         ? 'submit'
         : 'button'
       }
+      style={style}
       {...restProps}
     >
       {icon}
