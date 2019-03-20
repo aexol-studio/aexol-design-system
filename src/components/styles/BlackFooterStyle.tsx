@@ -9,7 +9,9 @@ export const BlackFooterContainer = style({
   marginBottom: '20px',
   display: 'flex',
   justifyContent: 'space-between',
-  flexDirection: 'column'
+  flexDirection: 'column',
+  paddingRight: '115px',
+  paddingLeft: '115px'
 })
 
 export const rectangleTopDiv = style({
@@ -17,17 +19,17 @@ export const rectangleTopDiv = style({
   display: 'flex',
   flexDirection: 'column',
   // justifyContent: 'space-evenly',
-  marginTop: 50,
-  marginLeft: '10%', // usunac proceny
-  marginRight: '10%' // usunac proceny
+  marginTop: 50
+  // marginLeft: '10%', // usunac proceny
+  // marginRight: '10%' // usunac proceny
 })
 export const rectangleDownDiv = style({
   $debugName: 'rectangleDownDiv',
   display: 'flex',
   marginBottom: 50,
-  flexDirection: 'column',
-  marginLeft: '10%', // usunac proceny
-  marginRight: '10%'// usunac proceny
+  flexDirection: 'column'
+  // marginLeft: '10%', // usunac proceny
+  // marginRight: '10%'// usunac proceny
 })
 
 export const rectangleTop = style({
@@ -53,7 +55,7 @@ export const rectangleTopLogo = style({
 
 export const rectangleDownCopyright = style({
   $debugName: 'rectangleDownCopyright',
-  textAlign: 'center',
+  textAlign: 'left',
   color: Colors['Ancient Stone'],
   marginTop: 5,
   fontSize: 12
@@ -68,14 +70,16 @@ export const BlackFooterMain = style({
 export const BlackFooterContent = style({
   $debugName: 'BlackFooterContent',
   display: 'flex',
-  justifyContent: 'space-evenly',
+  justifyContent: 'space-between',
   flexWrap: 'wrap'
+  // marginLeft: '110px',
+  // marginRight: '110px'
 },
-  media({ minWidth: 0, maxWidth: 800 },
+  media({ minWidth: 0, maxWidth: 1280 },
     {
       flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center'
+      justifyContent: 'center'
+      // alignItems: 'center'
     })
 )
 
@@ -84,7 +88,13 @@ export const BlackFooterContentColumn = style({
   marginTop: '60px',
   marginBottom: '60px',
   flexDirection: 'column'
-})
+},
+media({ minWidth: 0, maxWidth: 960 },
+  {
+    marginTop: '35px',
+    marginBottom: '35px'
+  })
+)
 
 export const BlackFooterContentColumnTitle = style({
   $debugName: 'BlackFooterContentColumnTitle',

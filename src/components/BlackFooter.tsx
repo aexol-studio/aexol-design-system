@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as classnames from 'classnames';
-import { PFooterTitle, PFooterName, H4 } from './typography';
+import { PFooterTitle, PFooterName } from './typography';
 import * as styles from './styles/BlackFooterStyle';
 
 type input = {
@@ -54,7 +54,7 @@ export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props)
           <div className={styles.BlackFooterContentColumn}>
             {inputsCat.objects.map(el => {
               // tslint:disable-next-line:jsx-key
-              return <H4>{el.name}</H4>
+              return <PFooterName>{el.name}</PFooterName>
             })
             }
           </div>
