@@ -12,9 +12,10 @@ export const BrandCardContainer = style({
 })
 
 export const BrandCard = style({
-  maxHeight: 70,
+  maxHeight: 60,
   minHeight: 50,
-  maxWidth: 190
+  maxWidth: 140,
+  margin: 0
 })
 
 export const BrandBarContainer = style({
