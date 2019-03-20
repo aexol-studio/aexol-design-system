@@ -40,6 +40,7 @@ export const PoweredCommunity: React.FunctionComponent<IPoweredCommunityProps> =
   return (
     <div
       className={styles.PoweredCommunityContainer}
+      style={style}
       {...restProps}
     >
       <H1 style={{textAlign: 'center', marginBottom: 50}}>

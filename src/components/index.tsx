@@ -11,6 +11,14 @@ export { BrandBar } from './BrandBar';
 export { PoweredCommunity } from './PoweredCommunity';
 export { RoadmapPoint } from './RoadmapPoint';
 export { Roadmap } from './Roadmap';
+export { Hero1 } from './Hero1';
+export { Hero2 } from './Hero2';
+export { Hero3 } from './Hero3';
+export { Hero4 } from './Hero4';
+export { Hero5 } from './Hero5';
+export { NotFound } from './NotFound';
+export { ArrowsDown } from './ArrowsDown';
+export { WorkshopBottomBar } from './WorkshopBottomBar';
 export {
   Dropdown,
   DropdownButton,

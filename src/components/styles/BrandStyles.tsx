@@ -12,9 +12,10 @@ export const BrandCardContainer = style({
 })
 
 export const BrandCard = style({
-  maxHeight: 70,
+  maxHeight: 60,
   minHeight: 50,
-  maxWidth: 190
+  maxWidth: 140,
+  margin: 0
 })
 
 export const BrandBarContainer = style({
@@ -30,5 +31,19 @@ export const BrandLogos = style({
   marginBottom: 35,
   display: 'flex',
   justifyContent: 'center',
-  flexWrap: 'wrap'
+  flexWrap: 'wrap',
+  position: 'relative',
+  zIndex: 1
+})
+
+export const BrandBarBackground = style({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  height: '100%',
+  width: '100%',
+  backgroundImage: 'linear-gradient(193.55deg, #0091FF 0%, #5D2EEB 98.38%)',
+  opacity: 0.05,
+  filter: 'blur(30px)',
+  zIndex: -1
 })
