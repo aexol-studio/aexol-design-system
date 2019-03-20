@@ -72,6 +72,7 @@ export const Point = style({
   position: 'relative',
   height: 100,
   cursor: 'pointer',
+  zIndex: 10,
   $nest: {
     [`&:hover .${Popup}`]: {
       opacity: 1
@@ -106,11 +107,11 @@ export const Title = style({
   left: -60,
   $nest: {
     '&.topRight': {
-      top: -20,
+      top: -30,
       left: 8
     },
     '&.top': {
-      top: -20
+      top: -30
     },
     '&.blue': {
       color: Colors.White
