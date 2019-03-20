@@ -1,23 +1,22 @@
-import { style } from 'typestyle';
+import { style, media } from 'typestyle';
 import { Colors } from './Colors';
 
 export const BlackFooterContainer = style({
   $debugName: 'BlackFooterContainer',
   backgroundColor: Colors['Black Hole'],
-  width: '80%',
-  // height: 561,
+  width: '100%',
   marginTop: '20px',
   marginBottom: '20px',
   display: 'flex',
   justifyContent: 'space-between',
   flexDirection: 'column'
-
 })
 
 export const rectangleTopDiv = style({
   $debugName: 'rectangleTopDiv',
   display: 'flex',
-  justifyContent: 'space-evenly',
+  flexDirection: 'column',
+  // justifyContent: 'space-evenly',
   marginTop: 50,
   marginLeft: '10%', // usunac proceny
   marginRight: '10%' // usunac proceny
@@ -25,9 +24,7 @@ export const rectangleTopDiv = style({
 export const rectangleDownDiv = style({
   $debugName: 'rectangleDownDiv',
   display: 'flex',
-  // justifyContent: "space-evenly",
   marginBottom: 50,
-  // alignContent: "space-around",
   flexDirection: 'column',
   marginLeft: '10%', // usunac proceny
   marginRight: '10%'// usunac proceny
@@ -35,16 +32,14 @@ export const rectangleDownDiv = style({
 
 export const rectangleTop = style({
   $debugName: 'rectangleTop',
-  width: '80%',
   height: '3px',
-  background: Colors['Alien Blood']
+  background: Colors['Ancient Stone']
 })
 
 export const rectangleDown = style({
   $debugName: 'rectangleDown',
-  // width: "80%",
   height: '3px',
-  background: Colors.Serpentine
+  background: Colors['Ancient Stone']
 })
 
 export const rectangleTopLogo = style({
@@ -53,7 +48,7 @@ export const rectangleTopLogo = style({
   textAlign: 'center',
   marginTop: 5,
   marginBottom: 5,
-   fontSize: 30
+  fontSize: 30
 })
 
 export const rectangleDownCopyright = style({
@@ -73,18 +68,25 @@ export const BlackFooterMain = style({
 export const BlackFooterContent = style({
   $debugName: 'BlackFooterContent',
   display: 'flex',
-  justifyContent: 'space-around',
-  marginLeft: '10%', // usunac proceny
-  marginRight: '10%' // usunac proceny
-})
+  justifyContent: 'space-evenly',
+  flexWrap: 'wrap'
+},
+  media({ minWidth: 0, maxWidth: 800 },
+    {
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center'
+    })
+)
 
 export const BlackFooterContentColumn = style({
-  $debugName: 'BlackFooterContent',
-  marginTop: '20px',
-  marginBottom: '60px'
+  $debugName: 'BlackFooterContentColumn',
+  marginTop: '60px',
+  marginBottom: '60px',
+  flexDirection: 'column'
 })
 
-export const BlackFooterContentColumnTitle = style ({
+export const BlackFooterContentColumnTitle = style({
   $debugName: 'BlackFooterContentColumnTitle',
   color: '#514E5A',
   fontSize: 16,
@@ -92,7 +94,7 @@ export const BlackFooterContentColumnTitle = style ({
   marginBottom: 0,
   marginTop: 0
 })
-export const BlackFooterContentColumnName = style ({
+export const BlackFooterContentColumnName = style({
   $debugName: 'BlackFooterContentColumnTitle',
   color: '#514E5A',
   fontSize: 16,

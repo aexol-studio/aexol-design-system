@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as classnames from 'classnames';
-import { PFooterTitle, PFooterName } from './typography';
+import { PFooterTitle, PFooterName, H4 } from './typography';
 import * as styles from './styles/BlackFooterStyle';
 
 type input = {
@@ -13,17 +13,26 @@ type input = {
   }>;
 }
 
+type inputCat = {
+  objects: Array<{
+    name: string;
+    link: string;
+  }>;
+}
+
 export interface ICardComponentProps {
   inputsAr: input;
-  logo: string;
-  copyright: string
+  // logo: string;
+  copyright: string;
+  inputsCat: inputCat;
 }
 
 export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props) => {
 
   const {
     inputsAr,
-    logo,
+    inputsCat,
+    // logo,
     copyright,
     ...restProps
   } = props
@@ -37,26 +46,34 @@ export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props)
         {...restProps}
       >
         <div className={styles.rectangleTopDiv}>
-          <p className={styles.rectangleTopLogo}>
-            {logo}</p>
+          {/* <p className={styles.rectangleTopLogo}>
+            {logo}</p> */}
           <div className={styles.rectangleTop} />
         </div>
         <div className={styles.BlackFooterContent}>
+          <div className={styles.BlackFooterContentColumn}>
+            {inputsCat.objects.map(el => {
+              // tslint:disable-next-line:jsx-key
+              return <H4>{el.name}</H4>
+            })
+            }
+          </div>
           {inputsAr.objects.map(el => {
             // tslint:disable-next-line:jsx-key
             return <div className={styles.BlackFooterContentColumn}>
-               <PFooterTitle>{el.title}</PFooterTitle>
+              <div><PFooterTitle>{el.title}</PFooterTitle></div>
               <div>{el.objects.map(o =>
-              // tslint:disable-next-line:jsx-key
-              <PFooterName
-              >{o.name}</PFooterName>)}</div>
-            </div>})
+                // tslint:disable-next-line:jsx-key
+                <PFooterName
+                >{o.name}</PFooterName>)}</div>
+            </div>
+          })
           }
         </div>
         <div className={styles.rectangleDownDiv}>
-          <div className={styles.rectangleDown}/>
+          <div className={styles.rectangleDown} />
           <p className={styles.rectangleDownCopyright}>
-       {copyright}</p>
+            {copyright}</p>
         </div>
       </div>
     </div>
