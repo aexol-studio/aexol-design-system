@@ -3,9 +3,9 @@ import * as classnames from 'classnames';
 import { PFooterTitle, PFooterName } from './typography';
 import * as styles from './styles/BlackFooterStyle';
 
-type input = {
+type blackFooterColumnsTxt = {
   objects: Array<{
-    title: string;
+    title?: string;
     objects: Array<{
       name: string;
       link: string;
@@ -13,25 +13,16 @@ type input = {
   }>;
 }
 
-type inputCat = {
-  objects: Array<{
-    name: string;
-    link: string;
-  }>;
-}
-
 export interface ICardComponentProps {
-  inputsAr: input;
+  blackFooterColumnsTxt: blackFooterColumnsTxt;
   // logo: string;
   copyright: string;
-  inputsCat: inputCat;
 }
 
 export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props) => {
 
   const {
-    inputsAr,
-    inputsCat,
+    blackFooterColumnsTxt,
     // logo,
     copyright,
     ...restProps
@@ -51,21 +42,13 @@ export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props)
           <div className={styles.rectangleTop} />
         </div>
         <div className={styles.BlackFooterContent}>
-          <div className={styles.BlackFooterContentColumn}>
-            {inputsCat.objects.map(el => {
-              // tslint:disable-next-line:jsx-key
-              return <PFooterName>{el.name}</PFooterName>
-            })
-            }
-          </div>
-          {inputsAr.objects.map(el => {
+          {blackFooterColumnsTxt.objects.map(el => {
             // tslint:disable-next-line:jsx-key
             return <div className={styles.BlackFooterContentColumn}>
               <div><PFooterTitle>{el.title}</PFooterTitle></div>
               <div>{el.objects.map(o =>
                 // tslint:disable-next-line:jsx-key
-                <PFooterName
-                >{o.name}</PFooterName>)}</div>
+                <PFooterName>{o.name}</PFooterName>)}</div>
             </div>
           })
           }
