@@ -16,7 +16,7 @@ export {
   DropdownSubmenu
 } from './dropdown';
 export { CardComponent } from './CardComponent';
-export { BlackFooter } from './BlackFooter';
+export { Footer } from './Footer';
 
 import * as icons from './icons';
 export { icons };

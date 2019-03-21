@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as classnames from 'classnames';
 import { PFooterTitle, PFooterName } from './typography';
-import * as styles from './styles/BlackFooterStyle';
+import * as styles from './styles/FooterStyle';
 
 type blackFooterColumnsTxt = {
   objects: Array<{
@@ -15,15 +15,16 @@ type blackFooterColumnsTxt = {
 
 export interface ICardComponentProps {
   blackFooterColumnsTxt: blackFooterColumnsTxt;
-  // logo: string;
+  backgroundColor?: 'black' | 'white' ;
   copyright: string;
 }
 
-export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props) => {
+export const Footer: React.FunctionComponent<ICardComponentProps> = (props) => {
 
   const {
     blackFooterColumnsTxt,
     // logo,
+    backgroundColor= 'black',
     copyright,
     ...restProps
   } = props
@@ -32,7 +33,8 @@ export const BlackFooter: React.FunctionComponent<ICardComponentProps> = (props)
     <div className={styles.BlackFooterMain}>
       <div
         className={classnames(
-          styles.BlackFooterContainer
+          styles.BlackFooterContainer,
+          backgroundColor
         )}
         {...restProps}
       >

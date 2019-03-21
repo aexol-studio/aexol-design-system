@@ -26,7 +26,7 @@ export const CardComponent: React.FunctionComponent<ICardComponentProps> = (prop
       <div className={styles.ComponentHero}>
         <div
           className={classnames(
-            styles.CardComponentContainer,
+            styles.CardComponentContainer
           )}
           {...restProps}
         >
@@ -37,9 +37,7 @@ export const CardComponent: React.FunctionComponent<ICardComponentProps> = (prop
           </div>
 
           <div className={styles.boxTitle}>
-            <H4 style={{
-              color: Colors['Black Hole'],
-            }}>
+            <H4 style={{color: Colors['Black Hole']}}>
               {boxTitle}
             </H4>
           </div>

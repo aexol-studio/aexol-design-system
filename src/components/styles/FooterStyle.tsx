@@ -14,7 +14,12 @@ export const BlackFooterContainer = style({
   paddingTop: 100,
   paddingBottom: 100,
   paddingRight: 135,
-  paddingLeft: 135
+  paddingLeft: 135,
+  $nest: {
+    '&.white': {
+      backgroundColor: Colors.White
+    }
+  }
 })
 
 export const rectangleTopDiv = style({
