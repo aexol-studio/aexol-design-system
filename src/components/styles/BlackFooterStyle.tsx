@@ -1,6 +1,6 @@
 import { style, media } from 'typestyle';
 import { Colors } from './Colors';
-// import {Breakpoints} from './Breakpoints'
+import {Breakpoints} from './Breakpoints'
 
 export const BlackFooterContainer = style({
   $debugName: 'BlackFooterContainer',
@@ -75,8 +75,7 @@ export const BlackFooterContent = style({
   // marginLeft: '110px',
   // marginRight: '110px'
 },
-  media({ minWidth: 0, maxWidth: 1200 },
-    // media({Breakpoints: []},
+  media({ minWidth: 0, maxWidth: Breakpoints.Tablet},
     {
       flexDirection: 'column',
       justifyContent: 'center',
