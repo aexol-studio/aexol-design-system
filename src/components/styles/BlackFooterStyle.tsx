@@ -10,10 +10,10 @@ export const BlackFooterContainer = style({
   display: 'flex',
   justifyContent: 'space-between',
   flexDirection: 'column',
-  paddingTop: '100px',
-  paddingBottom: '100px',
-  paddingRight: '135px',
-  paddingLeft: '135px'
+  paddingTop: 100,
+  paddingBottom: 100,
+  paddingRight: 135,
+  paddingLeft: 135
 })
 
 export const rectangleTopDiv = style({
@@ -32,13 +32,13 @@ export const rectangleDownDiv = style({
 
 export const rectangleTop = style({
   $debugName: 'rectangleTop',
-  height: '3px',
+  height: 3,
   background: Colors['Ancient Stone']
 })
 
 export const rectangleDown = style({
   $debugName: 'rectangleDown',
-  height: '3px',
+  height: 3,
   background: Colors['Ancient Stone']
 })
 
@@ -84,14 +84,14 @@ export const BlackFooterContent = style({
 
 export const BlackFooterContentColumn = style({
   $debugName: 'BlackFooterContentColumn',
-  marginTop: '60px',
-  marginBottom: '60px',
+  marginTop: 60,
+  marginBottom: 60,
   flexDirection: 'column'
 },
 media({ minWidth: 0, maxWidth: 1200 },
   {
-    marginTop: '35px',
-    marginBottom: '35px'
+    marginTop: 35,
+    marginBottom: 35
   })
 )
 
