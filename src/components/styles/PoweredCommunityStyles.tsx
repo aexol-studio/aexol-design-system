@@ -14,7 +14,7 @@ export const CommunityCardContainer = style({
 
 export const CardVal = style({
   fontSize: 100,
-  lineHeight: 88,
+  lineHeight: '88px',
   color: Colors.Lunatic,
   fontFamily: 'Helvetica Neue-Thin'
 })
@@ -30,6 +30,7 @@ export const CardDescript = style({
 })
 
 export const PoweredCommunityContainer = style({
+  width: '80%',
   maxWidth: 1170,
   padding: '40px 0',
   margin: '0 auto'
