@@ -77,5 +77,4 @@ export const TypoGraphy = {
     marginBottom: 0,
     marginTop: 5
   })
-
 };
