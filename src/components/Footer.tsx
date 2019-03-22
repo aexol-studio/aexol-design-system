@@ -1,8 +1,7 @@
 import * as React from 'react'
 import * as classnames from 'classnames';
-import { PFooterTitle, PFooterName } from './typography';
+import { PFooterTitle} from './typography';
 import * as styles from './styles/FooterStyle';
-
 type FooterColumnsTxt = {
   objects: Array<{
     title?: string;
@@ -30,12 +29,15 @@ export const Footer: React.FunctionComponent<FooterComponentProps> = (props) => 
   } = props
 
   return (
-    <div className={styles.FooterMain}>
+    <div
+      className={classnames(
+      styles.FooterMain,
+      backgroundColor)}
+    >
       <div
-        className={classnames(
-          styles.FooterContainer,
-          backgroundColor
-        )}
+        className={
+          styles.FooterContainer
+        }
         {...restProps}
       >
         <div className={styles.rectangleTopDiv}>
@@ -44,13 +46,11 @@ export const Footer: React.FunctionComponent<FooterComponentProps> = (props) => 
           <div className={styles.rectangleTop} />
         </div>
         <div className={styles.FooterContent}>
-          {FooterColumnsTxt.objects.map(el => {
-            // tslint:disable-next-line:jsx-key
-            return <div className={styles.FooterContentColumn}>
-              <div><PFooterTitle>{el.title}</PFooterTitle></div>
-              <div>{el.objects.map(o =>
-                // tslint:disable-next-line:jsx-key
-                <PFooterName>{o.name}</PFooterName>)}</div>
+          {FooterColumnsTxt.objects.map((el, idxt) => {
+            return <div className={styles.FooterContentColumn} key={idxt}>
+              <div><PFooterTitle >{el.title}</PFooterTitle></div>
+              <div className={styles.PFooterNameDiv}>{el.objects.map((o, idx) =>
+                <a className={styles.PFooterName} href={o.link} key={idx}>{o.name}</a>)}</div>
             </div>
           })
           }
