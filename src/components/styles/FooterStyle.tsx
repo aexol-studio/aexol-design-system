@@ -1,25 +1,17 @@
 import { style, media } from 'typestyle';
 import { Colors } from './Colors';
-import {Breakpoints} from './Breakpoints'
+import {Breakpoints} from './Breakpoints';
 
 export const FooterContainer = style({
   $debugName: 'FooterContainer',
-  backgroundColor: Colors['Black Hole'],
-  width: '100%',
-  // marginTop: '20px',
-  // marginBottom: '20px',
+  width: '80%',
+  maxWidth: 1170,
+  margin: '0 auto',
+  marginTop: '80px',
+  marginBottom: '80px',
   display: 'flex',
   justifyContent: 'space-between',
-  flexDirection: 'column',
-  paddingTop: 100,
-  paddingBottom: 100,
-  paddingRight: 135,
-  paddingLeft: 135,
-  $nest: {
-    '&.white': {
-      backgroundColor: Colors.White
-    }
-  }
+  flexDirection: 'column'
 })
 
 export const rectangleTopDiv = style({
@@ -68,8 +60,14 @@ export const rectangleDownCopyright = style({
 
 export const FooterMain = style({
   $debugName: 'FooterMain',
+  backgroundColor: Colors['Black Hole'],
   display: 'flex',
-  justifyContent: 'space-around'
+  justifyContent: 'space-around',
+  $nest: {
+    '&.white': {
+      backgroundColor: Colors.White
+    }
+  }
 })
 
 export const FooterContent = style({
@@ -115,4 +113,20 @@ export const FooterContentColumnName = style({
   fontSize: 16,
   marginBottom: 0,
   marginTop: 5
+})
+
+export const PFooterNameDiv = style ({
+display: 'flex',
+flexDirection: 'column'
+})
+
+export const PFooterName = style ({
+    margin: 0,
+    padding: 0,
+    lineHeight: `23px`,
+    fontSize: 16,
+    color: '#514E5A',
+    marginBottom: 0,
+    marginTop: 5,
+    textDecoration: 'none'
 })
