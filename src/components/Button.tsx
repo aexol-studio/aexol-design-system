@@ -3,7 +3,7 @@ import * as classnames from 'classnames';
 import { PMedium } from './typography';
 import * as styles from './styles/ButtonStyle';
 
-type ButtonType = 'primary' | 'danger' | 'success' | 'submit' | 'secondary';
+type ButtonType = 'primary' | 'danger' | 'success' | 'submit' | 'secondary' | 'secondary2' | 'secondary3';
 type ButtonSize = 'small' | 'default';
 type ButtonShape = 'square' | 'round' | 'oval';
 

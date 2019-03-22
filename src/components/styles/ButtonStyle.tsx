@@ -34,15 +34,6 @@ export const Button = style({
     '&.success': {
       backgroundColor: Colors.Serpentine
     },
-    '&.secondary': {
-      backgroundColor: Colors.Foggy,
-      color: Colors['Ancient Stone'],
-      $nest: {
-        '&:hover': {
-          backgroundColor: Colors.Sopel
-        }
-      }
-    },
     '&.disabled': {
       backgroundColor: Colors.Ultrasonic,
       pointerEvents: 'none'
@@ -56,6 +47,35 @@ export const Button = style({
     },
     '&:hover': {
       backgroundColor: Colors.Pioneer
+    },
+    '&.secondary': {
+      backgroundColor: Colors.Foggy,
+      color: Colors['Ancient Stone'],
+      $nest: {
+        '&:hover': {
+          backgroundColor: Colors.Sopel
+        }
+      }
+    },
+    '&.secondary2': {
+      backgroundColor: Colors.Foggy,
+      color: Colors['Black Hole'],
+      border: `2px solid ${Colors['Ancient Stone']}`,
+      $nest: {
+        '&:hover': {
+          backgroundColor: Colors.Sopel
+        }
+      }
+    },
+    '&.secondary3': {
+      color: Colors.White,
+      backgroundColor: Colors['Ancient Stone'],
+      border: `2px solid ${Colors.White}`,
+      $nest: {
+        '&:hover': {
+          border: `3px solid ${Colors['Plutonic Briza']}`
+        }
+      }
     }
   }
 });
