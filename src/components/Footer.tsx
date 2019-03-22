@@ -3,7 +3,7 @@ import * as classnames from 'classnames';
 import { PFooterTitle, PFooterName } from './typography';
 import * as styles from './styles/FooterStyle';
 
-type blackFooterColumnsTxt = {
+type FooterColumnsTxt = {
   objects: Array<{
     title?: string;
     objects: Array<{
@@ -13,16 +13,16 @@ type blackFooterColumnsTxt = {
   }>;
 }
 
-export interface ICardComponentProps {
-  blackFooterColumnsTxt: blackFooterColumnsTxt;
+export interface FooterComponentProps {
+  FooterColumnsTxt: FooterColumnsTxt;
   backgroundColor?: 'black' | 'white' ;
   copyright: string;
 }
 
-export const Footer: React.FunctionComponent<ICardComponentProps> = (props) => {
+export const Footer: React.FunctionComponent<FooterComponentProps> = (props) => {
 
   const {
-    blackFooterColumnsTxt,
+    FooterColumnsTxt,
     // logo,
     backgroundColor= 'black',
     copyright,
@@ -30,10 +30,10 @@ export const Footer: React.FunctionComponent<ICardComponentProps> = (props) => {
   } = props
 
   return (
-    <div className={styles.BlackFooterMain}>
+    <div className={styles.FooterMain}>
       <div
         className={classnames(
-          styles.BlackFooterContainer,
+          styles.FooterContainer,
           backgroundColor
         )}
         {...restProps}
@@ -43,10 +43,10 @@ export const Footer: React.FunctionComponent<ICardComponentProps> = (props) => {
             {logo}</p> */}
           <div className={styles.rectangleTop} />
         </div>
-        <div className={styles.BlackFooterContent}>
-          {blackFooterColumnsTxt.objects.map(el => {
+        <div className={styles.FooterContent}>
+          {FooterColumnsTxt.objects.map(el => {
             // tslint:disable-next-line:jsx-key
-            return <div className={styles.BlackFooterContentColumn}>
+            return <div className={styles.FooterContentColumn}>
               <div><PFooterTitle>{el.title}</PFooterTitle></div>
               <div>{el.objects.map(o =>
                 // tslint:disable-next-line:jsx-key
