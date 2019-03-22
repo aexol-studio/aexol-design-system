@@ -33,11 +33,11 @@ class About extends React.PureComponent<IProps> {
     return (
       <div className={styles.About}>
       <nav className={styles.Nav}>
-        <Link to="/hero1" style={{marginRight: 10}}>Hero1</Link>
-        <Link to="/hero2" style={{marginRight: 10}}>Hero2</Link>
-        <Link to="/hero3" style={{marginRight: 10}}>Hero3</Link>
-        <Link to="/hero4" style={{marginRight: 10}}>Hero4</Link>
-        <Link to="/hero5">Hero5</Link>
+        <Link to="/Hero2Img" style={{marginRight: 10}}>Hero2Img</Link>
+        <Link to="/Hero1Img" style={{marginRight: 10}}>Hero1Img</Link>
+        <Link to="/HeroImgOnBottom" style={{marginRight: 10}}>HeroImgOnBottom</Link>
+        <Link to="/HeroBackImgWithTile" style={{marginRight: 10}}>heroBackImgTile</Link>
+        <Link to="/HeroBackImgWithText">heroBackImgText</Link>
       </nav>
         <div className={styles.Container}>
           <Logo

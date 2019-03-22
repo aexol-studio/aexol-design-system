@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { Hero1 } from '../../src';
+import { Hero2Img } from '../../src';
 import { withRouter, RouteComponentProps } from 'react-router';
 
 type IProps = RouteComponentProps<any>
 
-class Hero1view extends React.PureComponent<IProps> {
+class Hero2Imgview extends React.PureComponent<IProps> {
 
   render() {
     return (
-      <Hero1
+      <Hero2Img
         headerText="Thinking About Going Mobile?"
         paragraphText="Start seeing the masive benefits of having an app for your bussines."
         buttonText="Try it!"
@@ -21,4 +21,4 @@ class Hero1view extends React.PureComponent<IProps> {
   }
 }
 
-export default withRouter(Hero1view)
+export default withRouter(Hero2Imgview)

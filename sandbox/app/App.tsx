@@ -5,11 +5,11 @@ import {
   Switch
 } from 'react-router-dom';
 import About from './About';
-import Hero1view from './Hero1';
-import Hero2view from './Hero2';
-import Hero3view from './Hero3';
-import Hero4view from './Hero4';
-import Hero5view from './Hero5';
+import Hero2Imgview from './Hero2Img';
+import Hero1Imgview from './Hero1Img';
+import HeroImgOnBottomview from './HeroImgOnBottom';
+import HeroBackImgWithTileview from './HeroBackImgWithTile';
+import HeroBackImgWithTextview from './HeroBackImgWithText';
 import NoMatch from './NoMatch';
 
 class App extends React.Component {
@@ -24,24 +24,24 @@ class App extends React.Component {
             component={About}
           />
           <Route
-            path={'/hero1'}
-            component={Hero1view}
+            path={'/Hero2Img'}
+            component={Hero2Imgview}
           />
           <Route
-            path={'/hero2'}
-            component={Hero2view}
+            path={'/Hero1Img'}
+            component={Hero1Imgview}
           />
           <Route
-            path={'/hero3'}
-            component={Hero3view}
+            path={'/HeroImgOnBottom'}
+            component={HeroImgOnBottomview}
           />
           <Route
-            path={'/hero4'}
-            component={Hero4view}
+            path={'/HeroBackImgWithTile'}
+            component={HeroBackImgWithTileview}
           />
           <Route
-            path={'/hero5'}
-            component={Hero5view}
+            path={'/HeroBackImgWithText'}
+            component={HeroBackImgWithTextview}
           />
           <Route
             component={NoMatch}

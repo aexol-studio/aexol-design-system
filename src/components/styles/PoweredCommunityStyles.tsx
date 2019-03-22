@@ -30,6 +30,7 @@ export const CardDescript = style({
 })
 
 export const PoweredCommunityContainer = style({
+  width: '80%',
   maxWidth: 1170,
   padding: '40px 0',
   margin: '0 auto'

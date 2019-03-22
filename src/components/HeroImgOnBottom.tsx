@@ -4,7 +4,7 @@ import { Button } from './Button';
 import * as styles from './styles/HeroStyles';
 import { Colors } from './styles/Colors';
 
-export interface IHero3Props {
+export interface IHeroImgOnBottomProps {
   headerText: string;
   paragraphText: string;
   buttonText: string;
@@ -19,7 +19,7 @@ export interface IHero3Props {
   styleImg2_3?: React.CSSProperties;
 }
 
-export const Hero3: React.FunctionComponent<IHero3Props> = (props) => {
+export const HeroImgOnBottom: React.FunctionComponent<IHeroImgOnBottomProps> = (props) => {
 
   const {
     headerText,
@@ -39,7 +39,7 @@ export const Hero3: React.FunctionComponent<IHero3Props> = (props) => {
 
   return (
     <div
-      className={styles.Hero3}
+      className={styles.HeroImgOnBottom}
       style={{
         height: height
           ? height
@@ -49,7 +49,6 @@ export const Hero3: React.FunctionComponent<IHero3Props> = (props) => {
       {...restProps}
     >
       <div className={styles.HeroContainer}>
-        {/* <div className={styles.Nav}>Nawigacja</div> */}
         <div className={styles.HeroContent}>
           <div className={styles.TextContent3}>
             <H1 style={{color: Colors['Black Hole'], marginBottom: 6}}>

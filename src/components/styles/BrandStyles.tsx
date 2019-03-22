@@ -19,7 +19,8 @@ export const BrandCard = style({
 })
 
 export const BrandBarContainer = style({
-  maxWidth: 1168,
+  width: '80%',
+  maxWidth: 1170,
   padding: '40px 0',
   borderTop: `3px solid ${Colors.Sopel}`,
   borderBottom: `3px solid ${Colors.Sopel}`,

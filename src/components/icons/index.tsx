@@ -91,6 +91,6 @@ export const ArrowDown2 = () => (
 
 export const ArrowDown3 = () => (
   <svg width="35" height="23" viewBox="0 0 35 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.5 21L0.612505 -1.27375e-06L34.3875 1.67896e-06L17.5 21Z" fill="#C4C4C4" fill-opacity="0.4"/>
+    <path d="M17.5 21L0.612505 -1.27375e-06L34.3875 1.67896e-06L17.5 21Z" fill="#C4C4C4" fillOpacity="0.4"/>
   </svg>
 )

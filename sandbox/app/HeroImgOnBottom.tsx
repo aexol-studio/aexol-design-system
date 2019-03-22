@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { Hero3 } from '../../src';
+import { HeroImgOnBottom } from '../../src';
 import { withRouter, RouteComponentProps } from 'react-router';
 
 type IProps = RouteComponentProps<any>
 
-class Hero5view extends React.PureComponent<IProps> {
+class HeroImgOnBottomview extends React.PureComponent<IProps> {
 
   render() {
     return (
-      <Hero3
+      <HeroImgOnBottom
         headerText="Today is that day"
         paragraphText="What you’ve been looking for is already available and free!"
         buttonText="More Details"
@@ -22,4 +22,4 @@ class Hero5view extends React.PureComponent<IProps> {
   }
 }
 
-export default withRouter(Hero5view)
+export default withRouter(HeroImgOnBottomview)

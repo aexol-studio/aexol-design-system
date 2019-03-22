@@ -18,6 +18,11 @@ export const paragraphBig = 34;
 
 export const transition = '0.3s ease-out';
 
+export const laptop = 1280
+export const tablet = 1024
+export const tabletPortrait = 768
+export const phone = 550
+
 fontFace({
   fontFamily: 'Helvetica Neue',
   fontWeight: 450,

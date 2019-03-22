@@ -4,26 +4,24 @@ import { Button } from './Button';
 import * as styles from './styles/HeroStyles';
 import { Colors } from './styles/Colors';
 
-export interface IHero1Props {
+export interface IHeroBackImgWithTileProps {
   headerText: string;
   paragraphText: string;
   buttonText: string;
   buttonOnClick: (e: HTMLButtonElement) => void;
-  imgFile1: string;
-  imgFile2: string;
+  backgroundFile: string;
   height?: number;
   style?: React.CSSProperties;
 }
 
-export const Hero1: React.FunctionComponent<IHero1Props> = (props) => {
+export const HeroBackImgWithTile: React.FunctionComponent<IHeroBackImgWithTileProps> = (props) => {
 
   const {
     headerText,
     paragraphText,
     buttonText,
     buttonOnClick,
-    imgFile1,
-    imgFile2,
+    backgroundFile,
     height,
     style,
     ...restProps
@@ -31,19 +29,19 @@ export const Hero1: React.FunctionComponent<IHero1Props> = (props) => {
 
   return (
     <div
-      className={styles.Hero1}
+      className={styles.HeroBackImgWithTile}
       style={{
         height: height
           ? height
           : '100%',
+        backgroundImage: `url(${backgroundFile})`,
         ...style
       }}
       {...restProps}
     >
       <div className={styles.HeroContainer}>
-        {/* <div className={styles.Nav}>Nawigacja</div> */}
         <div className={styles.HeroContent}>
-          <div className={styles.TextContent1}>
+          <div className={styles.TextContent4}>
             <H1 style={{color: Colors['Dark Side'], marginBottom: 6}}>
               {headerText}
             </H1>
@@ -55,10 +53,6 @@ export const Hero1: React.FunctionComponent<IHero1Props> = (props) => {
             >
               {buttonText}
             </Button>
-          </div>
-          <div className={styles.ImgContent}>
-            <div className={styles.Img1} style={{backgroundImage: `url(${imgFile1})`}} />
-            <div className={styles.Img2} style={{backgroundImage: `url(${imgFile2})`}} />
           </div>
         </div>
       </div>

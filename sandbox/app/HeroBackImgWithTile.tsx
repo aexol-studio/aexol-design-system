@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { Hero4 } from '../../src';
+import { HeroBackImgWithTile} from '../../src';
 import { withRouter, RouteComponentProps } from 'react-router';
 
 type IProps = RouteComponentProps<any>
 
-class Hero4view extends React.PureComponent<IProps> {
+class HeroBackImgWithTileview extends React.PureComponent<IProps> {
 
   render() {
     return (
-      <Hero4
+      <HeroBackImgWithTile
         headerText="Help finding information online"
         paragraphText="How to take advantage of both, at the same time."
         buttonText="Learn more"
@@ -19,4 +19,4 @@ class Hero4view extends React.PureComponent<IProps> {
   }
 }
 
-export default withRouter(Hero4view)
+export default withRouter(HeroBackImgWithTileview)

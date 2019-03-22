@@ -29,6 +29,7 @@ export const SideBar = style({
   alignItems: 'center',
   justifyContent: 'center',
   width: 66,
+  minWidth: 66,
   height: '100%',
   borderRight: `6px solid ${Colors.Sopel}`,
   $nest: {

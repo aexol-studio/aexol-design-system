@@ -1,11 +1,11 @@
-import { style } from 'typestyle';
+import { style, media } from 'typestyle';
 import { Colors } from './Colors';
 import * as vars from '../../vars';
 
 export const Popup = style({
   width: 200,
   borderRadius: 8,
-  backgroundImage: `linear-gradient(to bottom, rgba(65, 104, 255, 0), ${Colors.Lunatic})`,
+  backgroundImage: `linear-gradient(to bottom, '${Colors.Lunatic}00', ${Colors.Lunatic})`,
   padding: 2,
   position: 'absolute',
   alignItems: 'center',
@@ -58,7 +58,7 @@ export const Text = style({
     '&::after': {
       content: `''`,
       position: 'absolute',
-      bottom: -24,
+      bottom: -22,
       right: 86,
       marginTop: -12,
       borderWidth: 12,
@@ -124,7 +124,7 @@ export const Title = style({
 })
 
 export const Roadmap = style({
-  width: '100vw',
+  width: '100%',
   minHeight: 550,
   backgroundColor: Colors.Foggy,
   display: 'flex',
@@ -132,10 +132,12 @@ export const Roadmap = style({
   alignItems: 'center',
   $nest: {
     '&.blue': {
-      backgroundImage: 'linear-gradient(to bottom left, #0091FF, #5D2EEB)'
+      backgroundImage: Colors['Alien Blood']
     }
   }
-})
+}, media({ maxWidth: vars.laptop }, {
+  padding: 70
+}))
 
 export const Road = style({
   display: 'flex',
@@ -148,4 +150,6 @@ export const Background = style({
   position: 'absolute',
   top: -100,
   left: 0
-})
+}, media({ maxWidth: vars.laptop }, {
+  display: 'none'
+}))

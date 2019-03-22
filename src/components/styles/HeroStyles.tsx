@@ -1,19 +1,18 @@
-import { style, classes } from 'typestyle';
+import { style, classes, media } from 'typestyle';
 import { Colors } from './Colors';
+import * as vars from '../../vars';
 
 export const Hero = style({
-  width: '100vw',
+  width: '100%',
   display: 'flex',
   alignItems: 'center'
 })
 
 export const HeroContainer = style({
   width: '80%',
-  maxWidth: 1168,
+  maxWidth: 1170,
   height: '100%',
-  margin: '0 auto',
-  display: 'flex',
-  flexDirection: 'column'
+  margin: '0 auto'
 })
 
 export const HeroContent = style({
@@ -29,7 +28,11 @@ export const TextContent = style({
   flexDirection: 'column',
   width: '25%',
   maxWidth: 450
-})
+}, media({ maxWidth: vars.laptop }, {
+  width: '35%'
+}), media({ maxWidth: vars.tablet }, {
+  width: '100%'
+}))
 
 export const Img = style({
   width: '70%',
@@ -45,17 +48,13 @@ export const Img = style({
       alignSelf: 'center'
     }
   }
-})
+}, media({ maxWidth: vars.laptop }, {
+  width: '60%'
+}), media({ maxWidth: vars.tablet }, {
+  display: 'none'
+}))
 
-export const Nav = style({
-  width: '100%',
-  height: 72,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-end'
-})
-
-export const Hero1 = classes(Hero, style({
+export const Hero1Img = classes(Hero, style({
   backgroundColor: Colors.Foggy
 }))
 
@@ -83,7 +82,7 @@ export const Img2 = classes(Img1, style({
   backgroundPosition: 'right center'
 }))
 
-export const Hero4 = classes(Hero, style({
+export const HeroBackImgWithTile = classes(Hero, style({
   width: '100%',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
@@ -105,9 +104,11 @@ export const TextContent5 = classes(TextContent, style({
   marginBottom: 162
 }))
 
-export const Hero3 = classes(Hero1, style({
+export const HeroImgOnBottom = classes(Hero1Img, style({
   position: 'relative'
 }))
+
+export const HeroBackImgWithText = HeroImgOnBottom
 
 export const TextContent3 = classes(TextContent5, style({
   marginTop: 150,
