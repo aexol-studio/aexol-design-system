@@ -59,5 +59,23 @@ export const TypoGraphy = {
     lineHeight: `16px`,
     fontSize: 12,
     fontFamily: 'Helvetica Neue-Medium'
+  }),
+  PFooterTitle: style({
+    ...BaseTypoGraphy,
+    ...BaseTypoGraphyP,
+    color: '#514E5A',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 0,
+    marginTop: 0
+  }),
+  PFooterName: style({
+    ...BaseTypoGraphy,
+    ...BaseTypoGraphyP,
+    color: '#514E5A',
+    fontSize: 16,
+    marginBottom: 0,
+    marginTop: 5
   })
+
 };

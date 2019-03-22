@@ -29,9 +29,18 @@ export const H4: React.StatelessComponent<PropsI> = (props) => (
 export const P: React.StatelessComponent<PropsI> = (props) => (
   <p className={TypoGraphy.PRegular} {...props}>{props.children}</p>
 );
+
 export const PMedium: React.StatelessComponent<PropsI> = (props) => (
   <p className={TypoGraphy.PMedium} {...props}>{props.children}</p>
 );
+
 export const PBold: React.StatelessComponent<PropsI> = (props) => (
   <p className={TypoGraphy.PBold} {...props}>{props.children}</p>
+);
+export const PFooterTitle: React.StatelessComponent<PropsI> = (props) => (
+  <p className={TypoGraphy.PFooterTitle} {...props}>{props.children}</p>
+);
+
+export const PFooterName: React.StatelessComponent<PropsI> = (props) => (
+  <p className={TypoGraphy.PFooterName} {...props}>{props.children}</p>
 );

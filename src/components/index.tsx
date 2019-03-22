@@ -25,7 +25,8 @@ export {
   DropdownElement,
   DropdownSubmenu
 } from './dropdown';
-
+export { CardComponent } from './CardComponent';
+export { Footer } from './Footer';
 import * as icons from './icons';
 export { icons };
 
