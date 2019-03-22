@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as classnames from 'classnames';
-import { PFooterTitle, PFooterName} from './typography';
+import { PFooterTitle} from './typography';
 import * as styles from './styles/FooterStyle';
 type FooterColumnsTxt = {
   objects: Array<{
