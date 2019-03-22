@@ -76,3 +76,21 @@ export const SuccessLight = () => (
     <path d="M18 8L8.5 17.5L5.5 13.5" stroke="white" strokeWidth="1.9365" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 )
+
+export const ArrowDown1 = () => (
+  <svg width="51" height="23" viewBox="0 0 51 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M25.5 21L0.818277 -2.74195e-06L50.1817 1.57354e-06L25.5 21Z" fill="#C4C4C4"/>
+  </svg>
+)
+
+export const ArrowDown2 = () => (
+  <svg width="43" height="23" viewBox="0 0 43 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path opacity="0.6" d="M21.5 21L0.282381 -2.08941e-06L42.7176 1.62039e-06L21.5 21Z" fill="#C4C4C4"/>
+  </svg>
+)
+
+export const ArrowDown3 = () => (
+  <svg width="35" height="23" viewBox="0 0 35 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.5 21L0.612505 -1.27375e-06L34.3875 1.67896e-06L17.5 21Z" fill="#C4C4C4" fillOpacity="0.4"/>
+  </svg>
+)

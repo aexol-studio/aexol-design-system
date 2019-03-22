@@ -9,6 +9,16 @@ export { WorkshopTile } from './WorkshopTile';
 export { WorkshopTextTile } from './WorkshopTextTile';
 export { BrandBar } from './BrandBar';
 export { PoweredCommunity } from './PoweredCommunity';
+export { RoadmapPoint } from './RoadmapPoint';
+export { Roadmap } from './Roadmap';
+export { Hero2Img } from './Hero2Img';
+export { Hero1Img } from './Hero1Img';
+export { HeroImgOnBottom } from './HeroImgOnBottom';
+export { HeroBackImgWithTile } from './HeroBackImgWithTile';
+export { HeroBackImgWithText } from './HeroBackImgWithText';
+export { NotFound } from './NotFound';
+export { ArrowsDown } from './ArrowsDown';
+export { WorkshopBottomBar } from './WorkshopBottomBar';
 export {
   Dropdown,
   DropdownButton,
@@ -17,7 +27,6 @@ export {
 } from './dropdown';
 export { CardComponent } from './CardComponent';
 export { Footer } from './Footer';
-
 import * as icons from './icons';
 export { icons };
 

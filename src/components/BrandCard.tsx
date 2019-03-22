@@ -17,6 +17,7 @@ export const BrandCard: React.FunctionComponent<IBrandCardProps> = (props) => {
   return (
     <div
       className={styles.BrandCardContainer}
+      style={style}
       {...restProps}
     >
       <img

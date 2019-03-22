@@ -2,8 +2,8 @@ import { style, media } from 'typestyle';
 import { Colors } from './Colors';
 import {Breakpoints} from './Breakpoints'
 
-export const BlackFooterContainer = style({
-  $debugName: 'BlackFooterContainer',
+export const FooterContainer = style({
+  $debugName: 'FooterContainer',
   backgroundColor: Colors['Black Hole'],
   width: '100%',
   // marginTop: '20px',
@@ -66,14 +66,14 @@ export const rectangleDownCopyright = style({
   fontSize: 12
 })
 
-export const BlackFooterMain = style({
-  $debugName: 'BlackFooterMain',
+export const FooterMain = style({
+  $debugName: 'FooterMain',
   display: 'flex',
   justifyContent: 'space-around'
 })
 
-export const BlackFooterContent = style({
-  $debugName: 'BlackFooterContent',
+export const FooterContent = style({
+  $debugName: 'FooterContent',
   display: 'flex',
   justifyContent: 'space-between',
   flexWrap: 'wrap'
@@ -88,8 +88,8 @@ export const BlackFooterContent = style({
     })
 )
 
-export const BlackFooterContentColumn = style({
-  $debugName: 'BlackFooterContentColumn',
+export const FooterContentColumn = style({
+  $debugName: 'FooterContentColumn',
   marginTop: 60,
   marginBottom: 60,
   flexDirection: 'column'
@@ -101,16 +101,16 @@ media({ minWidth: 0, maxWidth: 1200 },
   })
 )
 
-export const BlackFooterContentColumnTitle = style({
-  $debugName: 'BlackFooterContentColumnTitle',
+export const FooterContentColumnTitle = style({
+  $debugName: 'FooterContentColumnTitle',
   color: '#514E5A',
   fontSize: 16,
   fontWeight: 'bold',
   marginBottom: 0,
   marginTop: 0
 })
-export const BlackFooterContentColumnName = style({
-  $debugName: 'BlackFooterContentColumnTitle',
+export const FooterContentColumnName = style({
+  $debugName: 'FooterContentColumnTitle',
   color: '#514E5A',
   fontSize: 16,
   marginBottom: 0,

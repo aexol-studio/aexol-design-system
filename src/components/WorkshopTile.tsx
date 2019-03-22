@@ -38,6 +38,7 @@ export const WorkshopTile: React.FunctionComponent<IWorkshopTileProps> = (props)
         styles.WorkshopTileContainer,
         corner
       )}
+      style={style}
       {...restProps}
     >
       <div
@@ -47,7 +48,9 @@ export const WorkshopTile: React.FunctionComponent<IWorkshopTileProps> = (props)
         )}
       >
         <div className={styles.SideBarText}>
-          {day}<span className={styles.DayEnding}>{checkDay()}</span>
+          <div className={styles.TextFirstLine}>
+            {day}<span className={styles.DayEnding}>{checkDay()}</span>
+          </div>
           <div className={styles.Day}>day</div>
         </div>
       </div>
