@@ -19,6 +19,7 @@ export { HeroBackImgWithText } from './HeroBackImgWithText';
 export { NotFound } from './NotFound';
 export { ArrowsDown } from './ArrowsDown';
 export { WorkshopBottomBar } from './WorkshopBottomBar';
+export { PricingTable, PricingProps } from './PricingTable';
 export {
   Dropdown,
   DropdownButton,

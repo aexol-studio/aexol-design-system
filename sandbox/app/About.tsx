@@ -1,9 +1,5 @@
 import * as React from 'react';
-import {
-  Button,
-  Logo,
-  Notification
-} from '../../src';
+import { Button, Logo, Notification } from '../../src';
 import * as styles from './styles/AboutStyles';
 import { withRouter, RouteComponentProps } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -32,13 +28,22 @@ class About extends React.PureComponent<IProps> {
   render() {
     return (
       <div className={styles.About}>
-      <nav className={styles.Nav}>
-        <Link to="/Hero2Img" style={{marginRight: 10}}>Hero2Img</Link>
-        <Link to="/Hero1Img" style={{marginRight: 10}}>Hero1Img</Link>
-        <Link to="/HeroImgOnBottom" style={{marginRight: 10}}>HeroImgOnBottom</Link>
-        <Link to="/HeroBackImgWithTile" style={{marginRight: 10}}>heroBackImgTile</Link>
-        <Link to="/HeroBackImgWithText">heroBackImgText</Link>
-      </nav>
+        <nav className={styles.Nav}>
+          <Link to="/Hero2Img" style={{ marginRight: 10 }}>
+            Hero2Img
+          </Link>
+          <Link to="/Hero1Img" style={{ marginRight: 10 }}>
+            Hero1Img
+          </Link>
+          <Link to="/HeroImgOnBottom" style={{ marginRight: 10 }}>
+            HeroImgOnBottom
+          </Link>
+          <Link to="/HeroBackImgWithTile" style={{ marginRight: 10 }}>
+            heroBackImgTile
+          </Link>
+          <Link to="/HeroBackImgWithText">heroBackImgText</Link>
+          <Link to="/PricingTableComp">PricingTableComp</Link>
+        </nav>
         <div className={styles.Container}>
           <Logo
             width={DEFAULT_LOGO_WIDTH}
