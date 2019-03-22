@@ -1,7 +1,7 @@
 import { style } from 'typestyle';
 
 export const About = style({
-  width: '100vw',
+  width: '100%',
   height: '100vh',
   display: 'flex',
   alignItems: 'center',
@@ -13,5 +13,17 @@ export const Container = style({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
+  alignItems: 'center'
+})
+
+export const Nav = style({
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  height: 72,
+  width: '100%',
+  paddingRight: '10%',
+  display: 'flex',
+  justifyContent: 'flex-end',
   alignItems: 'center'
 })

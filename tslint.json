@@ -25,6 +25,7 @@
     "no-unused-variable": [true, "react"],
     "no-shadowed-variable": false,
     // "no-magic-numbers": true,
+    "no-console": false,
     "object-literal-sort-keys": false,
     "object-literal-shorthand": false,
     "object-property-newline": false,

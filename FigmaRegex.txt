@@ -6,4 +6,4 @@ SetColors
 
 RemoveUnwanted
 
-position: absolute;\nleft:(.*);\nright:(.*);\ntop:(.*);\nbottom:(.*);\n
+position: absolute;\nleft:(.*);\nright:(.*);\ntop:(.*);\nbottom:(.*);\  n

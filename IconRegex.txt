@@ -1,0 +1,14 @@
+Using fontastic.me you can create icon font
+
+regex search:
+\.icon-(.*):before {\n  content: "(.*)";\n}
+
+regex replace:
+
+export const $1 = classes(defaultIcon,style({
+    $nest:{
+        "&:before":{
+            content:`"\\$2"`
+        }
+    }
+}))

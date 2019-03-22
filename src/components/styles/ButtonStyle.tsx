@@ -34,8 +34,17 @@ export const Button = style({
     '&.success': {
       backgroundColor: Colors.Serpentine
     },
+    '&.secondary': {
+      backgroundColor: Colors.Foggy,
+      color: Colors['Ancient Stone'],
+      $nest: {
+        '&:hover': {
+          backgroundColor: Colors.Sopel
+        }
+      }
+    },
     '&.disabled': {
-      backgroundColor: Colors.Androgyn,
+      backgroundColor: Colors.Ultrasonic,
       pointerEvents: 'none'
     },
     '&:focus': {
@@ -44,6 +53,9 @@ export const Button = style({
     },
     '&.small': {
       width: 80
+    },
+    '&:hover': {
+      backgroundColor: Colors.Pioneer
     }
   }
 });
