@@ -2,10 +2,24 @@ import { style, media } from 'typestyle';
 import { Colors } from './Colors';
 import {Breakpoints} from './Breakpoints';
 
-export const FooterContainer = style({
-  $debugName: 'FooterContainer',
+export const BlueTileMain = style({
+  $debugName: 'BlueTileMain',
+  background: Colors['Alien Blood'],
+  display: 'flex'
+  // justifyContent: 'space-around'
+  // $nest: {
+  //   '&.white': {
+  //     backgroundColor: Colors.White
+  //   }
+  // }
+})
+
+export const BlueTileContainer = style({
+  $debugName: 'BlueTileContainer',
   width: '80%',
   maxWidth: 1170,
+  height: '80%',
+  maxHeight: 820,
   margin: '0 auto',
   marginTop: '80px',
   marginBottom: '80px',
@@ -14,28 +28,22 @@ export const FooterContainer = style({
   flexDirection: 'column'
 })
 
-export const rectangleTopDiv = style({
-  $debugName: 'rectangleTopDiv',
+export const TileContent = style({
+  $debugName: 'TileContent',
   display: 'flex',
-  flexDirection: 'column'
-  // justifyContent: 'space-evenly',
-  // marginTop: 50
-})
-export const rectangleDownDiv = style({
-  $debugName: 'rectangleDownDiv',
-  display: 'flex',
-  // marginBottom: 50,
-  flexDirection: 'column'
-})
+  flexDirection: 'row',
+  // flexWrap: 'wrap',
+  justifyContent: 'center',
+  alignItems: 'center'
+
+  // marginLeft: '110px',
+  // marginRight: '110px'
+}
+)
+// Cokolwiek stare rzeczy będzie tu nowe. beng beng.
 
 export const rectangleTop = style({
   $debugName: 'rectangleTop',
-  height: 3,
-  background: Colors['Ancient Stone']
-})
-
-export const rectangleDown = style({
-  $debugName: 'rectangleDown',
   height: 3,
   background: Colors['Ancient Stone']
 })
@@ -57,34 +65,6 @@ export const rectangleDownCopyright = style({
   marginBottom: 0,
   fontSize: 12
 })
-
-export const FooterMain = style({
-  $debugName: 'FooterMain',
-  backgroundColor: Colors['Black Hole'],
-  display: 'flex',
-  justifyContent: 'space-around',
-  $nest: {
-    '&.white': {
-      backgroundColor: Colors.White
-    }
-  }
-})
-
-export const FooterContent = style({
-  $debugName: 'FooterContent',
-  display: 'flex',
-  justifyContent: 'space-between',
-  flexWrap: 'wrap'
-  // marginLeft: '110px',
-  // marginRight: '110px'
-},
-  media({ minWidth: 0, maxWidth: Breakpoints.Tablet},
-    {
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center'
-    })
-)
 
 export const FooterContentColumn = style({
   $debugName: 'FooterContentColumn',

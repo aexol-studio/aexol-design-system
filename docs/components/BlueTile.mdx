@@ -1,50 +1,22 @@
 ---
-name: Footer
+name: BlueTile
 ---
 
 import { Playground, PropsTable } from 'docz'
-import { Footer } from '../../src/components'
+import { BlueTile } from '../../src/components'
 
 #WorkshopTile
 
 ##Properties
 
-<PropsTable of={Footer} />
+<PropsTable of={BlueTile} />
 
 ##Basic usage
 
 <Playground style={{ backgroundColor: '#DFE6F7' }}>
-  <Footer
-  copyright="Copyright 2018 AEXOL/Slothking/Graphqleditor.com"
-  logo="LOGO"
-  backgroundColor="white"
-  FooterColumnsTxt = {{
-  objects: [
-     {
-      objects: [
-    { name: "Services", link: "http://google.pl" },
-    { name: "Roadmap", link: "http://google.pl" },
-    { name: "Slack Community", link: "http://google.pl" },
-    { name: "GraphQL Blog", link: "http://google.pl" },
-    { name: "GraphQL Editor", link: "http://google.pl" },
-    { name: "Docs", link: "http://google.pl" }]
-  },
-  {
-    title: "Examples",
-    objects: [
-    { name: "GraphQL Example #1: Fake Twitter", link: "http://google.pl" },
-    { name: "GraphQL Example #2: Library of books", link: "http://google.pl" },
-    { name: "GraphQL Example #3: eCommerce", link: "http://google.pl" }]
-  },
-  {
-    title: "From The Blog",
-    objects: [
-    { name: "GraphQL Tutorial - Schemas and types part 2", link: "http://google.pl" },
-    { name: "Code Academy - How to visualize your GraphQL schema?", link: "http://google.pl" },
-    { name: "Code Academy - Low-code development ", link: "http://google.pl" },
-    { name: "Code Academy - Create Fake Backend with GraphQL Editor", link: "http://google.pl" },
-    { name: "Code academy - backend developmen", link: "http://google.pl" }]
-  }]
-}}
+  <BlueTile
+  envelope = "KOPERTATATATA"
+  BlueTileHeader = "Become a user, contributor, partner or get in touch"
+  BlueTileHeaderTxt = "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
   />
 </Playground>

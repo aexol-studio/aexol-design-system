@@ -1,65 +1,43 @@
 import * as React from 'react'
 import * as classnames from 'classnames';
-import { PFooterTitle} from './typography';
-import * as styles from './styles/FooterStyle';
-type FooterColumnsTxt = {
-  objects: Array<{
-    title?: string;
-    objects: Array<{
-      name: string;
-      link: string;
-    }>;
-  }>;
+import * as styles from './styles/BlueTileStyles';
+
+export interface BlueTileComponentProps {
+  BlueTileHeader: string;
+  BlueTileHeaderTxt: string;
+  envelope: string
+
 }
 
-export interface FooterComponentProps {
-  FooterColumnsTxt: FooterColumnsTxt;
-  backgroundColor?: 'black' | 'white' ;
-  copyright: string;
-}
-
-export const Footer: React.FunctionComponent<FooterComponentProps> = (props) => {
-
+export const BlueTile: React.FunctionComponent<BlueTileComponentProps> = (props) => {
   const {
-    FooterColumnsTxt,
-    // logo,
-    backgroundColor= 'black',
-    copyright,
+    BlueTileHeader,
+    BlueTileHeaderTxt,
+    envelope,
     ...restProps
   } = props
 
   return (
     <div
       className={classnames(
-      styles.FooterMain,
-      backgroundColor)}
+      styles.BlueTileMain)}
     >
       <div
         className={
-          styles.FooterContainer
+          styles.BlueTileContainer
         }
         {...restProps}
       >
-        <div className={styles.rectangleTopDiv}>
-          {/* <p className={styles.rectangleTopLogo}>
-            {logo}</p> */}
-          <div className={styles.rectangleTop} />
-        </div>
-        <div className={styles.FooterContent}>
-          {FooterColumnsTxt.objects.map((el, idxt) => {
-            return <div className={styles.FooterContentColumn} key={idxt}>
-              <div><PFooterTitle >{el.title}</PFooterTitle></div>
-              <div className={styles.PFooterNameDiv}>{el.objects.map((o, idx) =>
-                <a className={styles.PFooterName} href={o.link} key={idx}>{o.name}</a>)}</div>
-            </div>
-          })
-          }
-        </div>
-        <div className={styles.rectangleDownDiv}>
-          <div className={styles.rectangleDown} />
-          <p className={styles.rectangleDownCopyright}>
-            {copyright}</p>
-        </div>
+      <div className={styles.TileContent}>
+      <div className={styles.TileleftContent}>
+      <p>Cokolwiek jakiś kod</p>
+       </div>
+      <div className={styles.TileRightContent}>
+          <div>{envelope}</div>
+          <div>{BlueTileHeader}</div>
+          <div>{BlueTileHeaderTxt}</div>
+          </div>
+      </div>
       </div>
     </div>
   )
