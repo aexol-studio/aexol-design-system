@@ -76,7 +76,7 @@ export class NavBar extends React.PureComponent<INavBarProps, NavBarState> {
           }
         </div>
         <div className={styles.ContentContainer}>
-          <div className={styles.LinkContainer}>
+          <div className={classnames(styles.LinkContainer, color)}>
             {this.props.children}
           </div>
           <Button

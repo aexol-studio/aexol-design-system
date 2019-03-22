@@ -24,8 +24,7 @@ export const Container = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'flex-end'
-}, media({ maxWidth: vars.tablet }, {
-  width: '95%',
+}, media({ maxWidth: vars.tabletPortrait }, {
   justifyContent: 'space-between'
 }))
 
@@ -35,14 +34,24 @@ export const ContentContainer = style({
 })
 
 export const LinkContainer = style({
-
+  $nest: {
+    'a': {
+      color: Colors['Ancient Stone']
+    },
+    '&.black': {
+      $nest: {
+        a: {
+          color: Colors.White
+        }
+      }
+    }
+  }
 }, media({ maxWidth: vars.tabletPortrait }, {
   display: 'none'
 }))
 
 export const Hamburger = style({
   display: 'none',
-  margin: '0 20px',
   position: 'relative',
   width: 24,
   height: 25,
@@ -93,6 +102,9 @@ export const Bar = style({
   $nest: {
     '&:nth-child(even)': {
       transform: 'translate(12px, -4px)'
+    },
+    '&.black': {
+      backgroundColor: Colors.White
     }
   }
 })
