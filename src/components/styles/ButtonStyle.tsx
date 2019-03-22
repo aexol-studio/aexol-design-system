@@ -51,6 +51,7 @@ export const Button = style({
     '&.secondary': {
       backgroundColor: Colors.Foggy,
       color: Colors['Ancient Stone'],
+      transition: vars.transition,
       $nest: {
         '&:hover': {
           backgroundColor: Colors.Sopel
@@ -58,9 +59,10 @@ export const Button = style({
       }
     },
     '&.secondary2': {
-      backgroundColor: Colors.Foggy,
+      backgroundColor: 'transparent',
       color: Colors['Black Hole'],
       border: `2px solid ${Colors['Ancient Stone']}`,
+      transition: vars.transition,
       $nest: {
         '&:hover': {
           backgroundColor: Colors.Sopel
@@ -69,8 +71,9 @@ export const Button = style({
     },
     '&.secondary3': {
       color: Colors.White,
-      backgroundColor: Colors['Ancient Stone'],
+      backgroundColor: 'transparent',
       border: `2px solid ${Colors.White}`,
+      transition: vars.transition,
       $nest: {
         '&:hover': {
           border: `3px solid ${Colors['Plutonic Briza']}`

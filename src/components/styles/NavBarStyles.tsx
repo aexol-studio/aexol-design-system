@@ -18,12 +18,16 @@ export const NavBar = style({
 
 export const Container = style({
   width: '80%',
+  margin: '0 auto',
   maxWidth: 1170,
   height: '100%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'flex-end'
-})
+}, media({ maxWidth: vars.tablet }, {
+  width: '95%',
+  justifyContent: 'space-between'
+}))
 
 export const ContentContainer = style({
   display: 'flex',
@@ -32,7 +36,9 @@ export const ContentContainer = style({
 
 export const LinkContainer = style({
 
-})
+}, media({ maxWidth: vars.tabletPortrait }, {
+  display: 'none'
+}))
 
 export const Hamburger = style({
   display: 'none',
@@ -73,16 +79,14 @@ export const Hamburger = style({
       }
     }
   }
-},
-media({ maxWidth: vars.tablet }, {
+}, media({ maxWidth: vars.tabletPortrait }, {
   display: 'block'
-})
-)
+}))
 
 export const Bar = style({
   height: 3,
   width: 12,
-  backgroundColor: Colors.White,
+  backgroundColor: Colors['Black Hole'],
   display: 'block',
   margin: '1px 0',
   transition: '.5s ease-out',

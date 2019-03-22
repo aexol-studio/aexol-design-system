@@ -58,6 +58,23 @@ export class NavBar extends React.PureComponent<INavBarProps, NavBarState> {
           open: this.state.open
         })}
       >
+        <div
+          className={classnames({
+            [styles.Hamburger]: true,
+            open: this.state.open
+          })}
+          onClick={e => this.handleOpen(e)}
+        >
+          {new Array(BAR_NUMBER)
+            .fill(0)
+            .map((a, i) =>
+              <div
+                key={i}
+                className={classnames(styles.Bar, color)}
+              />
+            )
+          }
+        </div>
         <div className={styles.ContentContainer}>
           <div className={styles.LinkContainer}>
             {this.props.children}
@@ -73,22 +90,6 @@ export class NavBar extends React.PureComponent<INavBarProps, NavBarState> {
           >
             {buttonText}
           </Button>
-        </div>
-        <div
-          className={classnames({
-            [styles.Hamburger]: true,
-            open: this.state.open
-          })}
-          onClick={e => this.handleOpen(e)}
-        >
-          {new Array(BAR_NUMBER)
-            .fill(0)
-            .map((a, i) =>
-              <div
-                key={i}
-                className={styles.Bar}
-              />)
-          }
         </div>
       </div>
     </div>
