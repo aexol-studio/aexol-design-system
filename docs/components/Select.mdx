@@ -1,0 +1,36 @@
+---
+name: Select
+---
+
+import { Playground, PropsTable } from 'docz'
+import { Select } from '../../src/components'
+
+#WorkshopTile
+
+##Properties
+
+<PropsTable of={Select} />
+
+##Basic usage
+
+<Playground>
+  <Select
+    options={[
+      {
+        label: 'test',
+        value: 1
+      },
+      {
+        label: 'test2',
+        value: 2
+      },
+      {
+        label: 'test3',
+        value: 3
+      }
+    ]}
+    onChange={(val) => {console.log(val)}}
+    placeholder="GraphQL Editor Project"
+    label="GraphQL Editor Project"
+  />
+</Playground>
