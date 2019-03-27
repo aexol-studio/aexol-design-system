@@ -1,4 +1,4 @@
-import { style, media } from 'typestyle';
+import { style } from 'typestyle';
 import { Colors } from './Colors';
 // import {Breakpoints} from './Breakpoints';
 
@@ -10,22 +10,23 @@ export const BlueTileMain = style({
 export const BlueTileContainer = style({
   $debugName: 'BlueTileContainer',
   maxHeight: 1440,
-  height: 600,
+  height: 800,
   margin: '0 auto',
   paddingTop: 80,
   paddingBottom: 80,
-  paddingRight: 136,
-  paddingLeft: 136,
-  display: 'flex',
-  alignContent: 'center'
+  // paddingRight: 136,
+  // paddingLeft: 136,
+  display: 'flex'
+  // alignContent: 'center'
 })
 
 export const TileContent = style({
   $debugName: 'TileContent',
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'space-around',
-  alignItems: 'flex-end'
+  justifyContent: 'space-evenly',
+  alignItems: 'flex-end',
+  width: '100%'
 })
 
 export const TileLeftContent = style({
@@ -33,11 +34,17 @@ export const TileLeftContent = style({
   display: 'flex',
   alignItems: 'center',
   marginRight: 50,
-  height: '100%'
+  height: '80%',
+  maxWidth: 500
+  // background: Colors.White,
+  // borderRadius: 8,
+  // width: 521
+  // height: 614
 })
 
 export const TileRightContent = style({
   $debugName: 'TileRightContent',
+  maxWidth: 500,
   display: 'flex',
   flexDirection: 'column',
   alignSelf: 'flex-end'

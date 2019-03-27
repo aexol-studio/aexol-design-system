@@ -32,7 +32,7 @@ export const BlueTile: React.FunctionComponent<BlueTileComponentProps> = (props)
       >
       <div className={styles.TileContent}>
       <div className={styles.TileLeftContent}>
-      <p>Cokolwiek jakiś kod</p>
+      {/* <p>Cokolwiek jakiś kod</p> */}
        </div>
       <div className={styles.TileRightContent}>
           {/* <div>{envelope}</div> */}
