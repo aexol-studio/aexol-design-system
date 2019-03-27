@@ -1,112 +1,54 @@
 import { style, media } from 'typestyle';
 import { Colors } from './Colors';
-import {Breakpoints} from './Breakpoints';
+// import {Breakpoints} from './Breakpoints';
 
 export const BlueTileMain = style({
   $debugName: 'BlueTileMain',
-  background: Colors['Alien Blood'],
-  display: 'flex'
-  // justifyContent: 'space-around'
-  // $nest: {
-  //   '&.white': {
-  //     backgroundColor: Colors.White
-  //   }
-  // }
+  background: Colors['Alien Blood']
 })
 
 export const BlueTileContainer = style({
   $debugName: 'BlueTileContainer',
-  width: '80%',
-  maxWidth: 1170,
-  height: '80%',
-  maxHeight: 820,
+  maxHeight: 1440,
+  height: 600,
   margin: '0 auto',
-  marginTop: '80px',
-  marginBottom: '80px',
+  paddingTop: 80,
+  paddingBottom: 80,
+  paddingRight: 136,
+  paddingLeft: 136,
   display: 'flex',
-  justifyContent: 'space-between',
-  flexDirection: 'column'
+  alignContent: 'center'
 })
 
 export const TileContent = style({
   $debugName: 'TileContent',
   display: 'flex',
   flexDirection: 'row',
-  // flexWrap: 'wrap',
-  justifyContent: 'center',
-  alignItems: 'center'
-
-  // marginLeft: '110px',
-  // marginRight: '110px'
-}
-)
-// Cokolwiek stare rzeczy będzie tu nowe. beng beng.
-
-export const rectangleTop = style({
-  $debugName: 'rectangleTop',
-  height: 3,
-  background: Colors['Ancient Stone']
+  justifyContent: 'space-around',
+  alignItems: 'flex-end'
 })
 
-export const rectangleTopLogo = style({
-  $debugName: 'rectangleTopLogo',
-  color: Colors['Ancient Stone'],
-  textAlign: 'center',
-  marginTop: 5,
-  marginBottom: 5,
-  fontSize: 30
+export const TileLeftContent = style({
+  $debugName: 'TileLeftContent',
+  display: 'flex',
+  alignItems: 'center',
+  marginRight: 50,
+  height: '100%'
 })
 
-export const rectangleDownCopyright = style({
-  $debugName: 'rectangleDownCopyright',
-  textAlign: 'left',
-  color: Colors['Ancient Stone'],
-  marginTop: 5,
-  marginBottom: 0,
-  fontSize: 12
+export const TileRightContent = style({
+  $debugName: 'TileRightContent',
+  display: 'flex',
+  flexDirection: 'column',
+  alignSelf: 'flex-end'
 })
 
-export const FooterContentColumn = style({
-  $debugName: 'FooterContentColumn',
-  marginTop: 60,
-  marginBottom: 60,
-  flexDirection: 'column'
-},
-media({ minWidth: 0, maxWidth: 1200 },
-  {
-    marginTop: 35,
-    marginBottom: 35
-  })
-)
-
-export const FooterContentColumnTitle = style({
-  $debugName: 'FooterContentColumnTitle',
-  color: '#514E5A',
-  fontSize: 16,
-  fontWeight: 'bold',
-  marginBottom: 0,
-  marginTop: 0
-})
-export const FooterContentColumnName = style({
-  $debugName: 'FooterContentColumnTitle',
-  color: '#514E5A',
-  fontSize: 16,
-  marginBottom: 0,
+export const TileLeftHeader = style ({
+  $debugName: 'TileLeftHeader',
   marginTop: 5
 })
 
-export const PFooterNameDiv = style ({
-display: 'flex',
-flexDirection: 'column'
-})
-
-export const PFooterName = style ({
-    margin: 0,
-    padding: 0,
-    lineHeight: `23px`,
-    fontSize: 16,
-    color: '#514E5A',
-    marginBottom: 0,
-    marginTop: 5,
-    textDecoration: 'none'
+export const TileLeftParagraph = style ({
+  $debugName: 'TileLeftHeader',
+  marginTop: 14
 })

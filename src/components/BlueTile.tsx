@@ -1,10 +1,12 @@
 import * as React from 'react'
 import * as classnames from 'classnames';
 import * as styles from './styles/BlueTileStyles';
+import {H1, P} from './typography';
+import { Colors } from './styles/Colors';
 
 export interface BlueTileComponentProps {
   BlueTileHeader: string;
-  BlueTileHeaderTxt: string;
+  BlueTileHeaderParagraph: string;
   envelope: string
 
 }
@@ -12,7 +14,7 @@ export interface BlueTileComponentProps {
 export const BlueTile: React.FunctionComponent<BlueTileComponentProps> = (props) => {
   const {
     BlueTileHeader,
-    BlueTileHeaderTxt,
+    BlueTileHeaderParagraph,
     envelope,
     ...restProps
   } = props
@@ -29,13 +31,17 @@ export const BlueTile: React.FunctionComponent<BlueTileComponentProps> = (props)
         {...restProps}
       >
       <div className={styles.TileContent}>
-      <div className={styles.TileleftContent}>
+      <div className={styles.TileLeftContent}>
       <p>Cokolwiek jakiś kod</p>
        </div>
       <div className={styles.TileRightContent}>
-          <div>{envelope}</div>
-          <div>{BlueTileHeader}</div>
-          <div>{BlueTileHeaderTxt}</div>
+          {/* <div>{envelope}</div> */}
+          <div className={styles.TileLeftHeader}>
+          <H1 style={{color: Colors.White}}>{BlueTileHeader}</H1>
+          </div>
+          <div className={styles.TileLeftParagraph}>
+          <P style={{color: Colors.White}}>{BlueTileHeaderParagraph}</P>
+          </div>
           </div>
       </div>
       </div>
