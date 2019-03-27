@@ -10,7 +10,7 @@ export const BlueTileMain = style({
 export const BlueTileContainer = style({
   $debugName: 'BlueTileContainer',
   maxHeight: 1440,
-  height: 800,
+  height: 700,
   margin: '0 auto',
   paddingTop: 80,
   paddingBottom: 80,
@@ -32,14 +32,17 @@ export const TileContent = style({
 export const TileLeftContent = style({
   $debugName: 'TileLeftContent',
   display: 'flex',
-  alignItems: 'center',
-  marginRight: 50,
-  height: '80%',
-  maxWidth: 500
+  alignItems: 'center'
+  // marginRight: 50,
+  // height: '80%',
+  // maxWidth: 500
+
+// biały div z cieniami
   // background: Colors.White,
   // borderRadius: 8,
-  // width: 521
-  // height: 614
+  // width: 400,
+  // height: 500,
+  // boxShadow : '8px 8px 32px rgba(81, 78, 90, 0.6)'
 })
 
 export const TileRightContent = style({
