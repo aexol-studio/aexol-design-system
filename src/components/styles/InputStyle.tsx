@@ -11,7 +11,7 @@ export const TextInputLabel = style({
 })
 
 export const TextInput = style({
-  width: '100%',
+  width: '80%',
   color: '#000',
   padding: '15px 10px',
   border: '1px solid rgba(0, 0, 0, 0.12)',

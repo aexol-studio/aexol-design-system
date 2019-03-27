@@ -34,7 +34,7 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
     <div
       className={styles.TextInputContainer}
       style={{width: fullWidth
-          ? '100%'
+          ? '80%'
           : width,
         ...style
       }}
