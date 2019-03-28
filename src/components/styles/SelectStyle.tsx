@@ -10,9 +10,18 @@ export const Select = style({
 
 export const holderSelect = style({
   position: 'relative',
-  cursor: 'pointer',
-  fontSize: 14
+  fontSize: 16
 });
+
+export const ArrowContainer = style({
+  cursor: 'pointer',
+  position: 'absolute',
+  top: 0,
+  right: 0,
+  width: 35,
+  height: '100%',
+  zIndex: 10
+})
 
 export const SelectArrow = style({
   borderColor: `${Colors['Black Hole']} transparent transparent`,
@@ -67,6 +76,7 @@ export const valueChoosen = style({
 });
 
 export const Delete = style({
+  cursor: 'pointer',
   position: 'absolute',
   top: 0,
   right: 0,
@@ -89,43 +99,23 @@ export const holderValues = style({
   width: '100%',
   zIndex: 8,
   $nest: {
-    li: {
-      padding: 10,
-      transition: vars.transition,
-      $nest: {
-        '&:hover': {
-          background: Colors.Sopel,
-          color: Colors.White
-        }
-      }
+    '&.open': {
+      display: 'block'
     }
   }
 });
 
 export const Li = style({
-  padding: '10px 15px',
+  padding: '10px 20px',
   transition: vars.transition,
-  color: 'inherit',
+  color: Colors['Ancient Stone'],
   $nest: {
     '&:hover': {
-      backgroundColors: Colors.Sopel,
-      color: Colors.White
+      backgroundColor: Colors['Damsel in distress'],
+      color: Colors.Ultrasonic
     }
   }
 });
-
-export const open = style({
-  display: 'block'
-});
-
-export const Change = style({
-  $nest: {
-    SelectArrow: {
-      top: '30%',
-      transform: 'rotate(180deg) translate(0, -50%)'
-    }
-  }
-})
 
 export const Label = style({
   position: 'absolute',

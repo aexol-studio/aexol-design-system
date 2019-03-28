@@ -29,20 +29,6 @@ export class Select extends React.PureComponent<ISelectProps, ISelectState> {
     }
   }
 
-  componentWillMount() {
-    document.addEventListener('click', this.documentClickHandler, true);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('click', this.documentClickHandler, true);
-  }
-
-  documentClickHandler = () => {
-    this.setState({
-      open: false
-    });
-  };
-
   addValue = (value: any) => {
     this.setState({
       fieldVal: value
@@ -65,6 +51,7 @@ export class Select extends React.PureComponent<ISelectProps, ISelectState> {
     options = options.map((o) => ({ ...o, label: `${o.label}` }));
     let selectOptions = [...options];
     selectOptions = selectOptions.filter((o) => o.value !== this.state.fieldVal);
+
     const selectObject = (
       <div className={styles.holderValue}>
         {this.state.fieldVal
@@ -115,36 +102,40 @@ export class Select extends React.PureComponent<ISelectProps, ISelectState> {
       >
         <div className={styles.Label}>{label}</div>
         <div
-          onClick={() => {
-            this.setState({
-              open: !this.state.open
-            });
-          }}
-          className={classnames({
-            [styles.holderSelect]: true,
-            [styles.Change]: this.state.open
-          })}
+          className={styles.holderSelect}
         >
           {selectObject}
-          <span
-            className={classnames({
-              [styles.SelectArrow]: true,
-              [styles.Change]: this.state.open
-            })}
-          />
+          <div
+            className={styles.ArrowContainer}
+            onClick={() => {
+              this.setState((prevState) => ({
+                open: !prevState.open
+              }))
+            }}
+          >
+            <span
+              className={styles.SelectArrow}
+            />
+          </div>
         </div>
         <ul
           className={classnames({
             [styles.holderValues]: true,
-            [styles.open]: this.state.open
+            open: this.state.open
           })}
         >
           {this.state.inputMatch
-          ? selectOptions.filter(o => o.label.toLowerCase().match(this.state.inputMatch.toLowerCase())).map(({ label, value }, index) => {
+          ? selectOptions.filter(o =>
+              o.label.toLowerCase().match(this.state.inputMatch.toLowerCase())).map(({ label, value }, index
+            ) => {
             return (
               <li
+                className={styles.Li}
                 onClick={() => {
                   this.addValue(value);
+                  this.setState({
+                    open: false
+                  })
                 }}
                 key={index}
               >
@@ -155,8 +146,12 @@ export class Select extends React.PureComponent<ISelectProps, ISelectState> {
           : selectOptions.map(({ label, value }, index) => {
             return (
               <li
+                className={styles.Li}
                 onClick={() => {
                   this.addValue(value);
+                  this.setState({
+                    open: false
+                  })
                 }}
                 key={index}
               >
