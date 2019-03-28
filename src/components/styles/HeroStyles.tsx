@@ -29,7 +29,7 @@ export const TextContent = style({
   flexDirection: 'column',
   width: '25%',
   maxWidth: 450
-}, media({ maxWidth: Breakpoints.Laptop }, {
+}, media({ minWidth: Breakpoints.Tablet, maxWidth: Breakpoints.Laptop }, {
   width: '35%'
 }), media({ maxWidth: Breakpoints.Tablet }, {
   width: '100%'
@@ -49,7 +49,7 @@ export const Img = style({
       alignSelf: 'center'
     }
   }
-}, media({ maxWidth: Breakpoints.Laptop }, {
+}, media({ minWidth: Breakpoints.Tablet, maxWidth: Breakpoints.Laptop }, {
   width: '60%'
 }), media({ maxWidth: Breakpoints.Tablet }, {
   display: 'none'
@@ -65,7 +65,7 @@ export const ImgContent = style({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center'
-}, media({ maxWidth: Breakpoints.Laptop}, {
+}, media({ minWidth: Breakpoints.Tablet, maxWidth: Breakpoints.Laptop }, {
   width: '60%'
 }), media({ maxWidth: Breakpoints.Tablet }, {
   display: 'none'
@@ -73,7 +73,7 @@ export const ImgContent = style({
 
 export const TextContent1 = classes(TextContent, style({
   width: '40%'
-}, media({ maxWidth: Breakpoints.Laptop }, {
+}, media({ minWidth: Breakpoints.Tablet, maxWidth: Breakpoints.Laptop }, {
   width: '35%'
 }), media({ maxWidth: Breakpoints.Tablet }, {
   width: '100%'
