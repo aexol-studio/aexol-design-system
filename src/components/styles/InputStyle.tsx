@@ -35,28 +35,28 @@ export const TextInput = style({
   }
 })
 
-// export const TextInputLabelForgot = style({
-//   $debugName: 'TextInput',
-//   width: '20%',
-//   background: 'white',
-//   textAlign: 'center',
-//   padding: '15px 10px',
-//   border: '1px solid rgba(0, 0, 0, 0.12)',
-//   borderRadius: 4,
-//   outline: 0,
-//   marginBottom: 15,
-//   boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
-//   $nest: {
-//     [`&:hover`]: {
-//       boxShadow: '0 0 0 2px #359FFB',
-//       color: '#313132',
-//       FontSize: 16
-//     }
-//   }
-// })
+export const TextInputLabelForgot = style({
+  $debugName: 'TextInput',
+  width: '20%',
+  background: 'white',
+  textAlign: 'center',
+  padding: '15px 10px',
+  border: '1px solid rgba(0, 0, 0, 0.12)',
+  borderRadius: 4,
+  outline: 0,
+  marginBottom: 15,
+  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
+  $nest: {
+    [`&:hover`]: {
+      boxShadow: '0 0 0 2px #359FFB',
+      color: '#313132',
+      FontSize: 16
+    }
+  }
+})
 
-// export const TextInputLabel1 = style({
-//   $debugName: 'TextInputContainer',
-//   display: 'flex'
-// })
+export const TextInputLabel1 = style({
+  $debugName: 'TextInputContainer',
+  display: 'flex'
+})
 ;

@@ -10,6 +10,7 @@ export interface IInputProps {
   width?: number;
   fullWidth?: boolean;
   style?: React.CSSProperties;
+  password: boolean;
 }
 
 export const Input: React.FunctionComponent<IInputProps> = (props) => {
@@ -18,6 +19,7 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
     label,
     placeholder,
     required = false,
+    password = false,
     onChange,
     width,
     fullWidth,
@@ -33,7 +35,8 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
   return (
     <div
       className={styles.TextInputContainer}
-      style={{width: fullWidth
+      style={{
+        width: fullWidth
           ? '80%'
           : width,
         ...style
@@ -46,19 +49,28 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
           {label}
         </label>
       }
-      {/* <div className={styles.TextInputLabel1}> */}
-      <input
-        type={type || 'text'}
-        className={styles.TextInput}
-        onChange={handleChange}
-        placeholder={placeholder}
-        required={required}
-        {...restProps}
-      />
-      {/* <div className={styles.TextInputLabelForgot}>
-      <a href="google.pl">Forgot?</a>
-      </div> */}
-      {/* </div> */}
+      <div>
+        <input
+          type={type || 'text'}
+          className={styles.TextInput}
+          onChange={handleChange}
+          placeholder={placeholder}
+          required={required}
+          {...restProps}
+        />
+        </div>
+      <div>
+        {password &&
+          <div
+            className={styles.TextInputLabel1}
+          >
+            {password}
+          </div>
+        }
+          <div className={styles.TextInputLabelForgot}>
+            <a href="google.pl">Forgot?</a>
+          </div>
+      </div>
     </div>
   )
 };
