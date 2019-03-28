@@ -119,6 +119,8 @@ media({ maxWidth: vars.tabletPortrait }, {
   justifyContent: 'space-between',
   $nest: {
     '&.open': {
+      zIndex: 20,
+      position: 'relative',
       margin: 0,
       display: 'inline-block',
       width: 'auto',
@@ -146,8 +148,8 @@ media({ maxWidth: vars.tabletPortrait }, {
           padding: '0 30px',
           $nest: {
             a: {
-              width: 'inherit',
-              margin: '0 -30px',
+              width: 'calc(100% + 60px)',
+              marginLeft: -30,
               fontSize: 18,
               lineHeight: '23px',
               color: Colors.White,

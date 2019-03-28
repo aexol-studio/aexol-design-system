@@ -90,6 +90,13 @@ export const Text = style({
         bottom: '50%',
         right: 166,
         borderColor: `transparent ${Colors.White} transparent transparent`
+      },
+      '&.blue': {
+        $nest: {
+          '&::before': {
+            borderColor: `transparent`
+          }
+        }
       }
     }
 }))
