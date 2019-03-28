@@ -10,7 +10,9 @@ export interface IInputProps {
   width?: number;
   fullWidth?: boolean;
   style?: React.CSSProperties;
-  password: boolean;
+  password?: boolean;
+  passwordText: string;
+  passwordLink?: string;
 }
 
 export const Input: React.FunctionComponent<IInputProps> = (props) => {
@@ -20,6 +22,8 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
     placeholder,
     required = false,
     password = false,
+    passwordLink,
+    passwordText,
     onChange,
     width,
     fullWidth,
@@ -49,7 +53,7 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
           {label}
         </label>
       }
-      <div>
+      <div className={styles.TextInputDiv}>
         <input
           type={type || 'text'}
           className={styles.TextInput}
@@ -58,19 +62,12 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
           required={required}
           {...restProps}
         />
-        </div>
-      <div>
         {password &&
-          <div
-            className={styles.TextInputLabel1}
-          >
-            {password}
-          </div>
+          <div className={styles.TextInputLabelPassword}>
+          <a href={passwordLink}>{passwordText}</a>
+        </div>
         }
-          <div className={styles.TextInputLabelForgot}>
-            <a href="google.pl">Forgot?</a>
-          </div>
-      </div>
+        </div>
     </div>
   )
 };
