@@ -78,7 +78,7 @@ export const FooterContent = style({
   // marginLeft: '110px',
   // marginRight: '110px'
 },
-  media({ minWidth: 0, maxWidth: Breakpoints.Tablet},
+  media({ minWidth: 0, maxWidth: Breakpoints.Laptop},
     {
       flexDirection: 'column',
       justifyContent: 'center',

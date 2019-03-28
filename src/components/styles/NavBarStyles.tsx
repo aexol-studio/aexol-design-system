@@ -1,5 +1,6 @@
 import { style, media } from 'typestyle';
 import { Colors } from '../styles/Colors';
+import { Breakpoints } from './Breakpoints';
 import * as vars from '../../vars';
 
 export const NavBar = style({
@@ -43,7 +44,7 @@ export const LinkContainer = style({
       }
     }
   }
-}, media({ maxWidth: vars.tabletPortrait }, {
+}, media({ maxWidth: Breakpoints.TabletPortrait }, {
   display: 'none'
 }))
 
@@ -85,7 +86,7 @@ export const Hamburger = style({
       }
     }
   }
-}, media({ maxWidth: vars.tabletPortrait }, {
+}, media({ maxWidth: Breakpoints.TabletPortrait }, {
   display: 'block'
 }))
 
@@ -107,15 +108,15 @@ export const Bar = style({
 })
 
 export const Container = style({
-  width: '80%',
+  width: vars.containerWidth,
   margin: '0 auto',
-  maxWidth: 1170,
+  maxWidth: vars.maxWidth,
   height: '100%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'flex-end'
 },
-media({ maxWidth: vars.tabletPortrait }, {
+media({ maxWidth: Breakpoints.TabletPortrait }, {
   justifyContent: 'space-between',
   $nest: {
     '&.open': {

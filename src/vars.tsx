@@ -1,27 +1,13 @@
 import { cssRaw, fontFace } from 'typestyle';
 
 export const containerWidth = '80%';
-export const whiteBackground = '#FFF';
-export const Heading = '#25222E';
-export const Paragraph = '#514E5A';
+export const maxWidth = 1170;
 
 export const defaultFont = 16;
 export const smallFont = 12;
 export const largeFont = 22;
-export const headingH3 = 22;
-export const headingH2 = 33;
-export const headingH1 = 50;
-export const headingJumbo = 66;
-export const paragraphSmall = 22;
-export const paragraphMedium = 28;
-export const paragraphBig = 34;
 
 export const transition = '0.3s ease-out';
-
-export const laptop = 1280
-export const tablet = 1024
-export const tabletPortrait = 768
-export const phone = 550
 
 fontFace({
   fontFamily: 'Helvetica Neue',

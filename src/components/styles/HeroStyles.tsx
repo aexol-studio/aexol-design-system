@@ -1,5 +1,6 @@
 import { style, classes, media } from 'typestyle';
 import { Colors } from './Colors';
+import { Breakpoints } from './Breakpoints';
 import * as vars from '../../vars';
 
 export const Hero = style({
@@ -9,8 +10,8 @@ export const Hero = style({
 })
 
 export const HeroContainer = style({
-  width: '80%',
-  maxWidth: 1170,
+  width: vars.containerWidth,
+  maxWidth: vars.maxWidth,
   height: '100%',
   margin: '0 auto'
 })
@@ -28,9 +29,9 @@ export const TextContent = style({
   flexDirection: 'column',
   width: '25%',
   maxWidth: 450
-}, media({ maxWidth: vars.laptop }, {
+}, media({ maxWidth: Breakpoints.Laptop }, {
   width: '35%'
-}), media({ maxWidth: vars.tablet }, {
+}), media({ maxWidth: Breakpoints.Tablet }, {
   width: '100%'
 }))
 
@@ -48,9 +49,9 @@ export const Img = style({
       alignSelf: 'center'
     }
   }
-}, media({ maxWidth: vars.laptop }, {
+}, media({ maxWidth: Breakpoints.Laptop }, {
   width: '60%'
-}), media({ maxWidth: vars.tablet }, {
+}), media({ maxWidth: Breakpoints.Tablet }, {
   display: 'none'
 }))
 
@@ -64,17 +65,17 @@ export const ImgContent = style({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center'
-}, media({ maxWidth: vars.laptop }, {
+}, media({ maxWidth: Breakpoints.Laptop}, {
   width: '60%'
-}), media({ maxWidth: vars.tablet }, {
+}), media({ maxWidth: Breakpoints.Tablet }, {
   display: 'none'
 }))
 
 export const TextContent1 = classes(TextContent, style({
   width: '40%'
-}, media({ maxWidth: vars.laptop }, {
+}, media({ maxWidth: Breakpoints.Laptop }, {
   width: '35%'
-}), media({ maxWidth: vars.tablet }, {
+}), media({ maxWidth: Breakpoints.Tablet }, {
   width: '100%'
 })))
 
@@ -133,7 +134,7 @@ export const ImgContent3 = style({
   left: 0,
   display: 'flex',
   alignItems: 'flex-end'
-}, media({ maxWidth: vars.tablet }, {
+}, media({ maxWidth: Breakpoints.Tablet }, {
   display: 'none'
 }))
 
