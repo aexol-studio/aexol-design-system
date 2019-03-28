@@ -46,6 +46,7 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
           {label}
         </label>
       }
+      {/* <div className={styles.TextInputLabel1}> */}
       <input
         type={type || 'text'}
         className={styles.TextInput}
@@ -54,6 +55,10 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
         required={required}
         {...restProps}
       />
+      {/* <div className={styles.TextInputLabelForgot}>
+      <a href="google.pl">Forgot?</a>
+      </div> */}
+      {/* </div> */}
     </div>
   )
 };
