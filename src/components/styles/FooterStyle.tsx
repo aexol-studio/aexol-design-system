@@ -75,8 +75,6 @@ export const FooterContent = style({
   display: 'flex',
   justifyContent: 'space-between',
   flexWrap: 'wrap'
-  // marginLeft: '110px',
-  // marginRight: '110px'
 },
   media({ minWidth: 0, maxWidth: Breakpoints.Laptop},
     {
