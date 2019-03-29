@@ -16,6 +16,7 @@ export interface IHero1ImgProps {
   imgPosition?: ImgPosition;
   height?: number;
   style?: React.CSSProperties;
+  imgStyle?: React.CSSProperties;
 }
 
 export const Hero1Img: React.FunctionComponent<IHero1ImgProps> = (props) => {
@@ -29,6 +30,7 @@ export const Hero1Img: React.FunctionComponent<IHero1ImgProps> = (props) => {
     imgPosition = 'bottom',
     height,
     style,
+    imgStyle,
     ...restProps
   } = props
 
@@ -60,7 +62,10 @@ export const Hero1Img: React.FunctionComponent<IHero1ImgProps> = (props) => {
           </div>
           <div
             className={classnames(styles.Img, imgPosition)}
-            style={{ backgroundImage: `url(${imgFile})` }}
+            style={{
+              backgroundImage: `url(${imgFile})`,
+              ...imgStyle
+            }}
           />
         </div>
       </div>

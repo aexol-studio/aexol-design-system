@@ -6,6 +6,10 @@ export const Colors = {
 
   ['Damsel in distress']: '#E1E0FF',
 
+  /* Mora */
+
+  ['Mora']: '#A9A5FF',
+
   /* Super Nova */
 
   ['Super Nova']: '#645EE1',
