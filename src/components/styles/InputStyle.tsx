@@ -1,4 +1,5 @@
 import { style } from 'typestyle';
+import { Colors } from './Colors';
 // import * as vars from '../../vars';
 
 export const TextInputContainer = style({
@@ -36,12 +37,13 @@ export const TextInput = style({
 })
 
 export const TextInputLabelPassword = style({
-  $debugName: 'TextInputLabelForgot',
+  $debugName: 'TextInputLabelPassword',
   // position: 'static',
   // width: '20%',
   marginLeft: '-100px',
   zIndex: 1,
-  paddingTop: 13
+  height: 50,
+  // paddingTop: 12,
   // background: 'white',
   // padding: '10px 10px',
   // border: '1px solid rgba(0, 0, 0, 0.12)',
@@ -56,10 +58,27 @@ export const TextInputLabelPassword = style({
   //     FontSize: 16
   //   }
   // }
+  display: 'flex'
 })
 
 export const TextInputDiv = style({
   $debugName: 'TextInputDiv',
   display: 'flex'
+})
+
+export const TextInputSpacer = style({
+  $debugName: 'TextInputDiv',
+  backgroundColor: Colors.Sopel,
+  height: 30,
+  width: 2,
+  marginRight: 16,
+  marginTop: 10
+})
+
+export const TextInputHref = style ({
+  $debugName: 'TextInputHref',
+  color: 'black',
+  textDecoration: 'none',
+  paddingTop: 13
 })
   ;
