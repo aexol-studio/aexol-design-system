@@ -4,12 +4,9 @@ import { H4, PMedium } from './typography';
 import * as styles from './styles/CardComponent';
 import { Colors } from './styles/Colors';
 
-type Corner = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'none'
-
 export interface ICardComponentProps {
   boxText: string;
   boxTitle: string;
-  corner?: Corner;
   style?: React.CSSProperties;
 }
 
@@ -22,12 +19,11 @@ export const CardComponent: React.FunctionComponent<ICardComponentProps> = (prop
   } = props
 
   return (
-    <div className={styles.CardHero}>
-      <div className={styles.ComponentHero}>
         <div
           className={classnames(
             styles.CardComponentContainer
           )}
+          style={style}
           {...restProps}
         >
           <div className={styles.logo}>img</div>
@@ -47,7 +43,5 @@ export const CardComponent: React.FunctionComponent<ICardComponentProps> = (prop
             </PMedium>
           </div>
         </div>
-      </div>
-    </div>
   )
 }
