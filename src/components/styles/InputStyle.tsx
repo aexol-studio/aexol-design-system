@@ -10,7 +10,6 @@ export const TextInputContainer = style({
 export const TextInputLabel = style({
   $debugName: 'TextInputLabel',
   fontFamily: 'Helvetica Neue',
-  fontSize: 12,
   lineHeight: 2,
   marginLeft: 3
 })
@@ -18,7 +17,7 @@ export const TextInputLabel = style({
 export const TextInput = style({
   $debugName: 'TextInput',
   width: '60%',
-  color: '#000',
+  color: Colors.Black,
   padding: '15px 10px',
   border: '1px solid rgba(0, 0, 0, 0.12)',
   borderRadius: 4,
@@ -27,9 +26,8 @@ export const TextInput = style({
   boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
   $nest: {
     [`&:hover`]: {
-      boxShadow: '0 0 0 2px #359FFB',
-      color: '#313132',
-      FontSize: 16
+      boxShadow: `0 0 0 2px ${Colors.Pacific}`,
+      color: Colors['Dark Side']
     }
   }
 })
@@ -58,7 +56,7 @@ export const TextInputSpacer = style({
 
 export const TextInputHref = style ({
   $debugName: 'TextInputHref',
-  color: 'black',
+  color: Colors.Black,
   textDecoration: 'none',
   paddingTop: 13
 })
