@@ -43,7 +43,6 @@ export const TextInputLabelPassword = style({
   marginLeft: '-100px',
   zIndex: 1,
   height: 50,
-  // paddingTop: 12,
   // background: 'white',
   // padding: '10px 10px',
   // border: '1px solid rgba(0, 0, 0, 0.12)',
