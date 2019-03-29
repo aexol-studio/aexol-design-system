@@ -75,14 +75,12 @@ export const FooterContent = style({
   display: 'flex',
   justifyContent: 'space-between',
   flexWrap: 'wrap'
-  // marginLeft: '110px',
-  // marginRight: '110px'
 },
   media({ minWidth: 0, maxWidth: Breakpoints.Laptop},
     {
       flexDirection: 'column',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'flex-start'
     })
 )
 
@@ -92,10 +90,10 @@ export const FooterContentColumn = style({
   marginBottom: 60,
   flexDirection: 'column'
 },
-media({ minWidth: 0, maxWidth: 1200 },
+media({ minWidth: 0, maxWidth: Breakpoints.Laptop},
   {
-    marginTop: 35,
-    marginBottom: 35
+    marginTop: 10,
+    marginBottom: 10
   })
 )
 
