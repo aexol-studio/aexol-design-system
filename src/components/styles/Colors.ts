@@ -1,4 +1,8 @@
 export const Colors = {
+  /* Black*/
+
+  ['Black']: '#000000',
+
   /* White */
 
   ['White']: '#FFFFFF',
