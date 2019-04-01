@@ -1,10 +1,5 @@
 import * as React from 'react';
-import {
-  Button,
-  Logo,
-  Notification,
-  NavBar
-} from '../../src';
+import { Button, Logo, Notification, NavBar } from '../../src';
 import * as styles from './styles/AboutStyles';
 import { withRouter, RouteComponentProps } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -30,7 +25,7 @@ const nav = [
     name: 'HeroBackImgWithText',
     to: '/HeroBackImgWithText'
   },
-]
+];
 
 type IProps = RouteComponentProps<any>;
 
@@ -56,19 +51,12 @@ class About extends React.PureComponent<IProps> {
   render() {
     return (
       <React.Fragment>
-        <NavBar
-          color="white"
-          buttonText="Sign In"
-          onClick={() => {}}
-        >
-          {nav.map((el, idx) =>
-            <Link
-              to={el.to}
-              key={idx}
-            >
+        <NavBar color="white" buttonText="Sign In" onClick={() => {}}>
+          {nav.map((el, idx) => (
+            <Link to={el.to} key={idx}>
               {el.name}
             </Link>
-          )}
+          ))}
         </NavBar>
         <div className={styles.About}>
           <div className={styles.Container}>
