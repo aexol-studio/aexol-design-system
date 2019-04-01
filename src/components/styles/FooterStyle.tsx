@@ -1,11 +1,12 @@
 import { style, media } from 'typestyle';
 import { Colors } from './Colors';
 import { Breakpoints } from './Breakpoints';
+import * as vars from '../../vars';
 
 export const FooterContainer = style({
   $debugName: 'FooterContainer',
-  width: '80%',
-  maxWidth: 1170,
+  width: vars.containerWidth,
+  maxWidth: vars.maxWidth,
   margin: '0 auto',
   marginTop: '80px',
   marginBottom: '80px',
@@ -130,9 +131,8 @@ export const PFooterName = style({
     '&.white': {
       $nest: {
         '&:hover': {
-          color: 'black'
+          color: Colors.Black
         }
-        // po merge tutaj zmienić Colors.Black
       }
     }
   }
