@@ -20,6 +20,10 @@ export { NotFound } from './NotFound';
 export { ArrowsDown } from './ArrowsDown';
 export { WorkshopBottomBar } from './WorkshopBottomBar';
 export { NavBar } from './NavBar';
+export { Link } from './Link';
+export { ContentTextBox } from './ContentTextBox';
+export { ContentImgOnSide } from './ContentImgOnSide';
+export { ContentWithTile } from './ContentWithTile';
 export {
   Dropdown,
   DropdownButton,
