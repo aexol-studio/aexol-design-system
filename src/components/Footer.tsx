@@ -15,7 +15,6 @@ type FooterColumnsTxt = {
 export interface FooterComponentProps {
   FooterColumnsTxt: FooterColumnsTxt;
   backgroundColor?: 'black' | 'white' ;
-  footerHover?: 'black' | 'white';
   copyright: string;
 }
 
