@@ -1,6 +1,6 @@
 import { style, media } from 'typestyle';
 import { Colors } from './Colors';
-import {Breakpoints} from './Breakpoints';
+import { Breakpoints } from './Breakpoints';
 
 export const FooterContainer = style({
   $debugName: 'FooterContainer',
@@ -18,13 +18,10 @@ export const rectangleTopDiv = style({
   $debugName: 'rectangleTopDiv',
   display: 'flex',
   flexDirection: 'column'
-  // justifyContent: 'space-evenly',
-  // marginTop: 50
 })
 export const rectangleDownDiv = style({
   $debugName: 'rectangleDownDiv',
   display: 'flex',
-  // marginBottom: 50,
   flexDirection: 'column'
 })
 
@@ -76,11 +73,13 @@ export const FooterContent = style({
   justifyContent: 'space-between',
   flexWrap: 'wrap'
 },
-  media({ minWidth: 0, maxWidth: Breakpoints.Laptop},
+  media({ minWidth: 0, maxWidth: Breakpoints.Laptop },
     {
       flexDirection: 'column',
       justifyContent: 'center',
-      alignItems: 'flex-start'
+      alignItems: 'flex-start',
+      paddingTop: 40,
+      paddingBottom: 40
     })
 )
 
@@ -90,41 +89,51 @@ export const FooterContentColumn = style({
   marginBottom: 60,
   flexDirection: 'column'
 },
-media({ minWidth: 0, maxWidth: Breakpoints.Laptop},
-  {
-    marginTop: 10,
-    marginBottom: 10
-  })
+  media({ minWidth: 0, maxWidth: Breakpoints.Laptop },
+    {
+      marginTop: 20,
+      marginBottom: 20
+    })
 )
 
 export const FooterContentColumnTitle = style({
   $debugName: 'FooterContentColumnTitle',
-  color: '#514E5A',
-  fontSize: 16,
+  color: Colors.Lead,
   fontWeight: 'bold',
   marginBottom: 0,
   marginTop: 0
 })
 export const FooterContentColumnName = style({
   $debugName: 'FooterContentColumnTitle',
-  color: '#514E5A',
-  fontSize: 16,
+  color: Colors.Lead,
   marginBottom: 0,
   marginTop: 5
 })
 
-export const PFooterNameDiv = style ({
-display: 'flex',
-flexDirection: 'column'
+export const PFooterNameDiv = style({
+  display: 'flex',
+  flexDirection: 'column'
 })
 
-export const PFooterName = style ({
-    margin: 0,
-    padding: 0,
-    lineHeight: `23px`,
-    fontSize: 16,
-    color: '#514E5A',
-    marginBottom: 0,
-    marginTop: 5,
-    textDecoration: 'none'
+export const PFooterName = style({
+  margin: 0,
+  padding: 0,
+  lineHeight: `23px`,
+  color: Colors.Lead,
+  marginBottom: 0,
+  marginTop: 5,
+  textDecoration: 'none',
+  $nest: {
+    '&:hover': {
+      color: Colors.White
+        },
+    '&.white': {
+      $nest: {
+        '&:hover': {
+          color: 'black'
+        }
+        // po merge tutaj zmienić Colors.Black
+      }
+    }
+  }
 })
