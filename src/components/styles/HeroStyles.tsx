@@ -1,5 +1,6 @@
 import { style, classes, media } from 'typestyle';
 import { Colors } from './Colors';
+import { Breakpoints } from './Breakpoints';
 import * as vars from '../../vars';
 
 export const Hero = style({
@@ -9,8 +10,8 @@ export const Hero = style({
 })
 
 export const HeroContainer = style({
-  width: '80%',
-  maxWidth: 1170,
+  width: vars.containerWidth,
+  maxWidth: vars.maxWidth,
   height: '100%',
   margin: '0 auto'
 })
@@ -28,9 +29,9 @@ export const TextContent = style({
   flexDirection: 'column',
   width: '25%',
   maxWidth: 450
-}, media({ maxWidth: vars.laptop }, {
+}, media({ minWidth: Breakpoints.Tablet, maxWidth: Breakpoints.Laptop }, {
   width: '35%'
-}), media({ maxWidth: vars.tablet }, {
+}), media({ maxWidth: Breakpoints.Tablet }, {
   width: '100%'
 }))
 
@@ -48,9 +49,9 @@ export const Img = style({
       alignSelf: 'center'
     }
   }
-}, media({ maxWidth: vars.laptop }, {
+}, media({ minWidth: Breakpoints.Tablet, maxWidth: Breakpoints.Laptop }, {
   width: '60%'
-}), media({ maxWidth: vars.tablet }, {
+}), media({ maxWidth: Breakpoints.Tablet }, {
   display: 'none'
 }))
 
@@ -64,11 +65,19 @@ export const ImgContent = style({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center'
-})
+}, media({ minWidth: Breakpoints.Tablet, maxWidth: Breakpoints.Laptop }, {
+  width: '60%'
+}), media({ maxWidth: Breakpoints.Tablet }, {
+  display: 'none'
+}))
 
 export const TextContent1 = classes(TextContent, style({
   width: '40%'
-}))
+}, media({ minWidth: Breakpoints.Tablet, maxWidth: Breakpoints.Laptop }, {
+  width: '35%'
+}), media({ maxWidth: Breakpoints.Tablet }, {
+  width: '100%'
+})))
 
 export const Img1 = style({
   width: '45%',
@@ -101,7 +110,8 @@ export const TextContent5 = classes(TextContent, style({
   maxWidth: '100%',
   display: 'flex',
   alignItems: 'center',
-  marginBottom: 162
+  marginBottom: 162,
+  textAlign: 'center'
 }))
 
 export const HeroImgOnBottom = classes(Hero1Img, style({
@@ -112,7 +122,8 @@ export const HeroBackImgWithText = HeroImgOnBottom
 
 export const TextContent3 = classes(TextContent5, style({
   marginTop: 150,
-  marginBottom: 300
+  marginBottom: 300,
+  textAlign: 'center'
 }))
 
 export const ImgContent3 = style({
@@ -123,7 +134,9 @@ export const ImgContent3 = style({
   left: 0,
   display: 'flex',
   alignItems: 'flex-end'
-})
+}, media({ maxWidth: Breakpoints.Tablet }, {
+  display: 'none'
+}))
 
 export const Img3 = style({
   width: '25%',

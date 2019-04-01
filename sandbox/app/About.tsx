@@ -1,8 +1,31 @@
 import * as React from 'react';
-import { Button, Logo, Notification } from '../../src';
+import { Button, Logo, Notification, NavBar } from '../../src';
 import * as styles from './styles/AboutStyles';
 import { withRouter, RouteComponentProps } from 'react-router';
 import { Link } from 'react-router-dom';
+
+const nav = [
+  {
+    name: 'Hero2Img',
+    to: '/Hero2Img'
+  },
+  {
+    name: 'Hero1Img',
+    to: '/Hero1Img'
+  },
+  {
+    name: 'HeroImgOnBottom',
+    to: '/HeroImgOnBottom'
+  },
+  {
+    name: 'HeroBackImgWithTile',
+    to: '/HeroBackImgWithTile'
+  },
+  {
+    name: 'HeroBackImgWithText',
+    to: '/HeroBackImgWithText'
+  },
+];
 
 type IProps = RouteComponentProps<any>;
 
@@ -27,32 +50,25 @@ class About extends React.PureComponent<IProps> {
 
   render() {
     return (
-      <div className={styles.About}>
-        <nav className={styles.Nav}>
-          <Link to="/Hero2Img" style={{ marginRight: 10 }}>
-            Hero2Img
-          </Link>
-          <Link to="/Hero1Img" style={{ marginRight: 10 }}>
-            Hero1Img
-          </Link>
-          <Link to="/HeroImgOnBottom" style={{ marginRight: 10 }}>
-            HeroImgOnBottom
-          </Link>
-          <Link to="/HeroBackImgWithTile" style={{ marginRight: 10 }}>
-            heroBackImgTile
-          </Link>
-          <Link to="/HeroBackImgWithText">heroBackImgText</Link>
-          <Link to="/PricingTableComp">PricingTableComp</Link>
-        </nav>
-        <div className={styles.Container}>
-          <Logo
-            width={DEFAULT_LOGO_WIDTH}
-            logoURL={require('../assets/images/AexolLogo.png')}
-          />
-          <Button onClick={this.onclickHandler}>About</Button>
-          <Notification ref={this.notification} />
+      <React.Fragment>
+        <NavBar color="white" buttonText="Sign In" onClick={() => {}}>
+          {nav.map((el, idx) => (
+            <Link to={el.to} key={idx}>
+              {el.name}
+            </Link>
+          ))}
+        </NavBar>
+        <div className={styles.About}>
+          <div className={styles.Container}>
+            <Logo
+              width={DEFAULT_LOGO_WIDTH}
+              logoURL={require('../assets/images/AexolLogo.png')}
+            />
+            <Button onClick={this.onclickHandler}>About</Button>
+            <Notification ref={this.notification} />
+          </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

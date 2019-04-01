@@ -20,15 +20,6 @@ export const logo = style({
   marginBottom: 6
 })
 
-export const CardHero = style({
-  display: 'flex',
-  justifyContent: 'space-around'
-})
-
-export const ComponentHero = style ({
-  $debugName: 'ComponentHero'
-})
-
 export const rectangle = style ({
   $debugName: 'rectangle',
   display: 'flex',

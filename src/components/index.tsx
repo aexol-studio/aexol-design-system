@@ -19,7 +19,11 @@ export { HeroBackImgWithText } from './HeroBackImgWithText';
 export { NotFound } from './NotFound';
 export { ArrowsDown } from './ArrowsDown';
 export { WorkshopBottomBar } from './WorkshopBottomBar';
-export { PricingTable, PricingProps } from './PricingTable';
+export { NavBar } from './NavBar';
+export { Link } from './Link';
+export { ContentTextBox } from './ContentTextBox';
+export { ContentImgOnSide } from './ContentImgOnSide';
+export { ContentWithTile } from './ContentWithTile';
 export {
   Dropdown,
   DropdownButton,
@@ -28,8 +32,10 @@ export {
 } from './dropdown';
 export { CardComponent } from './CardComponent';
 export { Footer } from './Footer';
+export { BlueTile } from './BlueTile';
 import * as icons from './icons';
 export { icons };
 
 import * as Typography from './typography';
 export { Typography };
+export { PricingTable } from './PricingTable';

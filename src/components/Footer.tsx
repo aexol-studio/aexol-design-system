@@ -50,7 +50,7 @@ export const Footer: React.FunctionComponent<FooterComponentProps> = (props) => 
             return <div className={styles.FooterContentColumn} key={idxt}>
               <div><PFooterTitle >{el.title}</PFooterTitle></div>
               <div className={styles.PFooterNameDiv}>{el.objects.map((o, idx) =>
-                <a className={styles.PFooterName} href={o.link} key={idx}>{o.name}</a>)}</div>
+                <a className={classnames(styles.PFooterName, backgroundColor)}href={o.link} key={idx}>{o.name}</a>)}</div>
             </div>
           })
           }

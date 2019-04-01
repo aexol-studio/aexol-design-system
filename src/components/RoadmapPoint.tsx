@@ -16,17 +16,13 @@ export interface IRoadmapPointProps {
   titlePosition?: Position;
   header: string;
   text: string;
-  bottomVal?: number;
   style?: React.CSSProperties;
 }
-
-const DEFAULT_BOTTOM = 125
 
 export const RoadmapPoint: React.FunctionComponent<IRoadmapPointProps> = (props) => {
   const {
     header,
     text,
-    bottomVal,
     title,
     titlePosition,
     pointColor,
@@ -104,13 +100,8 @@ export const RoadmapPoint: React.FunctionComponent<IRoadmapPointProps> = (props)
     <div className={styles.Point}>
       {renderPoint()}
       <div
-        className={styles.Popup}
-        style={{
-          bottom: bottomVal
-            ? bottomVal
-            : DEFAULT_BOTTOM,
-          ...style
-        }}
+        className={classnames(styles.Popup, pointColor)}
+        style={style}
       >
         <div className={classnames(styles.Header, pointColor)}>{header}</div>
         <div className={classnames(styles.Text, pointColor)}>

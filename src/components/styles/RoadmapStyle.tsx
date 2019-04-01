@@ -1,11 +1,12 @@
 import { style, media } from 'typestyle';
 import { Colors } from './Colors';
+import { Breakpoints } from './Breakpoints';
 import * as vars from '../../vars';
 
 export const Popup = style({
   width: 200,
   borderRadius: 8,
-  backgroundImage: `linear-gradient(to bottom, '${Colors.Lunatic}00', ${Colors.Lunatic})`,
+  backgroundImage: `linear-gradient(to bottom, ${Colors.Lunatic}00, ${Colors.Lunatic})`,
   padding: 2,
   position: 'absolute',
   alignItems: 'center',
@@ -15,8 +16,19 @@ export const Popup = style({
   zIndex: 100,
   opacity: 0,
   transition: vars.transition,
-  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)'
-})
+  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
+  bottom: 125,
+  $nest: {
+    '&.blue': {
+      padding: 0
+    }
+  }
+}, media({ maxWidth: Breakpoints.Laptop }, {
+  transform: 'rotate(-90deg) translate(30px, 0)',
+  width: 170,
+  bottom: 85,
+  left: -80
+}))
 
 export const Header = style({
   width: 200,
@@ -32,7 +44,9 @@ export const Header = style({
       backgroundColor: Colors['Outer Space']
     }
   }
-})
+}, media({ maxWidth: Breakpoints.Laptop }, {
+  width: 170
+}))
 
 export const Text = style({
   width: '100%',
@@ -58,7 +72,7 @@ export const Text = style({
     '&::after': {
       content: `''`,
       position: 'absolute',
-      bottom: -22,
+      bottom: -24,
       right: 86,
       marginTop: -12,
       borderWidth: 12,
@@ -66,7 +80,27 @@ export const Text = style({
       borderColor: `${Colors.White} transparent transparent transparent`
     }
   }
-})
+}, media({ maxWidth: Breakpoints.Laptop }, {
+    $nest: {
+      '&::before': {
+        bottom: '47%',
+        right: 166,
+        borderColor: `transparent ${Colors.Lunatic} transparent transparent`
+      },
+      '&::after': {
+        bottom: '50%',
+        right: 166,
+        borderColor: `transparent ${Colors.White} transparent transparent`
+      },
+      '&.blue': {
+        $nest: {
+          '&::before': {
+            borderColor: `transparent`
+          }
+        }
+      }
+    }
+}))
 
 export const Point = style({
   position: 'relative',
@@ -97,7 +131,7 @@ export const Line = style({
 })
 
 export const Title = style({
-  fontFamily: 'Helvetica Neue-Medium',
+  fontFamily: 'Helvetica Neue',
   fontSize: 16,
   lineHeight: '18px',
   textAlign: 'center',
@@ -117,11 +151,23 @@ export const Title = style({
       color: Colors.White
     },
     '&.todo': {
-      fontFamily: 'Helvetica Neue',
-      color: Colors.Foggy
+      fontFamily: 'Helvetica Neue-Thin'
     }
   }
-})
+}, media({ maxWidth: Breakpoints.Laptop }, {
+  transform: 'rotate(-90deg)',
+  top: 125,
+  $nest: {
+    '&.topRight': {
+      top: -90,
+      left: -60
+    },
+    '&.top': {
+      top: -70,
+      left: -60
+    }
+  }
+}))
 
 export const Roadmap = style({
   width: '100%',
@@ -135,8 +181,8 @@ export const Roadmap = style({
       backgroundImage: Colors['Alien Blood']
     }
   }
-}, media({ maxWidth: vars.laptop }, {
-  padding: 70
+}, media({ maxWidth: Breakpoints.Laptop }, {
+  height: 1400
 }))
 
 export const Road = style({
@@ -144,12 +190,17 @@ export const Road = style({
   flexWrap: 'wrap',
   marginTop: 150,
   position: 'relative'
-})
+}, media({ maxWidth: Breakpoints.Laptop }, {
+  transform: 'translateY(-100px) translateX(40%) rotate(90deg)',
+  transformOrigin: 'left',
+  margin: 0,
+  width: 1280
+}))
 
 export const Background = style({
   position: 'absolute',
   top: -100,
   left: 0
-}, media({ maxWidth: vars.laptop }, {
-  display: 'none'
+}, media({ maxWidth: Breakpoints.Laptop }, {
+  overflow: 'auto'
 }))

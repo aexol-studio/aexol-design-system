@@ -1,10 +1,18 @@
 export const Colors = {
+  /* Black*/
+
+  ['Black']: '#000000',
+
   /* White */
 
   ['White']: '#FFFFFF',
   /* Damsel */
 
   ['Damsel in distress']: '#E1E0FF',
+
+  /* Mora */
+
+  ['Mora']: '#A9A5FF',
 
   /* Super Nova */
 
