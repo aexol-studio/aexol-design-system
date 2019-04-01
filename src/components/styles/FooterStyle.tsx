@@ -8,8 +8,8 @@ export const FooterContainer = style({
   width: vars.containerWidth,
   maxWidth: vars.maxWidth,
   margin: '0 auto',
-  marginTop: '80px',
-  marginBottom: '80px',
+  marginTop: 80,
+  marginBottom: 80,
   display: 'flex',
   justifyContent: 'space-between',
   flexDirection: 'column'

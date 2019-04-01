@@ -1,0 +1,21 @@
+---
+name: Checkbox
+---
+
+import { Playground, PropsTable } from 'docz'
+import { Checkbox } from '../../src/components'
+
+#Checkbox
+
+##Properties
+
+<PropsTable of={Checkbox} />
+
+##Basic usage
+
+<Playground>
+  <label style={{ display: 'block', marginTop: 10 }}>Square</label>
+  <Checkbox shape="square" name="square" />
+  <label style={{ display: 'block', marginTop: 10 }}>Round</label>
+  <Checkbox shape="round" name="round" />
+</Playground>
