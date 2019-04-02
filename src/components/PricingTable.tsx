@@ -63,7 +63,7 @@ export const PricingTable = (props: PricingProps) => {
               <div className={styles.PlanHeaderDescription}>
                 <P>{p.description}</P>
               </div>
-              <Button>{p.action}</Button>
+              <Button onClick={p.onClick} >{p.action}</Button>
             </div>
           ))}
         </div>
