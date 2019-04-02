@@ -87,7 +87,7 @@ export const PricingTable = (props: PricingProps) => {
           <div className={styles.PlanActions}>
             {plans.map(p => (
               <div className={styles.PlanOption}>
-                <Button>{p.action}</Button>
+                <Button onClick={p.onClick}>{p.action}</Button>
               </div>
             ))}
           </div>
