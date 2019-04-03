@@ -1,6 +1,5 @@
 import { style } from 'typestyle';
 import { Colors } from './Colors';
-// import { Breakpoints } from './Breakpoints';
 import * as vars from '../../vars';
 
 export const LinkContainer = style({

@@ -20,7 +20,13 @@ export const NavBar = style({
 export const ContentContainer = style({
   display: 'flex',
   alignItems: 'center'
-})
+}, media({ maxWidth: Breakpoints.Tablet }, {
+  $nest: {
+    button: {
+      display: 'none'
+    }
+  }
+}))
 
 export const LinkContainer = style({
   $nest: {
@@ -107,6 +113,19 @@ export const Bar = style({
   }
 })
 
+export const LogoContainer = style({
+  width: '10%',
+  marginRight: 'auto'
+}, media({ minWidth: Breakpoints.Phone, maxWidth: Breakpoints.Tablet }, {
+  width: '20%',
+  marginRight: 0,
+  marginLeft: 'auto'
+}), media({ maxWidth: Breakpoints.Phone }, {
+  width: '30%',
+  marginRight: 0,
+  marginLeft: 'auto'
+}))
+
 export const Container = style({
   width: vars.containerWidth,
   margin: '0 auto',
@@ -136,6 +155,9 @@ media({ maxWidth: Breakpoints.Tablet }, {
         },
         [`.${Bar}`]: {
           backgroundColor: Colors.White
+        },
+        [`.${LogoContainer}`]: {
+          display: 'none'
         },
         [`.${ContentContainer}`]: {
           flexDirection: 'column',
@@ -167,11 +189,4 @@ media({ maxWidth: Breakpoints.Tablet }, {
       }
     }
   }
-}))
-
-export const LogoContainer = style({
-  width: '10%',
-  marginRight: 'auto'
-}, media({ maxWidth: Breakpoints.Tablet }, {
-  display: 'none'
 }))
