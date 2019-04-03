@@ -1,9 +1,15 @@
 import * as React from 'react';
 import { Colors } from '../styles/Colors';
-interface IIcon {
+
+interface IIconFill {
   fill: keyof typeof Colors;
 }
-export const Profile = ({ fill }: IIcon) => (
+
+interface IIconStroke {
+  stroke: keyof typeof Colors;
+}
+
+export const Profile = ({ fill }: IIconFill) => (
   <svg
     width="24"
     height="24"
@@ -19,7 +25,7 @@ export const Profile = ({ fill }: IIcon) => (
   </svg>
 );
 
-export const BackArrow = ({ fill }: IIcon) => (
+export const BackArrow = ({ fill }: IIconFill) => (
   <svg
     width="24"
     height="24"
@@ -36,7 +42,7 @@ export const BackArrow = ({ fill }: IIcon) => (
   </svg>
 );
 
-export const Close = ({ fill }: IIcon) => (
+export const Close = ({ fill }: IIconFill) => (
   <svg
     width="24"
     height="24"
@@ -53,7 +59,7 @@ export const Close = ({ fill }: IIcon) => (
   </svg>
 );
 
-export const Check = ({ fill }: IIcon) => (
+export const Check = ({ fill }: IIconFill) => (
   <svg
     width="24"
     height="24"
@@ -70,7 +76,7 @@ export const Check = ({ fill }: IIcon) => (
   </svg>
 );
 
-export const Info = ({ fill }: IIcon) => (
+export const Info = ({ fill }: IIconFill) => (
   <svg
     width="24"
     height="24"
@@ -91,7 +97,7 @@ export const Info = ({ fill }: IIcon) => (
   </svg>
 );
 
-export const Error = ({ stroke }: any) => (
+export const Error = ({ stroke }: IIconStroke) => (
   <svg
     width="24"
     height="24"
@@ -101,7 +107,7 @@ export const Error = ({ stroke }: any) => (
   >
     <path
       d="M7.5 7.5L16.5 16.5"
-      stroke={stroke}
+      stroke={Colors[stroke]}
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -109,7 +115,7 @@ export const Error = ({ stroke }: any) => (
     />
     <path
       d="M16.5 7.5L7.5 16.5"
-      stroke={stroke}
+      stroke={Colors[stroke]}
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -118,7 +124,7 @@ export const Error = ({ stroke }: any) => (
   </svg>
 );
 
-export const Warning = ({ stroke }: any) => (
+export const Warning = ({ stroke }: IIconStroke) => (
   <svg
     width="24"
     height="24"
@@ -128,7 +134,7 @@ export const Warning = ({ stroke }: any) => (
   >
     <path
       d="M12 6V15"
-      stroke={stroke}
+      stroke={Colors[stroke]}
       strokeWidth="1.9365"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -137,12 +143,12 @@ export const Warning = ({ stroke }: any) => (
     <path
       d="M12.5 18C12.5 18.2761 12.2761 18.5 12 18.5C11.7239 18.5 11.5 18.2761 11.5 18C11.5 17.7239 11.7239 17.5 12 17.5C12.2761 17.5 12.5 17.7239 12.5 18Z"
       fill="black"
-      stroke={stroke}
+      stroke={Colors[stroke]}
     />
   </svg>
 );
 
-export const Success = ({ stroke }: any) => (
+export const Success = ({ stroke }: IIconStroke) => (
   <svg
     width="24"
     height="24"
@@ -152,7 +158,7 @@ export const Success = ({ stroke }: any) => (
   >
     <path
       d="M18 8L8.5 17.5L5.5 13.5"
-      stroke={stroke}
+      stroke={Colors[stroke]}
       strokeWidth="1.9365"
       strokeMiterlimit="10"
       strokeLinecap="round"

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as classnames from 'classnames';
 import { Close, Warning, Info, Error, Success } from '../icons';
-import { Colors } from '../styles/Colors'
 import * as styles from './styles/NotificationStyle';
 
 type NoticeBoxType = 'info' | 'error' | 'alert' | 'success'
@@ -70,13 +69,13 @@ export class NoticeBox extends React.PureComponent<INoticeBoxProps, INoticeBoxSt
 
   handleType = () => {
     const { type } = this.props
-    let icon = <Info fill={Colors.White} />
+    let icon = <Info fill={'White'} />
     if (type === 'error') {
-      icon = <Error stroke={Colors.White} />
+      icon = <Error stroke={'White'} />
     } else if (type === 'alert') {
-      icon = <Warning stroke={Colors.White} />
+      icon = <Warning stroke={'White'} />
     } else if (type === 'success') {
-      icon = <Success stroke={Colors.White} />
+      icon = <Success stroke={'White'} />
     }
 
     return(
@@ -120,7 +119,7 @@ export class NoticeBox extends React.PureComponent<INoticeBoxProps, INoticeBoxSt
           className={styles.NoticeClose}
           onClick={this.handleOnClose}
         >
-          <Close fill={Colors['Dark Side']} />
+          <Close fill={'Dark Side'} />
         </div>}
       </div>
     )
