@@ -1,12 +1,11 @@
 import * as React from 'react';
 import * as styles from './styles/PoweredCommunityStyles';
-
-// type barColor = '/^#([0-9a-f]{3}|[0-9a-f]{6})$/i'
+import { Colors } from './styles/Colors';
 
 export interface ICommunityCardProps {
   val: number;
   description: string;
-  barColor: string;
+  barColor: keyof typeof Colors;
   style?: React.CSSProperties;
 }
 
@@ -24,7 +23,7 @@ export const CommunityCard: React.FunctionComponent<ICommunityCardProps> = (prop
     <div
       className={styles.CommunityCardContainer}
       style={{
-        borderBottom: `8px solid ${barColor}`,
+        borderBottom: `8px solid ${Colors[barColor]}`,
         ...style
       }}
       {...restProps}
