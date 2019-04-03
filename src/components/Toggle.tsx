@@ -1,7 +1,8 @@
 import * as React from 'react';
 import * as classnames from 'classnames';
-import { CloseLight, CheckLight } from './icons';
+import { Close, Check } from './icons';
 import * as styles from './styles/ToggleStyle';
+import { Colors } from './styles/Colors';
 
 type ToggleShape = 'round' | 'oval'
 
@@ -49,7 +50,7 @@ export class Toggle extends React.PureComponent<IToggleProps, IToggleState> {
           ))}
           onClick={e => this.handleOnClick(true)}
         >
-          <CheckLight />
+          <Check fill={Colors.White} />
         </div>
         <div
           className={classnames(classnames({
@@ -62,7 +63,7 @@ export class Toggle extends React.PureComponent<IToggleProps, IToggleState> {
           ))}
           onClick={e => this.handleOnClick(false)}
         >
-          <CloseLight />
+          <Close fill={Colors.White}/>
         </div>
       </React.Fragment>
     )
