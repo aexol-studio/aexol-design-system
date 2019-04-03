@@ -13,7 +13,8 @@ export const LinkContainer = style({
   textDecoration: 'none',
   $nest: {
     '&:hover': {
-      textDecoration: 'underline'
+      textDecoration: 'underline',
+      color: Colors.Pacific
     },
     '&:focus': {
       border: `1px dashed ${Colors.Pacific}`

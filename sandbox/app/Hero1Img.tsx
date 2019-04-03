@@ -13,9 +13,9 @@ class Hero1Imgview extends React.PureComponent<IProps> {
         paragraphText="Tailored Specially For Your Company Needs & With Core Team."
         buttonText="Try it!"
         buttonOnClick={() => console.log('click')}
-        imgFile="https://via.placeholder.com/668x569"
+        imgFile={<img src="https://via.placeholder.com/668x569" style={{maxWidth: '100%', maxHeight: '100%', objectFit: 'contain'}} />}
         imgPosition="center"
-        height={550}
+        height={600}
       />
     )
   }

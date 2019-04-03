@@ -7,6 +7,8 @@ export interface IContentImgOnSideProps {
   text: string;
   imgSide?: 'right' | 'left';
   linkText?: string;
+  linkHref: string;
+  linkTarget?: string;
   imgFile: string;
   style?: React.CSSProperties;
 }
@@ -17,6 +19,8 @@ export const ContentImgOnSide: React.FunctionComponent<IContentImgOnSideProps> =
     title,
     text,
     linkText = 'Read Article...',
+    linkHref,
+    linkTarget,
     imgSide = 'right',
     imgFile,
     style,
@@ -34,6 +38,8 @@ export const ContentImgOnSide: React.FunctionComponent<IContentImgOnSideProps> =
           title={title}
           text={text}
           linkText={linkText}
+          linkHref={linkHref}
+          linkTarget={linkTarget}
         />
       </div>}
       <div
@@ -47,6 +53,8 @@ export const ContentImgOnSide: React.FunctionComponent<IContentImgOnSideProps> =
           title={title}
           text={text}
           linkText={linkText}
+          linkHref={linkHref}
+          linkTarget={linkTarget}
         />
       </div>}
     </div>

@@ -44,7 +44,7 @@ export const LinkContainer = style({
       }
     }
   }
-}, media({ maxWidth: Breakpoints.TabletPortrait }, {
+}, media({ maxWidth: Breakpoints.Tablet }, {
   display: 'none'
 }))
 
@@ -86,7 +86,7 @@ export const Hamburger = style({
       }
     }
   }
-}, media({ maxWidth: Breakpoints.TabletPortrait }, {
+}, media({ maxWidth: Breakpoints.Tablet }, {
   display: 'block'
 }))
 
@@ -116,7 +116,7 @@ export const Container = style({
   alignItems: 'center',
   justifyContent: 'flex-end'
 },
-media({ maxWidth: Breakpoints.TabletPortrait }, {
+media({ maxWidth: Breakpoints.Tablet }, {
   justifyContent: 'space-between',
   $nest: {
     '&.open': {
@@ -167,4 +167,11 @@ media({ maxWidth: Breakpoints.TabletPortrait }, {
       }
     }
   }
+}))
+
+export const LogoContainer = style({
+  width: '10%',
+  marginRight: 'auto'
+}, media({ maxWidth: Breakpoints.Tablet }, {
+  display: 'none'
 }))

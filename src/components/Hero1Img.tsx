@@ -12,7 +12,7 @@ export interface IHero1ImgProps {
   paragraphText: string;
   buttonText: string;
   buttonOnClick: (e: HTMLButtonElement) => void;
-  imgFile: string;
+  imgFile: React.ReactNode;
   imgPosition?: ImgPosition;
   height?: number;
   style?: React.CSSProperties;
@@ -60,13 +60,9 @@ export const Hero1Img: React.FunctionComponent<IHero1ImgProps> = (props) => {
               {buttonText}
             </Button>
           </div>
-          <div
-            className={classnames(styles.Img, imgPosition)}
-            style={{
-              backgroundImage: `url(${imgFile})`,
-              ...imgStyle
-            }}
-          />
+          <div className={classnames(styles.Img, imgPosition)}>
+            {imgFile}
+          </div>
         </div>
       </div>
     </div>

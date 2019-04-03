@@ -7,8 +7,10 @@ import * as classnames from 'classnames';
 export interface IContentTextBoxProps {
   title: string;
   text: string;
-  linkText?: string;
+  linkText: string;
+  linkHref: string;
   tileView?: boolean;
+  linkTarget?: string;
   style?: React.CSSProperties;
 }
 
@@ -18,6 +20,8 @@ export const ContentTextBox: React.FunctionComponent<IContentTextBoxProps> = (pr
     title,
     text,
     linkText = 'Read Article...',
+    linkHref,
+    linkTarget,
     tileView = false,
     style,
     ...restProps
@@ -34,7 +38,7 @@ export const ContentTextBox: React.FunctionComponent<IContentTextBoxProps> = (pr
     >
       <H2 style={{marginBottom: 17}}>{title}</H2>
       <P style={{marginBottom: 37}}>{text}</P>
-      <Link text={linkText} link={linkText} />
+      <Link text={linkText} link={linkHref} target={linkTarget} />
     </div>
   )
 }

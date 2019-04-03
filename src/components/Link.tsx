@@ -1,13 +1,13 @@
 import * as React from 'react';
 import * as classnames from 'classnames';
 import * as styles from './styles/LinkStyles';
-// import { H2, P } from './typography'
 
 export interface ILinkProps {
   text: string;
   link: string;
   strong?: boolean;
   disabled?: boolean;
+  target?: string;
   style?: React.CSSProperties;
 }
 
@@ -16,6 +16,7 @@ export const Link: React.FunctionComponent<ILinkProps> = (props) => {
   const {
     text,
     link,
+    target,
     strong = false,
     disabled = false,
     style,
@@ -31,6 +32,7 @@ export const Link: React.FunctionComponent<ILinkProps> = (props) => {
       })}
       href={link}
       title={text}
+      target={target}
       style={style}
       {...restProps}
     >

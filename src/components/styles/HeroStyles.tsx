@@ -39,13 +39,11 @@ export const Img = style({
   width: '70%',
   height: '85%',
   alignSelf: 'flex-end',
-  backgroundSize: 'contain',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'right bottom',
+  display: 'flex',
+  justifyContent: 'flex-end',
   $nest: {
     '&.center': {
       height: '80%',
-      backgroundPosition: 'right center',
       alignSelf: 'center'
     }
   }
@@ -80,16 +78,10 @@ export const TextContent1 = classes(TextContent, style({
 })))
 
 export const Img1 = style({
-  width: '45%',
-  height: '100%',
-  backgroundSize: 'contain',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'left center'
+  width: '47%'
 })
 
-export const Img2 = classes(Img1, style({
-  backgroundPosition: 'right center'
-}))
+export const Img2 = Img1
 
 export const HeroBackImgWithTile = classes(Hero, style({
   width: '100%',
@@ -141,9 +133,8 @@ export const ImgContent3 = style({
 export const Img3 = style({
   width: '25%',
   height: '100%',
-  backgroundSize: 'contain',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center bottom'
+  display: 'flex',
+  alignItems: 'flex-end'
 })
 
 export const Img4 = classes(Img3, style({

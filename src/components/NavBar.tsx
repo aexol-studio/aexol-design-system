@@ -7,6 +7,7 @@ export interface INavBarProps {
   onClick: (e: HTMLButtonElement) => void;
   buttonText: string;
   children: string | React.ReactChildren | React.ReactNode;
+  logo?: React.ReactNode;
   color?: 'white' | 'black' | 'light'
   style?: React.CSSProperties;
 }
@@ -38,6 +39,7 @@ export class NavBar extends React.PureComponent<INavBarProps, NavBarState> {
   const {
     color,
     onClick,
+    logo,
     buttonText,
     style,
     ...restProps
@@ -74,6 +76,9 @@ export class NavBar extends React.PureComponent<INavBarProps, NavBarState> {
               />
             )
           }
+        </div>
+        <div className={styles.LogoContainer}>
+          {logo}
         </div>
         <div className={styles.ContentContainer}>
           <div className={classnames(styles.LinkContainer, color)}>

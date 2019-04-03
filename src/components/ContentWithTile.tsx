@@ -7,6 +7,8 @@ export interface IContentWithTileProps {
   title: string;
   text: string;
   linkText?: string;
+  linkHref: string;
+  linkTarget?: string;
   imgFile: string;
   violetBakground?: boolean;
   style?: React.CSSProperties;
@@ -18,6 +20,8 @@ export const ContentWithTile: React.FunctionComponent<IContentWithTileProps> = (
     title,
     text,
     linkText = 'Read Article...',
+    linkHref,
+    linkTarget,
     violetBakground = false,
     imgFile,
     style,
@@ -47,7 +51,9 @@ export const ContentWithTile: React.FunctionComponent<IContentWithTileProps> = (
           title={title}
           text={text}
           linkText={linkText}
+          linkHref={linkHref}
           tileView={true}
+          linkTarget={linkTarget}
         />
       </div>
     </div>

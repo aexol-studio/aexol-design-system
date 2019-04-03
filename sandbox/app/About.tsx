@@ -51,7 +51,12 @@ class About extends React.PureComponent<IProps> {
   render() {
     return (
       <React.Fragment>
-        <NavBar color="white" buttonText="Sign In" onClick={() => {}}>
+        <NavBar
+          color="white"
+          buttonText="Sign In"
+          onClick={() => {}}
+          logo={<img src="../assets/images/AexolLogo.png" style={{maxWidth: '100%', maxHeight: '100%', objectFit: 'contain'}} />}
+        >
           {nav.map((el, idx) => (
             <Link to={el.to} key={idx}>
               {el.name}
