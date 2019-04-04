@@ -7,6 +7,7 @@ import { Colors } from './styles/Colors';
 export interface ICardComponentProps {
   boxText: string;
   boxTitle: string;
+  icon?: JSX.Element;
   style?: React.CSSProperties;
 }
 
@@ -14,6 +15,7 @@ export const CardComponent: React.FunctionComponent<ICardComponentProps> = (prop
   const {
     boxText,
     boxTitle,
+    icon,
     style,
     ...restProps
   } = props
@@ -26,7 +28,7 @@ export const CardComponent: React.FunctionComponent<ICardComponentProps> = (prop
           style={style}
           {...restProps}
         >
-          <div className={styles.logo}>img</div>
+          {icon && <div className={styles.logo}>{icon}</div>}
           <div className={styles.rectangle}>
             <div className={styles.rectangle1} />
             <div className={styles.rectangle2} />
