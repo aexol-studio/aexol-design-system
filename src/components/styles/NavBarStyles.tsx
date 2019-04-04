@@ -1,5 +1,6 @@
 import { style, media } from 'typestyle';
 import { Colors } from '../styles/Colors';
+import { Breakpoints } from './Breakpoints';
 import * as vars from '../../vars';
 
 export const NavBar = style({
@@ -16,37 +17,40 @@ export const NavBar = style({
   }
 })
 
-export const Container = style({
-  width: '80%',
-  margin: '0 auto',
-  maxWidth: 1170,
-  height: '100%',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-end'
-}, media({ maxWidth: vars.tabletPortrait }, {
-  justifyContent: 'space-between'
-}))
-
 export const ContentContainer = style({
   display: 'flex',
   alignItems: 'center'
-})
+}, media({ maxWidth: Breakpoints.Tablet }, {
+  $nest: {
+    button: {
+      display: 'none'
+    }
+  }
+}))
 
 export const LinkContainer = style({
   $nest: {
     'a': {
-      color: Colors['Ancient Stone']
+      marginRight: 20,
+      color: Colors['Ancient Stone'],
+      textDecoration: 'none',
+      transition: vars.transition,
+      $nest: {
+        '&:hover': {
+          color: Colors['Dark Side']
+        }
+      }
     },
     '&.black': {
       $nest: {
         a: {
-          color: Colors.White
+          color: Colors.White,
+          textDecoration: 'none'
         }
       }
     }
   }
-}, media({ maxWidth: vars.tabletPortrait }, {
+}, media({ maxWidth: Breakpoints.Tablet }, {
   display: 'none'
 }))
 
@@ -88,7 +92,7 @@ export const Hamburger = style({
       }
     }
   }
-}, media({ maxWidth: vars.tabletPortrait }, {
+}, media({ maxWidth: Breakpoints.Tablet }, {
   display: 'block'
 }))
 
@@ -108,3 +112,81 @@ export const Bar = style({
     }
   }
 })
+
+export const LogoContainer = style({
+  width: '10%',
+  marginRight: 'auto'
+}, media({ minWidth: Breakpoints.Phone, maxWidth: Breakpoints.Tablet }, {
+  width: '20%',
+  marginRight: 0,
+  marginLeft: 'auto'
+}), media({ maxWidth: Breakpoints.Phone }, {
+  width: '30%',
+  marginRight: 0,
+  marginLeft: 'auto'
+}))
+
+export const Container = style({
+  width: vars.containerWidth,
+  margin: '0 auto',
+  maxWidth: vars.maxWidth,
+  height: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'flex-end'
+},
+media({ maxWidth: Breakpoints.Tablet }, {
+  justifyContent: 'space-between',
+  $nest: {
+    '&.open': {
+      zIndex: 20,
+      position: 'relative',
+      margin: 0,
+      display: 'inline-block',
+      width: 'auto',
+      height: 'auto',
+      backgroundColor: Colors['Super Nova'],
+      paddingBottom: 30,
+      $nest: {
+        [`.${Hamburger}`]: {
+          marginLeft: 30,
+          marginTop: 25,
+          alignSelf: 'flex-start'
+        },
+        [`.${Bar}`]: {
+          backgroundColor: Colors.White
+        },
+        [`.${LogoContainer}`]: {
+          display: 'none'
+        },
+        [`.${ContentContainer}`]: {
+          flexDirection: 'column',
+          width: '100%'
+        },
+        [`.${LinkContainer}`]: {
+          margin: '30px 0',
+          display: 'flex',
+          flexBasis: 'auto',
+          flexDirection: 'column',
+          padding: '0 30px',
+          $nest: {
+            a: {
+              width: 'calc(100% + 60px)',
+              marginLeft: -30,
+              fontSize: 18,
+              lineHeight: '23px',
+              color: Colors.White,
+              padding: '10px 30px',
+              $nest: {
+                '&:hover': {
+                  backgroundColor: Colors.Mora,
+                  color: Colors.White
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}))

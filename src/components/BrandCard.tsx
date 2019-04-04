@@ -2,14 +2,16 @@ import * as React from 'react';
 import * as styles from './styles/BrandStyles';
 
 export interface IBrandCardProps {
-  BrandCardURL: string;
+  BrandCardLogo: string;
+  BrandCardLink?: string;
   style?: React.CSSProperties;
 }
 
 export const BrandCard: React.FunctionComponent<IBrandCardProps> = (props) => {
 
   const {
-    BrandCardURL,
+    BrandCardLogo,
+    BrandCardLink,
     style,
     ...restProps
   } = props
@@ -20,11 +22,19 @@ export const BrandCard: React.FunctionComponent<IBrandCardProps> = (props) => {
       style={style}
       {...restProps}
     >
+    {BrandCardLink && <a className={styles.BrandLink} href={BrandCardLink}>
       <img
         className={styles.BrandCard}
-        src={BrandCardURL}
+        src={BrandCardLogo}
         alt="BrandLogo"
       />
+    </a>}
+    {!BrandCardLink &&
+      <img
+        className={styles.BrandCard}
+        src={BrandCardLogo}
+        alt="BrandLogo"
+      />}
     </div>
   )
 }

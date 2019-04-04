@@ -1,11 +1,12 @@
 import { style, media } from 'typestyle';
 import { Colors } from './Colors';
-import {Breakpoints} from './Breakpoints';
+import { Breakpoints } from './Breakpoints';
+import * as vars from '../../vars';
 
 export const FooterContainer = style({
   $debugName: 'FooterContainer',
-  width: '80%',
-  maxWidth: 1170,
+  width: vars.containerWidth,
+  maxWidth: vars.maxWidth,
   margin: '0 auto',
   marginTop: '80px',
   marginBottom: '80px',
@@ -18,13 +19,10 @@ export const rectangleTopDiv = style({
   $debugName: 'rectangleTopDiv',
   display: 'flex',
   flexDirection: 'column'
-  // justifyContent: 'space-evenly',
-  // marginTop: 50
 })
 export const rectangleDownDiv = style({
   $debugName: 'rectangleDownDiv',
   display: 'flex',
-  // marginBottom: 50,
   flexDirection: 'column'
 })
 
@@ -75,14 +73,14 @@ export const FooterContent = style({
   display: 'flex',
   justifyContent: 'space-between',
   flexWrap: 'wrap'
-  // marginLeft: '110px',
-  // marginRight: '110px'
 },
-  media({ minWidth: 0, maxWidth: Breakpoints.Tablet},
+  media({ minWidth: 0, maxWidth: Breakpoints.Laptop },
     {
       flexDirection: 'column',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'flex-start',
+      paddingTop: 40,
+      paddingBottom: 40
     })
 )
 
@@ -92,41 +90,50 @@ export const FooterContentColumn = style({
   marginBottom: 60,
   flexDirection: 'column'
 },
-media({ minWidth: 0, maxWidth: 1200 },
-  {
-    marginTop: 35,
-    marginBottom: 35
-  })
+  media({ minWidth: 0, maxWidth: Breakpoints.Laptop },
+    {
+      marginTop: 20,
+      marginBottom: 20
+    })
 )
 
 export const FooterContentColumnTitle = style({
   $debugName: 'FooterContentColumnTitle',
-  color: '#514E5A',
-  fontSize: 16,
+  color: Colors.Lead,
   fontWeight: 'bold',
   marginBottom: 0,
   marginTop: 0
 })
 export const FooterContentColumnName = style({
   $debugName: 'FooterContentColumnTitle',
-  color: '#514E5A',
-  fontSize: 16,
+  color: Colors.Lead,
   marginBottom: 0,
   marginTop: 5
 })
 
-export const PFooterNameDiv = style ({
-display: 'flex',
-flexDirection: 'column'
+export const PFooterNameDiv = style({
+  display: 'flex',
+  flexDirection: 'column'
 })
 
-export const PFooterName = style ({
-    margin: 0,
-    padding: 0,
-    lineHeight: `23px`,
-    fontSize: 16,
-    color: '#514E5A',
-    marginBottom: 0,
-    marginTop: 5,
-    textDecoration: 'none'
+export const PFooterName = style({
+  margin: 0,
+  padding: 0,
+  lineHeight: `23px`,
+  color: Colors.Lead,
+  marginBottom: 0,
+  marginTop: 5,
+  textDecoration: 'none',
+  $nest: {
+    '&:hover': {
+      color: Colors.White
+        },
+    '&.white': {
+      $nest: {
+        '&:hover': {
+          color: Colors.Black
+        }
+      }
+    }
+  }
 })

@@ -1,5 +1,6 @@
 import { style, media } from 'typestyle';
 import { Colors } from './Colors';
+import { Breakpoints } from './Breakpoints';
 import * as vars from '../../vars';
 
 export const Popup = style({
@@ -22,7 +23,7 @@ export const Popup = style({
       padding: 0
     }
   }
-}, media({ maxWidth: vars.laptop }, {
+}, media({ maxWidth: Breakpoints.Laptop }, {
   transform: 'rotate(-90deg) translate(30px, 0)',
   width: 170,
   bottom: 85,
@@ -43,7 +44,7 @@ export const Header = style({
       backgroundColor: Colors['Outer Space']
     }
   }
-}, media({ maxWidth: vars.laptop }, {
+}, media({ maxWidth: Breakpoints.Laptop }, {
   width: 170
 }))
 
@@ -79,7 +80,7 @@ export const Text = style({
       borderColor: `${Colors.White} transparent transparent transparent`
     }
   }
-}, media({ maxWidth: vars.laptop }, {
+}, media({ maxWidth: Breakpoints.Laptop }, {
     $nest: {
       '&::before': {
         bottom: '47%',
@@ -90,6 +91,13 @@ export const Text = style({
         bottom: '50%',
         right: 166,
         borderColor: `transparent ${Colors.White} transparent transparent`
+      },
+      '&.blue': {
+        $nest: {
+          '&::before': {
+            borderColor: `transparent`
+          }
+        }
       }
     }
 }))
@@ -146,7 +154,7 @@ export const Title = style({
       fontFamily: 'Helvetica Neue-Thin'
     }
   }
-}, media({ maxWidth: vars.laptop }, {
+}, media({ maxWidth: Breakpoints.Laptop }, {
   transform: 'rotate(-90deg)',
   top: 125,
   $nest: {
@@ -173,7 +181,7 @@ export const Roadmap = style({
       backgroundImage: Colors['Alien Blood']
     }
   }
-}, media({ maxWidth: vars.laptop }, {
+}, media({ maxWidth: Breakpoints.Laptop }, {
   height: 1400
 }))
 
@@ -182,7 +190,7 @@ export const Road = style({
   flexWrap: 'wrap',
   marginTop: 150,
   position: 'relative'
-}, media({ maxWidth: vars.laptop }, {
+}, media({ maxWidth: Breakpoints.Laptop }, {
   transform: 'translateY(-100px) translateX(40%) rotate(90deg)',
   transformOrigin: 'left',
   margin: 0,
@@ -193,6 +201,6 @@ export const Background = style({
   position: 'absolute',
   top: -100,
   left: 0
-}, media({ maxWidth: vars.laptop }, {
+}, media({ maxWidth: Breakpoints.Laptop }, {
   overflow: 'auto'
 }))

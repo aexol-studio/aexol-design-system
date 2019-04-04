@@ -15,6 +15,8 @@ export interface IButtonProps {
   width?: number;
   icon?: JSX.Element;
   onClick?: (e: HTMLButtonElement) => void;
+  href?: string;
+  target?: string;
   style?: React.CSSProperties;
 }
 
@@ -28,6 +30,8 @@ export const Button: React.FunctionComponent<IButtonProps> = props => {
     icon,
     style,
     onClick,
+    href,
+    target,
     ...restProps
   } = props;
   const handleClick = (e: React.SyntheticEvent<HTMLButtonElement>) => {
@@ -52,10 +56,18 @@ export const Button: React.FunctionComponent<IButtonProps> = props => {
       style={style}
       {...restProps}
     >
-      {icon}
-      <PMedium>
-        {props.children}
-      </PMedium>
+      {href && <a className={styles.ButtonLink} href={href} target={target}>
+        {icon}
+        <PMedium>
+          {props.children}
+        </PMedium>
+      </a>}
+      {!href && <React.Fragment>
+        {icon}
+        <PMedium>
+          {props.children}
+        </PMedium>
+      </React.Fragment>}
     </button>
   );
 };

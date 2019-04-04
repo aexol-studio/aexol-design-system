@@ -13,10 +13,10 @@ class HeroImgOnBottomview extends React.PureComponent<IProps> {
         paragraphText="What you’ve been looking for is already available and free!"
         buttonText="More Details"
         buttonOnClick={() => console.log('click')}
-        imgFile1="https://via.placeholder.com/300x300"
-        imgFile2="https://via.placeholder.com/200x150"
-        imgFile3="https://via.placeholder.com/200x150"
-        imgFile4="https://via.placeholder.com/300x300"
+        imgFile1={<img src="https://via.placeholder.com/300x300" style={{width: '100%', objectFit: 'contain'}} />}
+        imgFile2={<img src="https://via.placeholder.com/200x150" style={{width: '100%', objectFit: 'contain'}} />}
+        imgFile3={<img src="https://via.placeholder.com/200x150" style={{width: '100%', objectFit: 'contain'}} />}
+        imgFile4={<img src="https://via.placeholder.com/300x300" style={{width: '100%', objectFit: 'contain'}} />}
       />
     )
   }

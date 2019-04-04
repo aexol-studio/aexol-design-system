@@ -22,6 +22,10 @@ export { WorkshopBottomBar } from './WorkshopBottomBar';
 export { NavBar } from './NavBar';
 export { FileUpload } from './FileUpload';
 export { Select } from './Select';
+export { Link } from './Link';
+export { ContentTextBox } from './ContentTextBox';
+export { ContentImgOnSide } from './ContentImgOnSide';
+export { ContentWithTile } from './ContentWithTile';
 export {
   Dropdown,
   DropdownButton,
@@ -30,8 +34,10 @@ export {
 } from './dropdown';
 export { CardComponent } from './CardComponent';
 export { Footer } from './Footer';
+export { BlueTile } from './BlueTile';
 import * as icons from './icons';
 export { icons };
 
 import * as Typography from './typography';
 export { Typography };
+export { PricingTable } from './PricingTable';

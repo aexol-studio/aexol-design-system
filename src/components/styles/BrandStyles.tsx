@@ -48,3 +48,8 @@ export const BrandBarBackground = style({
   filter: 'blur(30px)',
   zIndex: -1
 })
+
+export const BrandLink = style({
+  textDecoration: 'none',
+  color: 'inherit'
+})

@@ -9,8 +9,8 @@ export interface IHero2ImgProps {
   paragraphText: string;
   buttonText: string;
   buttonOnClick: (e: HTMLButtonElement) => void;
-  imgFile1: string;
-  imgFile2: string;
+  imgFile1: React.ReactNode;
+  imgFile2: React.ReactNode;
   height?: number;
   style?: React.CSSProperties;
 }
@@ -56,8 +56,8 @@ export const Hero2Img: React.FunctionComponent<IHero2ImgProps> = (props) => {
             </Button>
           </div>
           <div className={styles.ImgContent}>
-            <div className={styles.Img1} style={{backgroundImage: `url(${imgFile1})`}} />
-            <div className={styles.Img2} style={{backgroundImage: `url(${imgFile2})`}} />
+            <div className={styles.Img1}>{imgFile1}</div>
+            <div className={styles.Img2}>{imgFile2}</div>
           </div>
         </div>
       </div>

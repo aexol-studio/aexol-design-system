@@ -10,7 +10,7 @@ export const Button = style({
   height: 40,
   borderRadius: 4,
   border: 0,
-  color: '#fff',
+  color: Colors.White,
   backgroundColor: Colors.Ultrasonic,
   cursor: 'pointer',
   transition: vars.transition,
@@ -29,10 +29,20 @@ export const Button = style({
       borderRadius: 0
     },
     '&.danger': {
-      backgroundColor: Colors['Cherry Bomb']
+      backgroundColor: Colors['Cherry Bomb'],
+      $nest: {
+        '&:hover': {
+          backgroundColor: Colors.ACME
+        }
+      }
     },
     '&.success': {
-      backgroundColor: Colors.Serpentine
+      backgroundColor: Colors.Serpentine,
+      $nest: {
+        '&:hover': {
+          backgroundColor: Colors.Kriptonita
+        }
+      }
     },
     '&.disabled': {
       backgroundColor: Colors.Ultrasonic,
@@ -82,3 +92,16 @@ export const Button = style({
     }
   }
 });
+
+export const ButtonLink = style({
+  textDecoration: 'none',
+  color: 'inherit',
+  width: '100%',
+  height: '100%',
+  $nest: {
+    '&:hover': {
+      color: 'inherit',
+      backgroundColor: 'inherit'
+    }
+  }
+})

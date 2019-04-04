@@ -9,14 +9,12 @@ export interface IHeroImgOnBottomProps {
   paragraphText: string;
   buttonText: string;
   buttonOnClick: (e: HTMLButtonElement) => void;
-  imgFile1: string;
-  imgFile2: string;
-  imgFile3: string;
-  imgFile4: string;
+  imgFile1: React.ReactNode;
+  imgFile2: React.ReactNode;
+  imgFile3: React.ReactNode;
+  imgFile4: React.ReactNode;
   height?: number;
   style?: React.CSSProperties;
-  styleImg1_4?: React.CSSProperties;
-  styleImg2_3?: React.CSSProperties;
 }
 
 export const HeroImgOnBottom: React.FunctionComponent<IHeroImgOnBottomProps> = (props) => {
@@ -32,8 +30,6 @@ export const HeroImgOnBottom: React.FunctionComponent<IHeroImgOnBottomProps> = (
     imgFile4,
     height,
     style,
-    styleImg1_4,
-    styleImg2_3,
     ...restProps
   } = props
 
@@ -63,10 +59,10 @@ export const HeroImgOnBottom: React.FunctionComponent<IHeroImgOnBottomProps> = (
               {buttonText}
             </Button>
             <div className={styles.ImgContent3}>
-              <div className={styles.Img3} style={{backgroundImage: `url(${imgFile1})`, ...styleImg1_4}} />
-              <div className={styles.Img4} style={{backgroundImage: `url(${imgFile2})`, ...styleImg2_3}} />
-              <div className={styles.Img4} style={{backgroundImage: `url(${imgFile3})`, ...styleImg2_3}} />
-              <div className={styles.Img3} style={{backgroundImage: `url(${imgFile4})`, ...styleImg1_4}} />
+              <div className={styles.Img3}>{imgFile1}</div>
+              <div className={styles.Img4}>{imgFile2}</div>
+              <div className={styles.Img4}>{imgFile3}</div>
+              <div className={styles.Img3}>{imgFile4}</div>
             </div>
           </div>
         </div>

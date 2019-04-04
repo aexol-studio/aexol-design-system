@@ -13,9 +13,9 @@ class Hero2Imgview extends React.PureComponent<IProps> {
         paragraphText="Start seeing the masive benefits of having an app for your bussines."
         buttonText="Try it!"
         buttonOnClick={() => console.log('click')}
-        imgFile1="https://via.placeholder.com/270x540"
-        imgFile2="https://via.placeholder.com/270x540"
-        height={550}
+        imgFile1={<img src="https://via.placeholder.com/270x540" style={{maxWidth: '100%', maxHeight: '100%', objectFit: 'contain'}} />}
+        imgFile2={<img src="https://via.placeholder.com/270x540" style={{maxWidth: '100%', maxHeight: '100%', objectFit: 'contain'}} />}
+        height={800}
       />
     )
   }

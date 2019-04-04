@@ -4,8 +4,13 @@ import { PBold, H3 } from './typography';
 import * as styles from './styles/BrandStyles';
 import { Colors } from './styles/Colors';
 
+type BrandBar = {
+  logo: string;
+  link?: string;
+}
+
 export interface IBrandBarProps {
-  BrandBarURL: string[];
+  BrandBar: BrandBar[];
   smallText?: string;
   bigText?: string;
   style?: React.CSSProperties;
@@ -17,16 +22,16 @@ const DEFAULT_BIG_TEXT = 'Let’s create something great together'
 export const BrandBar: React.FunctionComponent<IBrandBarProps> = (props) => {
 
   const {
-    BrandBarURL,
+    BrandBar,
     smallText = DEFAULT_SMALL_TEXT,
     bigText = DEFAULT_BIG_TEXT,
     style,
     ...restProps
   } = props
 
-  const renderCards = (el: string, idx: number) => {
+  const renderCards = (el: BrandBar, idx: number) => {
     return (
-      <BrandCard BrandCardURL={el} key={idx} />
+      <BrandCard BrandCardLogo={el.logo} BrandCardLink={el.link} key={idx} />
     )
   }
 
@@ -38,7 +43,7 @@ export const BrandBar: React.FunctionComponent<IBrandBarProps> = (props) => {
     >
       <div className={styles.BrandLogos}>
         <div className={styles.BrandBarBackground} />
-        {BrandBarURL.map((el, idx) => renderCards(el, idx))}
+        {BrandBar.map((el, idx) => renderCards(el, idx))}
       </div>
       <PBold style={{color: Colors['Ancient Stone'], textAlign: 'center'}}>
         {smallText}
