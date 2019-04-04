@@ -34,7 +34,7 @@ export const TextInput = style({
 
 export const TextInputLabelPassword = style({
   $debugName: 'TextInputLabelPassword',
-  marginLeft: '-100px',
+  marginLeft: -100,
   zIndex: 1,
   height: 50,
   display: 'flex'
