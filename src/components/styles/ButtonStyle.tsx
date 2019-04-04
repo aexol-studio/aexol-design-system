@@ -10,7 +10,7 @@ export const Button = style({
   height: 40,
   borderRadius: 4,
   border: 0,
-  color: '#fff',
+  color: Colors.White,
   backgroundColor: Colors.Ultrasonic,
   cursor: 'pointer',
   transition: vars.transition,
@@ -97,5 +97,11 @@ export const ButtonLink = style({
   textDecoration: 'none',
   color: 'inherit',
   width: '100%',
-  height: '100%'
+  height: '100%',
+  $nest: {
+    '&:hover': {
+      color: 'inherit',
+      backgroundColor: 'inherit'
+    }
+  }
 })
