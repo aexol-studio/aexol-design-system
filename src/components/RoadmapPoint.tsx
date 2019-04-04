@@ -1,42 +1,31 @@
-import * as React from 'react';
-import * as classnames from 'classnames';
-import * as icon from './icons_roadmap';
-import * as styles from './styles/RoadmapStyle';
+import * as React from 'react'
+import * as classnames from 'classnames'
+import * as icon from './icons_roadmap'
+import * as styles from './styles/RoadmapStyle'
 
 type Point = 'small' | 'big'
 type Color = 'gradient' | 'blue'
 type Position = 'bottom' | 'topRight' | 'top'
 
 export interface IRoadmapPointProps {
-  idx: number;
-  point?: Point;
-  pointColor?: Color;
-  done: boolean;
-  title: string;
-  titlePosition?: Position;
-  header: string;
-  text: string;
-  style?: React.CSSProperties;
+  idx: number
+  point?: Point
+  pointColor?: Color
+  done: boolean
+  title: string
+  titlePosition?: Position
+  header: string
+  text: string
+  style?: React.CSSProperties
 }
 
-export const RoadmapPoint: React.FunctionComponent<IRoadmapPointProps> = (props) => {
-  const {
-    header,
-    text,
-    title,
-    titlePosition,
-    pointColor,
-    done,
-    style
-  } = props
+export const RoadmapPoint: React.FunctionComponent<
+  IRoadmapPointProps
+> = props => {
+  const { header, text, title, titlePosition, pointColor, done, style } = props
 
   const renderPoint = () => {
-    const {
-      pointColor = 'gradient',
-      point = 'small',
-      idx,
-      done
-    } = props
+    const { pointColor = 'gradient', point = 'small', idx, done } = props
     if (done) {
       if (pointColor === 'blue') {
         if (point === 'small') {
@@ -99,22 +88,13 @@ export const RoadmapPoint: React.FunctionComponent<IRoadmapPointProps> = (props)
   return (
     <div className={styles.Point}>
       {renderPoint()}
-      <div
-        className={classnames(styles.Popup, pointColor)}
-        style={style}
-      >
+      <div className={classnames(styles.Popup, pointColor)} style={style}>
         <div className={classnames(styles.Header, pointColor)}>{header}</div>
-        <div className={classnames(styles.Text, pointColor)}>
-          {text}
-        </div>
+        <div className={classnames(styles.Text, pointColor)}>{text}</div>
       </div>
       <div
-       className={classnames(
-          classnames(
-            styles.Title,
-            titlePosition,
-            pointColor
-          ),
+        className={classnames(
+          classnames(styles.Title, titlePosition, pointColor),
           classnames({
             todo: !done
           })

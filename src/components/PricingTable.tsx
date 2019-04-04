@@ -1,32 +1,32 @@
-import * as React from 'react';
-import * as styles from './styles/PricingTable';
-import * as cx from 'classnames';
-import { H3, PMedium, P } from './typography';
-import Button from './Button';
+import * as React from 'react'
+import * as styles from './styles/PricingTable'
+import * as cx from 'classnames'
+import { H3, PMedium, P } from './typography'
+import Button from './Button'
 
 interface Plan {
-  name: string;
-  subTitle: string;
-  description: string;
-  action: string;
-  onClick: () => void;
+  name: string
+  subTitle: string
+  description: string
+  action: string
+  onClick: () => void
 }
 
 export interface PricingProps {
-  plans: Plan[];
-  title: string;
+  plans: Plan[]
+  title: string
   options: Array<{
-    name: string;
-    values: string[];
-  }>;
+    name: string
+    values: string[]
+  }>
 }
 
 export const PricingTable = (props: PricingProps) => {
-  const { title, plans, options } = props;
+  const { title, plans, options } = props
   // Transform and sort pricing options
   const computedStyle: React.CSSProperties = {
     gridTemplateColumns: `${styles.TITLE_WIDTH}px ${plans.length}fr`
-  };
+  }
 
   return (
     <>
@@ -63,7 +63,7 @@ export const PricingTable = (props: PricingProps) => {
               <div className={styles.PlanHeaderDescription}>
                 <P>{p.description}</P>
               </div>
-              <Button onClick={p.onClick} >{p.action}</Button>
+              <Button onClick={p.onClick}>{p.action}</Button>
             </div>
           ))}
         </div>
@@ -94,5 +94,5 @@ export const PricingTable = (props: PricingProps) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}

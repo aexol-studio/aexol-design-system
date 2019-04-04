@@ -1,10 +1,10 @@
-import { style, classes } from 'typestyle';
-import * as vars from '../../../vars';
-import { Colors } from '../../styles/Colors';
+import { style, classes } from 'typestyle'
+import * as vars from '../../../vars'
+import { Colors } from '../../styles/Colors'
 
-const width = 100;
-const height = 32;
-const font = vars.smallFont;
+const width = 100
+const height = 32
+const font = vars.smallFont
 
 export const Dropdown = style({
   $debugName: 'Dropdown',
@@ -27,7 +27,7 @@ export const Dropdown = style({
       fontSize: font
     }
   }
-});
+})
 
 export const DropdownListElement = style({
   width: width,
@@ -47,7 +47,7 @@ export const DropdownListElement = style({
       borderRadius: '0 0 4px 4px'
     }
   }
-});
+})
 
 export const DropdownList = style({
   display: 'none',
@@ -66,7 +66,7 @@ export const DropdownList = style({
       flexDirection: 'column'
     }
   }
-});
+})
 
 export const DropdownSubmenuList = style({
   left: 0,
@@ -85,7 +85,7 @@ export const DropdownSubmenuList = style({
       flexDirection: 'column'
     }
   }
-});
+})
 
 export const DropdownSubmenuElement = classes(
   DropdownListElement,
@@ -99,7 +99,7 @@ export const DropdownSubmenuElement = classes(
       }
     }
   })
-);
+)
 
 export const DropdownButton = style({
   padding: 0,
@@ -136,4 +136,4 @@ export const DropdownButton = style({
       color: Colors['Ancient Stone']
     }
   }
-});
+})

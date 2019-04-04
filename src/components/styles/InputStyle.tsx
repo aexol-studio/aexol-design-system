@@ -1,5 +1,5 @@
-import { style } from 'typestyle';
-import { Colors } from './Colors';
+import { style } from 'typestyle'
+import { Colors } from './Colors'
 
 export const TextInputContainer = style({
   $debugName: 'TextInputContainer',
@@ -54,10 +54,9 @@ export const TextInputSpacer = style({
   marginTop: 10
 })
 
-export const TextInputHref = style ({
+export const TextInputHref = style({
   $debugName: 'TextInputHref',
   color: Colors.Black,
   textDecoration: 'none',
   paddingTop: 13
 })
-  ;

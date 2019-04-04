@@ -1,7 +1,7 @@
-import { style, media } from 'typestyle';
-import { Colors } from './Colors';
-import { Breakpoints } from './Breakpoints';
-import * as vars from '../../vars';
+import { style, media } from 'typestyle'
+import { Colors } from './Colors'
+import { Breakpoints } from './Breakpoints'
+import * as vars from '../../vars'
 
 export const FooterContainer = style({
   $debugName: 'FooterContainer',
@@ -68,33 +68,39 @@ export const FooterMain = style({
   }
 })
 
-export const FooterContent = style({
-  $debugName: 'FooterContent',
-  display: 'flex',
-  justifyContent: 'space-between',
-  flexWrap: 'wrap'
-},
-  media({ minWidth: 0, maxWidth: Breakpoints.Laptop },
+export const FooterContent = style(
+  {
+    $debugName: 'FooterContent',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap'
+  },
+  media(
+    { minWidth: 0, maxWidth: Breakpoints.Laptop },
     {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'flex-start',
       paddingTop: 40,
       paddingBottom: 40
-    })
+    }
+  )
 )
 
-export const FooterContentColumn = style({
-  $debugName: 'FooterContentColumn',
-  marginTop: 60,
-  marginBottom: 60,
-  flexDirection: 'column'
-},
-  media({ minWidth: 0, maxWidth: Breakpoints.Laptop },
+export const FooterContentColumn = style(
+  {
+    $debugName: 'FooterContentColumn',
+    marginTop: 60,
+    marginBottom: 60,
+    flexDirection: 'column'
+  },
+  media(
+    { minWidth: 0, maxWidth: Breakpoints.Laptop },
     {
       marginTop: 20,
       marginBottom: 20
-    })
+    }
+  )
 )
 
 export const FooterContentColumnTitle = style({
@@ -127,7 +133,7 @@ export const PFooterName = style({
   $nest: {
     '&:hover': {
       color: Colors.White
-        },
+    },
     '&.white': {
       $nest: {
         '&:hover': {

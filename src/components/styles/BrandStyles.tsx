@@ -1,5 +1,5 @@
-import { style } from 'typestyle';
-import { Colors } from './Colors';
+import { style } from 'typestyle'
+import { Colors } from './Colors'
 
 export const BrandCardContainer = style({
   height: 136,

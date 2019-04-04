@@ -1,25 +1,28 @@
-import * as React from 'react';
-import * as classnames from 'classnames';
-import { Close, Warning, Info, Error, Success } from '../icons';
-import * as styles from './styles/NotificationStyle';
+import * as React from 'react'
+import * as classnames from 'classnames'
+import { Close, Warning, Info, Error, Success } from '../icons'
+import * as styles from './styles/NotificationStyle'
 
 type NoticeBoxType = 'info' | 'error' | 'alert' | 'success'
 
 export interface INoticeBoxProps {
-  id?: number;
-  duration?: number;
-  type?: NoticeBoxType;
-  closable?: boolean;
-  message: string;
-  onClose?: (id: number) => void;
+  id?: number
+  duration?: number
+  type?: NoticeBoxType
+  closable?: boolean
+  message: string
+  onClose?: (id: number) => void
 }
 
 interface INoticeBoxState {
-  open: boolean;
+  open: boolean
 }
 
-export class NoticeBox extends React.PureComponent<INoticeBoxProps, INoticeBoxState> {
-  private Timer: number;
+export class NoticeBox extends React.PureComponent<
+  INoticeBoxProps,
+  INoticeBoxState
+> {
+  private Timer: number
   constructor(props: INoticeBoxProps) {
     super(props)
     this.state = {
@@ -38,7 +41,7 @@ export class NoticeBox extends React.PureComponent<INoticeBoxProps, INoticeBoxSt
 
   startTimer = () => {
     if (this.props.duration) {
-      this.Timer = window.setTimeout( () => {
+      this.Timer = window.setTimeout(() => {
         this.closeTimer()
       }, this.props.duration * 1000)
     }
@@ -78,58 +81,30 @@ export class NoticeBox extends React.PureComponent<INoticeBoxProps, INoticeBoxSt
       icon = <Success stroke={'White'} />
     }
 
-    return(
-      <React.Fragment>
-        {icon}
-      </React.Fragment>
-    )
+    return <React.Fragment>{icon}</React.Fragment>
   }
 
   renderElements = () => {
-    const {
-      type = 'info',
-      closable = false,
-      message
-    } = this.props
+    const { type = 'info', closable = false, message } = this.props
 
-    return(
-      <div
-        className={styles.NoticeBox}
-      >
-        <div
-          className={classnames(
-            styles.NoticeIconBox,
-            type
-          )}
-        >
-          <div
-            className={classnames(
-              styles.NoticeIcon,
-              type
-            )}
-          >
+    return (
+      <div className={styles.NoticeBox}>
+        <div className={classnames(styles.NoticeIconBox, type)}>
+          <div className={classnames(styles.NoticeIcon, type)}>
             {this.handleType()}
           </div>
         </div>
-        <div className={styles.NoticeText}>
-          {message}
-        </div>
-        {closable &&
-        <div
-          className={styles.NoticeClose}
-          onClick={this.handleOnClose}
-        >
-          <Close fill={'Dark Side'} />
-        </div>}
+        <div className={styles.NoticeText}>{message}</div>
+        {closable && (
+          <div className={styles.NoticeClose} onClick={this.handleOnClose}>
+            <Close fill={'Dark Side'} />
+          </div>
+        )}
       </div>
     )
   }
 
   render() {
-    return (
-      <React.Fragment>
-        {this.renderElements()}
-      </React.Fragment>
-    )
+    return <React.Fragment>{this.renderElements()}</React.Fragment>
   }
 }

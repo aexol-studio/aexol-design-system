@@ -3,7 +3,12 @@ name: Dropdown
 ---
 
 import { Playground, PropsTable } from 'docz'
-import { Dropdown, DropdownButton, DropdownSubmenu, DropdownElement } from '../../src/components'
+import {
+  Dropdown,
+  DropdownButton,
+  DropdownSubmenu,
+  DropdownElement
+} from '../../src/components'
 
 #Dropdown
 
@@ -17,11 +22,7 @@ import { Dropdown, DropdownButton, DropdownSubmenu, DropdownElement } from '../.
   <Dropdown>
     <DropdownButton title="opt1">
       <DropdownElement>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://www.wp.pl/"
-        >
+        <a target="_blank" rel="noopener noreferrer" href="http://www.wp.pl/">
           opt1.1
         </a>
       </DropdownElement>
@@ -43,6 +44,6 @@ import { Dropdown, DropdownButton, DropdownSubmenu, DropdownElement } from '../.
       <DropdownElement>opt3.2</DropdownElement>
       <DropdownElement>opt3.3</DropdownElement>
       <DropdownElement>opt3.4</DropdownElement>
-    </DropdownButton>                  
+    </DropdownButton>
   </Dropdown>
 </Playground>

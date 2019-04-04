@@ -1,21 +1,22 @@
-import * as React from 'react';
-import { H1, H3 } from './typography';
-import { Button } from './Button';
-import * as styles from './styles/HeroStyles';
-import { Colors } from './styles/Colors';
+import * as React from 'react'
+import { H1, H3 } from './typography'
+import { Button } from './Button'
+import * as styles from './styles/HeroStyles'
+import { Colors } from './styles/Colors'
 
 export interface IHeroBackImgWithTextProps {
-  headerText: string;
-  paragraphText: string;
-  buttonText: string;
-  buttonOnClick: (e: HTMLButtonElement) => void;
-  backgroundFile: string;
-  height?: number;
-  style?: React.CSSProperties;
+  headerText: string
+  paragraphText: string
+  buttonText: string
+  buttonOnClick: (e: HTMLButtonElement) => void
+  backgroundFile: string
+  height?: number
+  style?: React.CSSProperties
 }
 
-export const HeroBackImgWithText: React.FunctionComponent<IHeroBackImgWithTextProps> = (props) => {
-
+export const HeroBackImgWithText: React.FunctionComponent<
+  IHeroBackImgWithTextProps
+> = props => {
   const {
     headerText,
     paragraphText,
@@ -31,9 +32,7 @@ export const HeroBackImgWithText: React.FunctionComponent<IHeroBackImgWithTextPr
     <div
       className={styles.HeroBackImgWithText}
       style={{
-        height: height
-          ? height
-          : '100%',
+        height: height ? height : '100%',
         backgroundImage: `url(${backgroundFile})`,
         ...style
       }}
@@ -42,17 +41,13 @@ export const HeroBackImgWithText: React.FunctionComponent<IHeroBackImgWithTextPr
       <div className={styles.HeroContainer}>
         <div className={styles.HeroContent}>
           <div className={styles.TextContent5}>
-            <H1 style={{color: Colors.White, marginBottom: 6}}>
+            <H1 style={{ color: Colors.White, marginBottom: 6 }}>
               {headerText}
             </H1>
-            <H3 style={{color: Colors.White, marginBottom: 16}}>
+            <H3 style={{ color: Colors.White, marginBottom: 16 }}>
               {paragraphText}
             </H3>
-            <Button
-              onClick={buttonOnClick}
-            >
-              {buttonText}
-            </Button>
+            <Button onClick={buttonOnClick}>{buttonText}</Button>
           </div>
         </div>
       </div>

@@ -1,21 +1,23 @@
-import * as React from 'react';
-import { ICommunityCardProps, CommunityCard } from './CommunityCard';
-import { H1, H4, P } from './typography';
+import * as React from 'react'
+import { ICommunityCardProps, CommunityCard } from './CommunityCard'
+import { H1, H4, P } from './typography'
 import { Colors } from './styles/Colors'
-import * as styles from './styles/PoweredCommunityStyles';
+import * as styles from './styles/PoweredCommunityStyles'
 
 export interface IPoweredCommunityProps {
-  header: string;
-  cards: ICommunityCardProps[];
-  smallText?: string;
-  bigText?: string;
-  style?: React.CSSProperties;
+  header: string
+  cards: ICommunityCardProps[]
+  smallText?: string
+  bigText?: string
+  style?: React.CSSProperties
 }
 
-const DEFAULT_BIG_TEXT = 'Start using GraphQL today and improve your workflow inmediately.'
+const DEFAULT_BIG_TEXT =
+  'Start using GraphQL today and improve your workflow inmediately.'
 
-export const PoweredCommunity: React.FunctionComponent<IPoweredCommunityProps> = (props) => {
-
+export const PoweredCommunity: React.FunctionComponent<
+  IPoweredCommunityProps
+> = props => {
   const {
     header,
     cards,
@@ -43,18 +45,18 @@ export const PoweredCommunity: React.FunctionComponent<IPoweredCommunityProps> =
       style={style}
       {...restProps}
     >
-      <H1 style={{textAlign: 'center', marginBottom: 50}}>
-        {header}
-      </H1>
+      <H1 style={{ textAlign: 'center', marginBottom: 50 }}>{header}</H1>
       <div className={styles.Cards}>
         {cards.map((el, idx) => renderCards(el, idx))}
       </div>
-      {bigText && <H4 style={{color: Colors['Dark Side'], marginBottom: 16}}>
-        {bigText}
-      </H4>}
-      {smallText && <P style={{color: Colors['Ancient Stone']}}>
-        {smallText}
-      </P>}
+      {bigText && (
+        <H4 style={{ color: Colors['Dark Side'], marginBottom: 16 }}>
+          {bigText}
+        </H4>
+      )}
+      {smallText && (
+        <P style={{ color: Colors['Ancient Stone'] }}>{smallText}</P>
+      )}
     </div>
   )
 }

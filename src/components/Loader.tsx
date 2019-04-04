@@ -1,17 +1,17 @@
-import * as React from 'react';
+import * as React from 'react'
 import { keyframes } from 'typestyle'
 // import * as classnames from 'classnames';
-import * as styles from './styles/LoaderStyle';
+import * as styles from './styles/LoaderStyle'
 
 export interface ILoaderProps {
-  width?: number;
-  duration?: number;
-  progress?: boolean;
-  style?: React.CSSProperties;
+  width?: number
+  duration?: number
+  progress?: boolean
+  style?: React.CSSProperties
 }
 
 export interface ILoaderState {
-  progress: number;
+  progress: number
 }
 
 const DEFAULT_WIDTH = 100
@@ -29,7 +29,7 @@ export class Loader extends React.PureComponent<ILoaderProps, ILoaderState> {
     if (this.props.duration && this.props.progress) {
       const t = setInterval(() => {
         if (this.state.progress < 100) {
-          this.setState((prevState) => ({
+          this.setState(prevState => ({
             progress: prevState.progress + 1
           }))
         } else if (this.state.progress === 100) {
@@ -52,12 +52,8 @@ export class Loader extends React.PureComponent<ILoaderProps, ILoaderState> {
       ? this.props.duration + 's'
       : DEFAULT_DURATION
 
-    return(
-      <svg
-        height={'100%'}
-        width={'100%'}
-        className={styles.LoaderCircle}
-      >
+    return (
+      <svg height={'100%'} width={'100%'} className={styles.LoaderCircle}>
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#5D2EEB" />
@@ -95,12 +91,12 @@ export class Loader extends React.PureComponent<ILoaderProps, ILoaderState> {
 
   render() {
     const {
-        width = DEFAULT_WIDTH,
-        duration,
-        progress,
-        style,
-        ...restProps
-      } = this.props
+      width = DEFAULT_WIDTH,
+      duration,
+      progress,
+      style,
+      ...restProps
+    } = this.props
 
     return (
       <div
@@ -113,19 +109,19 @@ export class Loader extends React.PureComponent<ILoaderProps, ILoaderState> {
         {...restProps}
       >
         {this.renderProgress()}
-        {progress && duration &&
-        <div
-          className={styles.LoaderProgress}
-          style={{
-            fontSize: width ? width / 100 * 20 : 20
-          }}
-        >
-          {`${this.state.progress}%`}
-        </div>}
+        {progress && duration && (
+          <div
+            className={styles.LoaderProgress}
+            style={{
+              fontSize: width ? (width / 100) * 20 : 20
+            }}
+          >
+            {`${this.state.progress}%`}
+          </div>
+        )}
       </div>
     )
   }
+}
 
-};
-
-export default Loader;
+export default Loader

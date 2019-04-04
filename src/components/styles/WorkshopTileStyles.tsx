@@ -1,5 +1,5 @@
-import { style, classes } from 'typestyle';
-import { Colors } from './Colors';
+import { style, classes } from 'typestyle'
+import { Colors } from './Colors'
 
 export const WorkshopTileContainer = style({
   $debugName: 'WorkshopTile',
@@ -116,8 +116,9 @@ export const ListEl = style({
   }
 })
 
-export const WorkshopTextTileContainer = classes(WorkshopTileContainer,
-  style ({
+export const WorkshopTextTileContainer = classes(
+  WorkshopTileContainer,
+  style({
     borderRadius: '20px 0 0 0',
     padding: 18,
     paddingLeft: 25,

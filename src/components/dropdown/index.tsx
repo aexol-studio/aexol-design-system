@@ -8,9 +8,4 @@ import { DropdownElement } from './DropdownElement'
 // export { DropdownSubmenu } from './DropdownSubmenu'
 // export { DropdownElement } from './DropdownElement'
 
-export {
-  Dropdown,
-  DropdownButton,
-  DropdownElement,
-  DropdownSubmenu
-}
+export { Dropdown, DropdownButton, DropdownElement, DropdownSubmenu }

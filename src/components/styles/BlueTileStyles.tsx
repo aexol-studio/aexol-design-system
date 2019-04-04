@@ -1,5 +1,5 @@
-import { style } from 'typestyle';
-import { Colors } from './Colors';
+import { style } from 'typestyle'
+import { Colors } from './Colors'
 // import {Breakpoints} from './Breakpoints';
 
 export const BlueTileMain = style({
@@ -37,7 +37,7 @@ export const TileLeftContent = style({
   // height: '80%',
   // maxWidth: 500
 
-// biały div z cieniami
+  // biały div z cieniami
   // background: Colors.White,
   // borderRadius: 8,
   // width: 400,
@@ -53,12 +53,12 @@ export const TileRightContent = style({
   alignSelf: 'flex-end'
 })
 
-export const TileLeftHeader = style ({
+export const TileLeftHeader = style({
   $debugName: 'TileLeftHeader',
   marginTop: 5
 })
 
-export const TileLeftParagraph = style ({
+export const TileLeftParagraph = style({
   $debugName: 'TileLeftHeader',
   marginTop: 14
 })

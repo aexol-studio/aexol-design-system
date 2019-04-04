@@ -1,21 +1,22 @@
-import * as React from 'react';
-import * as styles from './styles/ContentStyles';
-import { H2, P } from './typography';
-import { Link } from './Link';
-import * as classnames from 'classnames';
+import * as React from 'react'
+import * as styles from './styles/ContentStyles'
+import { H2, P } from './typography'
+import { Link } from './Link'
+import * as classnames from 'classnames'
 
 export interface IContentTextBoxProps {
-  title: string;
-  text: string;
-  linkText: string;
-  linkHref: string;
-  tileView?: boolean;
-  linkTarget?: string;
-  style?: React.CSSProperties;
+  title: string
+  text: string
+  linkText: string
+  linkHref: string
+  tileView?: boolean
+  linkTarget?: string
+  style?: React.CSSProperties
 }
 
-export const ContentTextBox: React.FunctionComponent<IContentTextBoxProps> = (props) => {
-
+export const ContentTextBox: React.FunctionComponent<
+  IContentTextBoxProps
+> = props => {
   const {
     title,
     text,
@@ -36,8 +37,8 @@ export const ContentTextBox: React.FunctionComponent<IContentTextBoxProps> = (pr
       style={style}
       {...restProps}
     >
-      <H2 style={{marginBottom: 17}}>{title}</H2>
-      <P style={{marginBottom: 37}}>{text}</P>
+      <H2 style={{ marginBottom: 17 }}>{title}</H2>
+      <P style={{ marginBottom: 37 }}>{text}</P>
       <Link text={linkText} link={linkHref} target={linkTarget} />
     </div>
   )

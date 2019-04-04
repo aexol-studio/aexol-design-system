@@ -14,19 +14,14 @@ import { NavBar } from '../../src/components'
 ##Basic usage
 
 <Playground>
-  <NavBar
-    color="white"
-    buttonText="Sign In"
-    onClick={() => {}}
-  >
-    {[{name: 'workshop', to: '/workshop'}, {name: 'pricing', to: '/pricing'}].map((el, idx) => 
-      <a
-        href={el.to}
-        key={idx}
-        style={{marginRight: 50}}
-      >
+  <NavBar color="white" buttonText="Sign In" onClick={() => {}}>
+    {[
+      { name: 'workshop', to: '/workshop' },
+      { name: 'pricing', to: '/pricing' }
+    ].map((el, idx) => (
+      <a href={el.to} key={idx} style={{ marginRight: 50 }}>
         {el.name}
       </a>
-    )}
+    ))}
   </NavBar>
 </Playground>

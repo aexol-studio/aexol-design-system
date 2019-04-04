@@ -1,21 +1,22 @@
-import * as React from 'react';
-import * as styles from './styles/ContentStyles';
-import { ContentTextBox } from './ContentTextBox';
-import * as classnames from 'classnames';
+import * as React from 'react'
+import * as styles from './styles/ContentStyles'
+import { ContentTextBox } from './ContentTextBox'
+import * as classnames from 'classnames'
 
 export interface IContentWithTileProps {
-  title: string;
-  text: string;
-  linkText?: string;
-  linkHref: string;
-  linkTarget?: string;
-  imgFile: string;
-  violetBakground?: boolean;
-  style?: React.CSSProperties;
+  title: string
+  text: string
+  linkText?: string
+  linkHref: string
+  linkTarget?: string
+  imgFile: string
+  violetBakground?: boolean
+  style?: React.CSSProperties
 }
 
-export const ContentWithTile: React.FunctionComponent<IContentWithTileProps> = (props) => {
-
+export const ContentWithTile: React.FunctionComponent<
+  IContentWithTileProps
+> = props => {
   const {
     title,
     text,
@@ -29,11 +30,7 @@ export const ContentWithTile: React.FunctionComponent<IContentWithTileProps> = (
   } = props
 
   return (
-    <div
-      className={styles.ContentWithTile}
-      style={style}
-      {...restProps}
-    >
+    <div className={styles.ContentWithTile} style={style} {...restProps}>
       <div
         className={styles.ContentTileImg}
         style={{

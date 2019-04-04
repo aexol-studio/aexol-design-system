@@ -1,5 +1,5 @@
-import { style } from 'typestyle';
-import { Colors } from './Colors';
+import { style } from 'typestyle'
+import { Colors } from './Colors'
 
 export const Toggle = style({
   height: 24,
@@ -7,7 +7,7 @@ export const Toggle = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-around'
-});
+})
 
 export const ToggleElement = style({
   width: '50%',
@@ -30,7 +30,7 @@ export const ToggleElement = style({
             }
           }
         },
-        'svg': {
+        svg: {
           display: 'none',
           maxHeight: '90%',
           maxWidth: '90%'
@@ -59,7 +59,7 @@ export const ToggleElement = style({
             }
           }
         },
-        'svg': {
+        svg: {
           display: 'none',
           maxHeight: '90%',
           maxWidth: '90%'
@@ -75,4 +75,4 @@ export const ToggleElement = style({
       }
     }
   }
-});
+})

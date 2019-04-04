@@ -1,22 +1,25 @@
-import * as React from 'react';
-import * as classnames from 'classnames';
-import * as styles from './styles/PaginationStyle';
+import * as React from 'react'
+import * as classnames from 'classnames'
+import * as styles from './styles/PaginationStyle'
 
 export interface IPaginationProps {
-  pageSize?: number;
-  total?: number;
-  onChange?: (page: number, pageSize: number) => void;
+  pageSize?: number
+  total?: number
+  onChange?: (page: number, pageSize: number) => void
 }
 
 interface IPaginationState {
-  page: number;
-  pageSize: number;
+  page: number
+  pageSize: number
 }
 
 const DEFAULT_PAGESIZE = 10
 // const DEFAULT_TOTAL = 0
 
-export class Pagination extends React.PureComponent<IPaginationProps, IPaginationState> {
+export class Pagination extends React.PureComponent<
+  IPaginationProps,
+  IPaginationState
+> {
   constructor(props: IPaginationProps) {
     super(props)
     this.state = {
@@ -39,12 +42,14 @@ export class Pagination extends React.PureComponent<IPaginationProps, IPaginatio
       ? Math.ceil(this.props.total / this.state.pageSize)
       : 3
 
-    if (this.state.page > 1 && inc === -1 ||
-      this.state.page < maxNumber && inc === 1 ||
-      !this.props.total && inc === 1 ) {
-      this.setState((prevState => ({
+    if (
+      (this.state.page > 1 && inc === -1) ||
+      (this.state.page < maxNumber && inc === 1) ||
+      (!this.props.total && inc === 1)
+    ) {
+      this.setState(prevState => ({
         page: prevState.page + inc
-      })))
+      }))
       if (this.props.onChange) {
         this.props.onChange(this.state.page + inc, this.state.pageSize)
       }
@@ -57,7 +62,7 @@ export class Pagination extends React.PureComponent<IPaginationProps, IPaginatio
       : Math.max(3, this.state.page)
     const elements = Array.from({ length: maxNumber }, (v, k) => k + 1)
 
-    return(
+    return (
       <React.Fragment>
         <li
           className={styles.NavElement}
@@ -66,7 +71,7 @@ export class Pagination extends React.PureComponent<IPaginationProps, IPaginatio
           Prev
         </li>
         {elements.map(el => {
-          return(
+          return (
             <li
               key={el}
               className={classnames({
@@ -79,14 +84,16 @@ export class Pagination extends React.PureComponent<IPaginationProps, IPaginatio
             </li>
           )
         })}
-        {!this.props.total && <li
-          className={classnames({
-            [styles.Element]: true,
-            disabled: true
-          })}
-        >
-          ...
-        </li>}
+        {!this.props.total && (
+          <li
+            className={classnames({
+              [styles.Element]: true,
+              disabled: true
+            })}
+          >
+            ...
+          </li>
+        )}
         <li
           className={styles.NavElement}
           onClick={e => this.handleNavOnClick(1)}
@@ -98,10 +105,6 @@ export class Pagination extends React.PureComponent<IPaginationProps, IPaginatio
   }
 
   render() {
-    return (
-      <ul className={styles.Pagination}>
-        {this.renderElements()}
-      </ul>
-    )
+    return <ul className={styles.Pagination}>{this.renderElements()}</ul>
   }
 }

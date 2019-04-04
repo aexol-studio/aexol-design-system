@@ -1,12 +1,12 @@
-import { style } from 'typestyle';
-import * as vars from '../../vars';
-import { Colors } from './Colors';
+import { style } from 'typestyle'
+import * as vars from '../../vars'
+import { Colors } from './Colors'
 
 export const Pagination = style({
   height: 40,
   padding: 0,
   margin: 0
-});
+})
 export const NavElement = style({
   listStyleType: 'none',
   backgroundColor: Colors.Ultrasonic,
@@ -17,7 +17,7 @@ export const NavElement = style({
   borderRadius: 4,
   cursor: 'pointer',
   fontSize: vars.smallFont
-});
+})
 
 export const Element = style({
   width: 40,
@@ -49,4 +49,4 @@ export const Element = style({
       }
     }
   }
-});
+})

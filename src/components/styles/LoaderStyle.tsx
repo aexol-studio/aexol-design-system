@@ -1,5 +1,5 @@
-import { style } from 'typestyle';
-import { Colors } from './Colors';
+import { style } from 'typestyle'
+import { Colors } from './Colors'
 
 export const Loader = style({
   backgroundColor: Colors['Damsel in distress'],
@@ -17,15 +17,15 @@ export const Loader = style({
       backgroundColor: Colors.White
     }
   }
-});
+})
 
 export const LoaderCircle = style({
   transform: 'rotate(-90deg)'
-});
+})
 
 export const LoaderFill = style({
   animationTimingFunction: 'linear'
-});
+})
 
 export const LoaderProgress = style({
   position: 'absolute',
@@ -39,4 +39,4 @@ export const LoaderProgress = style({
   justifyContent: 'center',
   color: Colors.Pacific,
   fontSize: 20
-});
+})

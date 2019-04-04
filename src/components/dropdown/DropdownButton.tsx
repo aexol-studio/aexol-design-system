@@ -1,20 +1,19 @@
-import * as React from 'react';
-import * as styles from './styles/DropdownStyle';
+import * as React from 'react'
+import * as styles from './styles/DropdownStyle'
 
 export interface IDropdownButtonProps {
-  title: string;
+  title: string
 }
 
-export const DropdownButton: React.FunctionComponent<IDropdownButtonProps> = (props) => {
-
+export const DropdownButton: React.FunctionComponent<
+  IDropdownButtonProps
+> = props => {
   return (
     <div className={styles.DropdownButton}>
       {props.title}
-      <div className={styles.DropdownList}>
-        {props.children}
-      </div>
+      <div className={styles.DropdownList}>{props.children}</div>
     </div>
   )
-};
+}
 
-export default DropdownButton;
+export default DropdownButton

@@ -1,13 +1,13 @@
-import { types, style } from 'typestyle';
+import { types, style } from 'typestyle'
 export const BaseTypoGraphy: types.NestedCSSProperties = {
   fontFamily: 'Helvetica Neue',
   margin: 0,
   padding: 0
-};
+}
 export const BaseTypoGraphyP: types.NestedCSSProperties = {
   lineHeight: `23px`,
   fontSize: 16
-};
+}
 
 export const TypoGraphy = {
   H0: style({
@@ -77,4 +77,4 @@ export const TypoGraphy = {
     marginBottom: 0,
     marginTop: 5
   })
-};
+}

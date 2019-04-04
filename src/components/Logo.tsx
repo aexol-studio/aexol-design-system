@@ -2,18 +2,13 @@ import * as React from 'react'
 import * as styles from './styles/LogoStyles'
 
 export interface ILogoProps {
-  width?: number;
-  logoURL: string;
-  style?: React.CSSProperties;
+  width?: number
+  logoURL: string
+  style?: React.CSSProperties
 }
 
-export const Logo: React.FunctionComponent<ILogoProps> = (props) => {
-  const {
-    width,
-    logoURL,
-    style,
-    ...restProps
-  } = props
+export const Logo: React.FunctionComponent<ILogoProps> = props => {
+  const { width, logoURL, style, ...restProps } = props
 
   return (
     <div
@@ -24,11 +19,7 @@ export const Logo: React.FunctionComponent<ILogoProps> = (props) => {
       }}
       {...restProps}
     >
-      <img
-        className={styles.Logo}
-        src={logoURL}
-        alt="Logo"
-      />
+      <img className={styles.Logo} src={logoURL} alt="Logo" />
     </div>
   )
 }

@@ -1,13 +1,13 @@
-import { cssRaw, fontFace } from 'typestyle';
+import { cssRaw, fontFace } from 'typestyle'
 
-export const containerWidth = '80%';
-export const maxWidth = 1170;
+export const containerWidth = '80%'
+export const maxWidth = 1170
 
-export const defaultFont = 16;
-export const smallFont = 12;
-export const largeFont = 22;
+export const defaultFont = 16
+export const smallFont = 12
+export const largeFont = 22
 
-export const transition = '0.3s ease-out';
+export const transition = '0.3s ease-out'
 
 fontFace({
   fontFamily: 'Helvetica Neue',
@@ -18,7 +18,7 @@ fontFace({
         url(${require('./assets/fonts/HelveticaNeue.woff2')}) format('woff2'),
         url(${require('./assets/fonts/HelveticaNeue.woff')}) format('woff'),
         url(${require('./assets/fonts/HelveticaNeue.ttf')}) format('truetype')`
-});
+})
 
 fontFace({
   fontFamily: 'Helvetica Neue-Medium',
@@ -29,7 +29,7 @@ fontFace({
         url(${require('./assets/fonts/HelveticaNeue-Medium.woff2')}) format('woff2'),
         url(${require('./assets/fonts/HelveticaNeue-Medium.woff')}) format('woff'),
         url(${require('./assets/fonts/HelveticaNeue-Medium.ttf')}) format('truetype')`
-});
+})
 
 fontFace({
   fontFamily: 'Helvetica Neue-CondensedBold',
@@ -40,7 +40,7 @@ fontFace({
         url(${require('./assets/fonts/HelveticaNeue-CondensedBold.woff2')}) format('woff2'),
         url(${require('./assets/fonts/HelveticaNeue-CondensedBold.woff')}) format('woff'),
         url(${require('./assets/fonts/HelveticaNeue-CondensedBold.ttf')}) format('truetype')`
-});
+})
 
 fontFace({
   fontFamily: 'Helvetica Neue-Thin',
@@ -51,7 +51,7 @@ fontFace({
         url(${require('./assets/fonts/HelveticaNeue-Thin.woff2')}) format('woff2'),
         url(${require('./assets/fonts/HelveticaNeue-Thin.woff')}) format('woff'),
         url(${require('./assets/fonts/HelveticaNeue-Thin.ttf')}) format('truetype')`
-});
+})
 
 fontFace({
   fontFamily: 'Helvetica Neue-Bold',
@@ -62,9 +62,9 @@ fontFace({
         url(${require('./assets/fonts/HelveticaNeue-Bold.woff2')}) format('woff2'),
         url(${require('./assets/fonts/HelveticaNeue-Bold.woff')}) format('woff'),
         url(${require('./assets/fonts/HelveticaNeue-Bold.ttf')}) format('truetype')`
-});
+})
 
-cssRaw(`*{font-family: 'Helvetica Neue'}`);
-cssRaw(`*{font-size: ${defaultFont}px}`);
-cssRaw(`*{font-weight: 450}`);
-cssRaw(`*{box-sizing: border-box}`);
+cssRaw(`*{font-family: 'Helvetica Neue'}`)
+cssRaw(`*{font-size: ${defaultFont}px}`)
+cssRaw(`*{font-weight: 450}`)
+cssRaw(`*{box-sizing: border-box}`)

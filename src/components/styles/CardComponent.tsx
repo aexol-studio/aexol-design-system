@@ -1,5 +1,5 @@
-import { style } from 'typestyle';
-import { Colors } from './Colors';
+import { style } from 'typestyle'
+import { Colors } from './Colors'
 
 export const CardComponentContainer = style({
   $debugName: 'CardComponentTile',
@@ -20,7 +20,7 @@ export const logo = style({
   marginBottom: 6
 })
 
-export const rectangle = style ({
+export const rectangle = style({
   $debugName: 'rectangle',
   display: 'flex',
   marginLeft: 16

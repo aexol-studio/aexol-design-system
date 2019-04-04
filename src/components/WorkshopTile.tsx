@@ -1,25 +1,21 @@
 import * as React from 'react'
-import * as classnames from 'classnames';
+import * as classnames from 'classnames'
 
 import * as styles from './styles/WorkshopTileStyles'
 
 type Corner = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'none'
 
 export interface IWorkshopTileProps {
-  day: number;
-  list: string[];
-  corner?: Corner;
-  style?: React.CSSProperties;
+  day: number
+  list: string[]
+  corner?: Corner
+  style?: React.CSSProperties
 }
 
-export const WorkshopTile: React.FunctionComponent<IWorkshopTileProps> = (props) => {
-  const {
-    day,
-    list,
-    corner = 'none',
-    style,
-    ...restProps
-  } = props
+export const WorkshopTile: React.FunctionComponent<
+  IWorkshopTileProps
+> = props => {
+  const { day, list, corner = 'none', style, ...restProps } = props
 
   const checkDay = () => {
     switch (props.day) {
@@ -34,35 +30,25 @@ export const WorkshopTile: React.FunctionComponent<IWorkshopTileProps> = (props)
 
   return (
     <div
-      className={classnames(
-        styles.WorkshopTileContainer,
-        corner
-      )}
+      className={classnames(styles.WorkshopTileContainer, corner)}
       style={style}
       {...restProps}
     >
-      <div
-        className={classnames(
-          styles.SideBar,
-          corner
-        )}
-      >
+      <div className={classnames(styles.SideBar, corner)}>
         <div className={styles.SideBarText}>
           <div className={styles.TextFirstLine}>
-            {day}<span className={styles.DayEnding}>{checkDay()}</span>
+            {day}
+            <span className={styles.DayEnding}>{checkDay()}</span>
           </div>
           <div className={styles.Day}>day</div>
         </div>
       </div>
-      <div
-        className={classnames(
-          styles.List,
-          corner
-        )}
-      >
+      <div className={classnames(styles.List, corner)}>
         {list.map((el, idx) => {
-          return(
-            <div key={idx} className={styles.ListEl}>{el}</div>
+          return (
+            <div key={idx} className={styles.ListEl}>
+              {el}
+            </div>
           )
         })}
       </div>

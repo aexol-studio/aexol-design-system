@@ -1,6 +1,6 @@
-import { style } from 'typestyle';
-import * as vars from '../../vars';
-import { Colors } from './Colors';
+import { style } from 'typestyle'
+import * as vars from '../../vars'
+import { Colors } from './Colors'
 
 export const Button = style({
   display: 'flex',
@@ -18,7 +18,7 @@ export const Button = style({
     '&.submit': {
       // margin: '0 0 0 auto'
     },
-    'svg': {
+    svg: {
       marginRight: 5,
       maxHeight: 20
     },
@@ -91,7 +91,7 @@ export const Button = style({
       }
     }
   }
-});
+})
 
 export const ButtonLink = style({
   textDecoration: 'none',

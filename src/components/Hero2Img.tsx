@@ -1,22 +1,21 @@
-import * as React from 'react';
-import { H1, H3 } from './typography';
-import { Button } from './Button';
-import * as styles from './styles/HeroStyles';
-import { Colors } from './styles/Colors';
+import * as React from 'react'
+import { H1, H3 } from './typography'
+import { Button } from './Button'
+import * as styles from './styles/HeroStyles'
+import { Colors } from './styles/Colors'
 
 export interface IHero2ImgProps {
-  headerText: string;
-  paragraphText: string;
-  buttonText: string;
-  buttonOnClick: (e: HTMLButtonElement) => void;
-  imgFile1: React.ReactNode;
-  imgFile2: React.ReactNode;
-  height?: number;
-  style?: React.CSSProperties;
+  headerText: string
+  paragraphText: string
+  buttonText: string
+  buttonOnClick: (e: HTMLButtonElement) => void
+  imgFile1: React.ReactNode
+  imgFile2: React.ReactNode
+  height?: number
+  style?: React.CSSProperties
 }
 
-export const Hero2Img: React.FunctionComponent<IHero2ImgProps> = (props) => {
-
+export const Hero2Img: React.FunctionComponent<IHero2ImgProps> = props => {
   const {
     headerText,
     paragraphText,
@@ -33,9 +32,7 @@ export const Hero2Img: React.FunctionComponent<IHero2ImgProps> = (props) => {
     <div
       className={styles.Hero1Img}
       style={{
-        height: height
-          ? height
-          : '100%',
+        height: height ? height : '100%',
         ...style
       }}
       {...restProps}
@@ -43,17 +40,19 @@ export const Hero2Img: React.FunctionComponent<IHero2ImgProps> = (props) => {
       <div className={styles.HeroContainer}>
         <div className={styles.HeroContent}>
           <div className={styles.TextContent1}>
-            <H1 style={{color: Colors['Dark Side'], marginBottom: 6}}>
+            <H1 style={{ color: Colors['Dark Side'], marginBottom: 6 }}>
               {headerText}
             </H1>
-            <H3 style={{color: Colors.Androgyn, marginBottom: 16, lineHeight: '34px'}}>
+            <H3
+              style={{
+                color: Colors.Androgyn,
+                marginBottom: 16,
+                lineHeight: '34px'
+              }}
+            >
               {paragraphText}
             </H3>
-            <Button
-              onClick={buttonOnClick}
-            >
-              {buttonText}
-            </Button>
+            <Button onClick={buttonOnClick}>{buttonText}</Button>
           </div>
           <div className={styles.ImgContent}>
             <div className={styles.Img1}>{imgFile1}</div>

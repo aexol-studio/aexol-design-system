@@ -1,6 +1,6 @@
-import { style } from 'typestyle';
-import { Colors } from './Colors';
-import * as vars from '../../vars';
+import { style } from 'typestyle'
+import { Colors } from './Colors'
+import * as vars from '../../vars'
 
 export const LinkContainer = style({
   cursor: 'pointer',

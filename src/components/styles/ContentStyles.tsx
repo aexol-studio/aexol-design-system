@@ -1,6 +1,6 @@
-import { style, media } from 'typestyle';
-import { Colors } from './Colors';
-import { Breakpoints } from './Breakpoints';
+import { style, media } from 'typestyle'
+import { Colors } from './Colors'
+import { Breakpoints } from './Breakpoints'
 // import * as vars from '../../vars';
 
 export const ContentTextBoxContainer = style({
@@ -22,24 +22,36 @@ export const ContentImgOnSide = style({
   height: '100%'
 })
 
-export const ContentImg = style({
-  width: '50%',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover'
-}, media({ maxWidth: Breakpoints.Tablet }, {
-  display: 'none'
-}))
+export const ContentImg = style(
+  {
+    width: '50%',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
+  },
+  media(
+    { maxWidth: Breakpoints.Tablet },
+    {
+      display: 'none'
+    }
+  )
+)
 
-export const ContentTextContainer = style({
-  width: '50%',
-  padding: '10%',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center'
-}, media({ maxWidth: Breakpoints.Tablet }, {
-  width: '100%'
-}))
+export const ContentTextContainer = style(
+  {
+    width: '50%',
+    padding: '10%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  media(
+    { maxWidth: Breakpoints.Tablet },
+    {
+      width: '100%'
+    }
+  )
+)
 
 export const ContentWithTile = style({
   display: 'block',
@@ -48,42 +60,64 @@ export const ContentWithTile = style({
   position: 'relative'
 })
 
-export const ContentTileImg = style({
-  width: '60%',
-  height: '100%',
-  display: 'inline-block',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-  position: 'relative'
-}, media({ maxWidth: Breakpoints.Tablet }, {
-  width: '100%'
-}))
-
-export const ContentRightBar = style({
-  width: '40%',
-  height: '100%',
-  display: 'inline-block',
-  $nest: {
-    '&.violet': {
-      backgroundColor: Colors.Foggy
+export const ContentTileImg = style(
+  {
+    width: '60%',
+    height: '100%',
+    display: 'inline-block',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    position: 'relative'
+  },
+  media(
+    { maxWidth: Breakpoints.Tablet },
+    {
+      width: '100%'
     }
-  }
-}, media({ maxWidth: Breakpoints.Tablet }, {
-  display: 'none'
-}))
+  )
+)
 
-export const ContentTileTextBox = style({
-  position: 'absolute',
-  top: 0,
-  right: '10%',
-  width: '40%',
-  height: '100%',
-  display: 'flex',
-  alignItems: 'center',
-  zIndex: 10
-}, media({ minWidth: Breakpoints.TabletPortrait, maxWidth: Breakpoints.Laptop }, {
-  width: '60%'
-}), media({ maxWidth: Breakpoints.TabletPortrait }, {
-  width: '80%'
-}))
+export const ContentRightBar = style(
+  {
+    width: '40%',
+    height: '100%',
+    display: 'inline-block',
+    $nest: {
+      '&.violet': {
+        backgroundColor: Colors.Foggy
+      }
+    }
+  },
+  media(
+    { maxWidth: Breakpoints.Tablet },
+    {
+      display: 'none'
+    }
+  )
+)
+
+export const ContentTileTextBox = style(
+  {
+    position: 'absolute',
+    top: 0,
+    right: '10%',
+    width: '40%',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    zIndex: 10
+  },
+  media(
+    { minWidth: Breakpoints.TabletPortrait, maxWidth: Breakpoints.Laptop },
+    {
+      width: '60%'
+    }
+  ),
+  media(
+    { maxWidth: Breakpoints.TabletPortrait },
+    {
+      width: '80%'
+    }
+  )
+)

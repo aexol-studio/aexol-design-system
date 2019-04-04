@@ -1,25 +1,25 @@
-import { style, media } from 'typestyle';
-import { Colors } from './Colors';
-import { NestedCSSProperties } from 'typestyle/lib/types';
+import { style, media } from 'typestyle'
+import { Colors } from './Colors'
+import { NestedCSSProperties } from 'typestyle/lib/types'
 
-const OBJECT_WIDTH = 200;
-export const TITLE_WIDTH = 250;
-const computeWidth = (n: number) => TITLE_WIDTH + n * OBJECT_WIDTH + 30;
+const OBJECT_WIDTH = 200
+export const TITLE_WIDTH = 250
+const computeWidth = (n: number) => TITLE_WIDTH + n * OBJECT_WIDTH + 30
 const LineProperties: NestedCSSProperties = {
   display: 'grid',
   gridTemplateColumns: `${TITLE_WIDTH}px 3fr`,
   padding: `15px 30px`
-};
+}
 const ObjectInLineProperties: NestedCSSProperties = {
   width: OBJECT_WIDTH,
   textAlign: 'center'
-};
+}
 
 const FlexRowProperties: NestedCSSProperties = {
   display: 'flex',
   flexFlow: 'row nowrap',
   justifyContent: 'space-between'
-};
+}
 
 export const Main = (n: number) =>
   style(
@@ -38,14 +38,14 @@ export const Main = (n: number) =>
         display: 'block'
       }
     )
-  );
+  )
 export const PlanLine = style({
   ...LineProperties,
   gridTemplateAreas: `
   "planOptionTitle planOptions"
   `,
   borderBottom: `1px solid ${Colors.Sopel}`
-});
+})
 
 export const PlanActionLine = style({
   ...LineProperties,
@@ -53,11 +53,11 @@ export const PlanActionLine = style({
   gridTemplateAreas: `
     ". actions"
     `
-});
+})
 export const PlanActions = style({
   ...FlexRowProperties,
   gridArea: 'actions'
-});
+})
 export const PlanString = (n: number) =>
   style(
     {
@@ -72,7 +72,7 @@ export const PlanString = (n: number) =>
         display: 'none'
       }
     )
-  );
+  )
 export const PlansHeaders = (n: number) =>
   style(
     {
@@ -89,23 +89,23 @@ export const PlansHeaders = (n: number) =>
         alignItems: 'center'
       }
     )
-  );
+  )
 export const PlanOptionTitle = style({
   width: TITLE_WIDTH,
   gridArea: 'planOptionTitle',
   color: Colors.Lead
-});
+})
 export const PlanOptions = style({
   ...FlexRowProperties,
   gridArea: 'planOptions'
-});
+})
 export const PlanOption = style({
   ...ObjectInLineProperties,
   textAlign: 'center',
   display: 'flex',
   justifyContent: 'center',
   color: Colors.Ashes
-});
+})
 export const PlanHeader = (n: number) =>
   style(
     {
@@ -125,15 +125,15 @@ export const PlanHeader = (n: number) =>
         background: Colors.Sopel
       }
     )
-  );
+  )
 
 export const PlanHeaderTitle = style({
   marginBottom: 15
-});
+})
 
 export const PlanHeaderSubtitle = style({
   marginBottom: 30
-});
+})
 export const PlanHeaderOptions = (n: number) =>
   style(
     {
@@ -148,16 +148,16 @@ export const PlanHeaderOptions = (n: number) =>
         marginBottom: 25
       }
     )
-  );
+  )
 export const PlanHeaderOption = style({
   display: 'flex',
   flexFlow: 'row nowrap',
   padding: 10
-});
+})
 export const PlanHeaderDescription = style({
   marginBottom: 30,
   color: Colors.Ashes
-});
+})
 export const PricingHiderResoponsive = (n: number) =>
   style(
     media(
@@ -168,4 +168,4 @@ export const PricingHiderResoponsive = (n: number) =>
         display: 'none'
       }
     )
-  );
+  )

@@ -1,13 +1,13 @@
 export const Breakpoints = {
-//  Laptop
+  //  Laptop
   ['Laptop']: 1280,
 
-// Tablet
+  // Tablet
   ['Tablet']: 1024,
 
-// TabletPortrait
+  // TabletPortrait
   ['TabletPortrait']: 768,
 
-// Phone
+  // Phone
   ['Phone']: 550
 }

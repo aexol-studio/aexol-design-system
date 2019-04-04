@@ -14,31 +14,22 @@ import { Loader } from '../../src/components'
 ##Basic usage
 
 <Playground>
-  <label
-    htmlFor="basic"
-    style={{display: 'block', marginTop: 10}}
-  >
+  <label htmlFor="basic" style={{ display: 'block', marginTop: 10 }}>
     basic
   </label>
   <Loader name="basic" />
-  <label
-    htmlFor="duration"
-    style={{display: 'block', marginTop: 10}}
-  >
+  <label htmlFor="duration" style={{ display: 'block', marginTop: 10 }}>
     with specified duration
   </label>
   <Loader name="duration" duration={6} />
   <label
     htmlFor="durationAndProgress"
-    style={{display: 'block', marginTop: 10}}
+    style={{ display: 'block', marginTop: 10 }}
   >
     with specified duration and displayed progress
   </label>
   <Loader name="durationAndProgress" duration={6} progress={true} />
-  <label
-    htmlFor="size"
-    style={{display: 'block', marginTop: 10}}
-  >
+  <label htmlFor="size" style={{ display: 'block', marginTop: 10 }}>
     with specified diameter in px
   </label>
   <Loader name="size" width={60} duration={6} progress={true} />

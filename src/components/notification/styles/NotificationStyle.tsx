@@ -1,5 +1,5 @@
-import { style, keyframes } from 'typestyle';
-import { Colors } from '../../styles/Colors';
+import { style, keyframes } from 'typestyle'
+import { Colors } from '../../styles/Colors'
 
 const slideAndFade = keyframes({
   '0%': {
@@ -10,16 +10,16 @@ const slideAndFade = keyframes({
     opacity: 1,
     transform: 'translate(0px, 0px)'
   }
-});
+})
 
 export const NotificationContainer = style({
   $debugName: 'Notification',
   position: 'fixed',
   top: 0,
   right: 0
-});
+})
 
-export const Notification = style({});
+export const Notification = style({})
 
 export const NoticeBox = style({
   width: 400,
@@ -33,12 +33,12 @@ export const NoticeBox = style({
   animation: `${slideAndFade} ease 1s`,
   animationIterationCount: 1,
   animationFillMode: 'forwards'
-});
+})
 
 export const NoticeText = style({
   width: '80%',
   padding: 10
-});
+})
 
 export const NoticeIconBox = style({
   width: '10%',
@@ -58,7 +58,7 @@ export const NoticeIconBox = style({
       backgroundColor: Colors['Plutonic Briza']
     }
   }
-});
+})
 
 export const NoticeIcon = style({
   width: 20,
@@ -78,12 +78,12 @@ export const NoticeIcon = style({
     '&.success': {
       backgroundColor: Colors.Serpentine
     },
-    'svg': {
+    svg: {
       width: '100%',
       height: '100%'
     }
   }
-});
+})
 
 export const NoticeClose = style({
   width: '10%',
@@ -97,4 +97,4 @@ export const NoticeClose = style({
       height: 16
     }
   }
-});
+})

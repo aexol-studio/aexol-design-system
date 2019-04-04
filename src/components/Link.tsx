@@ -1,18 +1,17 @@
-import * as React from 'react';
-import * as classnames from 'classnames';
-import * as styles from './styles/LinkStyles';
+import * as React from 'react'
+import * as classnames from 'classnames'
+import * as styles from './styles/LinkStyles'
 
 export interface ILinkProps {
-  text: string;
-  link: string;
-  strong?: boolean;
-  disabled?: boolean;
-  target?: string;
-  style?: React.CSSProperties;
+  text: string
+  link: string
+  strong?: boolean
+  disabled?: boolean
+  target?: string
+  style?: React.CSSProperties
 }
 
-export const Link: React.FunctionComponent<ILinkProps> = (props) => {
-
+export const Link: React.FunctionComponent<ILinkProps> = props => {
   const {
     text,
     link,

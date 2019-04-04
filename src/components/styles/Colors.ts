@@ -226,4 +226,4 @@ export const Colors = {
 
   ['Space Monkeys']:
     'linear-gradient(197.67deg, #0091FF -21.75%, #3E1E9F 100%);'
-};
+}

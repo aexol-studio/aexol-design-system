@@ -1,4 +1,4 @@
-import { style } from 'typestyle';
+import { style } from 'typestyle'
 
 export const ArrowsDownContainer = style({
   width: 51,

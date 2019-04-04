@@ -1,38 +1,38 @@
-import * as React from 'react';
-import * as classnames from 'classnames';
-import { Close, Check } from './icons';
-import * as styles from './styles/ToggleStyle';
+import * as React from 'react'
+import * as classnames from 'classnames'
+import { Close, Check } from './icons'
+import * as styles from './styles/ToggleStyle'
 
-type ToggleShape = 'round' | 'oval';
+type ToggleShape = 'round' | 'oval'
 
 export interface IToggleProps {
-  shape?: ToggleShape;
-  value?: boolean;
-  onChange?: (value: boolean) => void;
+  shape?: ToggleShape
+  value?: boolean
+  onChange?: (value: boolean) => void
 }
 
 interface IToggleState {
-  value: boolean;
+  value: boolean
 }
 
 export class Toggle extends React.PureComponent<IToggleProps, IToggleState> {
   constructor(props: IToggleProps) {
-    super(props);
+    super(props)
     this.state = {
       value: props.value || false
-    };
+    }
   }
 
   handleOnClick = (value: boolean) => {
     if (this.state.value !== value) {
       this.setState({
         value: value
-      });
+      })
       if (this.props.onChange) {
-        this.props.onChange(value);
+        this.props.onChange(value)
       }
     }
-  };
+  }
 
   renderElements = () => {
     return (
@@ -64,10 +64,10 @@ export class Toggle extends React.PureComponent<IToggleProps, IToggleState> {
           <Close fill={'White'} />
         </div>
       </React.Fragment>
-    );
-  };
+    )
+  }
 
   render() {
-    return <div className={styles.Toggle}>{this.renderElements()}</div>;
+    return <div className={styles.Toggle}>{this.renderElements()}</div>
   }
 }

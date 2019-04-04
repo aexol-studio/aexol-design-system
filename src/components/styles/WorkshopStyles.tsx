@@ -1,4 +1,4 @@
-import { style } from 'typestyle';
+import { style } from 'typestyle'
 // import { Colors } from './Colors';
 
 export const Workshop = style({

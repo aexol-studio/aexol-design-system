@@ -1,4 +1,4 @@
-import { style } from 'typestyle';
+import { style } from 'typestyle'
 
 export const NotFound = style({
   width: '100%',

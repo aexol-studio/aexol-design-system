@@ -1,21 +1,22 @@
-import * as React from 'react';
+import * as React from 'react'
 // import * as classnames from 'classnames';
 import { INoticeBoxProps, NoticeBox } from './NoticeBox'
-import * as styles from './styles/NotificationStyle';
+import * as styles from './styles/NotificationStyle'
 
-export interface INotificationProps {
-
-}
+export interface INotificationProps {}
 
 interface INotificationState {
-  open: boolean;
-  number: number;
-  notifications: INoticeBoxProps[];
+  open: boolean
+  number: number
+  notifications: INoticeBoxProps[]
 }
 
 const DEFAULT_DURATION = 5
 
-export class Notification extends React.PureComponent<INotificationProps, INotificationState> {
+export class Notification extends React.PureComponent<
+  INotificationProps,
+  INotificationState
+> {
   constructor(props: INotificationProps) {
     super(props)
     this.state = {
@@ -26,36 +27,39 @@ export class Notification extends React.PureComponent<INotificationProps, INotif
   }
 
   handleOnClose = (id: number) => {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       notifications: prevState.notifications.filter(f => f.id !== id)
     }))
   }
 
   addAlert = (options: INoticeBoxProps) => {
-    this.setState((prevState) => ({
-      notifications: prevState.notifications.concat([{
-        id: Date.now(),
-        message: options.message,
-        type: options.type,
-        closable: options.closable
-      }])
+    this.setState(prevState => ({
+      notifications: prevState.notifications.concat([
+        {
+          id: Date.now(),
+          message: options.message,
+          type: options.type,
+          closable: options.closable
+        }
+      ])
     }))
   }
 
   renderElements = () => {
     if (this.state.notifications.length > 0) {
-      return(
+      return (
         <React.Fragment>
           {this.state.notifications.map(el => {
-            return(
+            return (
               <NoticeBox
                 key={el.id}
                 id={el.id}
                 message={el.message}
                 type={el.type}
-                duration={el.duration
-                  ? el.duration
-                  : el.closable
+                duration={
+                  el.duration
+                    ? el.duration
+                    : el.closable
                     ? undefined
                     : DEFAULT_DURATION
                 }
@@ -75,7 +79,8 @@ export class Notification extends React.PureComponent<INotificationProps, INotif
       {
         ref: 'notification',
         className: styles.NotificationContainer
-      }, this.renderElements()
+      },
+      this.renderElements()
     )
   }
 }

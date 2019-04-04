@@ -1,19 +1,19 @@
-import * as React from 'react';
-import classnames from 'classnames';
-import { Button } from '../components';
-import * as styles from './styles/NavBarStyles';
+import * as React from 'react'
+import classnames from 'classnames'
+import { Button } from '../components'
+import * as styles from './styles/NavBarStyles'
 
 export interface INavBarProps {
-  onClick: (e: HTMLButtonElement) => void;
-  buttonText: string;
-  children: string | React.ReactChildren | React.ReactNode;
-  logo?: React.ReactNode;
+  onClick: (e: HTMLButtonElement) => void
+  buttonText: string
+  children: string | React.ReactChildren | React.ReactNode
+  logo?: React.ReactNode
   color?: 'white' | 'black' | 'light'
-  style?: React.CSSProperties;
+  style?: React.CSSProperties
 }
 
 interface NavBarState {
-  open: boolean;
+  open: boolean
 }
 
 export const BAR_NUMBER = 6
@@ -29,74 +29,57 @@ export class NavBar extends React.PureComponent<INavBarProps, NavBarState> {
   handleClick = (e: HTMLButtonElement) => this.props.onClick(e)
 
   handleOpen = (e: React.SyntheticEvent<HTMLDivElement>) => {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       open: !prevState.open
     }))
   }
 
   render() {
+    const { color, onClick, logo, buttonText, style, ...restProps } = this.props
 
-  const {
-    color,
-    onClick,
-    logo,
-    buttonText,
-    style,
-    ...restProps
-  } = this.props
-
-  return (
-    <div
-      className={classnames(
-        styles.NavBar,
-        color
-      )}
-      style={style}
-      {...restProps}
-    >
+    return (
       <div
-        className={classnames({
-          [styles.Container]: true,
-          open: this.state.open
-        })}
+        className={classnames(styles.NavBar, color)}
+        style={style}
+        {...restProps}
       >
         <div
           className={classnames({
-            [styles.Hamburger]: true,
+            [styles.Container]: true,
             open: this.state.open
           })}
-          onClick={e => this.handleOpen(e)}
         >
-          {new Array(BAR_NUMBER)
-            .fill(0)
-            .map((a, i) =>
-              <div
-                key={i}
-                className={classnames(styles.Bar, color)}
-              />
-            )
-          }
-        </div>
-        <div className={styles.LogoContainer}>
-          {logo}
-        </div>
-        <div className={styles.ContentContainer}>
-          <div className={classnames(styles.LinkContainer, color)}>
-            {this.props.children}
-          </div>
-          <Button
-            onClick={e => this.handleClick(e)}
-            type={color === 'black'
-              ? 'secondary3'
-              : color === 'light'
-                ? 'secondary2'
-                : 'secondary'
-            }
+          <div
+            className={classnames({
+              [styles.Hamburger]: true,
+              open: this.state.open
+            })}
+            onClick={e => this.handleOpen(e)}
           >
-            {buttonText}
-          </Button>
+            {new Array(BAR_NUMBER).fill(0).map((a, i) => (
+              <div key={i} className={classnames(styles.Bar, color)} />
+            ))}
+          </div>
+          <div className={styles.LogoContainer}>{logo}</div>
+          <div className={styles.ContentContainer}>
+            <div className={classnames(styles.LinkContainer, color)}>
+              {this.props.children}
+            </div>
+            <Button
+              onClick={e => this.handleClick(e)}
+              type={
+                color === 'black'
+                  ? 'secondary3'
+                  : color === 'light'
+                  ? 'secondary2'
+                  : 'secondary'
+              }
+            >
+              {buttonText}
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
-  )}
+    )
+  }
 }
