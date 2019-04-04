@@ -5,7 +5,7 @@ export const WorkshopTileContainer = style({
   $debugName: 'WorkshopTile',
   backgroundColor: Colors.White,
   width: 368,
-  height: 166,
+  minHeight: 166,
   display: 'flex',
   $nest: {
     '&.topLeft': {
