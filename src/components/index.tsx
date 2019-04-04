@@ -20,8 +20,6 @@ export { NotFound } from './NotFound';
 export { ArrowsDown } from './ArrowsDown';
 export { WorkshopBottomBar } from './WorkshopBottomBar';
 export { NavBar } from './NavBar';
-export { FileUpload } from './FileUpload';
-export { Select } from './Select';
 export { Link } from './Link';
 export { ContentTextBox } from './ContentTextBox';
 export { ContentImgOnSide } from './ContentImgOnSide';
