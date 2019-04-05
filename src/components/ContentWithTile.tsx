@@ -43,15 +43,17 @@ export const ContentWithTile: React.FunctionComponent<
           violet: violetBakground
         })}
       />
-      <div className={styles.ContentTileTextBox}>
-        <ContentTextBox
-          title={title}
-          text={text}
-          linkText={linkText}
-          linkHref={linkHref}
-          tileView={true}
-          linkTarget={linkTarget}
-        />
+      <div className={styles.ContentContainer}>
+        <div className={styles.ContentTileTextBox}>
+          <ContentTextBox
+            title={title}
+            text={text}
+            linkText={linkText}
+            linkHref={linkHref}
+            tileView={true}
+            linkTarget={linkTarget}
+          />
+        </div>
       </div>
     </div>
   )

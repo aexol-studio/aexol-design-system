@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { H1, H3 } from './typography'
 import { Button } from './Button'
+import * as classnames from 'classnames'
 import * as styles from './styles/HeroStyles'
 import { Colors } from './styles/Colors'
 
@@ -8,6 +9,7 @@ export interface IHeroBackImgWithTileProps {
   headerText: string
   paragraphText: string
   buttonText: string
+  tilePosition?: 'left' | 'right'
   buttonOnClick: (e: HTMLButtonElement) => void
   backgroundFile: string
   height?: number
@@ -23,6 +25,7 @@ export const HeroBackImgWithTile: React.FunctionComponent<
     buttonText,
     buttonOnClick,
     backgroundFile,
+    tilePosition = 'left',
     height,
     style,
     ...restProps
@@ -40,7 +43,7 @@ export const HeroBackImgWithTile: React.FunctionComponent<
     >
       <div className={styles.HeroContainer}>
         <div className={styles.HeroContent}>
-          <div className={styles.TextContent4}>
+          <div className={classnames(styles.TextContent4, tilePosition)}>
             <H1 style={{ color: Colors['Dark Side'], marginBottom: 6 }}>
               {headerText}
             </H1>

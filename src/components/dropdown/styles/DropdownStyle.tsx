@@ -24,7 +24,8 @@ export const Dropdown = style({
       width: '100%',
       alignItems: 'center',
       justifyContent: 'center',
-      fontSize: font
+      fontSize: font,
+      fontFamily: 'Helvetica Neue-Medium'
     }
   }
 })
@@ -40,7 +41,7 @@ export const DropdownListElement = style({
   position: 'relative',
   $nest: {
     '&:hover': {
-      backgroundColor: Colors['Damsel in distress'],
+      backgroundColor: Colors.Foggy,
       color: Colors.Ultrasonic
     },
     '&:last-child': {

@@ -9,7 +9,7 @@ export const NavBar = style({
   backgroundColor: Colors.White,
   $nest: {
     '&.black': {
-      backgroundColor: Colors['Black Hole']
+      backgroundColor: 'transparent'
     },
     '&.light': {
       backgroundColor: Colors.Foggy
@@ -37,7 +37,7 @@ export const ContentContainer = style(
 export const LinkContainer = style(
   {
     $nest: {
-      a: {
+      'a': {
         marginRight: 20,
         color: Colors['Ancient Stone'],
         textDecoration: 'none',
@@ -52,7 +52,12 @@ export const LinkContainer = style(
         $nest: {
           a: {
             color: Colors.White,
-            textDecoration: 'none'
+            textDecoration: 'none',
+            $nest: {
+              '&:hover': {
+                color: Colors['Plutonic Briza']
+              }
+            }
           }
         }
       }

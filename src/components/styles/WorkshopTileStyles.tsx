@@ -7,6 +7,7 @@ export const WorkshopTileContainer = style({
   width: 368,
   minHeight: 166,
   display: 'flex',
+  border: `1px solid ${Colors.Sopel}`,
   $nest: {
     '&.topLeft': {
       borderRadius: '20px 0 0 0'
@@ -24,13 +25,13 @@ export const WorkshopTileContainer = style({
 })
 
 export const SideBar = style({
-  backgroundColor: Colors.Pacific,
+  backgroundColor: Colors.Lunatic,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   width: 66,
   minWidth: 66,
-  height: '100%',
+  // height: '100%',
   borderRight: `6px solid ${Colors.Sopel}`,
   $nest: {
     '&.topLeft': {
@@ -122,6 +123,11 @@ export const WorkshopTextTileContainer = classes(
     borderRadius: '20px 0 0 0',
     padding: 18,
     paddingLeft: 25,
-    overflowY: 'auto'
+    overflowY: 'auto',
+    $nest: {
+      '&.none': {
+        borderRadius: 0
+      }
+    }
   })
 )

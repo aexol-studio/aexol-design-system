@@ -36,7 +36,7 @@ export const PricingTable = (props: PricingProps) => {
         </div>
         <div className={styles.PlansHeaders(plans.length)}>
           {plans.map((p, index) => (
-            <div className={styles.PlanHeader(plans.length)}>
+            <div key={index} className={styles.PlanHeader(plans.length)}>
               <div className={styles.PlanHeaderTitle}>
                 <H3>{p.name}</H3>
               </div>
@@ -46,8 +46,8 @@ export const PricingTable = (props: PricingProps) => {
               <div className={styles.PlanHeaderOptions(plans.length)}>
                 {options
                   .filter(o => o.values[index])
-                  .map(o => (
-                    <div className={styles.PlanHeaderOption}>
+                  .map((o, index) => (
+                    <div className={styles.PlanHeaderOption} key={index}>
                       <P
                         style={{
                           marginRight: 10
@@ -69,14 +69,14 @@ export const PricingTable = (props: PricingProps) => {
         </div>
       </div>
       <div className={styles.PricingHiderResoponsive(plans.length)}>
-        {options.map(({ name, values }) => (
-          <div className={styles.PlanLine} style={computedStyle}>
+        {options.map(({ name, values }, index) => (
+          <div className={styles.PlanLine} style={computedStyle} key={index}>
             <div className={styles.PlanOptionTitle}>
               <P>{name}</P>
             </div>
             <div className={styles.PlanOptions}>
-              {values.slice(0, plans.length).map(ov => (
-                <div className={styles.PlanOption}>
+              {values.slice(0, plans.length).map((ov, index) => (
+                <div className={styles.PlanOption} key={index}>
                   <P>{ov}</P>
                 </div>
               ))}
@@ -85,8 +85,8 @@ export const PricingTable = (props: PricingProps) => {
         ))}
         <div className={styles.PlanActionLine} style={computedStyle}>
           <div className={styles.PlanActions}>
-            {plans.map(p => (
-              <div className={styles.PlanOption}>
+            {plans.map((p, index) => (
+              <div className={styles.PlanOption} key={index}>
                 <Button onClick={p.onClick}>{p.action}</Button>
               </div>
             ))}

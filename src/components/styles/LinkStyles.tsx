@@ -16,7 +16,8 @@ export const LinkContainer = style({
       color: Colors.Pacific
     },
     '&:focus': {
-      border: `1px dashed ${Colors.Pacific}`
+      border: `1px dashed ${Colors.Pacific}`,
+      width: 'fit-content'
     },
     '&.disabled': {
       opacity: 0.5,
