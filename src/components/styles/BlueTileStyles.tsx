@@ -33,8 +33,6 @@ export const TileLeftContent = style({
   $debugName: 'TileLeftContent',
   display: 'flex',
   alignItems: 'center'
-  // marginRight: 50,
-  // height: '80%',
   // maxWidth: 500
 
   // biały div z cieniami

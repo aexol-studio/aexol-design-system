@@ -3,6 +3,7 @@ import * as classnames from 'classnames'
 import * as styles from './styles/BlueTileStyles'
 import { H1, P } from './typography'
 import { Colors } from './styles/Colors'
+import { WhiteTile } from './WhiteTile'
 
 export interface BlueTileComponentProps {
   BlueTileHeader: string
@@ -25,7 +26,7 @@ export const BlueTile: React.FunctionComponent<
       <div className={styles.BlueTileContainer} {...restProps}>
         <div className={styles.TileContent}>
           <div className={styles.TileLeftContent}>
-            {/* <p>Cokolwiek jakiś kod</p> */}
+            <WhiteTile />
           </div>
           <div className={styles.TileRightContent}>
             {/* <div>{envelope}</div> */}

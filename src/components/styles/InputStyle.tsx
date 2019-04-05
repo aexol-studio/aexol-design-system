@@ -10,13 +10,15 @@ export const TextInputContainer = style({
 export const TextInputLabel = style({
   $debugName: 'TextInputLabel',
   fontFamily: 'Helvetica Neue',
-  lineHeight: 2,
-  marginLeft: 3
+  fontSize: 12,
+  color: Colors['Black Hole'],
+  fontSize: 12,
+  color: Colors['Black Hole']
 })
 
 export const TextInput = style({
   $debugName: 'TextInput',
-  width: 393,
+  width: 390,
   height: 56,
   color: Colors.Black,
   padding: '15px 10px',
