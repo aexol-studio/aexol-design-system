@@ -53,3 +53,9 @@ export const WhiteTileContentParagraph = style({
   $debugName: 'WhiteTileContentParagraph',
   marginTop: 14
 })
+
+export const WhiteTileSelectContent = style({
+  $debugName: 'WhiteTileSelectContent',
+  marginTop: 15,
+  color: Colors.Black
+})

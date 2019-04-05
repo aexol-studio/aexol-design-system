@@ -26,6 +26,7 @@ export { ContentTextBox } from './ContentTextBox'
 export { ContentImgOnSide } from './ContentImgOnSide'
 export { ContentWithTile } from './ContentWithTile'
 export { Checkbox } from './Checkbox'
+export { WhiteTile } from './WhiteTile'
 export {
   Dropdown,
   DropdownButton,

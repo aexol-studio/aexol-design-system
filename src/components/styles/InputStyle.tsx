@@ -4,16 +4,16 @@ import { Colors } from './Colors'
 export const TextInputContainer = style({
   $debugName: 'TextInputContainer',
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
+  marginBottom: 15
 })
 
 export const TextInputLabel = style({
   $debugName: 'TextInputLabel',
   fontFamily: 'Helvetica Neue',
-  fontSize: 12,
   color: Colors['Black Hole'],
   fontSize: 12,
-  color: Colors['Black Hole']
+  left: 2
 })
 
 export const TextInput = style({
@@ -22,10 +22,10 @@ export const TextInput = style({
   height: 56,
   color: Colors.Black,
   padding: '15px 10px',
-  border: '1px solid rgba(0, 0, 0, 0.12)',
+  border: '2px solid rgba(0, 0, 0, 0.12)',
   borderRadius: 4,
   outline: 0,
-  marginBottom: 15,
+  // marginBottom: 15,
   boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
   $nest: {
     [`&:hover`]: {

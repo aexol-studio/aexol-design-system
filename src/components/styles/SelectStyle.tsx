@@ -123,5 +123,5 @@ export const Label = style({
   top: -18,
   fontSize: 12,
   lineHeight: '16px',
-  fontFamily: 'Helvetica Neue-Medium'
+  fontFamily: 'Helvetica Neue'
 })
