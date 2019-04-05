@@ -145,7 +145,12 @@ export const TextContent4 = classes(
     width: '50%',
     maxWidth: 570,
     padding: '30px 70px 30px 50px',
-    backgroundColor: Colors.White
+    backgroundColor: Colors.White,
+    $nest: {
+      '&.right': {
+        marginLeft: 'auto'
+      }
+    }
   })
 )
 

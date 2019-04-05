@@ -30,7 +30,7 @@ export const ToggleElement = style({
             }
           }
         },
-        svg: {
+        'svg': {
           display: 'none',
           maxHeight: '90%',
           maxWidth: '90%'
@@ -59,7 +59,7 @@ export const ToggleElement = style({
             }
           }
         },
-        svg: {
+        'svg': {
           display: 'none',
           maxHeight: '90%',
           maxWidth: '90%'

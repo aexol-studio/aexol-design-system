@@ -1,7 +1,7 @@
 import { style, media } from 'typestyle'
 import { Colors } from './Colors'
 import { Breakpoints } from './Breakpoints'
-// import * as vars from '../../vars';
+import * as vars from '../../vars';
 
 export const ContentTextBoxContainer = style({
   width: '100%',
@@ -96,13 +96,24 @@ export const ContentRightBar = style(
     }
   )
 )
+export const ContentContainer = style({
+  position: 'absolute',
+  top: 0,
+  bottom: 0,
+  left: 0,
+  right: 0,
+  width: '80%',
+  maxWidth: vars.maxWidth,
+  margin: 'auto',
+  height: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'flex-end'
+})
 
 export const ContentTileTextBox = style(
   {
-    position: 'absolute',
-    top: 0,
-    right: '10%',
-    width: '40%',
+    width: '50%',
     height: '100%',
     display: 'flex',
     alignItems: 'center',
@@ -111,13 +122,13 @@ export const ContentTileTextBox = style(
   media(
     { minWidth: Breakpoints.TabletPortrait, maxWidth: Breakpoints.Laptop },
     {
-      width: '60%'
+      width: '70%'
     }
   ),
   media(
     { maxWidth: Breakpoints.TabletPortrait },
     {
-      width: '80%'
+      width: '100%'
     }
   )
 )

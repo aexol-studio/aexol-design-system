@@ -18,7 +18,7 @@ export const Button = style({
     '&.submit': {
       // margin: '0 0 0 auto'
     },
-    svg: {
+    'svg': {
       marginRight: 5,
       maxHeight: 20
     },
@@ -81,7 +81,7 @@ export const Button = style({
     },
     '&.secondary3': {
       color: Colors.White,
-      backgroundColor: 'transparent',
+      backgroundColor: `${Colors.Lead}4D`,
       border: `2px solid ${Colors.White}`,
       transition: vars.transition,
       $nest: {

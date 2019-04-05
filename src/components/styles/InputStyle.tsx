@@ -16,7 +16,8 @@ export const TextInputLabel = style({
 
 export const TextInput = style({
   $debugName: 'TextInput',
-  width: '60%',
+  width: 393,
+  height: 56,
   color: Colors.Black,
   padding: '15px 10px',
   border: '1px solid rgba(0, 0, 0, 0.12)',
