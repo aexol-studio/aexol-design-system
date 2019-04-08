@@ -1,21 +1,19 @@
 import { style } from 'typestyle'
 import { Colors } from './Colors'
 
-export const Toggle = style({
-  height: 20,
-  width: 40,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-around'
+export const Checkbox = style({
+  $debugName: 'Checkbox',
+  display: 'flex'
 })
 
 export const CheckboxElement = style({
-  width: '50%',
-  height: '100%',
+  $debugName: 'CheckboxElement',
+  width: 20,
+  height: 20,
   display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  flex: 'none',
   cursor: 'pointer',
+  marginRight: 20,
   $nest: {
     '&.on': {
       border: `1px solid ${Colors.Sopel}`,
@@ -30,10 +28,11 @@ export const CheckboxElement = style({
             }
           }
         },
-        svg: {
+        // prettier-ignore
+        'svg': {
           display: 'none',
-          maxHeight: '90%',
-          maxWidth: '90%'
+          maxHeight: '100%',
+          maxWidth: '100%'
         },
         '&.active': {
           border: `1px solid ${Colors.Sopel}`,

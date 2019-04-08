@@ -8,6 +8,7 @@ type CheckboxShape = 'round' | 'square'
 export interface ICheckBoxProps {
   shape?: CheckboxShape
   value?: boolean
+  checkboxParagraph?: string
   onChange?: (value: boolean) => void
 }
 
@@ -51,10 +52,11 @@ export class Checkbox extends React.PureComponent<
         >
           <Check fill={'Ashes'} />
         </div>
+        {this.props.checkboxParagraph}
       </React.Fragment>
     )
   }
   render() {
-    return <div className={styles.Toggle}>{this.renderElements()}</div>
+    return <div className={styles.Checkbox}>{this.renderElements()}</div>
   }
 }

@@ -14,8 +14,20 @@ import { Checkbox } from '../../src/components'
 ##Basic usage
 
 <Playground>
-  <label style={{ display: 'block', marginTop: 10 }}>Square</label>
-  <Checkbox shape="square" name="square" />
-  <label style={{ display: 'block', marginTop: 10 }}>Round</label>
-  <Checkbox shape="round" name="round" />
+  <label style={{ display: 'block', marginBottom: 10, marginTop: 10 }}>
+    Square
+  </label>
+  <Checkbox
+    shape="square"
+    name="square"
+    checkboxParagraph="Aque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo"
+  />
+  <label style={{ display: 'block', marginBottom: 10, marginTop: 10 }}>
+    Round
+  </label>
+  <Checkbox
+    shape="round"
+    name="round"
+    checkboxParagraph="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+  />
 </Playground>
