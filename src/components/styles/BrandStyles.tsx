@@ -50,6 +50,11 @@ export const BrandBarBackground = style({
 })
 
 export const BrandLink = style({
+  width: '100%',
+  height: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   textDecoration: 'none',
   color: 'inherit'
 })
