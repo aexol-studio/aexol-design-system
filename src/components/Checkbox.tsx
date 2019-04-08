@@ -52,7 +52,9 @@ export class Checkbox extends React.PureComponent<
         >
           <Check fill={'Ashes'} />
         </div>
-        {this.props.checkboxParagraph}
+        <p className={styles.CheckboxParagraph}>
+          {this.props.checkboxParagraph}
+        </p>
       </React.Fragment>
     )
   }

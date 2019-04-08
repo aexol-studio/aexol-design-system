@@ -2,8 +2,16 @@ import { style } from 'typestyle'
 import { Colors } from './Colors'
 
 export const Checkbox = style({
-  $debugName: 'Checkbox',
-  display: 'flex'
+  // height: 20,
+  // width: 60,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-around'
+})
+
+export const CheckboxParagraph = style({
+  fontFamily: 'Helvetica Neue',
+  fontSize: 12
 })
 
 export const CheckboxElement = style({
@@ -24,7 +32,10 @@ export const CheckboxElement = style({
           borderRadius: '13px 13px',
           $nest: {
             svg: {
-              marginLeft: 0
+              marginLeft: 0,
+              display: 'none',
+              maxHeight: '90%',
+              maxWidth: '90%'
             }
           }
         },
