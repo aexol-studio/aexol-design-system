@@ -25,6 +25,7 @@ export { Link } from './Link'
 export { ContentTextBox } from './ContentTextBox'
 export { ContentImgOnSide } from './ContentImgOnSide'
 export { ContentWithTile } from './ContentWithTile'
+export { Checkbox } from './Checkbox'
 export {
   Dropdown,
   DropdownButton,
