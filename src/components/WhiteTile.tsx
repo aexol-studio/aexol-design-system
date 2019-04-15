@@ -23,12 +23,12 @@ type WhiteButtonText = {
 }
 
 type InputTextName = {
-  labelName?: string
+  labelName: string
   placeholderName?: string
   type?: string
 }
 type InputTextEmail = {
-  labelEmail?: string
+  labelEmail: string
   placeholderEmail?: string
   type?: string
 }
