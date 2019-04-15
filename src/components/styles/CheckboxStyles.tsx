@@ -5,8 +5,7 @@ export const Checkbox = style({
   // height: 20,
   // width: 60,
   display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-around'
+  alignItems: 'center'
 })
 
 export const CheckboxParagraph = style({
