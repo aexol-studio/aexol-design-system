@@ -65,7 +65,7 @@ export const showValue = style({
   fontSize: 16,
   lineHeight: '23px',
   padding: '5px 15px',
-  margin: '5px 5px 5px 0'
+  margin: 5
 })
 
 export const emptyValue = style({

@@ -38,7 +38,7 @@ export const ContentTextBox: React.FunctionComponent<
       {...restProps}
     >
       <H2 style={{ marginBottom: 17 }}>{title}</H2>
-      <P style={{ marginBottom: 37 }}>{text}</P>
+      <P style={{ marginBottom: 37, overflowY: 'auto' }}>{text}</P>
       <Link text={linkText} link={linkHref} target={linkTarget} />
     </div>
   )
