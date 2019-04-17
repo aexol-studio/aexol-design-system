@@ -5,7 +5,8 @@ import { Colors } from './Colors'
 export const Select = style({
   position: 'relative',
   width: 393,
-  height: 56
+  height: 56,
+  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)'
 })
 
 export const holderSelect = style({
@@ -37,7 +38,7 @@ export const SelectArrow = style({
 
 export const holderValue = style({
   border: `2px solid ${Colors.Sopel}`,
-  padding: '0 35px 0 5px',
+  paddingRight: 35,
   height: 56,
   borderRadius: 4,
   display: 'flex',
@@ -45,7 +46,7 @@ export const holderValue = style({
 })
 
 export const placeholderValue = style({
-  padding: '5px 15px',
+  padding: '5px 18px',
   width: '100%',
   height: '100%',
   display: 'block',
@@ -109,6 +110,7 @@ export const Li = style({
   padding: '10px 20px',
   transition: vars.transition,
   color: Colors['Ancient Stone'],
+  margin: 0,
   $nest: {
     '&:hover': {
       backgroundColor: Colors['Damsel in distress'],
