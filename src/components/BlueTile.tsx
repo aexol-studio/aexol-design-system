@@ -3,12 +3,12 @@ import * as classnames from 'classnames'
 import * as styles from './styles/BlueTileStyles'
 import { H1, P } from './typography'
 import { Colors } from './styles/Colors'
-import { WhiteTile } from './WhiteTile'
 
 export interface BlueTileComponentProps {
   BlueTileHeader: string
   BlueTileHeaderParagraph: string
-  envelope: string
+  envelope?: string
+  children?: React.ReactNode
 }
 
 export const BlueTile: React.FunctionComponent<
@@ -25,15 +25,13 @@ export const BlueTile: React.FunctionComponent<
     <div className={classnames(styles.BlueTileMain)}>
       <div className={styles.BlueTileContainer} {...restProps}>
         <div className={styles.TileContent}>
-          <div className={styles.TileLeftContent}>
-            <WhiteTile />
-          </div>
+          <div className={styles.TileLeftContent}>{props.children}</div>
           <div className={styles.TileRightContent}>
-            {/* <div>{envelope}</div> */}
-            <div className={styles.TileLeftHeader}>
+            <div className={styles.TileRightEvelope}>{envelope}</div>
+            <div className={styles.TileRightHeader}>
               <H1 style={{ color: Colors.White }}>{BlueTileHeader}</H1>
             </div>
-            <div className={styles.TileLeftParagraph}>
+            <div className={styles.TileRightParagraph}>
               <P style={{ color: Colors.White }}>{BlueTileHeaderParagraph}</P>
             </div>
           </div>
