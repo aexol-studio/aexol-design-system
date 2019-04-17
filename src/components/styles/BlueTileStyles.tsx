@@ -1,62 +1,120 @@
-import { style } from 'typestyle'
+import { style, media } from 'typestyle'
 import { Colors } from './Colors'
-// import {Breakpoints} from './Breakpoints';
 
 export const BlueTileMain = style({
   $debugName: 'BlueTileMain',
   background: Colors['Alien Blood']
 })
 
-export const BlueTileContainer = style({
-  $debugName: 'BlueTileContainer',
-  maxHeight: 1440,
-  height: 700,
-  margin: '0 auto',
-  paddingTop: 80,
-  paddingBottom: 80,
-  // paddingRight: 136,
-  // paddingLeft: 136,
-  display: 'flex'
-  // alignContent: 'center'
-})
+export const BlueTileContainer = style(
+  {
+    $debugName: 'BlueTileContainer',
+    maxHeight: '100%',
+    height: 820,
+    paddingTop: 80,
+    paddingBottom: 80,
+    display: 'flex'
+  },
+  media(
+    { minWidth: 0, maxWidth: 1090 },
+    {
+      paddingTop: 0,
+      paddingBottom: 0
+    }
+  )
+)
 
-export const TileContent = style({
-  $debugName: 'TileContent',
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-evenly',
-  alignItems: 'flex-end',
-  width: '100%'
-})
+export const TileContent = style(
+  {
+    $debugName: 'TileContent',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%'
+  },
+  media(
+    { minWidth: 0, maxWidth: 1090 },
+    {
+      flexDirection: 'column-reverse'
+    }
+  )
+)
 
-export const TileLeftContent = style({
-  $debugName: 'TileLeftContent',
-  display: 'flex',
-  alignItems: 'center'
-  // maxWidth: 500
+export const TileLeftContent = style(
+  {
+    $debugName: 'TileLeftContent',
+    display: 'flex',
+    alignItems: 'center',
+    marginRight: 25
+  },
+  media(
+    { minWidth: 0, maxWidth: 1090 },
+    {
+      marginRight: 0
+    }
+  )
+)
 
-  // biały div z cieniami
-  // background: Colors.White,
-  // borderRadius: 8,
-  // width: 400,
-  // height: 500,
-  // boxShadow : '8px 8px 32px rgba(81, 78, 90, 0.6)'
-})
+export const TileRightContent = style(
+  {
+    $debugName: 'TileRightContent',
+    maxWidth: 500,
+    display: 'flex',
+    flexDirection: 'column',
+    alignSelf: 'flex-end',
+    marginLeft: 25,
+    marginBottom: 20
+  },
+  media(
+    { minWidth: 0, maxWidth: 1090 },
+    {
+      display: 'flex',
+      alignSelf: 'center',
+      marginLeft: 0
+    }
+  )
+)
 
-export const TileRightContent = style({
-  $debugName: 'TileRightContent',
-  maxWidth: 500,
-  display: 'flex',
-  flexDirection: 'column',
-  alignSelf: 'flex-end'
-})
+export const TileRightHeader = style(
+  {
+    $debugName: 'TileLeftHeader',
+    marginTop: 5
+  },
+  media(
+    { minWidth: 0, maxWidth: 1090 },
+    {
+      marginTop: 0
+    }
+  )
+)
 
-export const TileLeftHeader = style({
-  $debugName: 'TileLeftHeader',
-  marginTop: 5
-})
+export const TileRightParagraph = style(
+  {
+    $debugName: 'TileLeftHeader',
+    marginTop: 14
+  },
+  media(
+    { minWidth: 0, maxWidth: 1090 },
+    {
+      display: 'none'
+    }
+  )
+)
 
-export const TileLeftParagraph = style({
-  $debugName: 'TileLeftHeader',
-  marginTop: 14
-})
+export const TileRightEvelope = style(
+  {
+    $debugName: 'TileRightEvelope',
+    display: 'flex',
+    height: 489,
+    width: 355,
+    top: 0,
+    background: 'white'
+  },
+  media(
+    { minWidth: 0, maxWidth: 1090 },
+    {
+      display: 'none'
+    }
+  )
+)
