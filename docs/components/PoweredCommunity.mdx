@@ -3,7 +3,7 @@ name: PoweredCommunity
 ---
 
 import { Playground, PropsTable } from 'docz'
-import { PoweredCommunity } from '../../src/components'
+import { PoweredCommunity, icons } from '../../src/components'
 
 #WorkshopTile
 
@@ -20,19 +20,22 @@ import { PoweredCommunity } from '../../src/components'
     smallText="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio."
     cards={[
       {
-        val: 1000,
-        description: 'Github Stars',
-        barColor: 'Serpentine'
+        val: '1000',
+        description: 'More than 1000 github Stars',
+        backColor: 'Foggy',
+        icon: <icons.Github fill="Black Hole" />
       },
       {
-        val: 25,
-        description: 'Projects',
-        barColor: 'Lunatic'
+        val: '25+',
+        description: 'About 25+ Projects',
+        backColor: 'Lunatic',
+        icon: <icons.Projects fill="Black Hole" />
       },
       {
-        val: 150,
-        description: 'Users',
-        barColor: 'Floating Mandarines'
+        val: '150',
+        description: 'And more than 150 users',
+        backColor: 'Foggy',
+        icon: <icons.Users fill="Black Hole" />
       }
     ]}
   />
