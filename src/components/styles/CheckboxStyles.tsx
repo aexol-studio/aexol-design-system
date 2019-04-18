@@ -23,7 +23,7 @@ export const CheckboxElement = style({
   marginRight: 20,
   $nest: {
     '&.on': {
-      border: `1px solid ${Colors.Sopel}`,
+      border: `2px solid ${Colors.Sopel}`,
       backgroundColor: Colors.White,
       borderRadius: '4px 4px',
       $nest: {
@@ -31,10 +31,9 @@ export const CheckboxElement = style({
           borderRadius: '13px 13px',
           $nest: {
             svg: {
-              marginLeft: 0,
               display: 'none',
-              maxHeight: '90%',
-              maxWidth: '90%'
+              maxHeight: '100%',
+              maxWidth: '100%'
             }
           }
         },
@@ -45,12 +44,14 @@ export const CheckboxElement = style({
           maxWidth: '100%'
         },
         '&.active': {
-          border: `1px solid ${Colors.Sopel}`,
+          border: `2px solid ${Colors['Super Nova']}`,
           backgroundColor: Colors.White,
           $nest: {
             svg: {
               display: 'block',
-              marginRight: 1
+              marginLeft: 1,
+              marginTop: 2,
+              marginRight: 2
             }
           }
         }
