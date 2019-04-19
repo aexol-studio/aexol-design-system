@@ -20,7 +20,7 @@ export const CheckboxElement = style({
   display: 'flex',
   flex: 'none',
   cursor: 'pointer',
-  marginRight: 20,
+  marginRight: 17,
   $nest: {
     '&.on': {
       border: `2px solid ${Colors.Sopel}`,
