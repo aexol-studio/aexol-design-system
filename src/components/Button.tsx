@@ -65,7 +65,7 @@ export const Button: React.FunctionComponent<IButtonProps> = props => {
       style={{
         width: width,
         height: height,
-        style
+        ...style
       }}
       {...restProps}
     >
