@@ -9,14 +9,19 @@ export interface IButtonProps {
   size?: ButtonSize
   shape?: ButtonShape
   width?: number
+  height?: number
   style?: React.CSSProperties
 }
+
+const DEFAULT_WIDTH = 168
+const DEFAULT_HEIGHT = 40
 
 export const LoadingButton: React.FunctionComponent<IButtonProps> = props => {
   const {
     size = 'default',
     shape = 'round',
-    width,
+    width = DEFAULT_WIDTH,
+    height = DEFAULT_HEIGHT,
     style,
     ...restProps
   } = props
@@ -24,7 +29,11 @@ export const LoadingButton: React.FunctionComponent<IButtonProps> = props => {
   return (
     <button
       className={classnames(styles.Button, 'primary', shape, size)}
-      style={style}
+      style={{
+        width: width,
+        height: height,
+        ...style
+      }}
       {...restProps}
     >
       <div className={styles.Loader}>

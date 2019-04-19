@@ -20,6 +20,7 @@ export interface IButtonProps {
   shape?: ButtonShape
   disabled?: boolean
   width?: number
+  height?: number
   icon?: JSX.Element
   onClick?: (e: HTMLButtonElement) => void
   href?: string
@@ -27,13 +28,17 @@ export interface IButtonProps {
   style?: React.CSSProperties
 }
 
+const DEFAULT_WIDTH = 168
+const DEFAULT_HEIGHT = 40
+
 export const Button: React.FunctionComponent<IButtonProps> = props => {
   const {
     type = 'primary',
     size = 'default',
     shape = 'round',
     disabled = false,
-    width,
+    width = DEFAULT_WIDTH,
+    height = DEFAULT_HEIGHT,
     icon,
     style,
     onClick,
@@ -57,7 +62,11 @@ export const Button: React.FunctionComponent<IButtonProps> = props => {
       )}
       onClick={handleClick}
       type={type === 'submit' ? 'submit' : 'button'}
-      style={style}
+      style={{
+        width: width,
+        height: height,
+        style
+      }}
       {...restProps}
     >
       {href && (
