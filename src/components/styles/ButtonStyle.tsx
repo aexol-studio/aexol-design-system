@@ -1,6 +1,25 @@
-import { style } from 'typestyle'
+import { style, keyframes } from 'typestyle'
 import * as vars from '../../vars'
 import { Colors } from './Colors'
+
+const wave = keyframes({
+  '0%': {
+    transform: 'translateY(0px)'
+  },
+  '40%': {
+    transform: 'translateY(0px)'
+  },
+  '60%': {
+    transform: 'translateY(10px)'
+  },
+  '80%': {
+    transform: 'translateY(-10px)'
+  },
+  '100%': {
+    transform: 'translateY(0px)'
+  }
+})
+
 
 export const Button = style({
   display: 'flex',
@@ -102,6 +121,42 @@ export const ButtonLink = style({
     '&:hover': {
       color: 'inherit',
       backgroundColor: 'inherit'
+    }
+  }
+})
+
+export const Loader = style({
+  height: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+})
+
+export const Wave = style({
+  width: 34,
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center'
+})
+
+export const Dot = style({
+  display: 'inline-block',
+  width: 8,
+  height: 8,
+  borderRadius: 4,
+  animationName: wave,
+  animationDuration: '1.1s',
+  animationIterationCount: 'infinite',
+  backgroundColor: Colors.White,
+  $nest: {
+    '&:nth-child(1)': {
+      animationDelay: '-0.34667s'
+    },
+    '&:nth-child(2)': {
+      animationDelay: '-0.26s'
+    },
+    '&:nth-child(3)': {
+      animationDelay: '-0.17333s'
     }
   }
 })
