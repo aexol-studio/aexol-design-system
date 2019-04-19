@@ -5,6 +5,7 @@ import * as vars from '../../vars';
 
 export const ContentTextBoxContainer = style({
   width: '100%',
+  maxHeight: '90%',
   display: 'flex',
   flexDirection: 'column',
   backgroundColor: Colors.White,
@@ -14,7 +15,17 @@ export const ContentTextBoxContainer = style({
       padding: 70
     }
   }
-})
+},
+media(
+  { maxWidth: Breakpoints.Phone },
+  {
+    $nest: {
+      '&.tile': {
+        padding: 30
+      }
+    }
+  }
+))
 
 export const ContentImgOnSide = style({
   display: 'flex',

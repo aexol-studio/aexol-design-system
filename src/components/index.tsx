@@ -27,6 +27,7 @@ export { ContentImgOnSide } from './ContentImgOnSide'
 export { ContentWithTile } from './ContentWithTile'
 export { Checkbox } from './Checkbox'
 export { WhiteTile } from './WhiteTile'
+export { LoadingButton } from './LoadingButton'
 export {
   Dropdown,
   DropdownButton,

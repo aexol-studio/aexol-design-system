@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { ICommunityCardProps, CommunityCard } from './CommunityCard'
-import { H1, H4, P } from './typography'
+import { H2, H4, P } from './typography'
 import { Colors } from './styles/Colors'
+import { GraphQL } from './icons'
 import * as styles from './styles/PoweredCommunityStyles'
 
 export interface IPoweredCommunityProps {
@@ -32,8 +33,9 @@ export const PoweredCommunity: React.FunctionComponent<
       <CommunityCard
         val={el.val}
         description={el.description}
-        barColor={el.barColor}
+        backColor={el.backColor}
         key={idx}
+        icon={el.icon}
         style={el.style}
       />
     )
@@ -45,17 +47,21 @@ export const PoweredCommunity: React.FunctionComponent<
       style={style}
       {...restProps}
     >
-      <H1 style={{ textAlign: 'center', marginBottom: 50 }}>{header}</H1>
+      <div className={styles.Header}>
+        <GraphQL />
+        <div className={styles.HeaderLine} />
+        <H2 style={{ color: Colors.Ashes }}>{header}</H2>
+      </div>
       <div className={styles.Cards}>
         {cards.map((el, idx) => renderCards(el, idx))}
       </div>
       {bigText && (
-        <H4 style={{ color: Colors['Dark Side'], marginBottom: 16 }}>
+        <H4 style={{ color: Colors['Dark Side'], marginBottom: 16, textAlign: 'center' }}>
           {bigText}
         </H4>
       )}
       {smallText && (
-        <P style={{ color: Colors['Ancient Stone'] }}>{smallText}</P>
+        <P style={{ color: Colors['Ancient Stone'], textAlign: 'center' }}>{smallText}</P>
       )}
     </div>
   )
