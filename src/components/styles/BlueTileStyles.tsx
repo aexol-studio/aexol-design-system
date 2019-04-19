@@ -1,5 +1,6 @@
 import { style, media } from 'typestyle'
 import { Colors } from './Colors'
+import * as vars from '../../vars'
 
 export const BlueTileMain = style({
   $debugName: 'BlueTileMain',
@@ -13,7 +14,8 @@ export const BlueTileContainer = style(
     height: 820,
     paddingTop: 80,
     paddingBottom: 80,
-    display: 'flex'
+    display: 'flex',
+    justifyContent: 'center'
   },
   media(
     { minWidth: 0, maxWidth: 1090 },
@@ -28,9 +30,9 @@ export const TileContent = style(
   {
     $debugName: 'TileContent',
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    width: '100%',
+    width: vars.containerWidth,
     height: '100%'
   },
   media(
@@ -46,12 +48,13 @@ export const TileLeftContent = style(
     $debugName: 'TileLeftContent',
     display: 'flex',
     alignItems: 'center',
-    marginRight: 25
+    marginRight: 16
   },
   media(
     { minWidth: 0, maxWidth: 1090 },
     {
-      marginRight: 0
+      marginRight: 0,
+      marginBottom: 25
     }
   )
 )
@@ -59,11 +62,11 @@ export const TileLeftContent = style(
 export const TileRightContent = style(
   {
     $debugName: 'TileRightContent',
-    maxWidth: 500,
+    maxWidth: 668,
     display: 'flex',
     flexDirection: 'column',
     alignSelf: 'flex-end',
-    marginLeft: 25,
+    marginLeft: 16,
     marginBottom: 20
   },
   media(
@@ -71,20 +74,30 @@ export const TileRightContent = style(
     {
       display: 'flex',
       alignSelf: 'center',
-      marginLeft: 0
+      marginLeft: 0,
+      maxWidth: 521,
+      marginBottom: 0,
+      paddingTop: 20
     }
   )
 )
 
 export const TileRightHeader = style(
   {
-    $debugName: 'TileLeftHeader',
-    marginTop: 5
+    $debugName: 'TileRightHeader',
+    marginTop: 5,
+    color: Colors.White
   },
   media(
     { minWidth: 0, maxWidth: 1090 },
     {
-      marginTop: 0
+      marginTop: 0,
+      maxWidth: 464,
+      $nest: {
+        H1: {
+          fontSize: '40px'
+        }
+      }
     }
   )
 )
@@ -112,7 +125,7 @@ export const TileRightEvelope = style(
     background: 'white'
   },
   media(
-    { minWidth: 0, maxWidth: 1090 },
+    { minWidth: 0, maxWidth: 1242 },
     {
       display: 'none'
     }

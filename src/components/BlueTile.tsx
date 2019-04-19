@@ -29,7 +29,7 @@ export const BlueTile: React.FunctionComponent<
           <div className={styles.TileRightContent}>
             <div className={styles.TileRightEvelope}>{envelope}</div>
             <div className={styles.TileRightHeader}>
-              <H1 style={{ color: Colors.White }}>{BlueTileHeader}</H1>
+              <H1>{BlueTileHeader}</H1>
             </div>
             <div className={styles.TileRightParagraph}>
               <P style={{ color: Colors.White }}>{BlueTileHeaderParagraph}</P>

@@ -76,6 +76,23 @@ export const Check = ({ fill }: IIconFill) => (
   </svg>
 )
 
+export const CheckBox = ({ fill }: IIconFill) => (
+  <svg
+    width="50"
+    height="50"
+    viewBox="0 0 13 13"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M12.684 0.770466C13.0869 1.1482 13.1073 1.78103 12.7296 2.18394L5.2296 10.1839C5.02747 10.3995 4.74034 10.5147 4.44526 10.4985C4.15018 10.4823 3.87737 10.3364 3.70006 10.1L0.700059 6.1C0.368688 5.65818 0.458231 5.03137 0.900059 4.7C1.34189 4.36863 1.96869 4.45818 2.30006 4.9L4.58529 7.94698L11.2705 0.816062C11.6483 0.41315 12.2811 0.392736 12.684 0.770466Z"
+      fill={Colors[fill]}
+    />
+  </svg>
+)
+
 export const Info = ({ fill }: IIconFill) => (
   <svg
     width="24"

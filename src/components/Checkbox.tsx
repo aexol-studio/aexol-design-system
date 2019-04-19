@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as classnames from 'classnames'
-import { Check } from './icons'
+import { CheckBox } from './icons'
 import * as styles from './styles/CheckboxStyles'
 
 type CheckboxShape = 'round' | 'square'
@@ -50,7 +50,7 @@ export class Checkbox extends React.PureComponent<
           )}
           onClick={e => this.handleOnClick(!this.state.value)}
         >
-          <Check fill={'Ashes'} />
+          <CheckBox fill={'Super Nova'} />
         </div>
         <p className={styles.CheckboxParagraph}>
           {this.props.checkboxParagraph}
