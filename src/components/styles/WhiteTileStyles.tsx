@@ -7,7 +7,7 @@ export const WhiteTileMain = style({
   alignItems: 'center',
   background: Colors.White,
   borderRadius: 8,
-  width: 521,
+  width: 468,
   height: 614,
   boxShadow: '8px 8px 32px rgba(81, 78, 90, 0.6)',
   justifyContent: 'center'
