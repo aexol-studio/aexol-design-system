@@ -8,39 +8,61 @@ export const TextInputContainer = style({
   marginBottom: 15
 })
 
+export const TextInputLabelDiv = style({
+  $debugName: 'TextInputLabelDiv',
+  display: 'flex'
+})
+
 export const TextInputLabel = style({
   $debugName: 'TextInputLabel',
   fontFamily: 'Helvetica Neue',
-  color: Colors['Black Hole'],
+  lineHeight: 2,
+  marginLeft: 3,
+  marginBottom: 4,
   fontSize: 12,
-  left: 2
+  fontWeight: 'bold'
+})
+
+export const TextInputStar = style({
+  $debugName: 'TextInputStar',
+  color: Colors.ACME
 })
 
 export const TextInput = style({
   $debugName: 'TextInput',
-  width: 390,
+  width: 393,
   height: 56,
-  color: Colors.Black,
-  padding: '15px 10px',
-  border: '2px solid rgba(0, 0, 0, 0.12)',
+  color: Colors.Ashes,
+  paddingTop: 19,
+  paddingBottom: 13,
+  paddingLeft: 18,
+  border: '1px solid rgba(0, 0, 0, 0.12)',
   borderRadius: 4,
   outline: 0,
-  // marginBottom: 15,
   boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
   $nest: {
     [`&:hover`]: {
       boxShadow: `0 0 0 2px ${Colors.Pacific}`,
-      color: Colors['Dark Side']
+      color: `${Colors.Ashes}`
+    },
+    [`&::placeholder`]: {
+      color: `${Colors.Ashes}`
     }
   }
 })
 
-export const TextInputLabelPassword = style({
-  $debugName: 'TextInputLabelPassword',
+export const TextInputPassword = style({
+  $debugName: 'TextInputPassword',
   marginLeft: -100,
   zIndex: 1,
-  height: 50,
-  display: 'flex'
+  display: 'flex',
+  alignItems: 'center',
+  $nest: {
+    a: {
+      marginTop: 5,
+      paddingBottom: 1
+    }
+  }
 })
 
 export const TextInputDiv = style({
@@ -53,13 +75,19 @@ export const TextInputSpacer = style({
   backgroundColor: Colors.Sopel,
   height: 30,
   width: 2,
-  marginRight: 16,
-  marginTop: 10
+  marginRight: 16
 })
 
 export const TextInputHref = style({
   $debugName: 'TextInputHref',
-  color: Colors.Black,
   textDecoration: 'none',
-  paddingTop: 13
+  cursor: 'pointer',
+  $nest: {
+    [`&:hover`]: {
+      color: `${Colors.Pacific} !important`
+    },
+    [`&:visited`]: {
+      color: Colors.Ashes
+    }
+  }
 })

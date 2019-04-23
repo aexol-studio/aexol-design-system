@@ -2,23 +2,27 @@ import * as React from 'react'
 import * as styles from './styles/InputStyle'
 
 export interface IInputProps {
-  type?: string
-  label?: string
-  placeholder?: string
-  required?: boolean
-  onChange?: (value: string) => void
-  width?: number
-  fullWidth?: boolean
-  style?: React.CSSProperties
-  password?: boolean
-  passwordText?: string
-  passwordLink?: string
+  type?: string;
+  label?: string;
+  starLabel?: string;
+  placeholder?: string;
+  required?: boolean;
+  onChange?: (value: string) => void;
+  width?: number;
+  fullWidth?: boolean;
+  style?: React.CSSProperties;
+  password?: boolean;
+  passwordText: string;
+  passwordLink?: string;
 }
 
-export const Input: React.FunctionComponent<IInputProps> = props => {
+const LABEL_STAR = '*'
+
+export const Input: React.FunctionComponent<IInputProps> = (props) => {
   const {
     type,
     label,
+    starLabel = LABEL_STAR,
     placeholder,
     required = false,
     password = false,
@@ -44,7 +48,18 @@ export const Input: React.FunctionComponent<IInputProps> = props => {
         ...style
       }}
     >
-      {label && <label className={styles.TextInputLabel}>{label}</label>}
+    <div className={styles.TextInputLabelDiv}>
+    {label &&
+        <label
+          className={styles.TextInputLabel}
+        >
+          {label}
+        </label>
+      }
+      {starLabel &&
+      <span className={styles.TextInputStar}>*</span>
+      }
+    </div>
       <div className={styles.TextInputDiv}>
         <input
           type={type || 'text'}
@@ -54,15 +69,13 @@ export const Input: React.FunctionComponent<IInputProps> = props => {
           required={required}
           {...restProps}
         />
-        {password && (
-          <div className={styles.TextInputLabelPassword}>
-            <div className={styles.TextInputSpacer} />
-            <a className={styles.TextInputHref} href={passwordLink}>
-              {passwordText}
-            </a>
-          </div>
-        )}
-      </div>
+        {password &&
+          <div className={styles.TextInputPassword}>
+          <div className={styles.TextInputSpacer} />
+          <a className={styles.TextInputHref} href={passwordLink}>{passwordText}</a>
+        </div>
+        }
+        </div>
     </div>
   )
 }
