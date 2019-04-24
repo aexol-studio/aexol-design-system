@@ -89,7 +89,7 @@ export const Button = style({
     },
     '&.secondary2': {
       backgroundColor: 'transparent',
-      color: Colors['Black Hole'],
+      color: Colors['Ancient Stone'],
       border: `2px solid ${Colors['Ancient Stone']}`,
       transition: vars.transition,
       $nest: {
