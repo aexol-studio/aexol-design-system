@@ -1,4 +1,8 @@
-export const Colors = {
+export interface IColor {
+  [key: string]: string;
+}
+
+export const Colors: IColor = {
   /* Black*/
 
   ['Black']: '#000000',

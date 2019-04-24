@@ -1,13 +1,15 @@
 import * as React from 'react'
-import { H1, H3 } from './typography'
+import { H1, H3, H4 } from './typography'
 import { Button } from './Button'
 import * as classnames from 'classnames'
 import * as styles from './styles/HeroStyles'
 import { Colors } from './styles/Colors'
 
 export interface IHeroBackImgWithTileProps {
-  headerText: string
-  paragraphText: string
+  headerText: string | JSX.Element
+  paragraphText: string | JSX.Element
+  paragraphColor?: keyof typeof Colors
+  paragraphTextLength?: 'short' | 'long'
   buttonText: string
   tilePosition?: 'left' | 'right'
   buttonOnClick: (e: HTMLButtonElement) => void
@@ -22,6 +24,8 @@ export const HeroBackImgWithTile: React.FunctionComponent<
   const {
     headerText,
     paragraphText,
+    paragraphColor = 'Androgyn',
+    paragraphTextLength = 'short',
     buttonText,
     buttonOnClick,
     backgroundFile,
@@ -47,15 +51,25 @@ export const HeroBackImgWithTile: React.FunctionComponent<
             <H1 style={{ color: Colors['Dark Side'], marginBottom: 6 }}>
               {headerText}
             </H1>
+            {paragraphTextLength === 'short' &&
             <H3
               style={{
-                color: Colors.Androgyn,
+                color: Colors[paragraphColor],
                 marginBottom: 16,
                 lineHeight: '34px'
               }}
             >
               {paragraphText}
-            </H3>
+            </H3>}
+            {paragraphTextLength === 'long' &&
+            <H4
+              style={{
+                color: Colors[paragraphColor],
+                marginBottom: 16
+              }}
+            >
+              {paragraphText}
+            </H4>}
             <Button onClick={buttonOnClick}>{buttonText}</Button>
           </div>
         </div>
