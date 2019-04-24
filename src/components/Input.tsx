@@ -12,7 +12,7 @@ export interface IInputProps {
   fullWidth?: boolean;
   style?: React.CSSProperties;
   password?: boolean;
-  passwordText: string;
+  passwordText?: string;
   passwordLink?: string;
 }
 
