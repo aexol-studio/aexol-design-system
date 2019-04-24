@@ -1,12 +1,14 @@
 import * as React from 'react'
-import { H1, H3 } from './typography'
+import { H1, H3, H4 } from './typography'
 import { Button } from './Button'
 import * as styles from './styles/HeroStyles'
 import { Colors } from './styles/Colors'
 
 export interface IHero2ImgProps {
-  headerText: string
-  paragraphText: string
+  headerText: string | JSX.Element
+  paragraphText: string | JSX.Element
+  paragraphColor?: keyof typeof Colors
+  paragraphTextLength?: 'short' | 'long'
   buttonText: string
   buttonOnClick: (e: HTMLButtonElement) => void
   imgFile1: React.ReactNode
@@ -19,6 +21,8 @@ export const Hero2Img: React.FunctionComponent<IHero2ImgProps> = props => {
   const {
     headerText,
     paragraphText,
+    paragraphColor = 'Androgyn',
+    paragraphTextLength = 'short',
     buttonText,
     buttonOnClick,
     imgFile1,
@@ -43,15 +47,25 @@ export const Hero2Img: React.FunctionComponent<IHero2ImgProps> = props => {
             <H1 style={{ color: Colors['Dark Side'], marginBottom: 6 }}>
               {headerText}
             </H1>
+            {paragraphTextLength === 'short' &&
             <H3
               style={{
-                color: Colors.Androgyn,
+                color: Colors[paragraphColor],
                 marginBottom: 16,
                 lineHeight: '34px'
               }}
             >
               {paragraphText}
-            </H3>
+            </H3>}
+            {paragraphTextLength === 'long' &&
+            <H4
+              style={{
+                color: Colors[paragraphColor],
+                marginBottom: 16
+              }}
+            >
+              {paragraphText}
+            </H4>}
             <Button onClick={buttonOnClick}>{buttonText}</Button>
           </div>
           <div className={styles.ImgContent}>

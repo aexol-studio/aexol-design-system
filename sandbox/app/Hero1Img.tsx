@@ -10,7 +10,9 @@ class Hero1Imgview extends React.PureComponent<IProps> {
     return (
       <Hero1Img
         headerText="GraphQL Workshops"
-        paragraphText="Tailored Specially For Your Company Needs & With Core Team."
+        paragraphText={<React.Fragment>Tailored Specially For Your Company Needs & <br />With Core Team.</React.Fragment>}
+        paragraphTextLength="long"
+        paragraphColor={"Ashes"}
         buttonText="Try it!"
         buttonOnClick={() => console.log('click')}
         imgFile={<img src="https://via.placeholder.com/668x569" style={{maxWidth: '100%', maxHeight: '100%', objectFit: 'contain'}} />}

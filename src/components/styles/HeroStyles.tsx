@@ -28,13 +28,13 @@ export const TextContent = style(
   {
     display: 'flex',
     flexDirection: 'column',
-    width: '25%',
+    width: '40%',
     maxWidth: 450
   },
   media(
     { minWidth: Breakpoints.Tablet, maxWidth: Breakpoints.Laptop },
     {
-      width: '35%'
+      width: '45%'
     }
   ),
   media(
@@ -47,22 +47,24 @@ export const TextContent = style(
 
 export const Img = style(
   {
-    width: '70%',
+    width: '55%',
     height: '85%',
     alignSelf: 'flex-end',
     display: 'flex',
     justifyContent: 'flex-end',
+    alignItems: 'flex-end',
     $nest: {
       '&.center': {
         height: '80%',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        alignItems: 'center'
       }
     }
   },
   media(
     { minWidth: Breakpoints.Tablet, maxWidth: Breakpoints.Laptop },
     {
-      width: '60%'
+      width: '55%'
     }
   ),
   media(
