@@ -28,6 +28,7 @@ export { ContentWithTile } from './ContentWithTile'
 export { Checkbox } from './Checkbox'
 export { WhiteTile } from './WhiteTile'
 export { LoadingButton } from './LoadingButton'
+export { WorkshopDay } from './WorkshopDay'
 export {
   Dropdown,
   DropdownButton,
