@@ -7,14 +7,14 @@ import { Colors } from './styles/Colors'
 export interface ICardComponentProps {
   boxText: string
   boxTitle: string
-  icon?: JSX.Element
+  barColor?: keyof typeof Colors
   style?: React.CSSProperties
 }
 
 export const CardComponent: React.FunctionComponent<
   ICardComponentProps
 > = props => {
-  const { boxText, boxTitle, icon, style, ...restProps } = props
+  const { boxText, boxTitle, barColor = 'Mars', style, ...restProps } = props
 
   return (
     <div
@@ -22,18 +22,17 @@ export const CardComponent: React.FunctionComponent<
       style={style}
       {...restProps}
     >
-      {icon && <div className={styles.logo}>{icon}</div>}
+      <H4 style={{ marginBottom: 15 }}>{boxTitle}</H4>
       <div className={styles.rectangle}>
         <div className={styles.rectangle1} />
-        <div className={styles.rectangle2} />
+        <div
+          className={styles.rectangle2}
+          style={{ backgroundColor: Colors[barColor] }}
+        />
       </div>
-
-      <div className={styles.boxTitle}>
-        <H4 style={{ color: Colors['Black Hole'] }}>{boxTitle}</H4>
-      </div>
-      <div className={styles.boxText}>
-        <PMedium>{boxText}</PMedium>
-      </div>
+      <PMedium style={{ marginTop: 19, color: Colors.Androgyn }}>
+        {boxText}
+      </PMedium>
     </div>
   )
 }
