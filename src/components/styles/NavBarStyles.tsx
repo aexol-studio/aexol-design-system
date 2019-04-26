@@ -37,7 +37,7 @@ export const ContentContainer = style(
 export const LinkContainer = style(
   {
     $nest: {
-      'a': {
+      "a": {
         marginRight: 20,
         color: Colors['Ancient Stone'],
         textDecoration: 'none',
@@ -138,7 +138,10 @@ export const Bar = style({
 
 export const LogoContainer = style(
   {
-    width: '10%',
+    width: '15%',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
     marginRight: 'auto'
   },
   media(

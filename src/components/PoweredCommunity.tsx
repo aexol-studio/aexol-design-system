@@ -2,7 +2,6 @@ import * as React from 'react'
 import { ICommunityCardProps, CommunityCard } from './CommunityCard'
 import { H2, H4, P } from './typography'
 import { Colors } from './styles/Colors'
-import { GraphQL } from './icons'
 import * as styles from './styles/PoweredCommunityStyles'
 
 export interface IPoweredCommunityProps {
@@ -48,7 +47,10 @@ export const PoweredCommunity: React.FunctionComponent<
       {...restProps}
     >
       <div className={styles.Header}>
-        <GraphQL />
+        <img
+          src={require('../assets/images/logo.png')}
+          style={{ height: 80 }}
+        />
         <div className={styles.HeaderLine} />
         <H2 style={{ color: Colors.Ashes }}>{header}</H2>
       </div>
@@ -56,12 +58,20 @@ export const PoweredCommunity: React.FunctionComponent<
         {cards.map((el, idx) => renderCards(el, idx))}
       </div>
       {bigText && (
-        <H4 style={{ color: Colors['Dark Side'], marginBottom: 16, textAlign: 'center' }}>
+        <H4
+          style={{
+            color: Colors['Dark Side'],
+            marginBottom: 16,
+            textAlign: 'center'
+          }}
+        >
           {bigText}
         </H4>
       )}
       {smallText && (
-        <P style={{ color: Colors['Ancient Stone'], textAlign: 'center' }}>{smallText}</P>
+        <P style={{ color: Colors['Ancient Stone'], textAlign: 'center' }}>
+          {smallText}
+        </P>
       )}
     </div>
   )

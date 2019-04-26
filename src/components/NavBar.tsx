@@ -8,6 +8,7 @@ export interface INavBarProps {
   buttonText: string
   children: string | React.ReactChildren | React.ReactNode
   logo?: React.ReactNode
+  logoHref?: string
   color?: 'white' | 'black' | 'light'
   style?: React.CSSProperties
 }
@@ -35,7 +36,15 @@ export class NavBar extends React.PureComponent<INavBarProps, NavBarState> {
   }
 
   render() {
-    const { color, onClick, logo, buttonText, style, ...restProps } = this.props
+    const {
+      color,
+      onClick,
+      logo,
+      logoHref,
+      buttonText,
+      style,
+      ...restProps
+    } = this.props
 
     return (
       <div
@@ -60,7 +69,9 @@ export class NavBar extends React.PureComponent<INavBarProps, NavBarState> {
               <div key={i} className={classnames(styles.Bar, color)} />
             ))}
           </div>
-          <div className={styles.LogoContainer}>{logo}</div>
+          <a className={styles.LogoContainer} href={logoHref}>
+            {logo}
+          </a>
           <div className={styles.ContentContainer}>
             <div className={classnames(styles.LinkContainer, color)}>
               {this.props.children}
