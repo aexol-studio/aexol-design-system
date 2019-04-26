@@ -4,8 +4,9 @@ import * as styles from './styles/InputStyle'
 export interface IInputProps {
   type?: string;
   label?: string;
-  starLabel?: string;
+  starLabel?: boolean;
   placeholder?: string;
+  maxLength?: number;
   required?: boolean;
   onChange?: (value: string) => void;
   width?: number;
@@ -28,6 +29,7 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
     password = false,
     passwordLink,
     passwordText,
+    maxLength,
     onChange,
     width,
     fullWidth,
@@ -48,34 +50,35 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
         ...style
       }}
     >
-    <div className={styles.TextInputLabelDiv}>
-    {label &&
-        <label
-          className={styles.TextInputLabel}
-        >
-          {label}
-        </label>
-      }
-      {starLabel &&
-      <span className={styles.TextInputStar}>*</span>
-      }
-    </div>
+      <div className={styles.TextInputLabelDiv}>
+        {label &&
+          <label
+            className={styles.TextInputLabel}
+          >
+            {label}
+          </label>
+        }
+        {starLabel &&
+          <span className={styles.TextInputStar}>*</span>
+        }
+      </div>
       <div className={styles.TextInputDiv}>
         <input
           type={type || 'text'}
           className={styles.TextInput}
           onChange={handleChange}
+          maxLength={maxLength}
           placeholder={placeholder}
           required={required}
           {...restProps}
         />
         {password &&
           <div className={styles.TextInputPassword}>
-          <div className={styles.TextInputSpacer} />
-          <a className={styles.TextInputHref} href={passwordLink}>{passwordText}</a>
-        </div>
+            <div className={styles.TextInputSpacer} />
+            <a className={styles.TextInputHref} href={passwordLink}>{passwordText}</a>
+          </div>
         }
-        </div>
+      </div>
     </div>
   )
 }

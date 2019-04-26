@@ -35,9 +35,10 @@ export const TextInput = style({
   color: Colors.Ashes,
   paddingTop: 19,
   paddingBottom: 13,
-  paddingLeft: 18,
+  paddingRight: 22,
   border: '1px solid rgba(0, 0, 0, 0.12)',
   borderRadius: 4,
+  textAlign: 'center',
   outline: 0,
   boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
   $nest: {
@@ -46,6 +47,7 @@ export const TextInput = style({
       color: `${Colors.Ashes}`
     },
     [`&::placeholder`]: {
+      textAlign: 'center',
       color: `${Colors.Ashes}`
     }
   }
