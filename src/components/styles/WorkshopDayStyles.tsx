@@ -23,7 +23,7 @@ export const WorkshopDayHeader = style({
 export const List = style({
   color: Colors.Lead,
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'column'
 })
 
 export const ListEl = style({
@@ -35,4 +35,3 @@ export const ListEl = style({
     }
   }
 })
-

@@ -20,7 +20,6 @@ const wave = keyframes({
   }
 })
 
-
 export const Button = style({
   display: 'flex',
   justifyContent: 'center',
@@ -116,7 +115,6 @@ export const ButtonLink = style({
   textDecoration: 'none',
   color: 'inherit',
   width: '100%',
-  height: '100%',
   $nest: {
     '&:hover': {
       color: 'inherit',
