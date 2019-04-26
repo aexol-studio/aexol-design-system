@@ -73,7 +73,7 @@ export const Input: React.FunctionComponent<IInputProps> = (props) => {
           {...restProps}
         />
         {password &&
-          <div className={styles.TextInputPassword}>
+          <div className={styles.TextInputLabelPassword}>
             <div className={styles.TextInputSpacer} />
             <a className={styles.TextInputHref} href={passwordLink}>{passwordText}</a>
           </div>
