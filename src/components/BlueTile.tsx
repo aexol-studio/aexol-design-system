@@ -9,6 +9,8 @@ export interface BlueTileComponentProps {
   BlueTileHeaderParagraph: string
   envelope?: string
   children?: React.ReactNode
+  isVisible?: boolean
+  ContactImg?: string
 }
 
 export const BlueTile: React.FunctionComponent<
@@ -18,6 +20,8 @@ export const BlueTile: React.FunctionComponent<
     BlueTileHeader,
     BlueTileHeaderParagraph,
     envelope,
+    ContactImg = require('../assets/images/ContactRequest1@2x.png'),
+    isVisible,
     ...restProps
   } = props
 
@@ -27,7 +31,20 @@ export const BlueTile: React.FunctionComponent<
         <div className={styles.TileContent}>
           <div className={styles.TileLeftContent}>{props.children}</div>
           <div className={styles.TileRightContent}>
-            <div className={styles.TileRightEvelope}>{envelope}</div>
+            {isVisible && (
+              <div className={styles.TileRightEvelope}>
+                <img
+                  src={ContactImg}
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain'
+                  }}
+                />
+                {envelope}
+              </div>
+            )}
+
             <div className={styles.TileRightHeader}>
               <H1>{BlueTileHeader}</H1>
             </div>
