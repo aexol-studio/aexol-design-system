@@ -68,6 +68,11 @@ cssRaw(`*{font-family: 'Helvetica Neue'}`)
 cssRaw(`*{font-size: ${defaultFont}px}`)
 cssRaw(`*{font-weight: 450}`)
 cssRaw(`*{box-sizing: border-box}`)
-cssRaw(`*{-moz-osx-font-smoothing: grayscale}`)
-cssRaw(`*{-webkit-font-smoothing: antialiased}`)
-cssRaw(`*{textRendering: optimizeLegibility,}`)
+cssRaw(`
+  html,body{
+    scroll-behavior: smooth;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+`)
