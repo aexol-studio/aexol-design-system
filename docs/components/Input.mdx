@@ -14,31 +14,22 @@ import { Input } from '../../src/components'
 ##Basic usage
 
 <Playground style={{ backgroundColor: '#DFE6F7' }}>
+  <Input placeholder="Enter your first name" type="text" />
+  <Input label="E-mail" placeholder="Enter your e-mail address" type="email" />
   <Input
- placeholder='Enter your first name'
- type='text'
- starLabel={false}
+    label="Number"
+    starLabel={true}
+    placeholder="Enter your number"
+    type="number"
   />
   <Input
- label="E-mail"
- starLabel={true}
- placeholder='Enter your e-mail address'
- type='email'
-  />
-  <Input
- label="Number"
- starLabel={true}
- placeholder='Enter your number'
- type='number'
-  />
-  <Input
- starLabel={true}
- label="Password"
- placeholder='Enter your password'
- type='password'
- password = {true}
- maxLength = '40'
- passwordLink="google.pl"
- passwordText="Forgot?"
+    label="Password"
+    starLabel={true}
+    placeholder="Enter your password"
+    type="password"
+    password={true}
+    maxLength="40"
+    passwordLink="google.pl"
+    passwordText="Forgot?"
   />
 </Playground>
