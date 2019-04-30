@@ -33,7 +33,18 @@ export const Popup = style(
       transform: 'rotate(-90deg) translate(30px, 0)',
       width: 170,
       bottom: 85,
-      left: -80
+      left: -80,
+      $nest: {
+        '&.long': {
+          bottom: 60
+        },
+        '&.top': {
+          bottom: 80
+        },
+        '&.toplong': {
+          bottom: 75
+        }
+      }
     }
   )
 )

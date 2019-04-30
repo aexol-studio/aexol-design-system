@@ -143,17 +143,25 @@ export const HeroBackImgWithTile = classes(
 
 export const TextContent4 = classes(
   TextContent,
-  style({
-    width: '50%',
-    maxWidth: 570,
-    padding: '30px 70px 30px 50px',
-    backgroundColor: Colors.White,
-    $nest: {
-      '&.right': {
-        marginLeft: 'auto'
+  style(
+    {
+      width: '50%',
+      maxWidth: 570,
+      padding: '30px 70px 30px 50px',
+      backgroundColor: Colors.White,
+      $nest: {
+        '&.right': {
+          marginLeft: 'auto'
+        }
       }
-    }
-  })
+    },
+    media(
+      { maxWidth: Breakpoints.Phone },
+      {
+        padding: 30
+      }
+    )
+  )
 )
 
 export const TextContent5 = classes(
@@ -216,4 +224,37 @@ export const Img4 = classes(
   style({
     height: '80%'
   })
+)
+
+export const HeroHeader = style(
+  {
+    color: Colors['Dark Side'],
+    marginBottom: 6,
+    lineHeight: `48px`,
+    fontSize: 50,
+    fontFamily: 'Helvetica Neue-Bold'
+  },
+  media(
+    { maxWidth: Breakpoints.Phone },
+    {
+      fontSize: 37,
+      lineHeight: '42px'
+    }
+  )
+)
+
+export const HeroParagraph = style(
+  {
+    fontSize: 28,
+    fontFamily: 'Helvetica Neue-Bold',
+    marginBottom: 16,
+    lineHeight: '34px'
+  },
+  media(
+    { maxWidth: Breakpoints.Phone },
+    {
+      fontSize: 21,
+      lineHeight: '28px'
+    }
+  )
 )

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { H1, H3, H4 } from './typography'
+import { H4 } from './typography'
 import { Button } from './Button'
 import * as classnames from 'classnames'
 import * as styles from './styles/HeroStyles'
@@ -48,28 +48,27 @@ export const HeroBackImgWithTile: React.FunctionComponent<
       <div className={styles.HeroContainer}>
         <div className={styles.HeroContent}>
           <div className={classnames(styles.TextContent4, tilePosition)}>
-            <H1 style={{ color: Colors['Dark Side'], marginBottom: 6 }}>
-              {headerText}
-            </H1>
-            {paragraphTextLength === 'short' &&
-            <H3
-              style={{
-                color: Colors[paragraphColor],
-                marginBottom: 16,
-                lineHeight: '34px'
-              }}
-            >
-              {paragraphText}
-            </H3>}
-            {paragraphTextLength === 'long' &&
-            <H4
-              style={{
-                color: Colors[paragraphColor],
-                marginBottom: 16
-              }}
-            >
-              {paragraphText}
-            </H4>}
+            <div className={styles.HeroHeader}>{headerText}</div>
+            {paragraphTextLength === 'short' && (
+              <div
+                className={styles.HeroParagraph}
+                style={{
+                  color: Colors[paragraphColor]
+                }}
+              >
+                {paragraphText}
+              </div>
+            )}
+            {paragraphTextLength === 'long' && (
+              <H4
+                style={{
+                  color: Colors[paragraphColor],
+                  marginBottom: 16
+                }}
+              >
+                {paragraphText}
+              </H4>
+            )}
             <Button onClick={buttonOnClick}>{buttonText}</Button>
           </div>
         </div>

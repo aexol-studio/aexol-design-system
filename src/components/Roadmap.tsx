@@ -72,6 +72,7 @@ export const Roadmap: React.FunctionComponent<IRoadmapProps> = props => {
           titlePosition={
             idx === 2 ? 'topRight' : idx === 4 || idx === 6 ? 'top' : 'bottom'
           }
+          pointPosition={idx === 2 || idx === 6 ? 'top' : 'bottom'}
         />
         {idx === props.points.length - 1 &&
           idx === 7 &&

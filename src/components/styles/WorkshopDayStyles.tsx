@@ -1,13 +1,22 @@
-import { style } from 'typestyle'
+import { style, media } from 'typestyle'
 import { Colors } from './Colors'
+import { Breakpoints } from './Breakpoints'
 
-export const WorkshopDayContainer = style({
-  $debugName: 'WorkshopDay',
-  backgroundColor: Colors.White,
-  width: 368,
-  borderRadius: 8,
-  padding: '32px 20px'
-})
+export const WorkshopDayContainer = style(
+  {
+    $debugName: 'WorkshopDay',
+    backgroundColor: Colors.White,
+    width: 368,
+    borderRadius: 8,
+    padding: '32px 20px'
+  },
+  media(
+    { maxWidth: Breakpoints.Phone },
+    {
+      width: '100%'
+    }
+  )
+)
 
 export const WorkshopDayHeader = style({
   borderRadius: 2,

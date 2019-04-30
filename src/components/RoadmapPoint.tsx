@@ -6,6 +6,7 @@ import * as styles from './styles/RoadmapStyle'
 type Point = 'small' | 'big'
 type Color = 'gradient' | 'blue'
 type Position = 'bottom' | 'topRight' | 'top'
+type PointPosition = 'bottom' | 'top'
 
 export interface IRoadmapPointProps {
   idx: number
@@ -14,6 +15,7 @@ export interface IRoadmapPointProps {
   done: boolean
   title: string
   titlePosition?: Position
+  pointPosition?: PointPosition
   header: string
   text: string
   style?: React.CSSProperties
@@ -22,7 +24,16 @@ export interface IRoadmapPointProps {
 export const RoadmapPoint: React.FunctionComponent<
   IRoadmapPointProps
 > = props => {
-  const { header, text, title, titlePosition, pointColor, done, style } = props
+  const {
+    header,
+    text,
+    title,
+    titlePosition,
+    pointPosition,
+    pointColor,
+    done,
+    style
+  } = props
 
   const renderPoint = () => {
     const { pointColor = 'gradient', point = 'small', idx, done } = props
@@ -88,7 +99,16 @@ export const RoadmapPoint: React.FunctionComponent<
   return (
     <div className={styles.Point}>
       {renderPoint()}
-      <div className={classnames(styles.Popup, pointColor)} style={style}>
+      <div
+        className={classnames(
+          classnames(styles.Popup, pointColor, pointPosition),
+          classnames({
+            long: text.length > 100,
+            toplong: text.length > 100 && pointPosition === 'top'
+          })
+        )}
+        style={style}
+      >
         <div className={classnames(styles.Header, pointColor)}>{header}</div>
         <div className={classnames(styles.Text, pointColor)}>{text}</div>
       </div>
