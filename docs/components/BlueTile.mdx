@@ -16,8 +16,8 @@ import { WhiteTile } from '../../src/components'
 
 <Playground style={{ backgroundColor: '#DFE6F7' }}>
   <BlueTile
+    isVisible={true}
     BlueTileHeader="If you need a custom solution, please contact us here."
-    envelope=""
     BlueTileHeaderParagraph="Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
   >
     <WhiteTile
@@ -41,7 +41,8 @@ import { WhiteTile } from '../../src/components'
       InputTextName = {{
         labelName:"First Name",
         placeholderName:"Enter your first name",
-        type:"text"
+        type:"text",
+        starLabel:true
         }}
 
       InputTextEmail = {{

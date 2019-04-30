@@ -121,11 +121,11 @@ export const TileRightEvelope = style(
     display: 'flex',
     height: 489,
     width: 355,
-    top: 0,
-    background: 'white'
+    marginBottom: 24,
+    top: 0
   },
   media(
-    { minWidth: 0, maxWidth: 1242 },
+    { minWidth: 0, maxWidth: 1332 },
     {
       display: 'none'
     }
