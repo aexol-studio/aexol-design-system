@@ -49,7 +49,7 @@ export const TextInput = style({
   }
 })
 
-export const TextInputPassword = style({
+export const TextInputLabelPassword = style({
   $debugName: 'TextInputPassword',
   marginLeft: -100,
   zIndex: 1,
