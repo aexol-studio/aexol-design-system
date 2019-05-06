@@ -14,13 +14,6 @@ type SelectComumnsTxt = {
   label: string
 }
 
-type WhiteTileParagraph = {
-  type?: string
-}
-type WhiteButtonText = {
-  type?: string
-}
-
 type InputTextName = {
   labelName: string
   placeholderName?: string
@@ -50,8 +43,8 @@ export interface WhiteTileProps {
   InputTextEmail: InputTextEmail
   CheckboxTextFirst: CheckboxTextFirst
   CheckboxTextSecond: CheckboxTextSecond
-  WhiteTileParagraph: WhiteTileParagraph
-  WhiteButtonText: WhiteButtonText
+  WhiteTileParagraph: string
+  WhiteButtonText: string
 }
 
 export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
