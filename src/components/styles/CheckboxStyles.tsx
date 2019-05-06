@@ -9,8 +9,11 @@ export const Checkbox = style({
 })
 
 export const CheckboxParagraph = style({
+  $debugName: 'CheckboxParagraph',
   fontFamily: 'Helvetica Neue',
-  fontSize: 12
+  fontSize: 12,
+  marginTop: 0,
+  marginBottom: 0
 })
 
 export const CheckboxElement = style({
