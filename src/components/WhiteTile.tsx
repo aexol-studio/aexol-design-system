@@ -24,12 +24,14 @@ type WhiteButtonText = {
 type InputTextName = {
   labelName: string
   placeholderName?: string
-  type?: string
+  type?: string,
+  starLabel?: boolean
 }
 type InputTextEmail = {
   labelEmail: string
   placeholderEmail?: string
   type?: string
+  starLabel?: boolean
 }
 
 type CheckboxTextFirst = {
@@ -70,11 +72,13 @@ export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
           label={InputTextName.labelName}
           placeholder={InputTextName.placeholderName}
           type={InputTextName.type}
+          starLabel={InputTextName.starLabel}
         />
         <Input
           label={InputTextEmail.labelEmail}
           placeholder={InputTextEmail.placeholderEmail}
           type={InputTextEmail.type}
+          starLabel={InputTextEmail.starLabel}
         />
         <div className={styles.WhiteTileSelectContent}>
           <Select
