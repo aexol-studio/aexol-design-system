@@ -48,8 +48,12 @@ export const PoweredCommunity: React.FunctionComponent<
     >
       <div className={styles.Header}>
         <img
+          src={require('../assets/images/logoText.png')}
+          className={styles.HeaderImage}
+        />
+        <img
           src={require('../assets/images/logo.png')}
-          style={{ height: 80 }}
+          className={styles.HeaderImagePhone}
         />
         <div className={styles.HeaderLine} />
         <H2 style={{ color: Colors.Ashes }}>{header}</H2>

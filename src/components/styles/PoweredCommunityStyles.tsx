@@ -81,3 +81,27 @@ export const HeaderLine = style({
   backgroundColor: Colors.Mora,
   marginTop: 2
 })
+
+export const HeaderImage = style({
+  height: 80,
+  margin: 0,
+  display: 'block'
+},
+media(
+  { maxWidth: Breakpoints.Phone },
+  {
+    display: 'none'
+  }
+))
+
+export const HeaderImagePhone = style({
+  display: 'none'
+},
+media(
+  { maxWidth: Breakpoints.Phone },
+  {
+    display: 'block',
+    height: 80,
+    margin: 0
+  }
+))

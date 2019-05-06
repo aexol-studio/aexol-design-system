@@ -37,7 +37,7 @@ export const ContentContainer = style(
 export const LinkContainer = style(
   {
     $nest: {
-      "a": {
+      'a': {
         marginRight: 20,
         color: Colors['Ancient Stone'],
         textDecoration: 'none',
@@ -138,7 +138,7 @@ export const Bar = style({
 
 export const LogoContainer = style(
   {
-    width: '15%',
+    width: '20%',
     height: '100%',
     display: 'flex',
     alignItems: 'center',
@@ -147,7 +147,7 @@ export const LogoContainer = style(
   media(
     { minWidth: Breakpoints.Phone, maxWidth: Breakpoints.Tablet },
     {
-      width: '20%',
+      width: '30%',
       marginRight: 0,
       marginLeft: 'auto'
     }
@@ -155,7 +155,7 @@ export const LogoContainer = style(
   media(
     { maxWidth: Breakpoints.Phone },
     {
-      width: '30%',
+      width: '45%',
       marginRight: 0,
       marginLeft: 'auto'
     }
