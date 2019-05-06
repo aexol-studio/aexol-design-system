@@ -5,7 +5,6 @@ import { Input } from './Input'
 import { Checkbox } from './Checkbox'
 import { Button } from './Button'
 import { Select } from './Select'
-import { P } from './typography'
 type SelectComumnsTxt = {
   options: Array<{
     value: number
