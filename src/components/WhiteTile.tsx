@@ -16,10 +16,10 @@ type SelectComumnsTxt = {
 }
 
 type WhiteTileParagraph = {
-  type: string
+  type?: string
 }
 type WhiteButtonText = {
-  type: string
+  type?: string
 }
 
 type InputTextName = {
