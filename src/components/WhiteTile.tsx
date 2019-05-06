@@ -5,7 +5,6 @@ import { Input } from './Input'
 import { Checkbox } from './Checkbox'
 import { Button } from './Button'
 import { Select } from './Select'
-import { P } from './typography'
 type SelectComumnsTxt = {
   options: Array<{
     value: number
@@ -16,10 +15,10 @@ type SelectComumnsTxt = {
 }
 
 type WhiteTileParagraph = {
-  type: string
+  type?: string
 }
 type WhiteButtonText = {
-  type: string
+  type?: string
 }
 
 type InputTextName = {
@@ -104,7 +103,7 @@ export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
           </div>
           <div className={styles.WhiteTileCheckboxContentButton}>
             <Button>
-              <P>{WhiteButtonText}</P>
+              {WhiteButtonText}
             </Button>
           </div>
         </div>
