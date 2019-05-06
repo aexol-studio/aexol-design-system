@@ -104,7 +104,7 @@ export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
           </div>
           <div className={styles.WhiteTileCheckboxContentButton}>
             <Button>
-              <P>{WhiteButtonText}</P>
+              {WhiteButtonText}
             </Button>
           </div>
         </div>
