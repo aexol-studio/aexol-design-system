@@ -11,17 +11,22 @@ export const BlueTileContainer = style(
   {
     $debugName: 'BlueTileContainer',
     maxHeight: '100%',
+    width: vars.containerWidth,
+    maxWidth: vars.maxWidth,
+    margin: '0 auto',
     height: 820,
     paddingTop: 80,
     paddingBottom: 80,
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'space-between'
   },
   media(
     { minWidth: 0, maxWidth: 1090 },
     {
       paddingTop: 0,
-      paddingBottom: 0
+      paddingBottom: 0,
+      justifyContent: 'center',
+      width: '100%'
     }
   )
 )
@@ -32,13 +37,13 @@ export const TileContent = style(
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: vars.containerWidth,
     height: '100%'
   },
   media(
     { minWidth: 0, maxWidth: 1090 },
     {
-      flexDirection: 'column-reverse'
+      flexDirection: 'column-reverse',
+      justifyContent: 'space-around'
     }
   )
 )
@@ -54,7 +59,8 @@ export const TileLeftContent = style(
     { minWidth: 0, maxWidth: 1090 },
     {
       marginRight: 0,
-      marginBottom: 25
+      marginBottom: 25,
+      justifyContent: 'center'
     }
   )
 )
@@ -93,9 +99,10 @@ export const TileRightHeader = style(
     {
       marginTop: 0,
       maxWidth: 464,
+      textAlign: 'center',
       $nest: {
         H1: {
-          fontSize: '40px'
+          fontSize: '37px'
         }
       }
     }
@@ -119,15 +126,27 @@ export const TileRightEvelope = style(
   {
     $debugName: 'TileRightEvelope',
     display: 'flex',
+    paddingLeft: 90,
     height: 489,
-    width: 355,
     marginBottom: 24,
     top: 0
   },
   media(
-    { minWidth: 0, maxWidth: 1332 },
+    { minWidth: 0, maxWidth: 1400 },
     {
-      display: 'none'
-    }
-  )
+      paddingLeft: 0
+    }),
+    media (
+      {maxWidth: 1109},
+      {
+        marginBottom: 5,
+        maxHeight: '80%'
+      }
+    ),
+    media (
+      {maxWidth: 1090},
+      {
+        display: 'none'
+      }
+    )
 )
