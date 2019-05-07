@@ -5,7 +5,7 @@ export const TextInputContainer = style({
   $debugName: 'TextInputContainer',
   display: 'flex',
   flexDirection: 'column',
-  marginBottom: 15
+  marginBottom: 6
 })
 
 export const TextInputLabelDiv = style({
@@ -16,11 +16,10 @@ export const TextInputLabelDiv = style({
 export const TextInputLabel = style({
   $debugName: 'TextInputLabel',
   fontFamily: 'Helvetica Neue',
-  lineHeight: 2,
+  lineHeight: '16px',
   marginLeft: 3,
   marginBottom: 4,
-  fontSize: 12,
-  fontWeight: 'bold'
+  fontSize: 12
 })
 
 export const TextInputStar = style({
