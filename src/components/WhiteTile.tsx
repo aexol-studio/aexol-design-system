@@ -14,6 +14,11 @@ type SelectComumnsTxt = {
   label: string
 }
 
+type WhiteTileButton = {
+  href?: string,
+  target?: string
+}
+
 type InputTextName = {
   labelName: string
   placeholderName?: string
@@ -45,6 +50,7 @@ export interface WhiteTileProps {
   CheckboxTextSecond: CheckboxTextSecond
   WhiteTileParagraph: string
   WhiteButtonText: string
+  WhiteTileButton: WhiteTileButton
 }
 
 export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
@@ -55,7 +61,8 @@ export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
     CheckboxTextFirst,
     CheckboxTextSecond,
     WhiteTileParagraph,
-    WhiteButtonText
+    WhiteButtonText,
+    WhiteTileButton
   } = props
 
   return (
@@ -102,7 +109,9 @@ export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
             </p>
           </div>
           <div className={styles.WhiteTileCheckboxContentButton}>
-            <Button>{WhiteButtonText}</Button>
+            <Button href={WhiteTileButton.href}>
+            {WhiteButtonText}
+            </Button>
           </div>
         </div>
       </div>
