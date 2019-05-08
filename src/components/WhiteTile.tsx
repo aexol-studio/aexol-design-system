@@ -51,6 +51,7 @@ export interface WhiteTileProps {
   WhiteTileParagraph: string
   WhiteButtonText: string
   WhiteTileButton: WhiteTileButton
+  onChange?: (value: string) => void
 }
 
 export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
@@ -62,13 +63,21 @@ export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
     CheckboxTextSecond,
     WhiteTileParagraph,
     WhiteButtonText,
-    WhiteTileButton
+    WhiteTileButton,
+    onChange
   } = props
+
+  const inputChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
+    if (onChange) {
+      onChange(e.currentTarget.value)
+    }
+  }
 
   return (
     <div className={classnames(styles.WhiteTileMain)}>
       <div className={styles.WhiteTileContent}>
         <Input
+          onChange={inputChange}
           label={InputTextName.labelName}
           placeholder={InputTextName.placeholderName}
           type={InputTextName.type}
