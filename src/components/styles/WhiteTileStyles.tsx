@@ -1,4 +1,4 @@
-import { style } from 'typestyle'
+import { style, media } from 'typestyle'
 import { Colors } from './Colors'
 
 export const WhiteTileMain = style({
@@ -11,14 +11,24 @@ export const WhiteTileMain = style({
   height: 614,
   boxShadow: '8px 8px 32px rgba(81, 78, 90, 0.6)',
   justifyContent: 'center'
-})
+},  media(
+  { minWidth: 0, maxWidth: 535 },
+  {
+    width: '80%'
+  }
+))
 
 export const WhiteTileContent = style({
   $debugName: 'WhiteTileContent',
   display: 'flex',
   flexDirection: 'column',
   width: 390
-})
+},  media(
+  { minWidth: 0, maxWidth: 535 },
+  {
+    width: '80%'
+  }
+))
 
 export const WhiteTileCheckboxContent = style({
   $debugName: 'WhiteTileCheckboxContent',

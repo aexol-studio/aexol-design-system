@@ -17,7 +17,7 @@ type SelectComumnsTxt = {
 type InputTextName = {
   labelName: string
   placeholderName?: string
-  type?: string,
+  type?: string
   starLabel?: boolean
 }
 type InputTextEmail = {
@@ -75,6 +75,9 @@ export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
         />
         <div className={styles.WhiteTileSelectContent}>
           <Select
+            style={{
+              width: '100%'
+            }}
             options={SelectComumnsTxt.options}
             label={SelectComumnsTxt.label}
             placeholder={SelectComumnsTxt.placeholder}
@@ -99,9 +102,7 @@ export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
             </p>
           </div>
           <div className={styles.WhiteTileCheckboxContentButton}>
-            <Button>
-              {WhiteButtonText}
-            </Button>
+            <Button>{WhiteButtonText}</Button>
           </div>
         </div>
       </div>
