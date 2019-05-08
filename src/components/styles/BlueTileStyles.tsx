@@ -60,7 +60,8 @@ export const TileLeftContent = style(
     {
       marginRight: 0,
       marginBottom: 25,
-      justifyContent: 'center'
+      justifyContent: 'center',
+      width: '100%'
     }
   )
 )
