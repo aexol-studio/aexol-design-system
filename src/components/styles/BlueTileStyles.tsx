@@ -81,7 +81,7 @@ export const TileRightContent = style(
       display: 'flex',
       alignSelf: 'center',
       marginLeft: 0,
-      maxWidth: 521,
+      maxWidth: '80%',
       marginBottom: 0,
       paddingTop: 20
     }
