@@ -77,6 +77,7 @@ export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
     <div className={classnames(styles.WhiteTileMain)}>
       <div className={styles.WhiteTileContent}>
         <Input
+          onChange={inputChange}
           label={InputTextName.labelName}
           placeholder={InputTextName.placeholderName}
           type={InputTextName.type}
