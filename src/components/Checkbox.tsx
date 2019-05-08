@@ -8,7 +8,7 @@ type CheckboxShape = 'round' | 'square'
 export interface ICheckBoxProps {
   shape?: CheckboxShape
   value?: boolean
-  checkboxParagraph?: string
+  checkboxParagraph?: string | JSX.Element
   onChange?: (value: boolean) => void
 }
 
