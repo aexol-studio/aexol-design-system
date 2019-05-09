@@ -37,7 +37,8 @@ export const TileContent = style(
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: '100%'
+    height: '100%',
+    width: '100%'
   },
   media(
     { minWidth: 0, maxWidth: 1090 },
