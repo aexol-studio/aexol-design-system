@@ -34,12 +34,12 @@ type InputTextEmail = {
 
 type CheckboxTextFirst = {
   shapeFirst: 'round' | 'square'
-  checkboxParagraphFirst?: string
+  checkboxParagraphFirst?: string | JSX.Element
 }
 
 type CheckboxTextSecond = {
   shapeSecond: 'round' | 'square'
-  checkboxParagraphSecond?: string
+  checkboxParagraphSecond?: string | JSX.Element
 }
 
 export interface WhiteTileProps {
