@@ -28,7 +28,7 @@ export const BlueTile: React.FunctionComponent<
   } = props
 
   return (
-    <div className={classnames(styles.BlueTileMain)}>
+    <div className={classnames(styles.BlueTileMain)} id={id}>
       <div className={styles.BlueTileContainer} {...restProps}>
         <div className={styles.TileContent}>
           <div className={styles.TileLeftContent}>{props.children}</div>
