@@ -4,7 +4,6 @@ import * as styles from './styles/WhiteTileStyles'
 import { Input } from './Input'
 import { Checkbox } from './Checkbox'
 import { Button } from './Button'
-// import value from '*.json';
 import { Select } from './Select'
 type SelectComumnsTxt = {
   options: Array<{
@@ -17,7 +16,7 @@ type SelectComumnsTxt = {
 
 type InputTextName = {
   labelName: string
-  placeholderName?: string
+  placeholderTextName?: string
   type?: string
   starLabel?: boolean
 }
@@ -39,11 +38,6 @@ type CheckboxTextSecond = {
   checkboxParagraphSecond?: string | JSX.Element
 }
 
-// interface WhiteTileButton {
-//   href?: string,
-//   target?: string
-// }
-
 type myObj = {
   checkboxHandler1: any
   checkboxHandler2: any
@@ -62,7 +56,6 @@ interface IGetInputTextProps {
   WhiteTileParagraph: string
   WhiteButtonText: string
   isVisibleParagraph?: boolean
-
   onSubmit: (value: myObj) => void
 }
 
@@ -137,49 +130,19 @@ export class WhiteTile extends React.PureComponent<
     })
   }
 
-  // export interface WhiteTileProps {
-  //   SelectComumnsTxt: SelectComumnsTxt
-  //   InputTextName: InputTextName
-  //   InputTextEmail: InputTextEmail
-  //   CheckboxTextFirst: CheckboxTextFirst
-  //   CheckboxTextSecond: CheckboxTextSecond
-  //   WhiteTileParagraph: string
-  //   WhiteButtonText: string
-  //   WhiteButtonHref: string
-  //   // WhiteTileButton: WhiteTileButton
-  //   isVisibleTxt: boolean
-  //   onChange?: (value: string) => void
-  // }
-
-  // export const WhiteTile: React.FunctionComponent<WhiteTileProps> = props => {
-  //   const {
-  //     SelectComumnsTxt,
-  //     InputTextName,
-  //     InputTextEmail,
-  //     CheckboxTextFirst,
-  //     CheckboxTextSecond,
-  //     WhiteTileParagraph,
-  //     WhiteButtonText,
-  //     // WhiteTileButton,
-  //     WhiteButtonHref,
-  //     isVisibleTxt,
-  //     // onChange
-  //   } = props
-
   render() {
-    // console.log(this.state)
     return (
       <div className={classnames(styles.WhiteTileMain)}>
         <div className={styles.WhiteTileContent}>
           <Input
-            label="First name"
-            placeholder="Enter your first name"
+            label={this.props.InputTextName.labelName}
+            placeholder={this.props.InputTextName.placeholderTextName}
             starLabel={true}
             onChange={this.inputTextNameHandler}
           />
           <Input
-            label="Email"
-            placeholder="Enter your e-mail adress"
+            label={this.props.InputTextEmail.labelEmail}
+            placeholder={this.props.InputTextEmail.placeholderEmail}
             starLabel={true}
             onChange={this.inputTextEmailHandler}
           />
@@ -197,30 +160,26 @@ export class WhiteTile extends React.PureComponent<
           <div className={styles.WhiteTileCheckboxElement}>
             <div className={styles.WhiteTileCheckboxContent}>
               <Checkbox
-                shape="round"
-                checkboxParagraph="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+                shape={this.props.CheckboxTextFirst.shapeFirst}
+                checkboxParagraph={this.props.CheckboxTextFirst.checkboxParagraphFirst}
                 onChange={this.checkboxHandler1}
               />
             </div>
             <div className={styles.WhiteTileCheckboxContent}>
               <Checkbox
-                shape="round"
-                checkboxParagraph="Aque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+                shape={this.props.CheckboxTextSecond.shapeSecond}
+                checkboxParagraph={this.props.CheckboxTextSecond.checkboxParagraphSecond}
                 onChange={this.checkboxHandler2}
               />
             </div>
-
             {this.props.isVisibleParagraph && (
               <div className={styles.WhiteTileContentParagraph}>
-                <p className={styles.WhiteTileCheckboxContentParagraph}>
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                  odit aut fugit, sed quia consequuntur magni dolores eos qui
-                  ratione voluptatem sequi nesciunt
+                <p className={styles.WhiteTileCheckboxContentParagraph}>{this.props.WhiteTileParagraph}
                 </p>
               </div>
             )}
             <div className={styles.WhiteTileCheckboxContentButton}>
-              <Button onClick={this.onClickHandler}>Send Request</Button>
+              <Button onClick={this.onClickHandler}>{this.props.WhiteButtonText}</Button>
             </div>
           </div>
         </div>
