@@ -11,6 +11,7 @@ export interface BlueTileComponentProps {
   children?: React.ReactNode
   isVisible?: boolean
   ContactImg?: string
+  id?: string
 }
 
 export const BlueTile: React.FunctionComponent<
@@ -22,6 +23,7 @@ export const BlueTile: React.FunctionComponent<
     envelope,
     ContactImg = require('../assets/images/ContactRequest1@2x.png'),
     isVisible,
+    id,
     ...restProps
   } = props
 
