@@ -60,8 +60,8 @@ interface IGetInputTextProps {
   CheckboxTextFirst: CheckboxTextFirst
   CheckboxTextSecond: CheckboxTextSecond
   WhiteTileParagraph: string
-  WhiteButtonHref: string
   WhiteButtonText: string
+  isVisibleParagraph?: boolean
 
   onSubmit: (value: myObj) => void
 }
@@ -89,7 +89,7 @@ export class WhiteTile extends React.PureComponent<
       emailHandler: '',
       textNameHandler: '',
       SelectComumnsTxt: '',
-      isVisibleParagraph: true
+      isVisibleParagraph: false
     }
   }
   inputTextNameHandler = (val: string) => {
@@ -210,7 +210,7 @@ export class WhiteTile extends React.PureComponent<
               />
             </div>
 
-            {this.state.isVisibleParagraph && (
+            {this.props.isVisibleParagraph && (
               <div className={styles.WhiteTileContentParagraph}>
                 <p className={styles.WhiteTileCheckboxContentParagraph}>
                   Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
