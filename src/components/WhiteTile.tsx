@@ -38,12 +38,12 @@ type CheckboxTextSecond = {
   checkboxParagraphSecond?: string | JSX.Element
 }
 
-type myObj = {
-  checkboxHandler1: any
-  checkboxHandler2: any
-  emailHandler: any
-  textNameHandler: any
-  SelectComumnsTxt: any
+type ReturnedWhiteTileValue = {
+  checkboxHandler1: boolean
+  checkboxHandler2: boolean
+  emailHandler: string
+  textNameHandler: string
+  SelectedOption: number
 }
 
 interface IGetInputTextProps {
@@ -56,15 +56,15 @@ interface IGetInputTextProps {
   WhiteTileParagraph: string
   WhiteButtonText: string
   isVisibleParagraph?: boolean
-  onSubmit: (value: myObj) => void
+  onSubmit: (value: ReturnedWhiteTileValue) => void
 }
 
 interface IGetInputTextState {
   error: string
   emailHandler: string
   textNameHandler: string
-  checkboxHandler1: boolean | undefined
-  checkboxHandler2: boolean | undefined
+  checkboxHandler1: boolean
+  checkboxHandler2: boolean
   SelectComumnsTxt: any
   isVisibleParagraph?: boolean
 }
@@ -120,13 +120,13 @@ export class WhiteTile extends React.PureComponent<
     })
   }
 
-  onClickHandler = (val: any) => {
+  onClickHandler = () => {
     this.props.onSubmit({
       checkboxHandler1: this.state.checkboxHandler1,
       checkboxHandler2: this.state.checkboxHandler2,
       emailHandler: this.state.emailHandler,
       textNameHandler: this.state.textNameHandler,
-      SelectComumnsTxt: this.state.SelectComumnsTxt
+      SelectedOption: this.state.SelectComumnsTxt
     })
   }
 
@@ -161,25 +161,32 @@ export class WhiteTile extends React.PureComponent<
             <div className={styles.WhiteTileCheckboxContent}>
               <Checkbox
                 shape={this.props.CheckboxTextFirst.shapeFirst}
-                checkboxParagraph={this.props.CheckboxTextFirst.checkboxParagraphFirst}
+                checkboxParagraph={
+                  this.props.CheckboxTextFirst.checkboxParagraphFirst
+                }
                 onChange={this.checkboxHandler1}
               />
             </div>
             <div className={styles.WhiteTileCheckboxContent}>
               <Checkbox
                 shape={this.props.CheckboxTextSecond.shapeSecond}
-                checkboxParagraph={this.props.CheckboxTextSecond.checkboxParagraphSecond}
+                checkboxParagraph={
+                  this.props.CheckboxTextSecond.checkboxParagraphSecond
+                }
                 onChange={this.checkboxHandler2}
               />
             </div>
             {this.props.isVisibleParagraph && (
               <div className={styles.WhiteTileContentParagraph}>
-                <p className={styles.WhiteTileCheckboxContentParagraph}>{this.props.WhiteTileParagraph}
+                <p className={styles.WhiteTileCheckboxContentParagraph}>
+                  {this.props.WhiteTileParagraph}
                 </p>
               </div>
             )}
             <div className={styles.WhiteTileCheckboxContentButton}>
-              <Button onClick={this.onClickHandler}>{this.props.WhiteButtonText}</Button>
+              <Button onClick={this.onClickHandler}>
+                {this.props.WhiteButtonText}
+              </Button>
             </div>
           </div>
         </div>
