@@ -28,6 +28,7 @@ export const Button = style({
   height: 40,
   borderRadius: 4,
   border: 0,
+  textDecoration: 'none',
   color: Colors.White,
   backgroundColor: Colors.Ultrasonic,
   cursor: 'pointer',
@@ -36,7 +37,7 @@ export const Button = style({
     '&.submit': {
       // margin: '0 0 0 auto'
     },
-    'svg': {
+    svg: {
       marginRight: 5,
       maxHeight: 20
     },

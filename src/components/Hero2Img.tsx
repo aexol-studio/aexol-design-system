@@ -10,7 +10,7 @@ export interface IHero2ImgProps {
   paragraphColor?: keyof typeof Colors
   paragraphTextLength?: 'short' | 'long'
   buttonText: string
-  buttonOnClick: (e: HTMLButtonElement) => void
+  buttonOnClick: (e: HTMLAnchorElement) => void
   imgFile1: React.ReactNode
   imgFile2: React.ReactNode
   height?: number

@@ -13,7 +13,7 @@ export interface IHero1ImgProps {
   paragraphColor?: keyof typeof Colors
   paragraphTextLength?: 'short' | 'long'
   buttonText: string
-  buttonOnClick: (e: HTMLButtonElement) => void
+  buttonOnClick: (e: HTMLAnchorElement) => void
   imgFile: React.ReactNode
   imgPosition?: ImgPosition
   height?: number

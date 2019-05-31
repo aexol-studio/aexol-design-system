@@ -8,7 +8,7 @@ export interface IHeroBackImgWithTextProps {
   headerText: string
   paragraphText: string
   buttonText: string
-  buttonOnClick: (e: HTMLButtonElement) => void
+  buttonOnClick: (e: HTMLAnchorElement) => void
   backgroundFile: string
   height?: number
   style?: React.CSSProperties

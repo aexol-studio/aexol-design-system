@@ -4,7 +4,7 @@ import { Button } from '../components'
 import * as styles from './styles/NavBarStyles'
 
 export interface INavBarProps {
-  onClick: (e: HTMLButtonElement) => void
+  onClick: (e: HTMLAnchorElement) => void
   buttonText: string
   children: string | React.ReactChildren | React.ReactNode
   logo?: React.ReactNode
@@ -27,7 +27,7 @@ export class NavBar extends React.PureComponent<INavBarProps, NavBarState> {
     }
   }
 
-  handleClick = (e: HTMLButtonElement) => this.props.onClick(e)
+  handleClick = (e: HTMLAnchorElement) => this.props.onClick(e)
 
   handleOpen = (e: React.SyntheticEvent<HTMLDivElement>) => {
     this.setState(prevState => ({

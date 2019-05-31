@@ -8,7 +8,7 @@ export interface IHeroImgOnBottomProps {
   headerText: string
   paragraphText: string
   buttonText: string
-  buttonOnClick: (e: HTMLButtonElement) => void
+  buttonOnClick: (e: HTMLAnchorElement) => void
   imgFile1: React.ReactNode
   imgFile2: React.ReactNode
   imgFile3: React.ReactNode

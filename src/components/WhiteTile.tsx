@@ -5,7 +5,7 @@ import { Input } from './Input'
 import { Checkbox } from './Checkbox'
 import { Button } from './Button'
 import { Select } from './Select'
-type SelectComumnsTxt = {
+type SelectOptions = {
   options: Array<{
     value: number
     label: string
@@ -14,28 +14,16 @@ type SelectComumnsTxt = {
   label: string
 }
 
-type InputTextName = {
-  labelName: string
-  placeholderTextName?: string
+type InputText = {
+  label: string
+  placeholder?: string
   type?: string
   starLabel?: boolean
 }
 
-type InputTextEmail = {
-  labelEmail: string
-  placeholderEmail?: string
-  type?: string
-  starLabel?: boolean
-}
-
-type CheckboxTextFirst = {
-  shapeFirst: 'round' | 'square'
-  checkboxParagraphFirst?: string | JSX.Element
-}
-
-type CheckboxTextSecond = {
-  shapeSecond: 'round' | 'square'
-  checkboxParagraphSecond?: string | JSX.Element
+type CheckboxText = {
+  shape: 'round' | 'square'
+  paragraph?: string | JSX.Element
 }
 
 type ReturnedWhiteTileValue = {
@@ -48,14 +36,13 @@ type ReturnedWhiteTileValue = {
 
 interface IGetInputTextProps {
   id?: string
-  SelectComumnsTxt: SelectComumnsTxt
-  InputTextName: InputTextName
-  InputTextEmail: InputTextEmail
-  CheckboxTextFirst: CheckboxTextFirst
-  CheckboxTextSecond: CheckboxTextSecond
-  WhiteTileParagraph: string
+  SelectOptions: SelectOptions
+  InputTextName: InputText
+  InputTextEmail: InputText
+  CheckboxTextFirst: CheckboxText
+  CheckboxTextSecond: CheckboxText
+  WhiteTileParagraph?: string
   WhiteButtonText: string
-  isVisibleParagraph?: boolean
   onSubmit: (value: ReturnedWhiteTileValue) => void
 }
 
@@ -135,15 +122,15 @@ export class WhiteTile extends React.PureComponent<
       <div className={classnames(styles.WhiteTileMain)}>
         <div className={styles.WhiteTileContent}>
           <Input
-            label={this.props.InputTextName.labelName}
-            placeholder={this.props.InputTextName.placeholderTextName}
-            starLabel={true}
+            label={this.props.InputTextName.label}
+            placeholder={this.props.InputTextName.placeholder}
+            starLabel={this.props.InputTextName.starLabel}
             onChange={this.inputTextNameHandler}
           />
           <Input
-            label={this.props.InputTextEmail.labelEmail}
-            placeholder={this.props.InputTextEmail.placeholderEmail}
-            starLabel={true}
+            label={this.props.InputTextEmail.label}
+            placeholder={this.props.InputTextEmail.placeholder}
+            starLabel={this.props.InputTextEmail.starLabel}
             onChange={this.inputTextEmailHandler}
           />
           <div className={styles.WhiteTileSelectContent}>
@@ -151,32 +138,28 @@ export class WhiteTile extends React.PureComponent<
               style={{
                 width: '100%'
               }}
-              options={this.props.SelectComumnsTxt.options}
-              label={this.props.SelectComumnsTxt.label}
-              placeholder={this.props.SelectComumnsTxt.placeholder}
+              options={this.props.SelectOptions.options}
+              label={this.props.SelectOptions.label}
+              placeholder={this.props.SelectOptions.placeholder}
               onChange={this.selectHandler}
             />
           </div>
           <div className={styles.WhiteTileCheckboxElement}>
             <div className={styles.WhiteTileCheckboxContent}>
               <Checkbox
-                shape={this.props.CheckboxTextFirst.shapeFirst}
-                checkboxParagraph={
-                  this.props.CheckboxTextFirst.checkboxParagraphFirst
-                }
+                shape={this.props.CheckboxTextFirst.shape}
+                checkboxParagraph={this.props.CheckboxTextFirst.paragraph}
                 onChange={this.checkboxHandler1}
               />
             </div>
             <div className={styles.WhiteTileCheckboxContent}>
               <Checkbox
-                shape={this.props.CheckboxTextSecond.shapeSecond}
-                checkboxParagraph={
-                  this.props.CheckboxTextSecond.checkboxParagraphSecond
-                }
+                shape={this.props.CheckboxTextSecond.shape}
+                checkboxParagraph={this.props.CheckboxTextSecond.paragraph}
                 onChange={this.checkboxHandler2}
               />
             </div>
-            {this.props.isVisibleParagraph && (
+            {this.props.WhiteTileParagraph && (
               <div className={styles.WhiteTileContentParagraph}>
                 <p className={styles.WhiteTileCheckboxContentParagraph}>
                   {this.props.WhiteTileParagraph}

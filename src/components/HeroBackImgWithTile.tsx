@@ -12,7 +12,7 @@ export interface IHeroBackImgWithTileProps {
   paragraphTextLength?: 'short' | 'long'
   buttonText: string
   tilePosition?: 'left' | 'right'
-  buttonOnClick: (e: HTMLButtonElement) => void
+  buttonOnClick: (e: HTMLAnchorElement) => void
   backgroundFile: string
   height?: number
   style?: React.CSSProperties

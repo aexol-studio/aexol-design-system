@@ -22,7 +22,7 @@ export interface IButtonProps {
   width?: number
   height?: number
   icon?: JSX.Element
-  onClick?: (e: HTMLButtonElement) => void
+  onClick?: (e: HTMLAnchorElement) => void
   href?: string
   target?: string
   style?: React.CSSProperties
@@ -46,22 +46,24 @@ export const Button: React.FunctionComponent<IButtonProps> = props => {
     target,
     ...restProps
   } = props
-  const handleClick = (e: React.SyntheticEvent<HTMLButtonElement>) => {
+  const handleClick = (e: React.SyntheticEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
     if (onClick) {
       onClick(e.currentTarget)
     }
   }
 
   return (
-    <button
+    <a
       className={classnames(
         classnames(styles.Button, type, shape, size),
         classnames({
           disabled: disabled
         })
       )}
+      href={href}
+      target={target}
       onClick={handleClick}
-      type={type === 'submit' ? 'submit' : 'button'}
       style={{
         width: width,
         height: height,
@@ -69,19 +71,11 @@ export const Button: React.FunctionComponent<IButtonProps> = props => {
       }}
       {...restProps}
     >
-      {href && (
-        <a className={styles.ButtonLink} href={href} target={target}>
-          {icon}
-          <PMedium>{props.children}</PMedium>
-        </a>
-      )}
-      {!href && (
-        <React.Fragment>
-          {icon}
-          <PMedium>{props.children}</PMedium>
-        </React.Fragment>
-      )}
-    </button>
+      <React.Fragment>
+        {icon}
+        <PMedium>{props.children}</PMedium>
+      </React.Fragment>
+    </a>
   )
 }
 
