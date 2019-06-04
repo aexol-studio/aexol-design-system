@@ -47,7 +47,6 @@ export const Button: React.FunctionComponent<IButtonProps> = props => {
     ...restProps
   } = props
   const handleClick = (e: React.SyntheticEvent<HTMLAnchorElement>) => {
-    e.preventDefault()
     if (onClick) {
       onClick(e.currentTarget)
     }
