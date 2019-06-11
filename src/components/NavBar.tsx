@@ -76,18 +76,20 @@ export class NavBar extends React.PureComponent<INavBarProps, NavBarState> {
             <div className={classnames(styles.LinkContainer, color)}>
               {this.props.children}
             </div>
-            <Button
-              onClick={e => this.handleClick(e)}
-              type={
-                color === 'black'
-                  ? 'secondary3'
-                  : color === 'light'
-                  ? 'secondary2'
-                  : 'secondary'
-              }
-            >
-              {buttonText}
-            </Button>
+            <div className={styles.ButtonContainer}>
+              <Button
+                onClick={e => this.handleClick(e)}
+                type={
+                  color === 'black'
+                    ? 'secondary3'
+                    : color === 'light'
+                    ? 'secondary2'
+                    : 'secondary'
+                }
+              >
+                {buttonText}
+              </Button>
+            </div>
           </div>
         </div>
       </div>

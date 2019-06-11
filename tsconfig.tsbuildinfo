@@ -166,11 +166,11 @@
         "signature": "129926d4032a2b8a54221ddd043b2673e2873cb70389c83f6bced5381fb4ae9a"
       },
       "/users/arturczemiel/.projects/design-system/src/components/styles/buttonstyle.tsx": {
-        "version": "37a57759e7c44c823dbe0f45c9408c6ee0ca332feb0997d843c01d475530a10e",
+        "version": "a4cdde37a4114f9d45443d36f7f9efa4bec2c4744d698158701eafc5b2d1084f",
         "signature": "28e6e71d85459eea01c1a3740854ab2f5f07008e5a21353361a1916b510acf98"
       },
       "/users/arturczemiel/.projects/design-system/src/components/button.tsx": {
-        "version": "0fa7fc06ce4b1c926cd6aff894264b6b03d6cbaa8fff4c887ed71eb22699b595",
+        "version": "591945f69f0bcc973b941b284faa5ec9befb7d2c332ade623d457679937e09fe",
         "signature": "93a8a195ec1d18df6b25f84900cabdfffbd8774122c895dc6e3bd61448136231"
       },
       "/users/arturczemiel/.projects/design-system/src/components/styles/inputstyle.tsx": {
@@ -330,11 +330,11 @@
         "signature": "4d1b0eb9beb94f89f7cddd18b8594fb6d6b38b7af4709577300e4397142afd7c"
       },
       "/users/arturczemiel/.projects/design-system/src/components/styles/navbarstyles.tsx": {
-        "version": "46c304883b2b706f9a4b112b10a32a0f001a2d483848a84499c367f48d8ad942",
-        "signature": "e8c5bca0447630b433b09c8409e8eccafc72707132262e8fca952b655f87d954"
+        "version": "cd88be7d28cddffb665b4677026ad5168b9c40fdee8d973d4375ead2957cd4aa",
+        "signature": "48e26483cf4adcf830071a0213beae0f59e81300aebf498b4bce2884d3383830"
       },
       "/users/arturczemiel/.projects/design-system/src/components/navbar.tsx": {
-        "version": "faf5675882df041599d5f1ddb250afcf4be3f172330e15cadb4c56ec3f544197",
+        "version": "7786d20e161409dde46b51124e08a0174fd79672827abef4c0488328db0d080c",
         "signature": "8d43360ba99f952a667dc95d580ca8fa7098bcf339213e1bcce3d21e49f2e8b7"
       },
       "/users/arturczemiel/.projects/design-system/src/components/styles/fileuploadstyle.tsx": {
@@ -2701,7 +2701,7 @@
       "/users/arturczemiel/.projects/design-system/src/components/notfound.tsx",
       "/users/arturczemiel/.projects/design-system/src/components/styles/workshopstyles.tsx",
       "/users/arturczemiel/.projects/design-system/src/components/workshopbottombar.tsx",
-      "/users/arturczemiel/.projects/design-system/src/components/styles/navbarstyles.tsx",
+      "/users/arturczemiel/.projects/design-system/src/components/navbar.tsx",
       "/users/arturczemiel/.projects/design-system/src/components/styles/fileuploadstyle.tsx",
       "/users/arturczemiel/.projects/design-system/src/components/fileupload.tsx",
       "/users/arturczemiel/.projects/design-system/src/components/styles/selectstyle.tsx",
@@ -2715,6 +2715,7 @@
       "/users/arturczemiel/.projects/design-system/src/components/styles/checkboxstyles.tsx",
       "/users/arturczemiel/.projects/design-system/src/components/checkbox.tsx",
       "/users/arturczemiel/.projects/design-system/src/components/styles/whitetilestyles.tsx",
+      "/users/arturczemiel/.projects/design-system/src/components/whitetile.tsx",
       "/users/arturczemiel/.projects/design-system/src/components/loadingbutton.tsx",
       "/users/arturczemiel/.projects/design-system/src/components/styles/workshopdaystyles.tsx",
       "/users/arturczemiel/.projects/design-system/src/components/workshopday.tsx",
@@ -2732,6 +2733,8 @@
       "/users/arturczemiel/.projects/design-system/src/components/bluetile.tsx",
       "/users/arturczemiel/.projects/design-system/src/components/styles/pricingtable.tsx",
       "/users/arturczemiel/.projects/design-system/src/components/pricingtable.tsx",
+      "/users/arturczemiel/.projects/design-system/src/components/index.tsx",
+      "/users/arturczemiel/.projects/design-system/src/index.tsx",
       "/users/arturczemiel/.projects/design-system/node_modules/@types/anymatch/index.d.ts",
       "/users/arturczemiel/.projects/design-system/node_modules/@types/history/domutils.d.ts",
       "/users/arturczemiel/.projects/design-system/node_modules/@types/history/createbrowserhistory.d.ts",
@@ -2796,10 +2799,7 @@
       "/users/arturczemiel/.projects/design-system/node_modules/@types/vfile/index.d.ts",
       "/users/arturczemiel/.projects/design-system/node_modules/@types/webpack/index.d.ts",
       "/users/arturczemiel/.projects/design-system/node_modules/@types/webpack-env/index.d.ts",
-      "/users/arturczemiel/.projects/design-system/src/components/navbar.tsx",
-      "/users/arturczemiel/.projects/design-system/src/components/whitetile.tsx",
-      "/users/arturczemiel/.projects/design-system/src/components/index.tsx",
-      "/users/arturczemiel/.projects/design-system/src/index.tsx"
+      "/users/arturczemiel/.projects/design-system/src/components/styles/navbarstyles.tsx"
     ]
   },
   "version": "3.5.1"
