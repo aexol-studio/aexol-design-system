@@ -1,0 +1,58 @@
+---
+name: CardComponentV2
+---
+
+import { Playground, PropsTable } from 'docz'
+import { CardComponentV2 } from '../../src/components'
+
+#WorkshopTile
+
+##Properties
+
+<PropsTable of={CardComponentV2} />
+
+##Basic usage
+
+<Playground style={{ backgroundColor: '#DFE6F7' }}>
+  <CardComponentV2
+    boxTitle="Create"
+    CardContentBoxText={{
+      object: [
+        { text: '- Prototype visually new systems' },
+        { text: '- Instant GraphQL Development Environment' },
+        { text: '- Host your GraphQL Schema' },
+        { text: '- Use schema versioning' },
+        { text: '- Use web based GraphiQL' }
+      ]
+    }}
+  />
+  <CardComponentV2
+    boxTitle="Manage"
+    CardContentBoxText={{
+      object: [
+        { text: '- Stitch multiple schemas' },
+        { text: '- Visualize your systems' },
+        { text: '- Onboard employees faster' },
+        { text: '- Team Schema libraries' },
+        { text: '- Manage access' },
+        { text: '- Live collaboration' }
+      ]
+    }}
+  />
+
+    <CardComponentV2
+    boxTitle="Automate "
+    CardContentBoxText={{
+      object: [
+        { text: '- Auto fake backend' },
+        { text: '- Generate queries from schema' },
+        { text: '- Visualize schema from GQL files' },
+        { text: '- FAAS Code Runner (Q2 ’19)' },
+        { text: '- Backend to Frontend (Q3 ’19)' },
+        { text: '- GraphQL to Backend (Q1 ’20)' }
+      ]
+    }}
+
+/>
+
+</Playground>
