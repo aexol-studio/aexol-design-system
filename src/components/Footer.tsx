@@ -2,6 +2,7 @@ import * as React from 'react'
 import * as classnames from 'classnames'
 import { PFooterTitle } from './typography'
 import * as styles from './styles/FooterStyle'
+import { GraphQLlogo } from './icons'
 type FooterColumnsTxt = {
   objects: Array<{
     title?: string
@@ -14,25 +15,31 @@ type FooterColumnsTxt = {
 
 export interface FooterComponentProps {
   FooterColumnsTxt: FooterColumnsTxt
+  isVissible: boolean
   backgroundColor?: 'black' | 'white'
   copyright: string
+  isVisible: boolean
 }
 
 export const Footer: React.FunctionComponent<FooterComponentProps> = props => {
   const {
     FooterColumnsTxt,
-    // logo,
     backgroundColor = 'black',
     copyright,
-    ...restProps
+    isVisible = false
   } = props
+
+  console.log(isVisible)
 
   return (
     <div className={classnames(styles.FooterMain, backgroundColor)}>
-      <div className={styles.FooterContainer} {...restProps}>
+      <div className={styles.FooterContainer}>
         <div className={styles.rectangleTopDiv}>
-          {/* <p className={styles.rectangleTopLogo}>
-            {logo}</p> */}
+          {isVisible && (
+            <div className={styles.rectangleTopLogo}>
+              <GraphQLlogo />
+            </div>
+          )}
           <div className={styles.rectangleTop} />
         </div>
         <div className={styles.FooterContent}>

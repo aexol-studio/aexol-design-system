@@ -14,11 +14,18 @@ type SelectOptions = {
   label: string
 }
 
-type InputText = {
+type InputTextName = {
   label: string
-  placeholder?: string
-  type?: string
-  starLabel?: boolean
+  placeholder: string
+  type: string
+  starLabel: boolean
+}
+
+type InputTextEmail = {
+  label: string
+  placeholder: string
+  type: string
+  starLabel: boolean
 }
 
 type CheckboxText = {
@@ -37,8 +44,8 @@ type ReturnedWhiteTileValue = {
 interface IGetInputTextProps {
   id?: string
   SelectOptions: SelectOptions
-  InputTextName: InputText
-  InputTextEmail: InputText
+  InputTextName: InputTextName
+  InputTextEmail: InputTextEmail
   CheckboxTextFirst: CheckboxText
   CheckboxTextSecond: CheckboxText
   WhiteTileParagraph?: string

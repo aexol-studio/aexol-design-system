@@ -18,7 +18,8 @@ export const FooterContainer = style({
 export const rectangleTopDiv = style({
   $debugName: 'rectangleTopDiv',
   display: 'flex',
-  flexDirection: 'column'
+  // background: 'yellow'
+  alignItems: 'center'
 })
 export const rectangleDownDiv = style({
   $debugName: 'rectangleDownDiv',
@@ -28,29 +29,31 @@ export const rectangleDownDiv = style({
 
 export const rectangleTop = style({
   $debugName: 'rectangleTop',
-  height: 3,
-  background: Colors['Ancient Stone']
+  height: 1,
+  width: '100%',
+  background: Colors.Lead
 })
 
 export const rectangleDown = style({
   $debugName: 'rectangleDown',
-  height: 3,
-  background: Colors['Ancient Stone']
+  height: 1,
+  background: Colors.Lead
 })
 
 export const rectangleTopLogo = style({
   $debugName: 'rectangleTopLogo',
-  color: Colors['Ancient Stone'],
+  color: Colors.Lead,
   textAlign: 'center',
-  marginTop: 5,
-  marginBottom: 5,
-  fontSize: 30
+  marginRight: 4,
+  // marginBottom: 5,
+  fontSize: 30,
+  display: 'flex'
 })
 
 export const rectangleDownCopyright = style({
   $debugName: 'rectangleDownCopyright',
   textAlign: 'left',
-  color: Colors['Ancient Stone'],
+  color: Colors.Lead,
   marginTop: 5,
   marginBottom: 0,
   fontSize: 12
@@ -92,7 +95,8 @@ export const FooterContentColumn = style(
     $debugName: 'FooterContentColumn',
     marginTop: 60,
     marginBottom: 60,
-    flexDirection: 'column'
+    flexDirection: 'column',
+    color: Colors.Lead
   },
   media(
     { minWidth: 0, maxWidth: Breakpoints.Laptop },

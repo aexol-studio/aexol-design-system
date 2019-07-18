@@ -15,7 +15,7 @@ import { WhiteTile } from '../../src/components'
 
 <Playground style={{ backgroundColor: '#DFE6F7' }}>
   <WhiteTile
-  SelectComumnsTxt={{
+  SelectOptions={{
     options:[
       {
         label: 'test',
@@ -34,24 +34,25 @@ import { WhiteTile } from '../../src/components'
       }}
 
     InputTextName = {{
-      labelName:"First Name",
-      placeholderName:"Enter your first name",
-      type:"text", 
+      label:"First Name",
+      placeholder:"Enter your first name",
+      type:"text",
       starLabel: true
       }}
 
     InputTextEmail = {{
-      labelEmail:"E-mail",
-      placeholderEmail:"Enter your e-mail address",
+      label:"E-mail",
+      placeholder:"Enter your e-mail address",
       type:"email",
       starLabel: true
       }}
 
-    CheckboxTextFirst = {{shapeFirst:"round", checkboxParagraphFirst:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."}}
-    CheckboxTextSecond = {{shapeSecond:"round", checkboxParagraphSecond:"Aque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo"}}
+    CheckboxTextFirst = {{shape:"round", paragraph:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."}}
+    CheckboxTextSecond = {{shape:"round", paragraph:"Aque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo"}}
     WhiteTileParagraph ="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt"
     WhiteButtonText ="Send Request"
     //onSubmit={(val: any) => console.log(val)}
+
 />
 
 </Playground>
