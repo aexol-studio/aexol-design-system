@@ -25,6 +25,7 @@ export const ContentContainer = style(
   media(
     { maxWidth: Breakpoints.Tablet },
     {
+      alignItems: 'stretch',
       $nest: {
         button: {
           display: 'none'
@@ -45,9 +46,12 @@ export const ButtonContainer = style(
 )
 export const LinkContainer = style(
   {
+    display: 'flex',
+    alignItems: 'center',
     $nest: {
       a: {
         marginRight: 20,
+        cursor: 'pointer',
         color: Colors['Ancient Stone'],
         textDecoration: 'none',
         transition: vars.transition,
@@ -73,9 +77,14 @@ export const LinkContainer = style(
     }
   },
   media(
-    { maxWidth: Breakpoints.Tablet },
+    { minWidth: Breakpoints.Phone, maxWidth: Breakpoints.Tablet },
     {
-      display: 'none'
+      display: 'none',
+      $nest: {
+        a: {
+          marginRight: 0
+        }
+      }
     }
   )
 )
@@ -213,7 +222,7 @@ export const Container = style(
               display: 'flex',
               flexBasis: 'auto',
               flexDirection: 'column',
-              padding: '0 30px',
+              padding: '0 15px 0 40px',
               $nest: {
                 a: {
                   width: 'calc(100% + 60px)',
