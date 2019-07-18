@@ -24,8 +24,7 @@ export const TextInputLabel = style({
 
 export const TextInputStar = style({
   $debugName: 'TextInputStar',
-  lineHeight: '16px',
-  color: Colors.ACME
+  lineHeight: '16px'
 })
 
 export const TextInput = style({
