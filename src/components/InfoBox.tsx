@@ -26,7 +26,9 @@ export const InfoBox: React.FunctionComponent<IInfoBoxProps> = props => {
         <H4 style={{ color: Colors.White }}>{title}</H4>
       </div>
       <div className={styles.ContentBox}>
-        <PMedium style={{ marginBottom: 8 }}>{text}</PMedium>
+        <PMedium style={{ marginBottom: 8, color: Colors.Androgyn }}>
+          {text}
+        </PMedium>
         {linkText && link && <Link link={link} text={linkText} />}
       </div>
     </div>
