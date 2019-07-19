@@ -1,0 +1,23 @@
+---
+name: InfoBox
+---
+
+import { Playground, PropsTable } from 'docz'
+import { InfoBox } from '../../src/components'
+
+#WorkshopTile
+
+##Properties
+
+<PropsTable of={InfoBox} />
+
+##Basic usage
+
+<Playground>
+  <InfoBox
+    link="www.google.pl"
+    linkText="Contact Us..."
+    title="Your question"
+    text="Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur."
+  />
+</Playground>

@@ -46,3 +46,4 @@ import * as Typography from './typography'
 export { Typography }
 export { PricingTable } from './PricingTable'
 export { FoldingBox } from './FoldingBox'
+export { InfoBox } from './InfoBox'
