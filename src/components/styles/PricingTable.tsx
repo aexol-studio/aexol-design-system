@@ -1,14 +1,16 @@
 import { style, media } from 'typestyle'
 import { Colors } from './Colors'
 import { NestedCSSProperties } from 'typestyle/lib/types'
+import { Breakpoints } from './Breakpoints'
+// import * as vars from '../../vars'
 
 const OBJECT_WIDTH = 200
-export const TITLE_WIDTH = 250
+export const TITLE_WIDTH = 190
 const computeWidth = (n: number) => TITLE_WIDTH + n * OBJECT_WIDTH + 30
 const LineProperties: NestedCSSProperties = {
   display: 'grid',
-  gridTemplateColumns: `${TITLE_WIDTH}px 3fr`,
-  padding: `15px 30px`
+  gridTemplateColumns: `${TITLE_WIDTH} 3fr`,
+  padding: `15px 0`
 }
 const ObjectInLineProperties: NestedCSSProperties = {
   width: OBJECT_WIDTH,
@@ -62,7 +64,7 @@ export const PlanString = (n: number) =>
   style(
     {
       gridArea: 'planString',
-      width: 250
+      width: '100%'
     },
     media(
       {
@@ -90,22 +92,38 @@ export const PlansHeaders = (n: number) =>
       }
     )
   )
-export const PlanOptionTitle = style({
-  width: TITLE_WIDTH,
-  gridArea: 'planOptionTitle',
-  color: Colors.Lead
-})
+export const PlanOptionTitle = style(
+  {
+    width: TITLE_WIDTH,
+    gridArea: 'planOptionTitle',
+    color: Colors.Lead
+  },
+  media(
+    { minWidth: Breakpoints.TabletPortrait, maxWidth: Breakpoints.Tablet },
+    {
+      width: 170
+    }
+  )
+)
 export const PlanOptions = style({
   ...FlexRowProperties,
   gridArea: 'planOptions'
 })
-export const PlanOption = style({
-  ...ObjectInLineProperties,
-  textAlign: 'center',
-  display: 'flex',
-  justifyContent: 'center',
-  color: Colors.Ashes
-})
+export const PlanOption = style(
+  {
+    ...ObjectInLineProperties,
+    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    color: Colors.Ashes
+  },
+  media(
+    { minWidth: Breakpoints.TabletPortrait, maxWidth: Breakpoints.Tablet },
+    {
+      width: 170
+    }
+  )
+)
 export const PlanHeader = (n: number) =>
   style(
     {
@@ -121,8 +139,15 @@ export const PlanHeader = (n: number) =>
       {
         marginBottom: 15,
         padding: `40px 20px`,
-        width: 320,
+        width: '100%',
+        maxWidth: 400,
         background: Colors.Sopel
+      }
+    ),
+    media(
+      { minWidth: Breakpoints.TabletPortrait, maxWidth: Breakpoints.Tablet },
+      {
+        width: 170
       }
     )
   )

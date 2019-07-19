@@ -77,12 +77,12 @@ export const LinkContainer = style(
     }
   },
   media(
-    { minWidth: Breakpoints.Phone, maxWidth: Breakpoints.Tablet },
+    { maxWidth: Breakpoints.Tablet },
     {
       display: 'none',
       $nest: {
         a: {
-          marginRight: 0
+          display: 'none'
         }
       }
     }
@@ -188,7 +188,7 @@ export const Container = style(
     justifyContent: 'flex-end'
   },
   media(
-    { maxWidth: Breakpoints.Tablet },
+    { minWidth: 0, maxWidth: Breakpoints.Tablet },
     {
       justifyContent: 'space-between',
       $nest: {
@@ -225,7 +225,9 @@ export const Container = style(
               padding: '0 15px 0 40px',
               $nest: {
                 a: {
+                  display: 'block',
                   width: 'calc(100% + 60px)',
+                  marginRight: 0,
                   marginLeft: -30,
                   fontSize: 18,
                   lineHeight: '23px',

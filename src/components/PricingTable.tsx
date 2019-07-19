@@ -63,7 +63,9 @@ export const PricingTable = (props: PricingProps) => {
               <div className={styles.PlanHeaderDescription}>
                 <P>{p.description}</P>
               </div>
-              <Button onClick={p.onClick}>{p.action}</Button>
+              <Button onClick={p.onClick} style={{ marginTop: 'auto' }}>
+                {p.action}
+              </Button>
             </div>
           ))}
         </div>
@@ -71,7 +73,7 @@ export const PricingTable = (props: PricingProps) => {
       <div className={styles.PricingHiderResoponsive(plans.length)}>
         {options.map(({ name, values }, index) => (
           <div className={styles.PlanLine} style={computedStyle} key={index}>
-            <div className={styles.PlanOptionTitle}>
+            <div className={styles.PlanOptionTitle} key={index}>
               <P>{name}</P>
             </div>
             <div className={styles.PlanOptions}>
