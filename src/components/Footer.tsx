@@ -18,7 +18,7 @@ export interface FooterComponentProps {
   backgroundColor?: 'black' | 'white'
   copyright: string
   isVisible: boolean
-  logo: JSX.Element
+  logo?: JSX.Element
 }
 
 export const Footer: React.FunctionComponent<FooterComponentProps> = props => {
