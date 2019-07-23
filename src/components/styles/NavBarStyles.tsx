@@ -239,6 +239,13 @@ export const Container = style(
                       color: Colors.White
                     }
                   }
+                },
+                svg: {
+                  $nest: {
+                    path: {
+                      fill: 'white'
+                    }
+                  }
                 }
               }
             }

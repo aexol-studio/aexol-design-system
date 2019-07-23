@@ -1,5 +1,5 @@
 export interface IColor {
-  [key: string]: string;
+  [key: string]: string
 }
 
 export const Colors: IColor = {
@@ -229,5 +229,9 @@ export const Colors: IColor = {
   /* Space Monkeys */
 
   ['Space Monkeys']:
-    'linear-gradient(197.67deg, #0091FF -21.75%, #3E1E9F 100%);'
+    'linear-gradient(197.67deg, #0091FF -21.75%, #3E1E9F 100%);',
+
+  /* Vanilla */
+
+  ['Vanilla']: '#FFEF99'
 }
