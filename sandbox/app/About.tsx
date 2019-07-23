@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Button, Logo, Notification, NavBar } from '../../src';
-import * as styles from './styles/AboutStyles';
-import { withRouter, RouteComponentProps } from 'react-router';
-import { Link } from 'react-router-dom';
+import * as React from 'react'
+import { Button, Logo, Notification, NavBar } from '../../src'
+import * as styles from './styles/AboutStyles'
+import { withRouter, RouteComponentProps } from 'react-router'
+import { Link } from 'react-router-dom'
 
 const nav = [
   {
@@ -24,29 +24,29 @@ const nav = [
   {
     name: 'HeroBackImgWithText',
     to: '/HeroBackImgWithText'
-  },
-];
+  }
+]
 
-type IProps = RouteComponentProps<any>;
+type IProps = RouteComponentProps<any>
 
-const DEFAULT_LOGO_WIDTH = 150;
+const DEFAULT_LOGO_WIDTH = 150
 
 class About extends React.PureComponent<IProps> {
-  private notification: React.RefObject<Notification>;
+  private notification: React.RefObject<Notification>
   constructor(props: IProps) {
-    super(props);
-    this.notification = React.createRef();
+    super(props)
+    this.notification = React.createRef()
   }
 
-  onclickHandler = (e: HTMLButtonElement) => {
+  onclickHandler = (e: HTMLAnchorElement) => {
     if (this.notification) {
       this.notification.current!.addAlert({
         message: 'This is a notification!',
         type: 'info',
         closable: true
-      });
+      })
     }
-  };
+  }
 
   render() {
     return (
@@ -55,7 +55,16 @@ class About extends React.PureComponent<IProps> {
           color="white"
           buttonText="Sign In"
           onClick={() => {}}
-          logo={<img src="../assets/images/AexolLogo.png" style={{maxWidth: '100%', maxHeight: '100%', objectFit: 'contain'}} />}
+          logo={
+            <img
+              src="../assets/images/AexolLogo.png"
+              style={{
+                maxWidth: '100%',
+                maxHeight: '100%',
+                objectFit: 'contain'
+              }}
+            />
+          }
         >
           {nav.map((el, idx) => (
             <Link to={el.to} key={idx}>
@@ -74,7 +83,7 @@ class About extends React.PureComponent<IProps> {
           </div>
         </div>
       </React.Fragment>
-    );
+    )
   }
 }
-export default withRouter(About);
+export default withRouter(About)
