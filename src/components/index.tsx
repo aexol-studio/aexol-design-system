@@ -37,6 +37,7 @@ export {
 } from './dropdown'
 export { CardComponent } from './CardComponent'
 export { CardComponentV2 } from './CardComponentV2'
+export { CardComponentV3 } from './CardComponentV3'
 export { Footer } from './Footer'
 export { BlueTile } from './BlueTile'
 import * as icons from './icons'
