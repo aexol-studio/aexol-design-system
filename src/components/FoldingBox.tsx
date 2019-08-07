@@ -35,7 +35,7 @@ export class FoldingBox extends React.PureComponent<
 
     return (
       <div className={styles.FoldingContainer} style={style} {...restProps}>
-        <div className={styles.TitleBox}>
+        <div className={styles.TitleBox} onClick={this.handleOpen}>
           <div
             className={classnames({
               [styles.Arrow]: true,
