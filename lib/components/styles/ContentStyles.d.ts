@@ -1,0 +1,9 @@
+export declare const ContentTextBoxContainer: string
+export declare const ContentImgOnSide: string
+export declare const ContentImg: string
+export declare const ContentTextContainer: string
+export declare const ContentWithTile: string
+export declare const ContentTileImg: string
+export declare const ContentRightBar: string
+export declare const ContentContainer: string
+export declare const ContentTileTextBox: string

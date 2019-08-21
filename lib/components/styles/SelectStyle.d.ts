@@ -1,0 +1,13 @@
+export declare const Select: string
+export declare const holderSelect: string
+export declare const ArrowContainer: string
+export declare const SelectArrow: string
+export declare const holderValue: string
+export declare const placeholderValue: string
+export declare const showValue: string
+export declare const emptyValue: string
+export declare const valueChoosen: string
+export declare const Delete: string
+export declare const holderValues: string
+export declare const Li: string
+export declare const Label: string
