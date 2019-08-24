@@ -7,12 +7,8 @@ export interface IInputProps {
   maxLength?: number
   required?: boolean
   onChange?: (value: string) => void
-  width?: number
-  fullWidth?: boolean
   style?: React.CSSProperties
-  password?: boolean
-  passwordText?: string
-  passwordLink?: string
+  value: any
 }
 export declare const Input: React.FunctionComponent<IInputProps>
 export default Input

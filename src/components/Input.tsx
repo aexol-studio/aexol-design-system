@@ -9,12 +9,8 @@ export interface IInputProps {
   maxLength?: number
   required?: boolean
   onChange?: (value: string) => void
-  width?: number
-  fullWidth?: boolean
   style?: React.CSSProperties
-  password?: boolean
-  passwordText?: string
-  passwordLink?: string
+  value: any
 }
 
 const LABEL_STAR = ''
@@ -26,15 +22,10 @@ export const Input: React.FunctionComponent<IInputProps> = props => {
     starLabel = LABEL_STAR,
     placeholder,
     required = false,
-    password = false,
-    passwordLink,
-    passwordText,
     maxLength,
     onChange,
-    width,
-    fullWidth,
     style,
-    ...restProps
+    value
   } = props
   const handleChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
     if (onChange) {
@@ -46,7 +37,6 @@ export const Input: React.FunctionComponent<IInputProps> = props => {
     <div
       className={styles.TextInputContainer}
       style={{
-        width: fullWidth ? '80%' : width,
         ...style
       }}
     >
@@ -62,16 +52,8 @@ export const Input: React.FunctionComponent<IInputProps> = props => {
           maxLength={maxLength}
           placeholder={placeholder}
           required={required}
-          {...restProps}
+          value={value}
         />
-        {password && (
-          <div className={styles.TextInputLabelPassword}>
-            <div className={styles.TextInputSpacer} />
-            <a className={styles.TextInputHref} href={passwordLink}>
-              {passwordText}
-            </a>
-          </div>
-        )}
       </div>
     </div>
   )
