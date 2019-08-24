@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "design-system components library",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
