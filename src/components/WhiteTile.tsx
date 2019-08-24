@@ -149,6 +149,7 @@ export class WhiteTile extends React.PureComponent<
               label={this.props.SelectOptions.label}
               placeholder={this.props.SelectOptions.placeholder}
               onChange={this.selectHandler}
+              value={this.state.SelectComumnsTxt}
             />
           </div>
           <div className={styles.WhiteTileCheckboxElement}>

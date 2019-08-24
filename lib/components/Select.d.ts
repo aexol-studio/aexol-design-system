@@ -6,13 +6,13 @@ export interface ISelectProps {
   }>
   placeholder?: string
   label?: string
-  onChange?: (val: any) => void
+  onChange: (val: any) => void
+  value: any | undefined
   style?: React.CSSProperties
 }
 interface ISelectState {
   open: boolean
-  inputMatch: any
-  fieldVal: any
+  inputMatch: string
 }
 export declare class Select extends React.PureComponent<
   ISelectProps,
