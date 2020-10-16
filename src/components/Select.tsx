@@ -9,14 +9,14 @@ export interface ISelectProps {
   }>
   placeholder?: string
   label?: string
-  onChange?: (val: any) => void
+  onChange: (val: any) => void
+  value: any | undefined
   style?: React.CSSProperties
 }
 
 interface ISelectState {
   open: boolean
-  inputMatch: any
-  fieldVal: any
+  inputMatch: string
 }
 
 export class Select extends React.PureComponent<ISelectProps, ISelectState> {
@@ -24,29 +24,23 @@ export class Select extends React.PureComponent<ISelectProps, ISelectState> {
     super(props)
     this.state = {
       open: false,
-      inputMatch: null,
-      fieldVal: null
+      inputMatch: ''
     }
   }
 
   addValue = (value: any) => {
-    this.setState({
-      fieldVal: value
-    })
-    if (this.props.onChange) {
-      this.props.onChange(value)
-    }
+    this.props.onChange(value)
   }
 
   render() {
     const { options } = this.props
-    const { placeholder, label, style } = this.props
+    const { placeholder, label, style, value, onChange } = this.props
 
-    const selectOptions = options.filter(o => o.value !== this.state.fieldVal)
+    const selectOptions = options.filter(o => o.value !== value)
 
     const selectObject = (
       <div className={styles.holderValue}>
-        {this.state.fieldVal ? (
+        {value ? (
           <div
             className={classnames({
               [styles.showValue]: true,
@@ -54,18 +48,15 @@ export class Select extends React.PureComponent<ISelectProps, ISelectState> {
             })}
           >
             <span className={styles.valueChoosen}>
-              {options.find(o => o.value === this.state.fieldVal)
-                ? options.filter(o => o.value === this.state.fieldVal)[0].label
+              {options.find(o => o.value === value)
+                ? options.filter(o => o.value === value)[0].label
                 : 'Error - no value'}
             </span>
             <span
               className={styles.Delete}
               onClick={e => {
                 e.stopPropagation()
-                const newValue = null
-                this.setState({
-                  fieldVal: newValue
-                })
+                onChange(null)
               }}
             >
               ×

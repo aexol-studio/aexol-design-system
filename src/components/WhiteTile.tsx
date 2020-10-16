@@ -133,12 +133,14 @@ export class WhiteTile extends React.PureComponent<
             placeholder={this.props.InputTextName.placeholder}
             starLabel={this.props.InputTextName.starLabel}
             onChange={this.inputTextNameHandler}
+            value={this.state.textNameHandler}
           />
           <Input
             label={this.props.InputTextEmail.label}
             placeholder={this.props.InputTextEmail.placeholder}
             starLabel={this.props.InputTextEmail.starLabel}
             onChange={this.inputTextEmailHandler}
+            value={this.state.emailHandler}
           />
           <div className={styles.WhiteTileSelectContent}>
             <Select
@@ -149,6 +151,7 @@ export class WhiteTile extends React.PureComponent<
               label={this.props.SelectOptions.label}
               placeholder={this.props.SelectOptions.placeholder}
               onChange={this.selectHandler}
+              value={this.state.SelectComumnsTxt}
             />
           </div>
           <div className={styles.WhiteTileCheckboxElement}>

@@ -1,0 +1,9 @@
+export declare const WorkshopTileContainer: string
+export declare const SideBar: string
+export declare const SideBarText: string
+export declare const TextFirstLine: string
+export declare const DayEnding: string
+export declare const Day: string
+export declare const List: string
+export declare const ListEl: string
+export declare const WorkshopTextTileContainer: string

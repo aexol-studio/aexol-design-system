@@ -1,0 +1,9 @@
+export declare const CommunityCardContainer: string
+export declare const CardDescript: string
+export declare const Icon: string
+export declare const PoweredCommunityContainer: string
+export declare const Cards: string
+export declare const Header: string
+export declare const HeaderLine: string
+export declare const HeaderImage: string
+export declare const HeaderImagePhone: string

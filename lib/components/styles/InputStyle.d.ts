@@ -1,0 +1,9 @@
+export declare const TextInputContainer: string
+export declare const TextInputLabelDiv: string
+export declare const TextInputLabel: string
+export declare const TextInputStar: string
+export declare const TextInput: string
+export declare const TextInputLabelPassword: string
+export declare const TextInputDiv: string
+export declare const TextInputSpacer: string
+export declare const TextInputHref: string

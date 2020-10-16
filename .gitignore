@@ -6,7 +6,6 @@ node_modules
 build
 dist
 docs-dist
-lib
 .idea
 .docz
 .tscache
